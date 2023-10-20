@@ -47,7 +47,7 @@ export default function Header({ user }: HeaderProps) {
         <PlatformContainer>
           <div className="relative flex h-16 items-center justify-between gap-16">
             <div className="relative flex items-center gap-16">
-              <Link href="/" className="items-center space-x-2">
+              <Link href="/home" className="items-center space-x-2">
                 <PrimaryLogo className="text-primary h-8 w-auto" />
               </Link>
               <div className="hidden gap-10 md:flex">

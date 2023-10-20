@@ -58,10 +58,10 @@ export function SignUpForm({
   const form = useForm<Inputs>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
-      firstname: '',
-      lastname: '',
-      email: '',
-      password: '',
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: "",
     },
   });
 
