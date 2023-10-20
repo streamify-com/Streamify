@@ -8,6 +8,19 @@ import LocaleSwitcher from "@/components/feature/locale-switcher";
 import { ModeToggle } from "@shared-components/components/mode-theme";
 import InstallPWA from "@shared-components/components/install-pwa";
 import { useTranslations } from "next-intl";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@shared-components/ui/select";
+import {
+  CircleFlagsDe,
+  CircleFlagsUk,
+} from "@shared-components/graphics/flags";
 
 export default function HeroSectionTest() {
   const t = useTranslations("signin");
@@ -38,6 +51,23 @@ export default function HeroSectionTest() {
           >
             {t("card-title")}
           </Link>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                {/* <SelectLabel>Language</SelectLabel> */}
+                <SelectItem value="english">
+                  <CircleFlagsUk /> English
+                </SelectItem>
+                <SelectItem value="german">
+                  <CircleFlagsDe /> Deutsch
+                </SelectItem>
+                <SelectItem value="french">Français</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
       </PlatformContainer>
     </>
