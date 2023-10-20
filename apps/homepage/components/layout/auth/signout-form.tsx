@@ -1,0 +1,37 @@
+import { cn } from "@shared-components/lib/utils";
+
+interface HeaderProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
+  title: string;
+  description?: string | null;
+  size?: "default" | "sm";
+}
+
+export function SignOutForm({
+  title,
+  description,
+  size = "default",
+  className,
+  ...props
+}: HeaderProps) {
+  return (
+    <div className={cn("grid gap-1", className)} {...props}>
+      <h1
+        className={cn(
+          "text-highlight text-2xl font-bold tracking-tight",
+          size === "default" && "md:text-4xl",
+        )}
+      >
+        {title}
+      </h1>
+      {description ? (
+        <p className={cn("text-standard", size === "default" && "text-md")}>
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
+}

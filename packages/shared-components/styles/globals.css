@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Grounding colors */
+    --foreground: 217, 217, 217, 1;
+    --background: 255, 255, 255, 1;
+    --hoverground: 217, 217, 217, 0.5;
+
+    /* Text colors */
+    --standard: 112, 112, 112, 1;
+    --highlight: 0, 0, 0, 1;
+
+    /* Brand colors */
+    --primary: 220, 5, 45, 1;
+    --primary-transparent: 220, 5, 45, 0.2;
+
+    --secondary: 241, 237, 231, 1;
+    --secondary-transparent: 241, 237, 231, 0.2;
+
+    --tertiary: 0, 0, 0, 1;
+    --tertiary-transparent: 0, 0, 0, 0.2;
+
+    /* Call-to-Action colors */
+    --active: 13, 153, 255, 1;
+    --passive: 217, 217, 217, 1;
+
+    /* Object colors */
+    --skeleton: 217, 217, 217, 1;
+    --separator: 112, 112, 112, 0.2;
+
+    --test: 109, 255, 168, 1;
+  }
+
+  .dark {
+    /* Grounding colors */
+    --foreground: 112, 112, 112, 1;
+    --background: 0, 0, 0, 1;
+    --hoverground: 17, 17, 17, 1;
+
+    /* Text colors */
+    --standard: 112, 112, 112, 1;
+    --highlight: 217, 217, 217, 1;
+
+    /* Brand colors */
+    --primary: 220, 5, 45, 1;
+    --primary-transparent: 220, 5, 45, 0.2;
+
+    --secondary: 241, 237, 231, 1;
+    --secondary-transparent: 241, 237, 231, 0.2;
+
+    --tertiary: 217, 217, 217, 1;
+    --tertiary-transparent: 217, 217, 217, 0.2;
+
+    /* Call-to-Action colors */
+    --active: 13, 153, 255, 1;
+    --passive: 112, 112, 112, 1;
+
+    /* Object colors */
+    --skeleton: 217, 217, 217, 1;
+    --separator: 112, 112, 112, 0.5;
+
+    --test: 109, 255, 168, 1;
+  }
+
+  ::selection {
+    background: #dc052d;
+    color: #000000;
+  }
+
+  body {
+    @apply bg-background font-regular text-standard;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.gradient-button {
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(60deg, #00f, #00e8ff) border-box;
+  color: #313149;
+  padding: 20px 70px;
+  border: 5px solid transparent;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 28px;
+}

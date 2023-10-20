@@ -1,0 +1,40 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^4.23.2",
+    "@clerk/types": "^3.50.0",
+    "@headlessui/react": "^1.7.17",
+    "@hookform/resolvers": "^3.3.1",
+    "@t3-oss/env-nextjs": "^0.6.1",
+    "clsx": "^1.2.1",
+    "cookies-next": "^3.0.0",
+    "next": "^13.4.19",
+    "next-intl": "2.20.0",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "shared-components": "workspace:*",
+    "sonner": "^0.7.0",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "autoprefixer": "^10.4.14",
+    "eslint-config-custom": "workspace:*",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.2.2"
+  }
+}

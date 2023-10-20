@@ -1,0 +1,18 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"],
+  "types": ["vidstack/globals"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@shared-components/*": ["./*"],
+      "@shared-components/components/*": ["./components/*"],
+      "@shared-components/features/*": ["./features/*"],
+      "@shared-components/graphics/*": ["./graphics/*"],
+      "@shared-components/ui/*": ["./ui/*"],
+      "@shared-components/lib/*": ["./lib/*"],
+      "@shared-components/types/*": ["./types/*"]
+    }
+  }
+}
