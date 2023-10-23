@@ -6,11 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@shared-components/ui/card";
-import { ResetPasswordForm } from "@/components/layout/auth/reset-password-form";
+import { ResetPasswordStep2Form } from "@/components/auth/components/reset-password-form-step-2";
 import { useTranslations } from "next-intl";
 
-export default function ResetPasswordPageForm() {
-  const t = useTranslations("reset-password");
+export default function ResetPasswordStep2PageForm() {
+  const t = useTranslations("step-2");
   return (
     <>
       <CardHeader className="space-y-1">
@@ -18,12 +18,13 @@ export default function ResetPasswordPageForm() {
         <CardDescription>{t("card-description")}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <ResetPasswordForm
-          formlabel={t("card-title")}
+        <ResetPasswordStep2Form
+          passwordformlabel={t("password-form-label")}
+          confirmationformlabel={t("confirmation-form-label")}
+          codeformlabel={t("code-form-label")}
+          verifycodeformlabel={t("verify-code-form-label")}
           formbutton={t("form-button")}
-          formbuttondescription={t("form-button-description")}
           previousstep={t("previous-step")}
-          inputplaceholder={t("input-placeholder")}
         />
       </CardContent>
     </>

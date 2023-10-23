@@ -5,7 +5,7 @@ import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import { platformConfig } from "@/config/platform";
 import { cn } from "@shared-components/lib/utils";
-import NavigationMain from "@/components/layout/header/navigation-main";
+import NavigationMain from "@/components/header/navigation-main";
 import { PrimaryLogo, SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import type { User } from "@clerk/nextjs/dist/types/server";
@@ -26,7 +26,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@shared-components/ui/avatar";
-import { ModeSelection } from "@/components/feature/mode-theme";
+import { ModeSelection } from "@/components/mode-theme";
+import LocaleSwitcher from "@/components/locale-switcher";
 
 interface HeaderProps {
   user: User | null;
@@ -42,50 +43,46 @@ export default function Header({ user }: HeaderProps) {
       ?.emailAddress ?? "";
 
   return (
-    <header className="border-separator bg-background/75 sticky top-0 z-30 border-b backdrop-blur-xl">
+    <header className="border-separator sticky top-0 z-40 border-b bg-white/60 backdrop-blur-xl dark:bg-black/60">
       <nav>
         <PlatformContainer>
-          <div className="relative flex h-16 items-center justify-between gap-16">
+          <div className="relative flex h-14 items-center justify-between gap-16">
             <div className="relative flex items-center gap-16">
               <Link href="/home" className="items-center space-x-2">
-                <PrimaryLogo className="text-primary h-8 w-auto" />
+                <PrimaryLogo className="text-primary h-7 w-auto md:w-auto" />
               </Link>
-              <div className="hidden gap-10 md:flex">
+              <div className="hidden gap-10 overflow-y-auto md:flex">
                 <NavigationMain items={platformConfig.mainNav} user={user} />
               </div>
             </div>
             <div className="hidden md:inline-block">
               <ul className="bottom-20 flex flex-row items-center gap-4">
-                {/* {user ? (
-                  <Link
-                    href="/subscribe"
-                    className={cn(
-                      buttonVariants({
-                        variant: "actionButton",
-                        size: "headerSize",
-                      }),
-                    )}
-                  >
-                    <SecondaryLogo className="text-background hover:text-primary h-7 w-auto md:h-9" />
-                  </Link>
+                {user ? (
+                  <></>
                 ) : (
                   <Link
-                    href="/subscribe"
+                    href={t("signin.href")}
                     className={cn(
                       buttonVariants({
-                        variant: "actionButton",
-                        size: "headerSize",
+                        variant: 'intentionButton',
+                        size: 'headerSize',
                       }),
                     )}
                   >
-                    <SecondaryLogo className="text-background hover:text-primary h-7 w-auto md:h-9" />
+                    {t("signin.name")}
                   </Link>
-                )} */}
+                )}
                 {user ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="avatarButton" size="avatarSize">
-                        <Avatar className="">
+                        <p className="font-regular text-highlight text-sm leading-none">
+                          Hallo,&nbsp;
+                        </p>
+                        <p className="text-highlight text-sm font-bold leading-none">
+                          {user.firstName}&nbsp;{user.lastName}
+                        </p>
+                        <Avatar className="ml-4">
                           <AvatarImage
                             src={user.imageUrl}
                             alt={user.username ?? ""}
@@ -95,7 +92,7 @@ export default function Header({ user }: HeaderProps) {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
-                      className="bg-background border-separator z-40 mt-2 w-full border p-4 md:w-56"
+                      className="bg-background border-separator z-40 mt-3 w-full border p-4 md:w-56"
                       align="end"
                       forceMount
                     >
@@ -127,7 +124,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/subscription"
-                            className="hover:bg-hoverground hover:text-highlight my-2 rounded-md"
+                            className="md:hover:bg-hoverground md:hover:text-highlight my-2 rounded-md text-sm"
                           >
                             <Icons.billing
                               className="mr-4 h-4 w-4"
@@ -179,7 +176,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="hover:bg-hoverground hover:text-highlight my-1 rounded-lg"
+                            className="md:hover:bg-hoverground md:hover:text-highlight my-2 rounded-md text-sm"
                           >
                             <Icons.SupportIcon
                               className="mr-4 h-4 w-4"
@@ -192,13 +189,17 @@ export default function Header({ user }: HeaderProps) {
                       </DropdownMenuGroup>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuItem asChild>
+                        <LocaleSwitcher />
+                      </DropdownMenuItem>
+                      <DropdownMenuSeparator className="border-separator my-2 border-t" />
+                      <DropdownMenuItem asChild>
                         <ModeSelection />
                       </DropdownMenuItem>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuItem asChild>
                         <Link
                           href="/signout"
-                          className="hover:bg-hoverground hover:text-highlight my-1 rounded-lg"
+                          className="md:hover:bg-primary md:hover:text-background text-primary my-1 rounded-md text-sm"
                         >
                           <Icons.LogOutIcon
                             className="mr-4 h-4 w-4"
@@ -212,7 +213,7 @@ export default function Header({ user }: HeaderProps) {
                   </DropdownMenu>
                 ) : (
                   <Link
-                    href="/signin"
+                    href="/subscribe"
                     className={cn(
                       buttonVariants({
                         variant: "actionButton",
@@ -220,8 +221,7 @@ export default function Header({ user }: HeaderProps) {
                       }),
                     )}
                   >
-                    {/* {t("call-to-action.name")}&nbsp;&nbsp; */}
-                    <SecondaryLogo className="text-background hover:text-primary h-7 w-auto md:h-9" />
+                    <SecondaryLogo className="text-background md:group-hover:text-primary h-7 w-auto md:h-9" />
                   </Link>
                 )}
               </ul>

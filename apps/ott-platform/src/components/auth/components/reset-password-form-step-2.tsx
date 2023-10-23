@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import type { z } from "zod";
-import { signInSchema } from "@/lib/auth";
+import { resetPasswordSchema } from "@/lib/auth";
 import { Button } from "@shared-components/ui/button";
 import {
   Form,
@@ -19,34 +19,39 @@ import {
 } from "@shared-components/ui/form";
 import { Input } from "@shared-components/ui/input";
 import { Icons } from "@shared-components/graphics/icons";
-import { PasswordInput } from "@/components/layout/auth/password-input";
+import { PasswordInput } from "@/components/auth/components/password-input";
 import { Separator } from "@shared-components/ui/separator";
 
-type Inputs = z.infer<typeof signInSchema>;
+type Inputs = z.infer<typeof resetPasswordSchema>;
 
-interface SignInFormProps {
-  email: string;
-  password: string;
-  signin: string;
+interface ResetPasswordStep2FormProps {
+  passwordformlabel: string;
+  confirmationformlabel: string;
+  codeformlabel: string;
+  verifycodeformlabel: string;
+  formbutton: string;
   previousstep: string;
 }
 
-export function SignInForm({
-  email,
-  password,
-  signin,
+export function ResetPasswordStep2Form({
+  passwordformlabel,
+  confirmationformlabel,
+  codeformlabel,
+  verifycodeformlabel,
+  formbutton,
   previousstep,
-}: SignInFormProps) {
+}: ResetPasswordStep2FormProps) {
   const router = useRouter();
   const { isLoaded, signIn, setActive } = useSignIn();
   const [isPending, startTransition] = React.useTransition();
 
   // react-hook-form
   const form = useForm<Inputs>({
-    resolver: zodResolver(signInSchema),
+    resolver: zodResolver(resetPasswordSchema),
     defaultValues: {
-      email: "",
       password: "",
+      confirmPassword: "",
+      code: "",
     },
   });
 
@@ -55,18 +60,22 @@ export function SignInForm({
 
     startTransition(async () => {
       try {
-        const result = await signIn.create({
-          identifier: data.email,
+        const attemptFirstFactor = await signIn.attemptFirstFactor({
+          strategy: "reset_password_email_code",
+          code: data.code,
           password: data.password,
         });
 
-        if (result.status === "complete") {
-          await setActive({ session: result.createdSessionId });
-
+        if (attemptFirstFactor.status === "needs_second_factor") {
+          // TODO: implement 2FA (requires clerk pro plan)
+        } else if (attemptFirstFactor.status === "complete") {
+          await setActive({
+            session: attemptFirstFactor.createdSessionId,
+          });
           router.push(`${window.location.origin}/`);
+          toast.success("Password reset successfully.");
         } else {
-          /*Investigate why the login hasn't completed */
-          console.log(result);
+          console.error(attemptFirstFactor);
         }
       } catch (error) {
         const unknownError = "Something went wrong, please try again.";
@@ -81,17 +90,17 @@ export function SignInForm({
   return (
     <Form {...form}>
       <form
-        className="grid gap-2"
+        className="grid gap-4"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <FormField
           control={form.control}
-          name="email"
+          name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{email}</FormLabel>
+              <FormLabel>{passwordformlabel}</FormLabel>
               <FormControl>
-                <Input placeholder={email} {...field} />
+                <PasswordInput placeholder={passwordformlabel} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -99,32 +108,47 @@ export function SignInForm({
         />
         <FormField
           control={form.control}
-          name="password"
+          name="confirmPassword"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{password}</FormLabel>
+              <FormLabel>{confirmationformlabel}</FormLabel>
               <FormControl>
-                <PasswordInput placeholder={password} {...field} />
+                <PasswordInput placeholder={confirmationformlabel} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="code"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{codeformlabel}</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder={verifycodeformlabel}
+                  {...field}
+                  onChange={(e) => {
+                    e.target.value = e.target.value.trim();
+                    field.onChange(e);
+                  }}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
         <Separator className="border-separator my-4 border-t" />
-        <Button
-          disabled={isPending}
-          className="w-full md:w-full"
-          variant="primaryButton"
-          size="defaultSize"
-        >
+        <Button disabled={isPending} className="bg-highlight w-full md:w-full">
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"
               aria-hidden="true"
             />
           )}
-          {signin}
-          <span className="sr-only">{signin}</span>
+          {formbutton}
+          <span className="sr-only">{formbutton}</span>
         </Button>
         <Button
           aria-label="Go back to the previous page"

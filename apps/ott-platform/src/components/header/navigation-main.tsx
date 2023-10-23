@@ -10,7 +10,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import { SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import { Separator } from "@shared-components/ui/separator";
-import { ModeSelection } from "@/components/feature/mode-theme";
+import { ModeSelection } from "@/components/mode-theme";
 import type { User } from "@clerk/nextjs/dist/types/server";
 import { buttonVariants } from "@shared-components/ui/button";
 import {
@@ -18,7 +18,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@shared-components/ui/avatar";
-import LocaleSwitcher from "@/components/feature/locale-switcher";
+import LocaleSwitcher from "@/components/locale-switcher";
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -51,7 +51,7 @@ export default function NavigationMain({
           <Link
             href={t("home.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-5 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "home"
                 ? "text-primary md:border-primary md:border-b-2"
                 : "text-highlight md:border-b-2 md:border-transparent",
@@ -62,7 +62,7 @@ export default function NavigationMain({
           <Link
             href={t("matches.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-5 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "matches"
                 ? "text-primary md:border-primary md:border-b-2"
                 : "text-highlight md:border-b-2 md:border-transparent",
@@ -73,7 +73,7 @@ export default function NavigationMain({
           <Link
             href={t("players.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-5 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "players"
                 ? "text-primary md:border-primary md:border-b-2"
                 : "text-highlight md:border-b-2 md:border-transparent",
@@ -84,7 +84,7 @@ export default function NavigationMain({
           <Link
             href={t("plus.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-5 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "plus"
                 ? "text-primary md:border-primary md:border-b-2"
                 : "text-highlight md:border-b-2 md:border-transparent",
@@ -95,7 +95,7 @@ export default function NavigationMain({
           <Link
             href={t("live.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-5 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "live"
                 ? "text-primary md:border-primary md:border-b-2"
                 : "text-highlight md:border-b-2 md:border-transparent",

@@ -6,11 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@shared-components/ui/card";
-import { VerifyEmailForm } from "@/components/layout/auth/verify-email-form";
+import { ResetPasswordForm } from "@/components/auth/components/reset-password-form";
 import { useTranslations } from "next-intl";
 
-export default function VerifyEmailPageForm() {
-  const t = useTranslations("verify");
+export default function ResetPasswordPageForm() {
+  const t = useTranslations("reset-password");
   return (
     <>
       <CardHeader className="space-y-1">
@@ -18,11 +18,12 @@ export default function VerifyEmailPageForm() {
         <CardDescription>{t("card-description")}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <VerifyEmailForm
-          formlabel={t("form-label")}
-          verifycodeformlabel={t("verify-code-form-label")}
+        <ResetPasswordForm
+          formlabel={t("card-title")}
           formbutton={t("form-button")}
+          formbuttondescription={t("form-button-description")}
           previousstep={t("previous-step")}
+          inputplaceholder={t("input-placeholder")}
         />
       </CardContent>
     </>

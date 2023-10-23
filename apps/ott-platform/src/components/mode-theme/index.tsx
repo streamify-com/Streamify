@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Switch } from "@headlessui/react";
 import { DarkIcon, LightIcon } from "@shared-components/graphics/icons";
 
+
 export function ModeSelection() {
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -88,3 +89,4 @@ export function ModeToggle() {
     </Switch>
   );
 }
+

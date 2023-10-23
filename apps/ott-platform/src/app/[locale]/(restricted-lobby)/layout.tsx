@@ -1,12 +1,12 @@
-import Header from "@/components/layout/header";
+import Header from "@/components/header";
 import {
   FooterDeclarationLayout,
   FooterPaymentLayout,
   FooterPlatformLayout,
-} from "@/components/layout/footer";
+} from "@/components/footer";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
-import Cookie from "@/components/feature/cookie";
+import Cookie from "@/components/cookie";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;

@@ -1,7 +1,7 @@
 "use client";
 
-import { LogOutButtons } from "@/components/layout/auth/logout-buttons";
-import { SignOutForm } from "@/components/layout/auth/signout-form";
+import { LogOutButtons } from "@/components/auth/components/logout-buttons";
+import { SignOutForm } from "@/components/auth/components/signout-form";
 import { CardContent, CardHeader } from "@shared-components/ui/card";
 import { useTranslations } from "next-intl";
 

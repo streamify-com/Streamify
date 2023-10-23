@@ -3,6 +3,9 @@
     "label": "Change language",
     "locale": "{locale, select, de {German} en {English} other {Unknown}}"
   },
+  "go-back": {
+    "name": "Back"
+  },
   "Cookie": {
     "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
     "cookie-policy": "Cookie Policy",
@@ -73,7 +76,8 @@
     "all-rights-reserved": "All rights reserved."
   },
   "footer-payment": {
-    "description": "Our payment methods:"
+    "cancel-subscription": "Cancel subscription",
+    "href": "/cancel-subscription"
   },
   "footer-homepage": {
     "solutions": {
@@ -199,6 +203,10 @@
     "call-to-action": {
       "name": "Subscribe",
       "href": "/subscribe"
+    },
+    "signin": {
+      "name": "Sign in",
+      "href": "/signin"
     }
   }
 }

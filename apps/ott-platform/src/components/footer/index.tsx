@@ -11,12 +11,9 @@ import {
   DiscordIcon,
   InstagramIcon,
   TiktokIcon,
-  Icons,
 } from "@shared-components/graphics/icons";
-import { SVGProps } from "react";
 import { PlatformContainer } from "@shared-components/ui/container";
-import { ModeSelection } from "@/components/feature/mode-theme";
-import LocaleSwitcher from "@/components/feature/locale-switcher";
+import LocaleSwitcher from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -25,40 +22,42 @@ import {
   KlarnaLogo,
   MastercardLogo,
   PaypalLogo,
+  SofortLogo,
   VisaLogo,
 } from "@shared-components/graphics/logo";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
+import { ThemeModeSelector } from "@shared-components/components/mode-theme";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
 }
 
 const navigationWebsite = {
-  solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
-  ],
-  support: [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Status", href: "#" },
-  ],
-  company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Partners", href: "#" },
-  ],
-  legal: [
-    { name: "Cookie Policy", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Services", href: "#" },
-    { name: "Imprint", href: "#" },
-  ],
+  // solutions: [
+  //   { name: "Marketing", href: "#" },
+  //   { name: "Analytics", href: "#" },
+  //   { name: "Commerce", href: "#" },
+  //   { name: "Insights", href: "#" },
+  // ],
+  // support: [
+  //   { name: "Pricing", href: "#" },
+  //   { name: "Documentation", href: "#" },
+  //   { name: "Guides", href: "#" },
+  //   { name: "API Status", href: "#" },
+  // ],
+  // company: [
+  //   { name: "About", href: "#" },
+  //   { name: "Blog", href: "#" },
+  //   { name: "Jobs", href: "#" },
+  //   { name: "Partners", href: "#" },
+  // ],
+  // legal: [
+  //   { name: "Cookie Policy", href: "#" },
+  //   { name: "Privacy Policy", href: "#" },
+  //   { name: "Terms of Services", href: "#" },
+  //   { name: "Imprint", href: "#" },
+  // ],
   social: [
     {
       name: "Facebook",
@@ -130,7 +129,7 @@ export function FooterDeclarationLayout() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-standard hover:text-highlight h-8 w-8 rounded-md bg-transparent hover:bg-hoverground flex justify-center items-center border border-transparent hover:border-separator"
+                className="text-standard md:hover:text-highlight h-8 w-8 rounded-md bg-transparent md:hover:bg-hoverground flex justify-center items-center border border-transparent md:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
                 {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}
@@ -139,7 +138,7 @@ export function FooterDeclarationLayout() {
           </div>
           <div className="mt-5 flex flex-col gap-4 md:order-3 md:mt-0 md:flex-row">
             <LocaleSwitcher />
-            <ModeSelection />
+            <ThemeModeSelector />
           </div>
         </div>
       </PlatformContainer>
@@ -169,25 +168,25 @@ export function FooterPlatformLayout() {
           ))} */}
             <Link
               href={t("terms-of-services.href")}
-              className="font-regular text-md text-standard hover:text-highlight leading-6 p-2 rounded-md bg-transparent hover:bg-hoverground border border-transparent hover:border-separator"
+              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
             >
               {t("terms-of-services.name")}
             </Link>
             <Link
               href={t("privacy-policy.href")}
-              className="font-regular text-md text-standard hover:text-highlight leading-6 p-2 rounded-md bg-transparent hover:bg-hoverground border border-transparent hover:border-separator"
+              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
             >
               {t("privacy-policy.name")}
             </Link>
             <Link
               href={t("cookie-policy.href")}
-              className="font-regular text-md text-standard hover:text-highlight leading-6 p-2 rounded-md bg-transparent hover:bg-hoverground border border-transparent hover:border-separator"
+              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
             >
               {t("cookie-policy.name")}
             </Link>
             <Link
               href={t("imprint.href")}
-              className="font-regular text-md text-standard hover:text-highlight leading-6 p-2 rounded-md bg-transparent hover:bg-hoverground border border-transparent hover:border-separator"
+              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
             >
               {t("imprint.name")}
             </Link>
@@ -198,8 +197,8 @@ export function FooterPlatformLayout() {
               className={cn(
                 buttonVariants({
                   variant: "primaryButton",
-                  size: "defaultSize",
-                }),
+                  size: "headerSize",
+                }), "text-md h-12 w-full px-4 py-2 md:h-9"
               )}
             >
               {t("support.name")}
@@ -215,12 +214,13 @@ export function FooterPaymentLayout() {
   const t = useTranslations("footer-payment");
 
   const logos = [
-    { logo: VisaLogo, className: "h-8 w-auto" },
-    { logo: MastercardLogo, className: "h-6 w-auto" },
-    { logo: PaypalLogo, className: "h-5 w-auto" },
-    { logo: KlarnaLogo, className: "h-5 w-auto" },
-    { logo: ApplepayLogo, className: "h-8 w-auto" },
-    { logo: GooglepayLogo, className: "h-8 w-auto" },
+    { logo: VisaLogo, className: 'h-6 md:h-8 w-auto' },
+    { logo: MastercardLogo, className: 'h-4 md:h-6 w-auto' },
+    { logo: PaypalLogo, className: 'h-8 md:h-12 w-auto' },
+    { logo: SofortLogo, className: 'h-3 md:h-4 w-auto' },
+    // { logo: KlarnaLogo, className: 'h-3 md:h-4 w-auto' },
+    { logo: ApplepayLogo, className: 'h-6 md:h-8 w-auto' },
+    { logo: GooglepayLogo, className: 'h-6 md:h-8 w-auto' },
   ];
 
   return (
@@ -228,15 +228,24 @@ export function FooterPaymentLayout() {
       <PlatformContainer>
         <div className="mx-auto md:flex md:items-center md:justify-between">
           <div className="md:order-1 md:mt-0">
-            <p className="text-center text-md leading-5 text-standard">
-              {t("description")}
-            </p>
+            <Link
+              href={t("href")}
+              className={cn(
+                buttonVariants({
+                  variant: 'secondaryButton',
+                  size: 'headerSize',
+                }),
+                'text-md h-12 w-full px-4 py-2 md:h-9',
+              )}
+            >
+              {t("cancel-subscription")}
+            </Link>
           </div>
-          <div className="flex gap-x-4 justify-between md:order-2 mt-4 md:mt-0">
+          <div className="flex gap-x-2 justify-between md:order-2 mt-4 md:mt-0">
             {logos.map((logoData, index) => (
               <div
                 key={index}
-                className="flex items-center py-1 px-2 h-10 w-20 rounded-md border border-separator bg-hoverground justify-center md:order-2"
+                className="flex items-center h-10 w-20 rounded-md border border-separator bg-hoverground justify-center md:order-2"
               >
                 <logoData.logo
                   className={logoData.className}

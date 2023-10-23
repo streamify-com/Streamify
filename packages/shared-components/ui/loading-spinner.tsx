@@ -4,7 +4,7 @@ export default function LoadingSpinner() {
   return (
     <div className="relative block items-center">
       <div className="text-md text-center">
-        <PrimaryLogo className="text-primary h-10 w-auto" />
+        <PrimaryLogo className="text-primary h-12 w-auto" />
         Loading ...
       </div>
       <div
@@ -19,7 +19,7 @@ export default function LoadingSpinner() {
               r="10"
               fill="none"
               stroke-linecap="round"
-              strokeWidth="0.7"
+              stroke-width="0.7"
             >
               <animate
                 attributeName="stroke-dasharray"

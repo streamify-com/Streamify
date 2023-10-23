@@ -4,15 +4,16 @@ import Link from "next-intl/link";
 import {
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@shared-components/ui/card";
-import { SignUpForm } from "@/components/layout/auth/signup-form";
-import { OAuthSignIn } from "@/components/layout/auth/oauth-signin";
+import { SignInForm } from "@/components/auth/components/signin-form";
+import { OAuthSignIn } from "@/components/auth/components/oauth-signin";
 import { useTranslations } from "next-intl";
 
-export default function SignUpPageForm() {
-  const t = useTranslations("signup");
+export default function SigninPageForm() {
+  const t = useTranslations("signin");
   return (
     <>
       <CardHeader className="space-y-1">
@@ -20,8 +21,8 @@ export default function SignUpPageForm() {
         <CardDescription>
           {t("card-description")}&nbsp;
           <Link
-            aria-label="Sign in"
-            href="/signin"
+            aria-label="Sign up"
+            href="/signup"
             className="text-highlight underline-offset-4 transition-colors hover:underline"
           >
             {t("alternative")}
@@ -40,18 +41,21 @@ export default function SignUpPageForm() {
             </span>
           </div>
         </div>
-        <SignUpForm
-          firstname={t("first-name")}
-          lastname={t("last-name")}
+        <SignInForm
           email={t("email")}
           password={t("password")}
-          termsandconditions={t("terms-and-conditions")}
-          termsandconditionsdescription={t("terms-and-conditions-description")}
-          privacypolicy={t("privacy-policy")}
-          and={t("and")}
-          formbutton={t("form-button")}
+          signin={t("sign-in")}
           previousstep={t("previous-step")}
         />
+        <CardFooter>
+          <Link
+            aria-label="Reset password"
+            href="/signin/reset-password"
+            className="hover:text-highlight underline underline-offset-4 transition-colors"
+          >
+            {t("reset-password")}
+          </Link>
+        </CardFooter>
       </CardContent>
     </>
   );

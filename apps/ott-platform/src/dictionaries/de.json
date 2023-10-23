@@ -3,6 +3,9 @@
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
   },
+  "go-back": {
+    "name": "Zurück"
+  },
   "Cookie": {
     "description": "Diese Seite speichert Daten in Form von Cookies, um essenzielle Funktionen zu ermöglichen, sowie für Marketing-, Personalisierungs- und Analysezwecke. Du kannst deine Einstellungen jederzeit ändern oder die Standardeinstellungen aktivieren. Weiterhin kannst du diese Seite mit den Mindesteinstellungen verwenden. Erfahre mehr unter ",
     "cookie-policy": "Cookie-Richtlinie",
@@ -73,7 +76,8 @@
     "all-rights-reserved": "Alle Rechte vorbehalten."
   },
   "footer-payment": {
-    "description": "Unsere Bezahlarten:"
+    "cancel-subscription": "Vertrag kündigen",
+    "href": "/cancel-subscription"
   },
   "footer-homepage": {
     "solutions": {
@@ -199,6 +203,10 @@
     "call-to-action": {
       "name": "Abonnieren",
       "href": "/subscribe"
+    },
+    "signin": {
+      "name": "Anmelden",
+      "href": "/signin"
     }
   }
 }

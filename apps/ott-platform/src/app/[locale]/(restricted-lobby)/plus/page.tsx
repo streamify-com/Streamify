@@ -1,4 +1,4 @@
-import HeroSection from "@/components/layout/section/hero-section";
+import HeroSection from "@/components/section/hero-section";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,9 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function IndexPage() {
-  return (
-    <>
-      <HeroSection />
-    </>
-  );
+  return <div>Plus</div>;
 }

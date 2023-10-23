@@ -6,11 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@shared-components/ui/card";
-import { ResetPasswordStep2Form } from "@/components/layout/auth/reset-password-form-step-2";
+import { VerifyEmailForm } from "@/components/auth/components/verify-email-form";
 import { useTranslations } from "next-intl";
 
-export default function ResetPasswordStep2PageForm() {
-  const t = useTranslations("step-2");
+export default function VerifyEmailPageForm() {
+  const t = useTranslations("verify");
   return (
     <>
       <CardHeader className="space-y-1">
@@ -18,10 +18,8 @@ export default function ResetPasswordStep2PageForm() {
         <CardDescription>{t("card-description")}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <ResetPasswordStep2Form
-          passwordformlabel={t("password-form-label")}
-          confirmationformlabel={t("confirmation-form-label")}
-          codeformlabel={t("code-form-label")}
+        <VerifyEmailForm
+          formlabel={t("form-label")}
           verifycodeformlabel={t("verify-code-form-label")}
           formbutton={t("form-button")}
           previousstep={t("previous-step")}

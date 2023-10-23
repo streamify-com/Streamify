@@ -11,7 +11,7 @@ import { signUpSchema } from "@/lib/auth";
 import { Button } from "@shared-components/ui/button";
 import { Input } from "@shared-components/ui/input";
 import { Icons } from "@shared-components/graphics/icons";
-import { PasswordInput } from "@/components/layout/auth/password-input";
+import { PasswordInput } from "@/components/auth/components/password-input";
 import { Separator } from "@shared-components/ui/separator";
 import Link from "next-intl/link";
 import {

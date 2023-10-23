@@ -26,7 +26,7 @@ export default function Modal({
   const desktopModalRef = useRef(null);
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
+      if (e.key === 'Escape') {
         setShowModal(false);
       }
     },
@@ -34,8 +34,8 @@ export default function Modal({
   );
 
   useEffect(() => {
-    document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
   }, [onKeyDown]);
 
   const { isMobile, isDesktop } = useWindowSize();
@@ -66,7 +66,7 @@ export default function Modal({
               </FocusTrap>
               <motion.div
                 key="desktop-backdrop"
-                className=" bg-background/75 fixed inset-0 z-40 backdrop-blur-xl"
+                className=" bg-background/75 fixed inset-0 z-40 backdrop-blur-sm"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

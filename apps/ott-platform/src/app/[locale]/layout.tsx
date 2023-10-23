@@ -1,7 +1,7 @@
 import "@shared-components/styles/globals.css";
 import type { Metadata } from "next";
 import { cn } from "@shared-components/lib/utils";
-import { ThemeProvider } from "@/components/feature/theme-provider";
+import { ThemeProvider } from "@/components/mode-theme/theme-provider";
 import { Analytics } from "@shared-components/components/vercel-analytics";
 import { Toaster } from "@shared-components/ui/toaster";
 import { ClerkProvider } from "@clerk/nextjs";

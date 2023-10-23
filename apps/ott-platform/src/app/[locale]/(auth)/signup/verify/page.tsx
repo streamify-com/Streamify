@@ -1,5 +1,5 @@
 import { type Metadata } from "next";
-import VerifyEmailPageForm from "@/components/form/verify-email-page-form";
+import VerifyEmailPageForm from "@/components/auth/verify";
 
 export const metadata: Metadata = {
   title: "Verify Email",

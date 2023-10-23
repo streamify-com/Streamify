@@ -15,21 +15,21 @@
 
     /* Brand colors */
     --primary: 220, 5, 45, 1;
-    --primary-transparent: 220, 5, 45, 0.2;
+    --primary-transparent: 220, 5, 45, 0.5;
 
-    --secondary: 241, 237, 231, 1;
-    --secondary-transparent: 241, 237, 231, 0.2;
+    --secondary: 0, 0, 0, 1;
+    --secondary-transparent: 0, 0, 0, 0.5;
 
-    --tertiary: 0, 0, 0, 1;
-    --tertiary-transparent: 0, 0, 0, 0.2;
+    --tertiary: 101, 22, 27, 1;
+    --tertiary-transparent: 255, 255, 255, 0.5;
 
     /* Call-to-Action colors */
     --active: 13, 153, 255, 1;
     --passive: 217, 217, 217, 1;
 
     /* Object colors */
-    --skeleton: 217, 217, 217, 1;
-    --separator: 112, 112, 112, 0.2;
+    --skeleton: 217, 217, 217, 0.5;
+    --separator: 112, 112, 112, 0.3;
 
     --test: 109, 255, 168, 1;
   }
@@ -46,21 +46,21 @@
 
     /* Brand colors */
     --primary: 220, 5, 45, 1;
-    --primary-transparent: 220, 5, 45, 0.2;
+    --primary-transparent: 220, 5, 45, 0.5;
 
-    --secondary: 241, 237, 231, 1;
-    --secondary-transparent: 241, 237, 231, 0.2;
+    --secondary: 0, 0, 0, 1;
+    --secondary-transparent: 0, 0, 0, 0.5;
 
-    --tertiary: 217, 217, 217, 1;
-    --tertiary-transparent: 217, 217, 217, 0.2;
+    --tertiary: 101, 22, 27, 1;
+    --tertiary-transparent: 255, 255, 255, 0.5;
 
     /* Call-to-Action colors */
     --active: 13, 153, 255, 1;
     --passive: 112, 112, 112, 1;
 
     /* Object colors */
-    --skeleton: 217, 217, 217, 1;
-    --separator: 112, 112, 112, 0.5;
+    --skeleton: 217, 217, 217, 0.5;
+    --separator: 112, 112, 112, 0.3;
 
     --test: 109, 255, 168, 1;
   }
@@ -95,4 +95,46 @@ body {
   border-radius: 40px;
   display: inline-block;
   font-size: 28px;
+}
+
+.general-gradient {
+  position: relative;
+  background-image: repeating-linear-gradient(to left,
+      #dc052d,
+      #424242,
+      #dc052d);
+
+  z-index: 1;
+  background-position-x: 0%;
+  background-size: 200%;
+  animation: gradimate 3s linear infinite;
+  background-clip: text;
+}
+
+.action-gradient {
+  position: relative;
+  background-image: repeating-linear-gradient(to left,
+      #d9d9d9,
+      #424242,
+      #d9d9d9);
+
+  z-index: 1;
+  background-position-x: 0%;
+  background-size: 200%;
+  animation: gradimate 3s linear infinite;
+  background-clip: text;
+}
+
+@keyframes gradimate {
+  0% {
+    background-position-x: 200%;
+  }
+
+  50% {
+    background-position-x: 100%;
+  }
+
+  100% {
+    background-position-x: 0%;
+  }
 }

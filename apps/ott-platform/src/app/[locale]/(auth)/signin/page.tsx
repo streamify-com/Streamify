@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import SigninPageForm from "@/components/form/signin-page-form";
+import SigninPageForm from "@/components/auth/signin";
 
 export const metadata: Metadata = {
   title: "Sign In",
