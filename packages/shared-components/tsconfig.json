@@ -2,7 +2,6 @@
   "extends": "tsconfig/react-library.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
-  "types": ["vidstack/globals"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

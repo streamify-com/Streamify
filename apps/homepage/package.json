@@ -6,7 +6,8 @@
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "unlighthouse": "pnpm dlx unlighthouse --site https://www.streamify.com"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.23.2",

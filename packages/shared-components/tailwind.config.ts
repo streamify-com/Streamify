@@ -3,9 +3,9 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/components/**/*.{ts,tsx}",
     "../../packages/shared-components/features/**/*.{ts,tsx}",
     "../../packages/shared-components/graphics/**/*.{ts,tsx}",
