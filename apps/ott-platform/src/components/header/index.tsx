@@ -64,8 +64,8 @@ export default function Header({ user }: HeaderProps) {
                     href={t("signin.href")}
                     className={cn(
                       buttonVariants({
-                        variant: 'intentionButton',
-                        size: 'headerSize',
+                        variant: "intentionButton",
+                        size: "headerSize",
                       }),
                     )}
                   >

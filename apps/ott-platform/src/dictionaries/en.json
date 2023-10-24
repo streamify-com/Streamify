@@ -6,6 +6,10 @@
   "go-back": {
     "name": "Back"
   },
+  "back-to-homepage": {
+    "name": "Back to homepage",
+    "href": "/home"
+  },
   "Cookie": {
     "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
     "cookie-policy": "Cookie Policy",
@@ -14,8 +18,11 @@
   },
   "signin": {
     "card-title": "Sign in",
-    "card-description": "Don't have an account yet?",
-    "alternative": "Sign up",
+    "card-description": "Not registered?",
+    "alternative": {
+      "name": "Sign up",
+      "href": "/signup"
+    },
     "or-continue-with": "Or continue with",
     "email": "Email",
     "password": "Password",
@@ -49,15 +56,21 @@
   },
   "signup": {
     "card-title": "Sign up",
+    "step-1-of-5": "Step 1 of 5",
     "card-description": "Already have an account?",
-    "alternative": "Sign in",
-    "or-continue-with": "Or continue with",
+    "alternative": {
+      "name": "Sign in",
+      "href": "/signin"
+    },
+    "or-continue-with": "or continue with",
     "first-name": "First name",
     "last-name": "Last name",
     "email": "Email",
     "password": "Password",
-    "terms-and-conditions": "Terms of services",
-    "terms-and-conditions-description": "By signing up you accept to the terms of services and privacy policy.",
+    "terms-and-conditions": "Terms of Services",
+    "terms-and-conditions-header": "Accept terms and conditions",
+    "terms-and-conditions-description-part-1": "By signing up you accept to our",
+    "terms-and-conditions-description-part-2": ".",
     "privacy-policy": "Privacy policy",
     "and": "and",
     "form-button": "Continue",

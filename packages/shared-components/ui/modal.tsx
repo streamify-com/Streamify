@@ -26,7 +26,7 @@ export default function Modal({
   const desktopModalRef = useRef(null);
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         setShowModal(false);
       }
     },
@@ -34,8 +34,8 @@ export default function Modal({
   );
 
   useEffect(() => {
-    document.addEventListener('keydown', onKeyDown);
-    return () => document.removeEventListener('keydown', onKeyDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
   }, [onKeyDown]);
 
   const { isMobile, isDesktop } = useWindowSize();

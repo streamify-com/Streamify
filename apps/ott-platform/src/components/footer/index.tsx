@@ -166,30 +166,32 @@ export function FooterPlatformLayout() {
               </Link>
             </div>
           ))} */}
-            <Link
-              href={t("terms-of-services.href")}
-              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-            >
-              {t("terms-of-services.name")}
-            </Link>
-            <Link
-              href={t("privacy-policy.href")}
-              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-            >
-              {t("privacy-policy.name")}
-            </Link>
-            <Link
-              href={t("cookie-policy.href")}
-              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-            >
-              {t("cookie-policy.name")}
-            </Link>
-            <Link
-              href={t("imprint.href")}
-              className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-            >
-              {t("imprint.name")}
-            </Link>
+            <div className="my-4 md:my-0">
+              <Link
+                href={t("terms-of-services.href")}
+                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+              >
+                {t("terms-of-services.name")}
+              </Link>
+              <Link
+                href={t("privacy-policy.href")}
+                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+              >
+                {t("privacy-policy.name")}
+              </Link>
+              <Link
+                href={t("cookie-policy.href")}
+                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+              >
+                {t("cookie-policy.name")}
+              </Link>
+              <Link
+                href={t("imprint.href")}
+                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+              >
+                {t("imprint.name")}
+              </Link>
+            </div>
           </nav>
           <div className="mb-6 md:mb-0">
             <Link
@@ -198,7 +200,8 @@ export function FooterPlatformLayout() {
                 buttonVariants({
                   variant: "primaryButton",
                   size: "headerSize",
-                }), "text-md h-12 w-full px-4 py-2 md:h-9"
+                }),
+                "text-md h-12 w-full px-4 py-2 md:h-9",
               )}
             >
               {t("support.name")}
@@ -214,13 +217,13 @@ export function FooterPaymentLayout() {
   const t = useTranslations("footer-payment");
 
   const logos = [
-    { logo: VisaLogo, className: 'h-6 md:h-8 w-auto' },
-    { logo: MastercardLogo, className: 'h-4 md:h-6 w-auto' },
-    { logo: PaypalLogo, className: 'h-8 md:h-12 w-auto' },
-    { logo: SofortLogo, className: 'h-3 md:h-4 w-auto' },
+    { logo: VisaLogo, className: "h-6 md:h-8 w-auto" },
+    { logo: MastercardLogo, className: "h-4 md:h-6 w-auto" },
+    { logo: PaypalLogo, className: "h-8 md:h-12 w-auto" },
+    { logo: SofortLogo, className: "h-3 md:h-4 w-auto" },
     // { logo: KlarnaLogo, className: 'h-3 md:h-4 w-auto' },
-    { logo: ApplepayLogo, className: 'h-6 md:h-8 w-auto' },
-    { logo: GooglepayLogo, className: 'h-6 md:h-8 w-auto' },
+    { logo: ApplepayLogo, className: "h-6 md:h-8 w-auto" },
+    { logo: GooglepayLogo, className: "h-6 md:h-8 w-auto" },
   ];
 
   return (
@@ -232,10 +235,10 @@ export function FooterPaymentLayout() {
               href={t("href")}
               className={cn(
                 buttonVariants({
-                  variant: 'secondaryButton',
-                  size: 'headerSize',
+                  variant: "secondaryButton",
+                  size: "headerSize",
                 }),
-                'text-md h-12 w-full px-4 py-2 md:h-9',
+                "text-md h-12 w-full px-4 py-2 md:h-9",
               )}
             >
               {t("cancel-subscription")}

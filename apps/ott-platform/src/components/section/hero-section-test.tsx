@@ -30,7 +30,7 @@ export default function HeroSectionTest() {
         <div className="grid grid-cols-1 gap-2 gap-y-4">
           <LocaleSwitcher />
           <Link
-            href="/signup"
+            href={t("alternative.href")}
             className={cn(
               buttonVariants({
                 variant: "actionButton",
@@ -38,7 +38,7 @@ export default function HeroSectionTest() {
               }),
             )}
           >
-            {t("alternative")}
+            {t("alternative.name")}
           </Link>
           <Link
             href="/signin"

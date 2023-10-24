@@ -6,6 +6,10 @@
   "go-back": {
     "name": "Zurück"
   },
+  "back-to-homepage": {
+    "name": "Zurück zur Startseite",
+    "href": "/home"
+  },
   "Cookie": {
     "description": "Diese Seite speichert Daten in Form von Cookies, um essenzielle Funktionen zu ermöglichen, sowie für Marketing-, Personalisierungs- und Analysezwecke. Du kannst deine Einstellungen jederzeit ändern oder die Standardeinstellungen aktivieren. Weiterhin kannst du diese Seite mit den Mindesteinstellungen verwenden. Erfahre mehr unter ",
     "cookie-policy": "Cookie-Richtlinie",
@@ -15,7 +19,10 @@
   "signin": {
     "card-title": "Anmelden",
     "card-description": "Noch nicht registriert?",
-    "alternative": "Registrieren",
+    "alternative": {
+      "name": "Registrieren",
+      "href": "/signup"
+    },
     "or-continue-with": "Oder weiter mit",
     "email": "E-Mail",
     "password": "Passwort",
@@ -49,15 +56,21 @@
   },
   "signup": {
     "card-title": "Registrieren",
+    "step-1-of-5": "Schritt 1 von 5",
     "card-description": "Bereits registriert?",
-    "alternative": "Anmelden",
-    "or-continue-with": "Oder weiter mit",
+    "alternative": {
+      "name": "Anmelden",
+      "href": "/signin"
+    },
+    "or-continue-with": "oder weiter mit",
     "first-name": "Vorname",
     "last-name": "Nachname",
     "email": "E-Mail",
     "password": "Passwort",
     "terms-and-conditions": "Nutzungsvereinbarung",
-    "terms-and-conditions-description": "Durch die Registrierung nehme ich die Bestimmungen der Nutzungsvereinbarung und Datenschutzerklärung zur Kenntnis und akzeptiere diese.",
+    "terms-and-conditions-header": "Akzeptieren der Nutzungsvereinbarung und Datenschutzbestimmungen",
+    "terms-and-conditions-description-part-1": "Durch die Registrierung nehme ich die Bestimmungen der",
+    "terms-and-conditions-description-part-2": "zur Kenntnis und akzeptiere diese.",
     "privacy-policy": "Datenschutzerklärung",
     "and": "und",
     "form-button": "Weiter",

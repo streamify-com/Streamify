@@ -5,7 +5,7 @@ import React, {
   useCallback,
   useMemo,
   ReactNode,
-} from 'react';
+} from "react";
 import { Button } from "@shared-components/ui/button";
 import Modal from "@shared-components/ui/modal";
 import { Icons } from "@shared-components/graphics/icons";

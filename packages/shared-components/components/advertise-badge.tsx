@@ -1,4 +1,4 @@
-import { StreamifyBadge } from '@shared-components/graphics/badge';
+import { StreamifyBadge } from "@shared-components/graphics/badge";
 import Link from "next-intl/link";
 
 export default function AdvertiseBadge() {

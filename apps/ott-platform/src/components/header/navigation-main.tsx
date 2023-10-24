@@ -120,7 +120,7 @@ export default function NavigationMain({
       {showMobileMenu && items && (
         <div
           className={cn(
-            "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 top-16 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 lg:static lg:block",
+            "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 top-14 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 lg:static lg:block",
           )}
         >
           <PlatformContainer>

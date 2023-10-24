@@ -99,10 +99,12 @@ body {
 
 .general-gradient {
   position: relative;
-  background-image: repeating-linear-gradient(to left,
-      #dc052d,
-      #424242,
-      #dc052d);
+  background-image: repeating-linear-gradient(
+    to left,
+    #dc052d,
+    #424242,
+    #dc052d
+  );
 
   z-index: 1;
   background-position-x: 0%;
@@ -113,10 +115,12 @@ body {
 
 .action-gradient {
   position: relative;
-  background-image: repeating-linear-gradient(to left,
-      #d9d9d9,
-      #424242,
-      #d9d9d9);
+  background-image: repeating-linear-gradient(
+    to left,
+    #d9d9d9,
+    #424242,
+    #d9d9d9
+  );
 
   z-index: 1;
   background-position-x: 0%;

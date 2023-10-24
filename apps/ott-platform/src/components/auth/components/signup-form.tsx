@@ -8,7 +8,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import type { z } from "zod";
 import { signUpSchema } from "@/lib/auth";
-import { Button } from "@shared-components/ui/button";
+import { Button, buttonVariants } from "@shared-components/ui/button";
+import { Checkbox } from "@shared-components/ui/checkbox";
 import { Input } from "@shared-components/ui/input";
 import { Icons } from "@shared-components/graphics/icons";
 import { PasswordInput } from "@/components/auth/components/password-input";
@@ -22,6 +23,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@shared-components/ui/form";
+import { cn } from "@shared-components/lib/utils";
 
 type Inputs = z.infer<typeof signUpSchema>;
 
@@ -31,7 +33,9 @@ interface SignUpFormProps {
   email: string;
   password: string;
   termsandconditions: string;
-  termsandconditionsdescription: string;
+  termsandconditionsheader: string;
+  termsandconditionsdescriptionpart1: string;
+  termsandconditionsdescriptionpart2: string;
   privacypolicy: string;
   and: string;
   formbutton: string;
@@ -44,7 +48,9 @@ export function SignUpForm({
   email,
   password,
   termsandconditions,
-  termsandconditionsdescription,
+  termsandconditionsheader,
+  termsandconditionsdescriptionpart1,
+  termsandconditionsdescriptionpart2,
   privacypolicy,
   and,
   formbutton,
@@ -53,6 +59,11 @@ export function SignUpForm({
   const router = useRouter();
   const { isLoaded, signUp } = useSignUp();
   const [isPending, startTransition] = React.useTransition();
+  const [isChecked, setIsChecked] = React.useState(false);
+
+  const handleCheckboxClick = () => {
+    setIsChecked(!isChecked);
+  };
 
   // react-hook-form
   const form = useForm<Inputs>({
@@ -99,7 +110,7 @@ export function SignUpForm({
   return (
     <Form {...form}>
       <form
-        className="grid gap-4"
+        className="grid gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4">
@@ -108,7 +119,7 @@ export function SignUpForm({
             name="firstname"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{firstname}</FormLabel>
+                {/* <FormLabel>{firstname}</FormLabel> */}
                 <FormControl>
                   <Input placeholder={firstname} {...field} />
                 </FormControl>
@@ -121,7 +132,7 @@ export function SignUpForm({
             name="lastname"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{lastname}</FormLabel>
+                {/* <FormLabel>{lastname}</FormLabel> */}
                 <FormControl>
                   <Input placeholder={lastname} {...field} />
                 </FormControl>
@@ -135,7 +146,7 @@ export function SignUpForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{email}</FormLabel>
+              {/* <FormLabel>{email}</FormLabel> */}
               <FormControl>
                 <Input placeholder={email} type="email" {...field} />
               </FormControl>
@@ -148,7 +159,7 @@ export function SignUpForm({
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{password}</FormLabel>
+              {/* <FormLabel>{password}</FormLabel> */}
               <FormControl>
                 <PasswordInput placeholder={password} {...field} />
               </FormControl>
@@ -156,26 +167,48 @@ export function SignUpForm({
             </FormItem>
           )}
         />
-        <p className="text-standard text-sm">
-          {termsandconditionsdescription}
-          <Link
-            aria-label="Terms of Services"
-            href="/terms-of-services"
-            className="hover:text-highlight underline underline-offset-4 transition-colors"
-          >
-            {termsandconditions}
-          </Link>
-          <span className="mx-2">{and}</span>
-          <Link
-            aria-label="Terms of Services"
-            href="/privacy-policy"
-            className="hover:text-highlight underline underline-offset-4 transition-colors"
-          >
-            {privacypolicy}
-          </Link>
-        </p>
-        <Separator className="border-separator my-4 border-t" />
-        <Button disabled={isPending} className="bg-highlight w-full md:w-full">
+        <Separator className="my-2" />
+        <div className="items-top mb-2 flex space-x-2 text-left">
+          <Checkbox
+            id="terms1"
+            checked={isChecked}
+            onClick={handleCheckboxClick}
+          />
+          <div className="grid gap-1.5 leading-none">
+            <label htmlFor="terms1" className="text-highlight text-sm">
+              {termsandconditionsheader}
+            </label>
+            <p className="text-standard text-sm">
+              {termsandconditionsdescriptionpart1}&nbsp;
+              <Link
+                aria-label="Terms of Services"
+                href="/terms-of-services"
+                className={cn(
+                  buttonVariants({ variant: "linkButton", size: "linkSize" }),
+                  "text-sm",
+                )}
+              >
+                {termsandconditions}
+              </Link>
+              &nbsp;{and}&nbsp;
+              <Link
+                aria-label="Privacy Policy"
+                href="/privacy-policy"
+                className={cn(
+                  buttonVariants({ variant: "linkButton", size: "linkSize" }),
+                  "text-sm",
+                )}
+              >
+                {privacypolicy}
+              </Link>
+              &nbsp;{termsandconditionsdescriptionpart2}
+            </p>
+          </div>
+        </div>
+        <Button
+          disabled={isPending || !isChecked}
+          className="bg-highlight w-full md:w-full"
+        >
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"

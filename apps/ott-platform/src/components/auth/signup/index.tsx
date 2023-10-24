@@ -6,6 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  CardSubtitle,
 } from "@shared-components/ui/card";
 import { SignUpForm } from "@/components/auth/components/signup-form";
 import { OAuthSignIn } from "@/components/auth/components/oauth-signin";
@@ -15,16 +16,17 @@ export default function SignUpPageForm() {
   const t = useTranslations("signup");
   return (
     <>
-      <CardHeader className="space-y-1">
+      <CardHeader>
+        <CardSubtitle>{t("step-1-of-5")}</CardSubtitle>
         <CardTitle>{t("card-title")}</CardTitle>
         <CardDescription>
           {t("card-description")}&nbsp;
           <Link
-            aria-label="Sign in"
-            href="/signin"
+            aria-label={t("alternative.name")}
+            href={t("alternative.href")}
             className="text-highlight underline-offset-4 transition-colors hover:underline"
           >
-            {t("alternative")}
+            {t("alternative.name")}
           </Link>
         </CardDescription>
       </CardHeader>
@@ -46,7 +48,13 @@ export default function SignUpPageForm() {
           email={t("email")}
           password={t("password")}
           termsandconditions={t("terms-and-conditions")}
-          termsandconditionsdescription={t("terms-and-conditions-description")}
+          termsandconditionsheader={t("terms-and-conditions-header")}
+          termsandconditionsdescriptionpart1={t(
+            "terms-and-conditions-description-part-1",
+          )}
+          termsandconditionsdescriptionpart2={t(
+            "terms-and-conditions-description-part-2",
+          )}
           privacypolicy={t("privacy-policy")}
           and={t("and")}
           formbutton={t("form-button")}

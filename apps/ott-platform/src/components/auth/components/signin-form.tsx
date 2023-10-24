@@ -89,9 +89,9 @@ export function SignInForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{email}</FormLabel>
+              {/* <FormLabel>{email}</FormLabel> */}
               <FormControl>
-                <Input placeholder={email} {...field} />
+                <Input placeholder={email} type="email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -102,7 +102,7 @@ export function SignInForm({
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{password}</FormLabel>
+              {/* <FormLabel>{password}</FormLabel> */}
               <FormControl>
                 <PasswordInput placeholder={password} {...field} />
               </FormControl>
@@ -110,7 +110,7 @@ export function SignInForm({
             </FormItem>
           )}
         />
-        <Separator className="border-separator my-4 border-t" />
+        <Separator className="my-2" />
         <Button
           disabled={isPending}
           className="w-full md:w-full"
