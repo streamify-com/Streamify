@@ -18,7 +18,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@shared-components/ui/avatar";
-import LocaleSwitcher from "@/components/locale-switcher";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 
 interface MainNavProps {
   items?: MainNavItem[];

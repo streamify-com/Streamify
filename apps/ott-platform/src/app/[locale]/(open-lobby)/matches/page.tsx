@@ -1,4 +1,5 @@
-import HeroSectionTest from "@/components/section/hero-section-test";
+import { LocaleChoose, LocaleSwitcher } from "@/components/locale-switcher";
+import { PlatformContainer } from "@shared-components/ui/container";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,8 +9,11 @@ export const metadata: Metadata = {
 
 export default function MatchesPage() {
   return (
-    <>
-      <HeroSectionTest />
-    </>
+    <PlatformContainer>
+      <div className="grid grid-cols-1 gap-2 gap-y-4">
+        <LocaleChoose />
+        <LocaleSwitcher />
+      </div>
+    </PlatformContainer>
   );
 }

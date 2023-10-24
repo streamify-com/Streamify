@@ -13,7 +13,7 @@ import {
   TiktokIcon,
 } from "@shared-components/graphics/icons";
 import { PlatformContainer } from "@shared-components/ui/container";
-import LocaleSwitcher from "@/components/locale-switcher";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -166,7 +166,7 @@ export function FooterPlatformLayout() {
               </Link>
             </div>
           ))} */}
-            <div className="my-4 md:my-0">
+            <div className="my-4 sm:my-0 sm:space-x-8">
               <Link
                 href={t("terms-of-services.href")}
                 className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"

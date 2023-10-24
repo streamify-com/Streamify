@@ -15,7 +15,7 @@ interface AuthLayoutProps {
 export default function AuthLayout({ children }: AuthLayoutProps) {
   return (
     <div>
-      <header className="border-separator  bg-background/75 sticky top-0 z-50 block border-b backdrop-blur-xl md:hidden">
+      <header className="border-separator bg-background/75 sticky top-0 z-50 block border-b backdrop-blur-xl md:hidden">
         <nav>
           <PlatformContainer>
             <div className="relative flex h-16 items-center justify-between gap-16 md:h-20">

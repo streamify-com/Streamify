@@ -3,7 +3,10 @@ import Link from "next-intl/link";
 import { PrimaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import * as React from "react";
-import GoBackButton from "@shared-components/components/go-back-button";
+import {
+  BackToHomepageButton,
+  GoBackButton,
+} from "@/components/auth/components/back-to-homepage";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -12,7 +15,7 @@ interface AuthLayoutProps {
 export default function AuthLayout({ children }: AuthLayoutProps) {
   return (
     <div>
-      <header className="border-separator  bg-background/75 sticky top-0 z-50 block border-b backdrop-blur-xl md:hidden">
+      <header className="border-separator bg-background/75 sticky top-0 z-50 block border-b backdrop-blur-xl md:hidden">
         <nav>
           <PlatformContainer>
             <div className="relative flex h-16 items-center justify-between gap-16 md:h-20">
@@ -42,10 +45,11 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
               alt="Authentication"
             />
           </div>
-          <Link href="/" className="absolute z-30 hidden p-20 lg:flex">
+          <Link href="/home" className="absolute z-30 hidden p-20 lg:flex">
             <PrimaryLogo className="text-primary h-8 w-auto md:h-14 md:w-auto" />
           </Link>
         </div>
+        <BackToHomepageButton />
         <main className="mx-auto flex w-full flex-col justify-center space-y-6 px-8 py-10 md:px-20">
           {children}
         </main>

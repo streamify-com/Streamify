@@ -19,6 +19,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@t3-oss/env-nextjs": "^0.7.1",
     "clsx": "^2.0.0",
+    "cmdk": "^0.2.0",
     "cookies-next": "^4.0.0",
     "next": "^13.5.5",
     "next-intl": "2.20.2",

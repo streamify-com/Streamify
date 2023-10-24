@@ -4,7 +4,7 @@ import Link from "next-intl/link";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 import { PlatformContainer } from "@shared-components/ui/container";
-import LocaleSwitcher from "@/components/locale-switcher";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 import { ModeToggle } from "@shared-components/components/mode-theme";
 import InstallPWA from "@shared-components/components/install-pwa";
 import { useTranslations } from "next-intl";

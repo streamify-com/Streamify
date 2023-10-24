@@ -27,7 +27,7 @@ import {
   AvatarImage,
 } from "@shared-components/ui/avatar";
 import { ModeSelection } from "@/components/mode-theme";
-import LocaleSwitcher from "@/components/locale-switcher";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 
 interface HeaderProps {
   user: User | null;
