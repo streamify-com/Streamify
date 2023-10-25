@@ -41,7 +41,8 @@ export default function Cookie() {
               buttonVariants({
                 variant: "linkButton",
                 size: "linkSize",
-              }), "text-sm md:text-sm"
+              }),
+              "text-sm md:text-sm",
             )}
           >
             {t("cookie-policy")}

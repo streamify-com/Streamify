@@ -203,7 +203,7 @@ export default function NavigationMain({
                   <Icons.chevronRight />
                 </Link>
               </nav>
-              <Separator className="border-separator my-2 border-t" />
+              <Separator className="my-2" />
               <div>
                 <ul className="bottom-20 flex flex-col gap-4">
                   {user ? (
@@ -240,7 +240,7 @@ export default function NavigationMain({
                       Sign in
                     </Link>
                   )}
-                  <Separator className="border-separator my-2 border-t" />
+                  <Separator className="my-2" />
                   {user ? (
                     <Link
                       href="/signout"
@@ -297,7 +297,7 @@ export default function NavigationMain({
                   )}
                 </ul>
               </div>
-              <Separator className="border-separator my-2 border-t" />
+              <Separator className="my-2" />
               <LocaleSwitcher />
               <ModeSelection />
               {children}
