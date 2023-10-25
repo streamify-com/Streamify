@@ -111,7 +111,7 @@ export function LocaleSwitcher() {
     >
       <p className="sr-only">{t("label")}</p>
       <select
-        className="border-separator rounded-md hover:border-highlight hover:text-highlight text-standard h-12 w-full border bg-transparent px-4 py-2 transition-all hover:border md:h-12 md:w-48"
+        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-standard h-12 w-full border bg-transparent px-4 py-2 transition-all md:h-12 md:w-48"
         defaultValue={locale}
         disabled={isPending}
         onChange={(e) => handleLocaleChange(e.target.value)}

@@ -16,6 +16,7 @@ import {
   SheetFooter,
 } from "@shared-components/ui/sheet";
 import { ScrollArea } from "@shared-components/ui/scroll-area";
+import { Separator } from "@shared-components/ui/separator";
 
 const SUPPORTED_LOCALES = ["en", "de"];
 
@@ -58,9 +59,9 @@ export default function MobileSelectionDialog() {
       <SheetContent
         title={t("label")}
         side="bottom"
-        className="border-separator h-[50%] rounded-t-lg border-t text-standard"
+        className="border-separator h-[65%] rounded-t-lg border-t text-standard"
       >
-        <ScrollArea className="mt-10 h-[90%] w-full">
+        <ScrollArea className="mt-10 h-[90%] w-full border-t border-separator">
           {/* <SheetHeader className="mt-2">
               <SheetTitle className="text-highlight">Edit profile</SheetTitle>
               <SheetDescription className="text-highlight">
@@ -68,7 +69,7 @@ export default function MobileSelectionDialog() {
                 done.
               </SheetDescription>
             </SheetHeader> */}
-          <div className="grid gap-4">
+          <div className="grid gap-4 mt-4">
             {SUPPORTED_LOCALES.map((cur) => (
               <Button
                 key={cur}
