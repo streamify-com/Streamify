@@ -7,7 +7,7 @@ import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 
 export default function Cookie() {
-  const t = useTranslations("Cookie");
+  const t = useTranslations("cookie");
 
   const [showConsent, setShowConsent] = useState<boolean>(true);
 

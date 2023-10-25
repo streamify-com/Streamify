@@ -24,7 +24,7 @@ export function ModeSelection() {
       <select
         id="selectTheme"
         name="Theme selector"
-        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-standard h-12 w-full border bg-transparent px-4 py-2 transition-all md:h-12 md:w-48"
+        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-md md:text-sm h-12 w-full border bg-transparent transition-all md:h-10 md:w-48"
         value={resolvedTheme}
         onChange={handleThemeChange}
       >

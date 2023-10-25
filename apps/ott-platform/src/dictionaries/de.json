@@ -10,7 +10,7 @@
     "name": "Zurück zur Startseite",
     "href": "/home"
   },
-  "Cookie": {
+  "cookie": {
     "description": "Diese Seite speichert Daten in Form von Cookies, um essenzielle Funktionen zu ermöglichen, sowie für Marketing-, Personalisierungs- und Analysezwecke. Du kannst deine Einstellungen jederzeit ändern oder die Standardeinstellungen aktivieren. Weiterhin kannst du diese Seite mit den Mindesteinstellungen verwenden. Erfahre mehr unter ",
     "cookie-policy": "Cookie-Richtlinie",
     "accept-all": "Akzeptiere alle",
@@ -230,6 +230,13 @@
     "signin": {
       "name": "Anmelden",
       "href": "/signin"
+    },
+    "dropdown": {
+      "greeting": "Hallo,",
+      "account": "Profil",
+      "subscription": "Abonnement",
+      "support": "Support",
+      "signout": "Abmelden"
     }
   }
 }

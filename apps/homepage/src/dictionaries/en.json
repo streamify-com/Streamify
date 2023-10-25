@@ -1,9 +1,9 @@
 {
-  "LocaleSwitcher": {
+  "locale-switcher": {
     "label": "Change language",
     "locale": "{locale, select, de {German} en {English} other {Unknown}}"
   },
-  "Cookie": {
+  "cookie": {
     "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
     "cookie-policy": "Cookie Policy",
     "accept-all": "Accept all",
