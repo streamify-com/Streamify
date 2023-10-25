@@ -13,7 +13,7 @@ import {
   TiktokIcon,
 } from "@shared-components/graphics/icons";
 import { PlatformContainer } from "@shared-components/ui/container";
-import { LocaleSwitcher } from "@/components/locale-switcher";
+import { LocaleChoose, LocaleSwitcher } from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -74,16 +74,11 @@ const navigationWebsite = {
       href: "#",
       icon: (props: JSX.IntrinsicAttributes) => <ThreadsIcon {...props} />,
     },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: (props: JSX.IntrinsicAttributes) => <TwitterIcon {...props} />,
-    },
-    {
-      name: "GitHub",
-      href: "#",
-      icon: (props: JSX.IntrinsicAttributes) => <GithubIcon {...props} />,
-    },
+    // {
+    //   name: "GitHub",
+    //   href: "#",
+    //   icon: (props: JSX.IntrinsicAttributes) => <GithubIcon {...props} />,
+    // },
     {
       name: "YouTube",
       href: "#",
@@ -94,11 +89,11 @@ const navigationWebsite = {
       href: "#",
       icon: (props: JSX.IntrinsicAttributes) => <LinkedinIcon {...props} />,
     },
-    {
-      name: "Discrod",
-      href: "#",
-      icon: (props: JSX.IntrinsicAttributes) => <DiscordIcon {...props} />,
-    },
+    // {
+    //   name: "Discord",
+    //   href: "#",
+    //   icon: (props: JSX.IntrinsicAttributes) => <DiscordIcon {...props} />,
+    // },
     {
       name: "Twitch",
       href: "#",
@@ -118,13 +113,16 @@ export function FooterDeclarationLayout() {
     <footer className="border-separator bg-background/75 z-0 border-t py-6 backdrop-blur-xl">
       <PlatformContainer>
         <div className="md:flex md:justify-between">
-          <div className="mt-3 md:order-2">
+          <div className="flex flex-col gap-4 md:order-1 order-3 md:flex-row w-full">
+            <ThemeModeSelector />
+          </div>
+          <div className="md:mt-2 my-4 md:my-0 md:order-2 order-2 w-full">
             <p className="font-regular text-standard text-center justify-center text-xs leading-5">
-              &copy; {t("company")} {new Date().getFullYear()}.{" "}
+              &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
           </div>
-          <div className="mt-3 flex justify-center space-x-2 md:order-1">
+          <div className="flex justify-center md:justify-end space-x-2 md:order-3 order-1 w-full">
             {navigationWebsite.social.map((item) => (
               <Link
                 key={item.name}
@@ -135,10 +133,6 @@ export function FooterDeclarationLayout() {
                 {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}
               </Link>
             ))}
-          </div>
-          <div className="mt-5 flex flex-col gap-4 md:order-3 md:mt-0 md:flex-row">
-            <LocaleSwitcher />
-            <ThemeModeSelector />
           </div>
         </div>
       </PlatformContainer>
@@ -166,7 +160,7 @@ export function FooterPlatformLayout() {
               </Link>
             </div>
           ))} */}
-            <div className="my-4 sm:my-0 sm:space-x-8">
+            <div className="my-4 sm:my-0 sm:space-x-8 grid sm:flex">
               <Link
                 href={t("terms-of-services.href")}
                 className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
@@ -190,6 +184,12 @@ export function FooterPlatformLayout() {
                 className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("imprint.name")}
+              </Link>
+              <Link
+                href={t("cancel-subscription.href")}
+                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+              >
+                {t("cancel-subscription.name")}
               </Link>
             </div>
           </nav>
@@ -231,18 +231,7 @@ export function FooterPaymentLayout() {
       <PlatformContainer>
         <div className="mx-auto md:flex md:items-center md:justify-between">
           <div className="md:order-1 md:mt-0">
-            <Link
-              href={t("href")}
-              className={cn(
-                buttonVariants({
-                  variant: "secondaryButton",
-                  size: "headerSize",
-                }),
-                "text-md h-12 w-full px-4 py-2 md:h-9",
-              )}
-            >
-              {t("cancel-subscription")}
-            </Link>
+            <LocaleChoose />
           </div>
           <div className="flex gap-x-2 justify-between md:order-2 mt-4 md:mt-0">
             {logos.map((logoData, index) => (

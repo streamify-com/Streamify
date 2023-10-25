@@ -1,3 +1,4 @@
+import SubscribeSection from "@/components/section/subscribe-section";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +9,9 @@ export const metadata: Metadata = {
 export default function SubscribePage() {
   return (
     <>
-      <div className="text-3xl font-customFont text-primary">Subscribe</div>
+      <div>
+        <SubscribeSection />
+      </div>
     </>
   );
 }

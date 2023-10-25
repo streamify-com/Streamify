@@ -13,6 +13,7 @@
     "@clerk/localizations": "^1.26.6",
     "@clerk/nextjs": "^4.25.6",
     "@clerk/types": "^3.56.1",
+    "@ducanh2912/next-pwa": "^9.7.2",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-label": "^2.0.2",
@@ -41,6 +42,7 @@
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
     "tsconfig": "workspace:*",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0"
   }
 }

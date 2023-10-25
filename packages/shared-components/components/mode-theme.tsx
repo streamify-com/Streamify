@@ -4,7 +4,11 @@ import * as React from "react";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { Switch } from "@headlessui/react";
-import { DarkIcon, LightIcon } from "@shared-components/graphics/icons";
+import {
+  DarkIcon,
+  LightIcon,
+  SystemIcon,
+} from "@shared-components/graphics/icons";
 import { Tabs, TabsList, TabsTrigger } from "@shared-components/ui/tabs";
 
 export function ModeSelection() {
@@ -20,13 +24,12 @@ export function ModeSelection() {
       <select
         id="selectTheme"
         name="Theme selector"
-        className="border-separator rounded-md hover:border-highlight hover:text-highlight text-standard h-12 w-full border bg-transparent px-4 py-2 transition-all hover:border md:h-12 md:w-48"
+        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-standard h-12 w-full border bg-transparent px-4 py-2 transition-all md:h-12 md:w-48"
         value={resolvedTheme}
         onChange={handleThemeChange}
       >
         <option value="light">Light</option>
         <option value="dark">Dark</option>
-        <option value="system">System</option>
       </select>
     </div>
   );
@@ -161,6 +164,87 @@ export function ThemeModeSelector() {
             className="data-[state=active]:bg-standard text-sm md:text-xs"
           >
             {opt.text}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+    </Tabs>
+  );
+}
+
+export function ThemeModeIcon() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "system",
+  );
+  const element = document.documentElement;
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const options = [
+    {
+      value: "light",
+      text: "System",
+      icon: <LightIcon className="h-4 w-auto" />,
+    },
+    {
+      value: "dark",
+      text: "System",
+      icon: <DarkIcon className="h-4 w-auto" />,
+    },
+    {
+      value: "system",
+      text: "System",
+      icon: <SystemIcon className="h-4 w-auto" />,
+    },
+  ];
+
+  function onWindowMatch() {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && darkQuery.matches)
+    ) {
+      element.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+    }
+  }
+  onWindowMatch();
+
+  useEffect(() => {
+    switch (theme) {
+      case "dark":
+        element.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        break;
+      case "light":
+        element.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        break;
+      default:
+        localStorage.removeItem("theme");
+        onWindowMatch();
+        break;
+    }
+  }, [element.classList, onWindowMatch, theme]);
+
+  darkQuery.addEventListener("change", (e) => {
+    if (!("theme" in localStorage)) {
+      if (e.matches) {
+        element.classList.add("dark");
+      } else {
+        element.classList.remove("dark");
+      }
+    }
+  });
+
+  return (
+    <Tabs defaultValue="system" className="w-full md:w-28 rounded-full">
+      <TabsList className="grid w-full grid-cols-3 gap-2">
+        {options?.map((opt) => (
+          <TabsTrigger
+            key={opt.text}
+            onClick={() => setTheme(opt.value)}
+            value={opt.value}
+            className="data-[state=active]:bg-standard text-sm md:text-xs"
+          >
+            {opt.icon}
           </TabsTrigger>
         ))}
       </TabsList>

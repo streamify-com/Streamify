@@ -18,7 +18,7 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-white/80 backdrop-blur-xl dark:bg-black/80",
+      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50 backdrop-blur-md dark:bg-white/20",
       className,
     )}
     {...props}
@@ -42,9 +42,9 @@ const DialogContent = React.forwardRef<
     >
       {children}
       <DialogPrimitive.Close className="ring-background focus:ring-separator data-[state=open]:bg-hoverground data-[state=open]:text-standard absolute right-8 top-4 rounded-sm opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none md:hover:opacity-100">
-        <button className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-sm md:hidden">
+        <button className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-sm group">
           {/* <X className="h-5 w-5 text-highlight" /> */}
-          <Icons.close className="text-highlight z-50 h-5 w-5" />
+          <Icons.close className="text-standard md:group-hover:text-highlight group z-50 h-5 w-5 md:h-4 md:w-4" />
           <span className="sr-only">Close</span>
         </button>
       </DialogPrimitive.Close>

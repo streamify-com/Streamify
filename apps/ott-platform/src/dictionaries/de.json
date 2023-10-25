@@ -1,5 +1,5 @@
 {
-  "LocaleSwitcher": {
+  "locale-switcher": {
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
   },
@@ -15,6 +15,12 @@
     "cookie-policy": "Cookie-Richtlinie",
     "accept-all": "Akzeptiere alle",
     "only-necessary": "Nur notwendige"
+  },
+  "plus": {
+    "name": "Deutsches Plus"
+  },
+  "subscribe": {
+    "name": "Abonnieren"
   },
   "signin": {
     "card-title": "Anmelden",
@@ -190,6 +196,10 @@
     "support": {
       "name": "Support",
       "href": "/support"
+    },
+    "cancel-subscription": {
+      "name": "Vertrag kündigen",
+      "href": "/cancel-subscription"
     }
   },
   "header-platform": {

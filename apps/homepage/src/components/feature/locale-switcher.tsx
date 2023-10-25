@@ -8,7 +8,7 @@ import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 
 export default function LocaleSwitcher() {
-  const t = useTranslations("LocaleSwitcher");
+  const t = useTranslations("locale-switcher");
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const router = useRouter();

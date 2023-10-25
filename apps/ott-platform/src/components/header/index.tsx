@@ -26,8 +26,9 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@shared-components/ui/avatar";
-import { ModeSelection } from "@/components/mode-theme";
-import { LocaleSwitcher } from "@/components/locale-switcher";
+
+import { LocaleChooseIcon, LocaleSwitcher } from "@/components/locale-switcher";
+import { ModeSelection } from "@shared-components/components/mode-theme";
 
 interface HeaderProps {
   user: User | null;
@@ -60,17 +61,20 @@ export default function Header({ user }: HeaderProps) {
                 {user ? (
                   <></>
                 ) : (
-                  <Link
-                    href={t("signin.href")}
-                    className={cn(
-                      buttonVariants({
-                        variant: "intentionButton",
-                        size: "headerSize",
-                      }),
-                    )}
-                  >
-                    {t("signin.name")}
-                  </Link>
+                  <>
+                    <LocaleChooseIcon />
+                    <Link
+                      href={t("signin.href")}
+                      className={cn(
+                        buttonVariants({
+                          variant: "intentionButton",
+                          size: "headerSize",
+                        }),
+                      )}
+                    >
+                      {t("signin.name")}
+                    </Link>
+                  </>
                 )}
                 {user ? (
                   <DropdownMenu>

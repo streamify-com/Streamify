@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import { hasCookie, setCookie } from "cookies-next";
-import { Button } from "@shared-components/ui/button";
+import { Button, buttonVariants } from "@shared-components/ui/button";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
+import { cn } from "@shared-components/lib/utils";
 
 export default function Cookie() {
   const t = useTranslations("Cookie");
@@ -32,11 +33,16 @@ export default function Cookie() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 px-10 pb-10">
       <div className="bg-background ring-separator pointer-events-auto max-w-md rounded-md p-6 ring-1">
-        <p className="text-standard text-sm">
+        <p className="text-standard text-sm md:text-md">
           {t("description")}
           <Link
             href="/cookie-policy"
-            className="font-regular underline underline-offset-4"
+            className={cn(
+              buttonVariants({
+                variant: "linkButton",
+                size: "linkSize",
+              }),
+            )}
           >
             {t("cookie-policy")}
           </Link>
@@ -47,6 +53,7 @@ export default function Cookie() {
             onClick={acceptCookie}
             variant="primaryButton"
             size="headerSize"
+            className="md:w-full sm:text-md"
           >
             {t("accept-all")}
           </Button>
@@ -54,6 +61,7 @@ export default function Cookie() {
             onClick={declineCookie}
             variant="secondaryButton"
             size="headerSize"
+            className="md:w-full sm:text-md"
           >
             {t("only-necessary")}
           </Button>

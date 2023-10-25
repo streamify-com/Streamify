@@ -10,7 +10,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import { SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import { Separator } from "@shared-components/ui/separator";
-import { ModeSelection } from "@/components/mode-theme";
+import { ModeSelection } from "@shared-components/components/mode-theme";
 import type { User } from "@clerk/nextjs/dist/types/server";
 import { buttonVariants } from "@shared-components/ui/button";
 import {

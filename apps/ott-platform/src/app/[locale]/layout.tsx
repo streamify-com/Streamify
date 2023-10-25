@@ -1,7 +1,7 @@
 import "@shared-components/styles/globals.css";
 import type { Metadata } from "next";
 import { cn } from "@shared-components/lib/utils";
-import { ThemeProvider } from "@/components/mode-theme/theme-provider";
+
 import { Analytics } from "@shared-components/components/vercel-analytics";
 import { Toaster } from "@shared-components/ui/toaster";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -17,6 +17,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { deDE } from "@clerk/localizations";
 import { enUS } from "@clerk/localizations";
+import { ThemeProvider } from "@shared-components/components/theme-provider";
 
 interface RootLayoutProps {
   children: React.ReactNode;

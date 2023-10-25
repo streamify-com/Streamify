@@ -4,32 +4,15 @@ import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import { useTransition } from "react";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@shared-components/ui/alert-dialog";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-  SheetFooter,
-} from "@shared-components/ui/sheet";
-import { ScrollArea } from "@shared-components/ui/scroll-area";
 import { Button } from "@shared-components/ui/button";
 import {
   CircleFlagsDe,
   CircleFlagsUk,
 } from "@shared-components/graphics/flags";
+import { Icons } from "@shared-components/graphics/icons";
+import LocaleSelectionDialog from "./locale-selection-dialog";
+import { Dialog, DialogTrigger } from "@shared-components/ui/dialog";
+import MobileSelectionDialog from "./mobile-selection-dialog";
 
 const SUPPORTED_LOCALES = ["en", "de"];
 
@@ -45,7 +28,7 @@ function getFlagIconForLocale(locale: string) {
 }
 
 export function LocaleChoose() {
-  const t = useTranslations("LocaleSwitcher");
+  const t = useTranslations("locale-switcher");
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const router = useRouter();
@@ -59,88 +42,55 @@ export function LocaleChoose() {
 
   return (
     <>
-      <AlertDialog>
-        <AlertDialogTrigger asChild className="hidden md:flex">
+      <Dialog>
+        <DialogTrigger asChild className="hidden md:flex">
           <Button variant="languageButton" size="languageSize">
             {getFlagIconForLocale(locale)}
             <span className="ml-2.5">{t("locale", { locale })}</span>
           </Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("label")}</AlertDialogTitle>
-            <AlertDialogDescription>
-              <div className="grid grid-cols-1 gap-2">
-                {SUPPORTED_LOCALES.map((cur) => (
-                  <Button
-                    key={cur}
-                    disabled={isPending}
-                    onClick={() => handleLocaleChange(cur)}
-                    variant="languageButton"
-                    size="languageSize"
-                  >
-                    {getFlagIconForLocale(cur)}
-                    <span className="ml-2.5">
-                      {t("locale", { locale: cur })}
-                    </span>
-                  </Button>
-                ))}
-              </div>
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-      <Sheet>
-        <SheetTrigger asChild className="flex md:hidden">
+        </DialogTrigger>
+        <LocaleSelectionDialog />
+      </Dialog>
+      <MobileSelectionDialog />
+    </>
+  );
+}
+
+export function LocaleChooseIcon() {
+  const t = useTranslations("locale-switcher");
+  const [isPending, startTransition] = useTransition();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  function handleLocaleChange(newLocale: string) {
+    startTransition(() => {
+      router.replace(pathname, { locale: newLocale });
+    });
+  }
+
+  return (
+    <>
+      <Dialog>
+        <DialogTrigger asChild className="hidden md:flex">
           <Button
             variant="languageButton"
-            size="languageSize"
-            className="justify-center"
+            size="avatarSize"
+            className="justify-center px-4 w-20 h-12 md:h-9 group"
           >
             {getFlagIconForLocale(locale)}
-            <span className="ml-2.5">{t("locale", { locale })}</span>
+            <Icons.chevronDown className="ml-2.5 h-4 text-standard md:group-hover:text-highlight group" />
           </Button>
-        </SheetTrigger>
-        <SheetContent
-          title={t("label")}
-          side="bottom"
-          className="border-separator h-[50%] rounded-t-lg border-t text-standard"
-        >
-          <ScrollArea className="mt-10 h-[90%] w-full">
-            {/* <SheetHeader className="mt-2">
-              <SheetTitle className="text-highlight">Edit profile</SheetTitle>
-              <SheetDescription className="text-highlight">
-                Make changes to your profile here. Click save when you&apos;re
-                done.
-              </SheetDescription>
-            </SheetHeader> */}
-            <div className="grid gap-4">
-              {SUPPORTED_LOCALES.map((cur) => (
-                <Button
-                  key={cur}
-                  disabled={isPending}
-                  onClick={() => handleLocaleChange(cur)}
-                  variant="languageButton"
-                  size="languageSize"
-                >
-                  {getFlagIconForLocale(cur)}
-                  <span className="ml-3">{t("locale", { locale: cur })}</span>
-                </Button>
-              ))}
-            </div>
-          </ScrollArea>
-        </SheetContent>
-      </Sheet>
+        </DialogTrigger>
+        <LocaleSelectionDialog />
+      </Dialog>
+      <MobileSelectionDialog />
     </>
   );
 }
 
 export function LocaleSwitcher() {
-  const t = useTranslations("LocaleSwitcher");
+  const t = useTranslations("locale-switcher");
   const [isPending, startTransition] = useTransition();
   const locale = useLocale();
   const router = useRouter();

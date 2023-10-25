@@ -1,5 +1,5 @@
 {
-  "LocaleSwitcher": {
+  "locale-switcher": {
     "label": "Change language",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}"
   },
@@ -15,6 +15,12 @@
     "cookie-policy": "Cookie Policy",
     "accept-all": "Accept all",
     "only-necessary": "Only necessary"
+  },
+  "plus": {
+    "name": "English Plus"
+  },
+  "subscribe": {
+    "name": "Subscribe"
   },
   "signin": {
     "card-title": "Sign in",
@@ -190,6 +196,10 @@
     "support": {
       "name": "Support",
       "href": "/support"
+    },
+    "cancel-subscription": {
+      "name": "Cancel subscription",
+      "href": "/cancel-subscription"
     }
   },
   "header-platform": {
