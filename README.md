@@ -44,12 +44,14 @@
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/) `Version +18`
-- [TypeScript](http://typescriptlang.org) `Version +4`
+- [pnpm](https://pnpm.io/) `Version +6`
+- [Turbo](https://turbo.build/) `Version +1.10`
+- [TypeScript](http://typescriptlang.org) `Version +5`
 
 Check versions:
 
 ```
-node -v && tsc -v
+node -v && pnpm -v && turbo --version && tsc -v
 ```
 
 ### Turbo configuration
@@ -57,7 +59,7 @@ node -v && tsc -v
 This repository is a monorepo using [Turborepo](https://turbo.build/repo). To install Turbo run:
 
 ```
-yarn global add turbo
+pnpm install turbo --global
 ```
 
 ## Installation
@@ -65,13 +67,13 @@ yarn global add turbo
 Install all dependencies and build all apps and packages
 
 ```
-yarn setup
+pnpm install && pnpm build
 ```
 
 Develop all apps and packages
 
 ```
-yarn run dev
+pnpm dev
 ```
 
 ### Remote Caching
