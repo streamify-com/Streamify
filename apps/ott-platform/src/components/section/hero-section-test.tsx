@@ -11,7 +11,7 @@ import {
 } from "@/components/locale-switcher";
 import InstallPWA from "@shared-components/components/install-pwa";
 import { useTranslations } from "next-intl";
-import { ThemeModeIcon } from "@shared-components/components/mode-theme";
+import { ThemeModeIcon } from "@/components/mode-theme";
 
 export default function HeroSectionTest() {
   const t = useTranslations("signin");
@@ -20,7 +20,9 @@ export default function HeroSectionTest() {
       <PlatformContainer>
         <div className="grid grid-cols-1 gap-2 gap-y-4">
           <InstallPWA />
-          <ThemeModeIcon />
+          <div className="md:w-48 w-full">
+            <ThemeModeIcon />
+          </div>
           <LocaleChooseIcon />
           <LocaleChoose />
           <LocaleSwitcher />

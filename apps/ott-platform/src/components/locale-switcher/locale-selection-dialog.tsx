@@ -44,7 +44,7 @@ export default function LocaleSelectionDialog() {
       <DialogHeader>
         <DialogTitle>{t("label")}</DialogTitle>
       </DialogHeader>
-      <div className="grid grid-cols-1 gap-2">
+      <div className="grid grid-cols-1 gap-2 mt-4">
         {SUPPORTED_LOCALES.map((cur) => (
           <Button
             key={cur}
@@ -54,7 +54,7 @@ export default function LocaleSelectionDialog() {
             size="languageSize"
             className={
               cur === locale
-                ? "justify-between md:w-full text-standard"
+                ? "justify-between md:w-full text-primary"
                 : "justify-between md:w-full text-highlight"
             }
           >

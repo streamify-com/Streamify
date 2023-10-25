@@ -64,7 +64,7 @@ export default function MobileSelectionDialog() {
                 size="languageSize"
                 className={
                   cur === locale
-                    ? "justify-between md:w-full text-standard"
+                    ? "justify-between md:w-full text-primary"
                     : "justify-between md:w-full text-highlight"
                 }
               >

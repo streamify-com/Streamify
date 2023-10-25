@@ -18,7 +18,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import { Input } from "@shared-components/ui/input";
 import { PrimaryLogo } from "@shared-components/graphics/logo";
 import { HomepageContainer } from "@shared-components/ui/container";
-import { ModeSelection } from "@/components/feature/mode-theme";
+import { ModeSelection } from "@/components/mode-theme";
 import LocaleSwitcher from "@/components/feature/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";

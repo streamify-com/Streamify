@@ -10,8 +10,10 @@ import {
   SystemIcon,
 } from "@shared-components/graphics/icons";
 import { Tabs, TabsList, TabsTrigger } from "@shared-components/ui/tabs";
+import { useTranslations } from "next-intl";
 
 export function ModeSelection() {
+  const t = useTranslations("mode-theme");
   const { setTheme, resolvedTheme } = useTheme();
 
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -28,8 +30,8 @@ export function ModeSelection() {
         value={resolvedTheme}
         onChange={handleThemeChange}
       >
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
+        <option value="light">{t("light")}</option>
+        <option value="dark">{t("dark")}</option>
       </select>
     </div>
   );
@@ -94,6 +96,7 @@ export function ModeToggle() {
 }
 
 export function ThemeModeSelector() {
+  const t = useTranslations("mode-theme");
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "system",
   );
@@ -102,15 +105,18 @@ export function ThemeModeSelector() {
   const options = [
     {
       value: "light",
-      text: "Light",
+      position: "light",
+      text: <>{t("light")}</>,
     },
     {
       value: "dark",
-      text: "Dark",
+      position: "dark",
+      text: <>{t("dark")}</>,
     },
     {
       value: "system",
-      text: "System",
+      position: "system",
+      text: <>{t("system")}</>,
     },
   ];
 
@@ -158,7 +164,7 @@ export function ThemeModeSelector() {
       <TabsList className="grid w-full grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger
-            key={opt.text}
+            key={opt.position}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
             className="data-[state=active]:bg-standard text-sm md:text-xs"
@@ -180,12 +186,12 @@ export function ThemeModeIcon() {
   const options = [
     {
       value: "light",
-      text: "System",
+      text: "Light",
       icon: <LightIcon className="h-4 w-auto" />,
     },
     {
       value: "dark",
-      text: "System",
+      text: "Dark",
       icon: <DarkIcon className="h-4 w-auto" />,
     },
     {

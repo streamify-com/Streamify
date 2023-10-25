@@ -3,6 +3,11 @@
     "label": "Change language",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}"
   },
+  "mode-theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "go-back": {
     "name": "Back"
   },
@@ -227,9 +232,17 @@
       "name": "Subscribe",
       "href": "/subscribe"
     },
+    "signup": {
+      "name": "Create acccount",
+      "href": "/signup"
+    },
     "signin": {
       "name": "Sign in",
       "href": "/signin"
+    },
+    "signout": {
+      "name": "Sign out",
+      "href": "/signout"
     },
     "dropdown": {
       "greeting": "Hi,",

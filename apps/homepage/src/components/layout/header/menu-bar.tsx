@@ -15,7 +15,7 @@ import {
 import { Separator } from "@shared-components/ui/separator";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/feature/locale-switcher";
-import { ModeSelection } from "@/components/feature/mode-theme";
+import { ModeSelection } from "@/components/mode-theme";
 import {
   CopyCard,
   DiscordCard,

@@ -5,7 +5,7 @@ import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import { platformConfig } from "@/config/platform";
 import { cn } from "@shared-components/lib/utils";
-import NavigationMain from "@/components/header/navigation-main";
+import NavigationMain from "./navigation-main";
 import { PrimaryLogo, SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import type { User } from "@clerk/nextjs/dist/types/server";
@@ -28,7 +28,7 @@ import {
 } from "@shared-components/ui/avatar";
 
 import { LocaleChooseIcon, LocaleSwitcher } from "@/components/locale-switcher";
-import { ModeSelection } from "@shared-components/components/mode-theme";
+import { ThemeModeSelector } from "@/components/mode-theme";
 
 interface HeaderProps {
   user: User | null;
@@ -197,7 +197,7 @@ export default function Header({ user }: HeaderProps) {
                       </DropdownMenuItem>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuItem asChild>
-                        <ModeSelection />
+                        <ThemeModeSelector />
                       </DropdownMenuItem>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuItem asChild>
