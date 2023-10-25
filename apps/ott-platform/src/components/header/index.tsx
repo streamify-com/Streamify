@@ -5,7 +5,7 @@ import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import { platformConfig } from "@/config/platform";
 import { cn } from "@shared-components/lib/utils";
-import NavigationMain from "@/components/header/navigation-main";
+import NavigationMain from "./navigation-main";
 import { PrimaryLogo, SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import type { User } from "@clerk/nextjs/dist/types/server";
@@ -28,7 +28,7 @@ import {
 } from "@shared-components/ui/avatar";
 
 import { LocaleChooseIcon, LocaleSwitcher } from "@/components/locale-switcher";
-import { ModeSelection } from "@shared-components/components/mode-theme";
+import { ThemeModeSelector } from "@/components/mode-theme";
 
 interface HeaderProps {
   user: User | null;
@@ -81,7 +81,7 @@ export default function Header({ user }: HeaderProps) {
                     <DropdownMenuTrigger asChild>
                       <Button variant="avatarButton" size="avatarSize">
                         <p className="font-regular text-highlight text-sm leading-none">
-                          Hallo,&nbsp;
+                          {t("dropdown.greeting")}&nbsp;
                         </p>
                         <p className="text-highlight text-sm font-bold leading-none">
                           {user.firstName}&nbsp;{user.lastName}
@@ -112,19 +112,19 @@ export default function Header({ user }: HeaderProps) {
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuGroup>
-                        {/* <DropdownMenuItem asChild>
+                        <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="hover:bg-hoverground my-2 rounded-md"
+                            className="md:hover:bg-hoverground md:hover:text-highlight my-2 rounded-md text-sm"
                           >
                             <Icons.AccountIcon
                               className="mr-4 h-4 w-4"
                               aria-hidden="true"
                             />
-                            Account
-                            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
+                            {t("dropdown.account")}
+                            {/* <DropdownMenuShortcut>⌘A</DropdownMenuShortcut> */}
                           </Link>
-                        </DropdownMenuItem> */}
+                        </DropdownMenuItem>
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/subscription"
@@ -134,7 +134,7 @@ export default function Header({ user }: HeaderProps) {
                               className="mr-4 h-4 w-4"
                               aria-hidden="true"
                             />
-                            Subscription
+                            {t("dropdown.subscription")}
                             {/* <DropdownMenuShortcut>⌘A</DropdownMenuShortcut> */}
                           </Link>
                         </DropdownMenuItem>
@@ -186,7 +186,7 @@ export default function Header({ user }: HeaderProps) {
                               className="mr-4 h-4 w-4"
                               aria-hidden="true"
                             />
-                            Support
+                            {t("dropdown.support")}
                             {/* <DropdownMenuShortcut>⌘A</DropdownMenuShortcut> */}
                           </Link>
                         </DropdownMenuItem>
@@ -197,7 +197,7 @@ export default function Header({ user }: HeaderProps) {
                       </DropdownMenuItem>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuItem asChild>
-                        <ModeSelection />
+                        <ThemeModeSelector />
                       </DropdownMenuItem>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuItem asChild>
@@ -209,7 +209,7 @@ export default function Header({ user }: HeaderProps) {
                             className="mr-4 h-4 w-4"
                             aria-hidden="true"
                           />
-                          Sign out
+                          {t("dropdown.signout")}
                           {/* <DropdownMenuShortcut>⌘A</DropdownMenuShortcut> */}
                         </Link>
                       </DropdownMenuItem>

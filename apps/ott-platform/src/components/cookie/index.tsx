@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@shared-components/lib/utils";
 
 export default function Cookie() {
-  const t = useTranslations("Cookie");
+  const t = useTranslations("cookie");
 
   const [showConsent, setShowConsent] = useState<boolean>(true);
 
@@ -41,7 +41,8 @@ export default function Cookie() {
               buttonVariants({
                 variant: "linkButton",
                 size: "linkSize",
-              }), "text-sm md:text-sm"
+              }),
+              "text-sm md:text-sm",
             )}
           >
             {t("cookie-policy")}

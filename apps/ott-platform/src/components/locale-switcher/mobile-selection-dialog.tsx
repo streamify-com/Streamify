@@ -6,17 +6,9 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import { useTransition } from "react";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-  SheetFooter,
-} from "@shared-components/ui/sheet";
+import { Sheet, SheetTrigger, SheetContent } from "@shared-components/ui/sheet";
 import { ScrollArea } from "@shared-components/ui/scroll-area";
-import { Separator } from "@shared-components/ui/separator";
+import { Icons } from "@shared-components/graphics/icons";
 
 const SUPPORTED_LOCALES = ["en", "de"];
 
@@ -62,13 +54,6 @@ export default function MobileSelectionDialog() {
         className="border-separator h-[65%] rounded-t-lg border-t text-standard"
       >
         <ScrollArea className="mt-10 h-[90%] w-full border-t border-separator">
-          {/* <SheetHeader className="mt-2">
-              <SheetTitle className="text-highlight">Edit profile</SheetTitle>
-              <SheetDescription className="text-highlight">
-                Make changes to your profile here. Click save when you&apos;re
-                done.
-              </SheetDescription>
-            </SheetHeader> */}
           <div className="grid gap-4 mt-4">
             {SUPPORTED_LOCALES.map((cur) => (
               <Button
@@ -77,9 +62,17 @@ export default function MobileSelectionDialog() {
                 onClick={() => handleLocaleChange(cur)}
                 variant="languageButton"
                 size="languageSize"
+                className={
+                  cur === locale
+                    ? "justify-between md:w-full text-primary"
+                    : "justify-between md:w-full text-highlight"
+                }
               >
-                {getFlagIconForLocale(cur)}
-                <span className="ml-3">{t("locale", { locale: cur })}</span>
+                <p className="flex items-center">
+                  {getFlagIconForLocale(cur)}
+                  <span className="ml-3">{t("locale", { locale: cur })}</span>
+                </p>
+                {cur === locale && <Icons.check className="ml-2 h-4" />}
               </Button>
             ))}
           </div>

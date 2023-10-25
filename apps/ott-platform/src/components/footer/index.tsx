@@ -27,7 +27,7 @@ import {
 } from "@shared-components/graphics/logo";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
-import { ThemeModeSelector } from "@shared-components/components/mode-theme";
+import { ThemeModeSelector } from "@/components/mode-theme";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;

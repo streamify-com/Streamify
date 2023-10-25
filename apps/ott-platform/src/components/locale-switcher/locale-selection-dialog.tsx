@@ -8,9 +8,10 @@ import {
   CircleFlagsDe,
   CircleFlagsUk,
 } from "@shared-components/graphics/flags";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import { useTransition } from "react";
+import { Icons } from "@shared-components/graphics/icons";
 
 const SUPPORTED_LOCALES = ["en", "de"];
 
@@ -30,6 +31,7 @@ export default function LocaleSelectionDialog() {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
 
   function handleLocaleChange(newLocale: string) {
     startTransition(() => {
@@ -41,11 +43,8 @@ export default function LocaleSelectionDialog() {
     <DialogContent className="sm:max-w-[425px]">
       <DialogHeader>
         <DialogTitle>{t("label")}</DialogTitle>
-        {/* <DialogDescription>
-            Make changes to your profi
-          </DialogDescription> */}
       </DialogHeader>
-      <div className="grid grid-cols-1 gap-2">
+      <div className="grid grid-cols-1 gap-2 mt-4">
         {SUPPORTED_LOCALES.map((cur) => (
           <Button
             key={cur}
@@ -53,15 +52,20 @@ export default function LocaleSelectionDialog() {
             onClick={() => handleLocaleChange(cur)}
             variant="languageButton"
             size="languageSize"
+            className={
+              cur === locale
+                ? "justify-between md:w-full text-primary"
+                : "justify-between md:w-full text-highlight"
+            }
           >
-            {getFlagIconForLocale(cur)}
-            <span className="ml-2.5">{t("locale", { locale: cur })}</span>
+            <p className="flex items-center">
+              {getFlagIconForLocale(cur)}
+              <span className="ml-3">{t("locale", { locale: cur })}</span>
+            </p>
+            {cur === locale && <Icons.check className="ml-2 h-4" />}
           </Button>
         ))}
       </div>
-      {/* <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter> */}
     </DialogContent>
   );
 }

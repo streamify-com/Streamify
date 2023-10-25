@@ -7,7 +7,7 @@ import { MainNavItem } from "@shared-components/types";
 import { cn } from "@shared-components/lib/utils";
 import { Icons } from "@shared-components/graphics/icons";
 import { HomepageContainer } from "@shared-components/ui/container";
-import { ModeSelection } from "@shared-components/components/mode-theme";
+
 import { Separator } from "@shared-components/ui/separator";
 import type { User } from "@clerk/nextjs/dist/types/server";
 import { buttonVariants } from "@shared-components/ui/button";
@@ -18,6 +18,7 @@ import {
 } from "@shared-components/ui/avatar";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/feature/locale-switcher";
+import { ModeSelection } from "@/components/mode-theme";
 
 interface MainNavProps {
   items?: MainNavItem[];

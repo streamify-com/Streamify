@@ -61,7 +61,7 @@ export function Header({ user }: HeaderProps) {
       className={`sticky top-0 z-40 ${
         scrolled
           ? "border-separator border-b bg-white/60 backdrop-blur-xl dark:bg-black/60"
-          : "md:bg-transparent bg-white border-separator border-b md:border-transparent"
+          : "md:bg-transparent bg-background border-separator border-b md:border-transparent"
       } `}
     >
       {/* <nav

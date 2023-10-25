@@ -29,22 +29,17 @@ function getFlagIconForLocale(locale: string) {
 
 export function LocaleChoose() {
   const t = useTranslations("locale-switcher");
-  const [isPending, startTransition] = useTransition();
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  function handleLocaleChange(newLocale: string) {
-    startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
-    });
-  }
 
   return (
     <>
       <Dialog>
         <DialogTrigger asChild className="hidden md:flex">
-          <Button variant="languageButton" size="languageSize">
+          <Button
+            variant="languageButton"
+            size="languageSize"
+            className="md:text-sm"
+          >
             {getFlagIconForLocale(locale)}
             <span className="ml-2.5">{t("locale", { locale })}</span>
           </Button>
@@ -57,17 +52,7 @@ export function LocaleChoose() {
 }
 
 export function LocaleChooseIcon() {
-  const t = useTranslations("locale-switcher");
-  const [isPending, startTransition] = useTransition();
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  function handleLocaleChange(newLocale: string) {
-    startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
-    });
-  }
 
   return (
     <>
@@ -111,7 +96,7 @@ export function LocaleSwitcher() {
     >
       <p className="sr-only">{t("label")}</p>
       <select
-        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-standard h-12 w-full border bg-transparent px-4 py-2 transition-all md:h-12 md:w-48"
+        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-md md:text-sm h-12 w-full border bg-transparent transition-all md:h-10 md:w-48"
         defaultValue={locale}
         disabled={isPending}
         onChange={(e) => handleLocaleChange(e.target.value)}

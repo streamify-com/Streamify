@@ -10,7 +10,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import { SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import { Separator } from "@shared-components/ui/separator";
-import { ModeSelection } from "@shared-components/components/mode-theme";
+import { ThemeModeIcon } from "@/components/mode-theme";
 import type { User } from "@clerk/nextjs/dist/types/server";
 import { buttonVariants } from "@shared-components/ui/button";
 import {
@@ -203,7 +203,7 @@ export default function NavigationMain({
                   <Icons.chevronRight />
                 </Link>
               </nav>
-              <Separator className="border-separator my-2 border-t" />
+              <Separator className="my-2" />
               <div>
                 <ul className="bottom-20 flex flex-col gap-4">
                   {user ? (
@@ -229,7 +229,7 @@ export default function NavigationMain({
                     </Link>
                   ) : (
                     <Link
-                      href="/signin"
+                      href={t("signin.href")}
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
@@ -237,13 +237,13 @@ export default function NavigationMain({
                         }),
                       )}
                     >
-                      Sign in
+                      {t("signin.name")}
                     </Link>
                   )}
-                  <Separator className="border-separator my-2 border-t" />
+                  <Separator className="my-2" />
                   {user ? (
                     <Link
-                      href="/signout"
+                      href={t("signout.href")}
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
@@ -255,11 +255,11 @@ export default function NavigationMain({
                         className="mr-2 h-4 w-4"
                         aria-hidden="true"
                       />
-                      Sign out
+                      {t("signout.name")}
                     </Link>
                   ) : (
                     <Link
-                      href="/signup"
+                      href={t("signup.href")}
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
@@ -267,7 +267,7 @@ export default function NavigationMain({
                         }),
                       )}
                     >
-                      Create account
+                      {t("signup.name")}
                     </Link>
                   )}
                   {user ? (
@@ -297,9 +297,9 @@ export default function NavigationMain({
                   )}
                 </ul>
               </div>
-              <Separator className="border-separator my-2 border-t" />
+              <Separator className="my-2" />
               <LocaleSwitcher />
-              <ModeSelection />
+              <ThemeModeIcon />
               {children}
             </div>
           </PlatformContainer>

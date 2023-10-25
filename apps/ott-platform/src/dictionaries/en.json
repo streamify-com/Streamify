@@ -3,6 +3,11 @@
     "label": "Change language",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}"
   },
+  "mode-theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "go-back": {
     "name": "Back"
   },
@@ -10,7 +15,7 @@
     "name": "Back to homepage",
     "href": "/home"
   },
-  "Cookie": {
+  "cookie": {
     "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
     "cookie-policy": "Cookie Policy",
     "accept-all": "Accept all",
@@ -227,9 +232,24 @@
       "name": "Subscribe",
       "href": "/subscribe"
     },
+    "signup": {
+      "name": "Create acccount",
+      "href": "/signup"
+    },
     "signin": {
       "name": "Sign in",
       "href": "/signin"
+    },
+    "signout": {
+      "name": "Sign out",
+      "href": "/signout"
+    },
+    "dropdown": {
+      "greeting": "Hi,",
+      "account": "Account",
+      "subscription": "Subscription",
+      "support": "Support",
+      "signout": "Sign out"
     }
   }
 }
