@@ -18,7 +18,7 @@ export function Banner({ firstButtonName, secondButtonName }: BannerProps) {
   const { DemoModal, setShowDemoModal } = useDemoModal();
   return (
     <div className="mt-10 flex flex-col items-center gap-4 md:flex-row">
-      <DemoModal />
+      <DemoModal>Hi</DemoModal>
       <Link
         href="#"
         onClick={() => setShowDemoModal(true)}

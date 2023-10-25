@@ -1,0 +1,235 @@
+{
+  "locale-switcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}"
+  },
+  "go-back": {
+    "name": "Back"
+  },
+  "back-to-homepage": {
+    "name": "Back to homepage",
+    "href": "/home"
+  },
+  "Cookie": {
+    "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
+    "cookie-policy": "Cookie Policy",
+    "accept-all": "Accept all",
+    "only-necessary": "Only necessary"
+  },
+  "plus": {
+    "name": "English Plus"
+  },
+  "subscribe": {
+    "name": "Subscribe"
+  },
+  "signin": {
+    "card-title": "Sign in",
+    "card-description": "Not registered?",
+    "alternative": {
+      "name": "Sign up",
+      "href": "/signup"
+    },
+    "or-continue-with": "Or continue with",
+    "email": "Email",
+    "password": "Password",
+    "sign-in": "Sign in",
+    "reset-password": "Reset password",
+    "previous-step": "Previous step"
+  },
+  "reset-password": {
+    "card-title": "Reset password",
+    "card-description": "Enter your email address and we will send you a verification code.",
+    "password": "Password",
+    "input-placeholder": "Email",
+    "form-button": "Continue",
+    "previous-step": "Previous step",
+    "form-button-description": "Continue to reset password verification."
+  },
+  "step-2": {
+    "card-title": "Verify new password",
+    "card-description": "Choose a new password and paste the code you received in your mailbox.",
+    "password-form-label": "Choose new password",
+    "confirmation-form-label": "Enter new password again",
+    "code-form-label": "Code",
+    "verify-code-form-label": "6-digit code",
+    "form-button": "Reset password",
+    "previous-step": "Previous step"
+  },
+  "signout": {
+    "card-title": "Sign out",
+    "card-description": "Are you sure you want to sign out?",
+    "cancel-button": "Cancel"
+  },
+  "signup": {
+    "card-title": "Sign up",
+    "step-1-of-5": "Step 1 of 5",
+    "card-description": "Already have an account?",
+    "alternative": {
+      "name": "Sign in",
+      "href": "/signin"
+    },
+    "or-continue-with": "or continue with",
+    "first-name": "First name",
+    "last-name": "Last name",
+    "email": "Email",
+    "password": "Password",
+    "terms-and-conditions": "Terms of Services",
+    "terms-and-conditions-header": "Accept terms and conditions",
+    "terms-and-conditions-description-part-1": "By signing up you accept to our",
+    "terms-and-conditions-description-part-2": ".",
+    "privacy-policy": "Privacy policy",
+    "and": "and",
+    "form-button": "Continue",
+    "previous-step": "Previous step"
+  },
+  "verify": {
+    "card-title": "Verify email",
+    "card-description": "A verification code was sent to you by email.",
+    "form-label": "Verification Code",
+    "verify-code-form-label": "6-digit code",
+    "form-button": "Create account",
+    "previous-step": "Previous step"
+  },
+  "footer-declaration": {
+    "company": "Streamify",
+    "all-rights-reserved": "All rights reserved."
+  },
+  "footer-payment": {
+    "cancel-subscription": "Cancel subscription",
+    "href": "/cancel-subscription"
+  },
+  "footer-homepage": {
+    "solutions": {
+      "name": "Solutions",
+      "studio": {
+        "name": "Studio",
+        "href": "/streamify-studio"
+      },
+      "ott-platform": {
+        "name": "Over-the-top platform",
+        "href": "/streamify-ott-platform"
+      },
+      "analytics": {
+        "name": "Analytics",
+        "href": "/streamify-analytics"
+      },
+      "atlas": {
+        "name": "Atlas",
+        "href": "/streamify-atlas"
+      }
+    },
+    "support": {
+      "name": "Support",
+      "pricing": {
+        "name": "Pricing",
+        "href": "/pricing"
+      },
+      "documentation": {
+        "name": "Documentation",
+        "href": "/documentation"
+      },
+      "guides": {
+        "name": "Guides",
+        "href": "/guides"
+      },
+      "programs": {
+        "name": "Programs",
+        "href": "/programs"
+      }
+    },
+    "company": {
+      "name": "Company",
+      "about-us": {
+        "name": "About us",
+        "href": "/about-us"
+      },
+      "blog": {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      "jobs": {
+        "name": "Jobs",
+        "href": "/jobs"
+      },
+      "partners": {
+        "name": "Partners",
+        "href": "/partners"
+      }
+    },
+    "legal": {
+      "name": "Legal",
+      "terms-of-services": {
+        "name": "Terms of services",
+        "href": "/terms-of-services"
+      },
+      "privacy-policy": {
+        "name": "Privacy policy",
+        "href": "/privacy-policy"
+      },
+      "cookie-policy": {
+        "name": "Cookie policy",
+        "href": "/cookie-policy"
+      },
+      "imprint": {
+        "name": "Imprint",
+        "href": "/imprint"
+      }
+    }
+  },
+  "footer-platform": {
+    "terms-of-services": {
+      "name": "Terms of services",
+      "href": "/terms-of-services"
+    },
+    "privacy-policy": {
+      "name": "Privacy policy",
+      "href": "/privacy-policy"
+    },
+    "cookie-policy": {
+      "name": "Cookie policy",
+      "href": "/cookie-policy"
+    },
+    "imprint": {
+      "name": "Imprint",
+      "href": "/imprint"
+    },
+    "support": {
+      "name": "Support",
+      "href": "/support"
+    },
+    "cancel-subscription": {
+      "name": "Cancel subscription",
+      "href": "/cancel-subscription"
+    }
+  },
+  "header-platform": {
+    "home": {
+      "name": "Home",
+      "href": "/home"
+    },
+    "matches": {
+      "name": "Matches",
+      "href": "/matches"
+    },
+    "players": {
+      "name": "Players",
+      "href": "/players"
+    },
+    "plus": {
+      "name": "Plus",
+      "href": "/plus"
+    },
+    "live": {
+      "name": "Live",
+      "href": "/live"
+    },
+    "call-to-action": {
+      "name": "Subscribe",
+      "href": "/subscribe"
+    },
+    "signin": {
+      "name": "Sign in",
+      "href": "/signin"
+    }
+  }
+}

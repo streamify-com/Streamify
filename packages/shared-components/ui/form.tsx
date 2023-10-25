@@ -87,12 +87,12 @@ const FormLabel = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
 >(({ className, ...props }, ref) => {
-  const { error, formItemId } = useFormField();
+  const { formItemId } = useFormField();
 
   return (
     <Label
       ref={ref}
-      className={cn(error && "text-destructive", className)}
+      className={cn(className)}
       htmlFor={formItemId}
       {...props}
     />
@@ -133,7 +133,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-sm text-muted-foreground", className)}
+      className={cn("text-standard text-sm", className)}
       {...props}
     />
   );
@@ -155,7 +155,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-sm font-medium text-destructive", className)}
+      className={cn("text-primary font-regular text-sm", className)}
       {...props}
     >
       {body}
@@ -163,6 +163,32 @@ const FormMessage = React.forwardRef<
   );
 });
 FormMessage.displayName = "FormMessage";
+
+const UncontrolledFormMessage = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement> & {
+    message?: string;
+  }
+>(({ className, children, message, ...props }, ref) => {
+  const { formMessageId } = useFormField();
+  const body = message ? String(message) : children;
+
+  if (!body) {
+    return null;
+  }
+
+  return (
+    <p
+      ref={ref}
+      id={formMessageId}
+      className={cn("text-standard text-md font-regular", className)}
+      {...props}
+    >
+      {body}
+    </p>
+  );
+});
+UncontrolledFormMessage.displayName = "UncontrolledFormMessage";
 
 export {
   useFormField,
@@ -172,5 +198,6 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
+  UncontrolledFormMessage,
   FormField,
 };

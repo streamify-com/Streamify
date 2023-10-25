@@ -17,7 +17,7 @@
     "strict": false,
     "target": "esnext",
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./src/*"],
       "@shared-components/*": ["../../packages/shared-components/*"],
       "@shared-components/styles/*": [
         "../../packages/shared-components/styles/*"

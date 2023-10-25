@@ -8,9 +8,9 @@ export function Toaster() {
       position="bottom-right"
       toastOptions={{
         style: {
-          background: "rgba(var(--background))",
-          color: "rgba(var(--standard))",
-          border: "1px solid rgba(var(--border))",
+          background: "rgba(var(--active))",
+          color: "rgba(var(--background))",
+          border: "1px solid rgba(var(--separator))",
         },
       }}
     />

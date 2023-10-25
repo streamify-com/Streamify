@@ -3,9 +3,8 @@
 import * as React from "react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
-import { X } from "lucide-react";
-
 import { cn } from "@shared-components/lib/utils";
+import { Icons } from "@shared-components/graphics/icons";
 
 const Sheet = SheetPrimitive.Root;
 
@@ -24,7 +23,7 @@ const SheetOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/70",
+      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50 backdrop-blur-md dark:bg-black/20",
       className,
     )}
     {...props}
@@ -68,15 +67,12 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <div className="absolute left-8 top-4 block sm:hidden">
-        {/* <Link href="/" className="items-center space-x-2">
-          <PrimaryLogo className="text-primary h-7 w-auto md:w-auto" />
-        </Link> */}
-        <span className="text-highlight">{title}</span>
+      <div className="absolute left-8 top-5 block sm:hidden">
+        <span className="text-standard">{title}</span>
       </div>
       <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute right-8 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
-        <button className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-sm md:hidden">
-          <X className="h-5 w-5" />
+        <button className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-sm">
+          <Icons.close className="h-5 w-5" />
           <span className="sr-only">Close</span>
         </button>
       </SheetPrimitive.Close>
@@ -116,7 +112,7 @@ const SheetTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
     ref={ref}
-    className={cn("text-foreground text-lg font-bold", className)}
+    className={cn("text-highlight text-lg font-bold", className)}
     {...props}
   />
 ));
@@ -128,7 +124,7 @@ const SheetDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Description
     ref={ref}
-    className={cn("text-foreground text-sm", className)}
+    className={cn("text-standard text-sm", className)}
     {...props}
   />
 ));

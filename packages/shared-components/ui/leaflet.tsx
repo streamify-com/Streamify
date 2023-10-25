@@ -2,8 +2,7 @@
 
 import { useEffect, useRef, ReactNode, Dispatch, SetStateAction } from "react";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import { cn } from "@shared-components/lib/utils";
-import { Button, buttonVariants } from "@shared-components/ui/button";
+import { Button } from "@shared-components/ui/button";
 
 export default function Leaflet({
   setShow,
@@ -44,7 +43,7 @@ export default function Leaflet({
       <motion.div
         ref={leafletRef}
         key="leaflet"
-        className="bg-background group fixed inset-x-0 bottom-0 h-[90%] z-50 w-screen pb-5 sm:hidden shadow-lg cursor-grab active:cursor-grabbing"
+        className="bg-background group fixed inset-x-0 bottom-0 z-50 h-[90%] w-screen cursor-grab rounded-t-lg pb-5 shadow-md drop-shadow-md active:cursor-grabbing sm:hidden"
         initial={{ y: "100%" }}
         animate={controls}
         exit={{ y: "100%" }}
@@ -57,27 +56,23 @@ export default function Leaflet({
       >
         <Button
           onClick={closeLeaflet}
-          className={cn(
-            buttonVariants({
-              variant: "menuButton",
-              size: "menuSize",
-            }),
-            "absolute uppercase bg-background hover:bg-transparent border border-separator hover:border-transparent text-xs right-0 top-0 z-50 mr-6 mt-2 h-7 w-16 md:flex",
-          )}
+          variant="leafletButton"
+          size="leafletSize"
+          className="absolute right-0 top-0 z-50 mr-8 mt-2.5"
         >
-          Exit
+          Done
         </Button>
         <div
-          className={`rounded-t-lg border-separator bg-hoverground -mb-1 flex h-12 w-full items-center justify-center border-t`}
+          className={`border-separator bg-hoverground -mb-1 flex h-12 w-full items-center justify-center rounded-t-lg border`}
         >
-          <div className="bg-foreground -mr-1 h-1 w-6 rounded-full transition-all group-active:rotate-12" />
-          <div className="bg-foreground h-1 w-6 rounded-full transition-all group-active:-rotate-12" />
+          <div className="bg-standard -mr-1 h-1 w-6 rounded-full transition-all group-active:rotate-12" />
+          <div className="bg-standard h-1 w-6 rounded-full transition-all group-active:-rotate-12" />
         </div>
-        {children}
+        <div className="mt-1 h-full overflow-auto">{children}</div>
       </motion.div>
       <motion.div
         key="leaflet-backdrop"
-        className="bg-background/75 fixed inset-0 z-40 bg-opacity-10 backdrop-blur-lg"
+        className="bg-background/10 fixed inset-0 z-40 backdrop-blur-sm"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

@@ -14,11 +14,13 @@ const buttonVariants = cva(
           "bg-background border border-separator md:hover:bg-hoverground md:hover:border md:hover:border-highlight md:hover:text-highlight text-standard",
         actionButton:
           "bg-primary text-background border border-primary md:hover:border md:hover:bg-background md:hover:border-primary md:hover:text-primary",
-        outlineButton: "bg-transparent text-primary border border-primary",
+        outlineButton: "bg-transparent text-standard border border-separator",
         intentionButton:
           "bg-transparent text-primary border border-primary md:border-transparent md:hover:border md:hover:border-primary md:hover:text-primary",
         menuButton:
-          "hover:text-highlight bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator text-highlight",
+          "md:hover:text-highlight bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator text-highlight",
+        languageButton:
+          "md:hover:text-highlight bg-transparent border border-separator md:border-transparent md:hover:border-separator text-highlight justify-start",
         navigationButton: "bg-transparent transition-all",
         closeButton:
           "bg-background md:hover:bg-hoverground text-standard border border-separator md:hover:text-highlight md:hover:border-highlight items-center justify-center transition duration-100",
@@ -55,9 +57,10 @@ const buttonVariants = cva(
         defaultSize: "h-12 py-2 px-4 w-full md:w-48",
         headerSize: "h-12 md:h-9 py-2 w-full sm:w-fit px-4 text-md sm:text-sm",
         navigationSize: "h-8",
-        iconSize: "h-8 rounded-md px-3 text-xs",
+        iconSize: "h-9 w-9 rounded-md",
         avatarSize: "py-1 px-2",
         menuSize: "w-full text-left h-auto rounded-md",
+        languageSize: "h-12 md:h-9 w-full md:w-36 px-4 text-md",
         leafletSize: "h-7 w-16 rounded-md",
         oauthSize: "h-12 md:h-10 w-full px-2 py-1 md:w-auto",
         linkSize: "px-0 py-0",
