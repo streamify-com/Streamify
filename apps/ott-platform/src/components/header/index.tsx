@@ -203,7 +203,7 @@ export default function Header({ user }: HeaderProps) {
                       <DropdownMenuItem asChild>
                         <Link
                           href="/signout"
-                          className="md:hover:bg-primary md:hover:text-background text-primary my-1 rounded-md text-sm"
+                          className="md:hover:bg-primary md:hover:text-background md:text-primary text-primary my-1 rounded-md text-sm"
                         >
                           <Icons.LogOutIcon
                             className="mr-4 h-4 w-4"

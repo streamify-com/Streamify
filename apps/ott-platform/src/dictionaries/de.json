@@ -205,6 +205,9 @@
     "cancel-subscription": {
       "name": "Vertrag kündigen",
       "href": "/cancel-subscription"
+    },
+    "sitemap": {
+      "name": "Seitenverzeichnis"
     }
   },
   "header-platform": {

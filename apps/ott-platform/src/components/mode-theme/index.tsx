@@ -241,14 +241,14 @@ export function ThemeModeIcon() {
   });
 
   return (
-    <Tabs defaultValue="system" className="w-full md:w-full rounded-full">
-      <TabsList className="grid w-full grid-cols-3 gap-2">
+    <Tabs defaultValue="system" className="w-28 md:w-28 rounded-full">
+      <TabsList className="grid w-full grid-cols-3 gap-2 p-1 rounded-full">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.text}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-standard text-sm md:text-xs"
+            className="data-[state=active]:bg-standard text-sm md:text-xs px-2 py-1 rounded-full"
           >
             {opt.icon}
           </TabsTrigger>

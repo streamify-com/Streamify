@@ -31,7 +31,7 @@
     --skeleton: 217, 217, 217, 0.5;
     --separator: 112, 112, 112, 0.3;
 
-    --test: 109, 255, 168, 1;
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -62,7 +62,7 @@
     --skeleton: 217, 217, 217, 0.5;
     --separator: 112, 112, 112, 0.3;
 
-    --test: 109, 255, 168, 1;
+    --radius: 0.5rem;
   }
 
   ::selection {

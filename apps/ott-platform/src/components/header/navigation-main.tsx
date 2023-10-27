@@ -10,7 +10,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import { SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import { Separator } from "@shared-components/ui/separator";
-import { ThemeModeIcon } from "@/components/mode-theme";
+import { ThemeModeSelector } from "@/components/mode-theme";
 import type { User } from "@clerk/nextjs/dist/types/server";
 import { buttonVariants } from "@shared-components/ui/button";
 import {
@@ -299,7 +299,7 @@ export default function NavigationMain({
               </div>
               <Separator className="my-2" />
               <LocaleSwitcher />
-              <ThemeModeIcon />
+              <ThemeModeSelector />
               {children}
             </div>
           </PlatformContainer>
