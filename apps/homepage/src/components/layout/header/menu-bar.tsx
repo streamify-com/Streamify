@@ -51,10 +51,6 @@ export default function MenuBar() {
               title={t("call-to-action.menu.email-title")}
               value_string={t("call-to-action.menu.email-value")}
             />
-            <CopyCard
-              title={t("call-to-action.menu.phone-title")}
-              value_string={t("call-to-action.menu.phone-value")}
-            />
             {/* <Separator className="my-2" />
             <div className="flex">
                 <span className="flex-1 text-highlight uppercase">Kontakt</span>

@@ -19,7 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@shared-components/ui/accordion";
-import { LocaleChoose, LocaleSwitcher } from "@/components/locale-switcher";
+import { LocaleChoose, LocaleChooseIcon, LocaleSwitcher } from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -33,37 +33,14 @@ import {
 } from "@shared-components/graphics/logo";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
-import { ThemeModeSelector } from "@/components/mode-theme";
+import { ThemeModeIcon, ThemeModeSelector } from "@/components/mode-theme";
+import { Separator } from "@shared-components/ui/separator";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
 }
 
 const navigationWebsite = {
-  // solutions: [
-  //   { name: "Marketing", href: "#" },
-  //   { name: "Analytics", href: "#" },
-  //   { name: "Commerce", href: "#" },
-  //   { name: "Insights", href: "#" },
-  // ],
-  // support: [
-  //   { name: "Pricing", href: "#" },
-  //   { name: "Documentation", href: "#" },
-  //   { name: "Guides", href: "#" },
-  //   { name: "API Status", href: "#" },
-  // ],
-  // company: [
-  //   { name: "About", href: "#" },
-  //   { name: "Blog", href: "#" },
-  //   { name: "Jobs", href: "#" },
-  //   { name: "Partners", href: "#" },
-  // ],
-  // legal: [
-  //   { name: "Cookie Policy", href: "#" },
-  //   { name: "Privacy Policy", href: "#" },
-  //   { name: "Terms of Services", href: "#" },
-  //   { name: "Imprint", href: "#" },
-  // ],
   social: [
     {
       name: "Facebook",
@@ -119,16 +96,19 @@ export function FooterDeclarationLayout() {
     <footer className="border-separator bg-background/75 z-0 border-t py-6 backdrop-blur-xl">
       <PlatformContainer>
         <div className="md:flex md:justify-between">
-          <div className="flex flex-col gap-4 md:order-1 order-3 md:flex-row w-full">
-            <ThemeModeSelector />
-          </div>
-          <div className="md:mt-2 my-4 md:my-0 md:order-2 order-2 w-full">
-            <p className="font-regular text-standard text-center justify-center text-xs leading-5">
+          <div className="w-full flex items-center justify-between">
+            <p className="font-regular text-standard text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
+            <div className="md:order-1 order-2 md:hidden block">
+              <ThemeModeIcon />
+            </div>
+            <div className="md:order-1 order-2 hidden md:block">
+              <ThemeModeSelector />
+            </div>
           </div>
-          <div className="flex justify-center md:justify-end space-x-2 md:order-3 order-1 w-full">
+          <div className="flex justify-center md:justify-end space-x-2 md:order-3 order-1 w-full mt-4 md:mt-0">
             {navigationWebsite.social.map((item) => (
               <Link
                 key={item.name}
@@ -156,16 +136,6 @@ export function FooterPlatformLayout() {
             className="text-center my-6 sm:flex sm:justify-center sm:space-x-10"
             aria-label="Footer"
           >
-            {/* {navigationPlatform.main.map((item, index) => (
-            <div key={index} className="pb-6">
-              <Link
-                href={item.href}
-                className="font-regular text-md text-standard hover:text-highlight leading-6 p-2 rounded-md bg-transparent hover:bg-hoverground border border-transparent hover:border-separator"
-              >
-                {item.name}
-              </Link>
-            </div>
-          ))} */}
             <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">
               <Link
                 href={t("terms-of-services.href")}

@@ -205,9 +205,7 @@
         "schedule-a-call": "Vereinbare einen Termin mit uns",
         "join-our-discord": "Tritt unserem Discord-Channel bei",
         "email-title": "E-Mail",
-        "email-value": "hello@streamify.com",
-        "phone-title": "Telefon",
-        "phone-value": "+49 173 7692475"
+        "email-value": "hello@streamify.com"
       }
     }
   },

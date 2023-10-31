@@ -225,7 +225,7 @@ export function SignUpForm({
           </div>
         </div>
         <p className="text-standard text-sm">{termsandconditionsdescription}</p>
-        <Separator className="border-separator my-4 border-t" />
+        <Separator className="my-4" />
         <Button
           disabled={isPending || !isChecked}
           className="bg-highlight w-full md:w-full"

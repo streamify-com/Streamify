@@ -139,7 +139,7 @@ export function ResetPasswordStep2Form({
             </FormItem>
           )}
         />
-        <Separator className="border-separator my-4 border-t" />
+        <Separator className="my-4" />
         <Button disabled={isPending} className="bg-highlight w-full md:w-full">
           {isPending && (
             <Icons.spinner
