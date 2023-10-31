@@ -19,7 +19,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@shared-components/ui/accordion";
-import { LocaleChoose, LocaleChooseIcon, LocaleSwitcher } from "@/components/locale-switcher";
+import {
+  LocaleChoose,
+  LocaleChooseIcon,
+  LocaleSwitcher,
+} from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -97,9 +101,12 @@ export function FooterDeclarationLayout() {
       <PlatformContainer>
         <div className="md:flex md:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="font-regular text-standard text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
+            <p className="hidden font-regular text-standard text-xs leading-5 md:order-2 order-1 md:absolute md:flex md:left-1/2 md:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
+            </p>
+            <p className="md:hidden font-regular text-standard text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
+              &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
             </p>
             <div className="md:order-1 order-2 md:hidden block">
               <ThemeModeIcon />
