@@ -13,7 +13,12 @@ import {
   TiktokIcon,
 } from "@shared-components/graphics/icons";
 import { PlatformContainer } from "@shared-components/ui/container";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@shared-components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@shared-components/ui/accordion";
 import { LocaleChoose, LocaleSwitcher } from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
@@ -193,45 +198,51 @@ export function FooterPlatformLayout() {
                 {t("cancel-subscription.name")}
               </Link>
             </div>
-            <Accordion type="single" collapsible className="w-full md:hidden block">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>{t("sitemap.name")}</AccordionTrigger>
-            <AccordionContent>
-              <div className="flex flex-col items-start">
-              <Link
-                href={t("terms-of-services.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-              >
-                {t("terms-of-services.name")}
-              </Link>
-              <Link
-                href={t("privacy-policy.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-              >
-                {t("privacy-policy.name")}
-              </Link>
-              <Link
-                href={t("cookie-policy.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-              >
-                {t("cookie-policy.name")}
-              </Link>
-              <Link
-                href={t("imprint.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-              >
-                {t("imprint.name")}
-              </Link>
-              <Link
-                href={t("cancel-subscription.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
-              >
-                {t("cancel-subscription.name")}
-              </Link>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full md:hidden block"
+            >
+              <AccordionItem value="item-1" className="border-transparent">
+                <AccordionTrigger className="text-md text-highlight font-bold leading-6">
+                  {t("sitemap.name")}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="flex flex-col items-start">
+                    <Link
+                      href={t("terms-of-services.href")}
+                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                    >
+                      {t("terms-of-services.name")}
+                    </Link>
+                    <Link
+                      href={t("privacy-policy.href")}
+                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                    >
+                      {t("privacy-policy.name")}
+                    </Link>
+                    <Link
+                      href={t("cookie-policy.href")}
+                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                    >
+                      {t("cookie-policy.name")}
+                    </Link>
+                    <Link
+                      href={t("imprint.href")}
+                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                    >
+                      {t("imprint.name")}
+                    </Link>
+                    <Link
+                      href={t("cancel-subscription.href")}
+                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                    >
+                      {t("cancel-subscription.name")}
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </nav>
           <div className="mb-6 md:mb-0">
             <Link

@@ -7,7 +7,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,js,tsx,css,json}\"",
+    "format:write": "prettier --write \"**/*.{ts,js,tsx,css,json}\"",
     "format:check": "prettier --check \"**/*.{ts,js,tsx,css,json}\"",
     "ui:add": "pnpm --filter ui ui:add"
   },

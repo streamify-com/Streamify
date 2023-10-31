@@ -26,7 +26,7 @@ export default function HeroSection() {
             <span className="text-highlight font-italic">
               {t("badge.read-the-story")}
             </span>
-            <ArrowRightCircle className="font-regular text-standard group group-hover:text-primary ml-2 h-4 w-4" />
+            <ArrowRightCircle className="font-regular text-standard group md:group-hover:text-primary ml-2 h-4 w-4" />
           </Link>
         </div>
         <div className="mx-auto text-center">
@@ -77,7 +77,7 @@ export default function HeroSection() {
               <span className="ml-2">Watch video</span>
             </Link> */}
             <ShiningButton>
-              <PlayIcon className="h-5 w-5 flex-none text-standard group-hover:text-highlight" />
+              <PlayIcon className="h-5 w-5 flex-none text-standard md:group-hover:text-highlight" />
               <span className="ml-3">{t("button.watch-video")}</span>
             </ShiningButton>
           </div>

@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { SignOutButton } from "@clerk/nextjs";
-import { useMounted } from "@shared-components/hooks/use-mounted";
+import useMounted from "@shared-components/hooks/use-mounted";
 import { Button } from "@shared-components/ui/button";
 import { Icons } from "@shared-components/graphics/icons";
 

@@ -191,8 +191,8 @@ export default function PricingSection() {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.mostPopular
-                      ? "bg-primary text-background hover:text-highlight border-primary hover:bg-hoverground hover:border-highlight border"
-                      : "text-standard hover:text-highlight border-separator hover:bg-hoverground hover:border-highlight border bg-transparent",
+                      ? "bg-primary text-background md:hover:text-highlight border-primary md:hover:bg-hoverground md:hover:border-highlight border"
+                      : "text-standard md:hover:text-highlight border-separator md:hover:bg-hoverground md:hover:border-highlight border bg-transparent",
                     "text-md focus-visible:ring-separator mt-6 inline-flex h-12 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-12 md:w-full",
                   )}
                 >

@@ -67,7 +67,7 @@ export default function NavigationBar() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="hover:bg-hoverground hover:border-separator hover:text-highlight flex h-full w-full select-none flex-col justify-end rounded-md border border-transparent p-6 no-underline outline-none"
+                    className="md:hover:bg-hoverground md:hover:border-separator md:hover:text-highlight flex h-full w-full select-none flex-col justify-end rounded-md border border-transparent p-6 no-underline outline-none"
                     href="/"
                   >
                     <div className="mb-2 mt-4">
@@ -160,7 +160,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:bg-hoverground hover:border-separator hover:text-highlight focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md border border-transparent p-3 leading-none no-underline outline-none transition-colors",
+            "md:hover:bg-hoverground md:hover:border-separator md:hover:text-highlight focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md border border-transparent p-3 leading-none no-underline outline-none transition-colors",
             className,
           )}
           {...props}

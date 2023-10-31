@@ -22,7 +22,7 @@ export default function SignUpPageForm() {
           <Link
             aria-label="Sign in"
             href="/signin"
-            className="text-highlight underline-offset-4 transition-colors hover:underline"
+            className="text-highlight underline-offset-4 transition-colors md:hover:underline"
           >
             {t("alternative")}
           </Link>

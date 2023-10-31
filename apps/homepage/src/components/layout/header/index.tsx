@@ -146,7 +146,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="hover:bg-hoverground my-2 rounded-md"
+                            className="md:hover:bg-hoverground my-2 rounded-md"
                           >
                             <Icons.AccountIcon
                               className="mr-4 h-4 w-4"
@@ -159,7 +159,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="hover:bg-hoverground my-1 rounded-lg"
+                            className="md:hover:bg-hoverground my-1 rounded-lg"
                           >
                             <Icons.BillingIcon
                               className="mr-4 h-4 w-4"
@@ -172,7 +172,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="hover:bg-hoverground my-1 rounded-lg"
+                            className="md:hover:bg-hoverground my-1 rounded-lg"
                           >
                             <Icons.SettingsIcon
                               className="mr-4 h-4 w-4"
@@ -185,7 +185,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="hover:bg-hoverground my-1 rounded-lg"
+                            className="md:hover:bg-hoverground my-1 rounded-lg"
                           >
                             <Icons.SupportIcon
                               className="mr-4 h-4 w-4"
@@ -200,7 +200,7 @@ export function Header({ user }: HeaderProps) {
                       <DropdownMenuItem asChild>
                         <Link
                           href="/signout"
-                          className="hover:bg-hoverground my-1 rounded-lg"
+                          className="md:hover:bg-hoverground my-1 rounded-lg"
                         >
                           <Icons.LogOutIcon
                             className="mr-4 h-4 w-4"

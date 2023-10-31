@@ -1,8 +1,21 @@
 import { Button } from "@shared-components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@shared-components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@shared-components/ui/card";
 import { Input } from "@shared-components/ui/input";
 import { Label } from "@shared-components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@shared-components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@shared-components/ui/select";
 
 export default function TestComponent() {
   return (
@@ -22,7 +35,11 @@ export default function TestComponent() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
-          <Input id="password" placeholder="Enter your password" type="password" />
+          <Input
+            id="password"
+            placeholder="Enter your password"
+            type="password"
+          />
         </div>
         <div className="space-y-2">
           <Label htmlFor="profilePicture">Profile Picture</Label>
@@ -36,7 +53,9 @@ export default function TestComponent() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Notifications</SelectItem>
-              <SelectItem value="important">Important Notifications Only</SelectItem>
+              <SelectItem value="important">
+                Important Notifications Only
+              </SelectItem>
               <SelectItem value="none">No Notifications</SelectItem>
             </SelectContent>
           </Select>
@@ -48,5 +67,5 @@ export default function TestComponent() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

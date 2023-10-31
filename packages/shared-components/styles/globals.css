@@ -27,11 +27,12 @@
     --active: 13, 153, 255, 1;
     --passive: 217, 217, 217, 1;
 
+    /* Destructive / Warning colors */
+    --destructive: 88, 101, 242, 1;
+
     /* Object colors */
     --skeleton: 217, 217, 217, 0.5;
     --separator: 112, 112, 112, 0.3;
-
-    --radius: 0.5rem;
   }
 
   .dark {
@@ -58,11 +59,12 @@
     --active: 13, 153, 255, 1;
     --passive: 112, 112, 112, 1;
 
+    /* Destructive / Warning colors */
+    --destructive: 88, 101, 242, 1;
+
     /* Object colors */
     --skeleton: 217, 217, 217, 0.5;
     --separator: 112, 112, 112, 0.3;
-
-    --radius: 0.5rem;
   }
 
   ::selection {

@@ -35,7 +35,7 @@
       "href": "/signup"
     },
     "or-continue-with": "Oder weiter mit",
-    "email": "E-Mail",
+    "email": "E-Mail-Adresse",
     "password": "Passwort",
     "sign-in": "Anmelden",
     "reset-password": "Passwort zurücksetzen",
@@ -76,7 +76,7 @@
     "or-continue-with": "oder weiter mit",
     "first-name": "Vorname",
     "last-name": "Nachname",
-    "email": "E-Mail",
+    "email": "E-Mail-Adresse",
     "password": "Passwort",
     "terms-and-conditions": "Nutzungsvereinbarung",
     "terms-and-conditions-header": "Akzeptieren der Nutzungsvereinbarung und Datenschutzbestimmungen",
@@ -168,7 +168,7 @@
         "href": "/terms-of-services"
       },
       "privacy-policy": {
-        "name": "Datenschutzerklärung",
+        "name": "Datenschutz",
         "href": "/privacy-policy"
       },
       "cookie-policy": {
@@ -187,7 +187,7 @@
       "href": "/terms-of-services"
     },
     "privacy-policy": {
-      "name": "Datenschutzerklärung",
+      "name": "Datenschutz",
       "href": "/privacy-policy"
     },
     "cookie-policy": {

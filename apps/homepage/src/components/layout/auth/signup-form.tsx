@@ -210,7 +210,7 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/terms-of-services"
-              className="hover:text-highlight underline underline-offset-4 transition-colors"
+              className="md:hover:text-highlight underline underline-offset-4 transition-colors"
             >
               {termsandconditions}
             </Link>
@@ -218,7 +218,7 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/privacy-policy"
-              className="hover:text-highlight underline underline-offset-4 transition-colors"
+              className="md:hover:text-highlight underline underline-offset-4 transition-colors"
             >
               {privacypolicy}
             </Link>

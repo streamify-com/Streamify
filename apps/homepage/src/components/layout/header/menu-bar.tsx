@@ -21,6 +21,7 @@ import {
   DiscordCard,
   ScheduleMeetingCard,
 } from "@shared-components/components/menu-card";
+import CopyToClipboardComponent from "@shared-components/components/copy-to-clipboard";
 
 export default function MenuBar() {
   const t = useTranslations("header-homepage");

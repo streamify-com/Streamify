@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
+    "dev": "next dev --port 4001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "unlighthouse": "pnpm dlx unlighthouse --site https://www.streamify.com"
+    "unlighthouse": "pnpm dlx unlighthouse --site https://www.streamify.com",
+    "email": "email dev --dir src/emails"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.23.2",
@@ -24,7 +25,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
     "shared-components": "workspace:*",
-    "sonner": "^0.7.0",
+    "sonner": "^1.1.0",
     "zod": "^3.22.2"
   },
   "devDependencies": {
