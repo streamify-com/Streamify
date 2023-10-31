@@ -334,7 +334,7 @@ export function FooterHomepageLayout() {
               className="w-full md:hidden block"
             >
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-md text-highlight font-bold leading-6 px-2">
+                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
                   {t("solutions.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -375,7 +375,7 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-md text-highlight font-bold leading-6 px-2">
+                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
                   {t("support.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -426,7 +426,7 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-md text-highlight font-bold leading-6 px-2">
+                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
                   {t("company.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -477,7 +477,7 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="border-transparent">
-                <AccordionTrigger className="text-md text-highlight font-bold leading-6 px-2">
+                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
                   {t("legal.name")}
                 </AccordionTrigger>
                 <AccordionContent>

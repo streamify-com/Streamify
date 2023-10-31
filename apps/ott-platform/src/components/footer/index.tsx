@@ -106,7 +106,7 @@ export function FooterDeclarationLayout() {
               {t("all-rights-reserved")}
             </p>
             <p className="md:hidden font-regular text-standard text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
-              &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
+              &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}
             </p>
             <div className="md:order-1 order-2 md:hidden block">
               <ThemeModeIcon />
@@ -181,7 +181,7 @@ export function FooterPlatformLayout() {
               className="w-full md:hidden block"
             >
               <AccordionItem value="item-1" className="border-transparent">
-                <AccordionTrigger className="text-md text-highlight font-bold leading-6">
+                <AccordionTrigger className="text-md text-highlight leading-6">
                   {t("sitemap.name")}
                 </AccordionTrigger>
                 <AccordionContent>

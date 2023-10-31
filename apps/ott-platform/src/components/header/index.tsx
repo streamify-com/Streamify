@@ -138,45 +138,6 @@ export default function Header({ user }: HeaderProps) {
                             {/* <DropdownMenuShortcut>⌘A</DropdownMenuShortcut> */}
                           </Link>
                         </DropdownMenuItem>
-                        {/* <DropdownMenuItem asChild>
-                          <Link
-                            href="/dashboard/account"
-                            className="hover:bg-hoverground my-2 rounded-md"
-                          >
-                            <Icons.AccountIcon
-                              className="mr-4 h-4 w-4"
-                              aria-hidden="true"
-                            />
-                            Account
-                            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
-                          </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href="/dashboard/account"
-                            className="hover:bg-hoverground my-1 rounded-lg"
-                          >
-                            <Icons.BillingIcon
-                              className="mr-4 h-4 w-4"
-                              aria-hidden="true"
-                            />
-                            Billing
-                            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
-                          </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href="/dashboard/account"
-                            className="hover:bg-hoverground my-1 rounded-lg"
-                          >
-                            <Icons.SettingsIcon
-                              className="mr-4 h-4 w-4"
-                              aria-hidden="true"
-                            />
-                            Settings
-                            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
-                          </Link>
-                        </DropdownMenuItem> */}
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"

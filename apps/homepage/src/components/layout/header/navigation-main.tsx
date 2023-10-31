@@ -71,7 +71,7 @@ export default function NavigationMain({
       ) : null}
       <div className="flex items-center space-x-2">
         <button
-          className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-md md:hidden"
+          className="active:bg-hoverground flex h-10 w-10 items-center justify-center rounded-md md:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (

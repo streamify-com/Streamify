@@ -107,7 +107,7 @@ export default function NavigationMain({
       ) : null}
       <div className="flex items-center space-x-2">
         <button
-          className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-md md:hidden"
+          className="active:bg-hoverground flex h-10 w-10 items-center justify-center rounded-md md:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (
@@ -126,26 +126,6 @@ export default function NavigationMain({
           <PlatformContainer>
             <div className="relative z-20 grid gap-4">
               <nav className="no-scrollbar font-regular mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
-                {/* {items.map((item, index) => (
-                  <>
-                    <Link
-                      onClick={closeMobileMenu}
-                      key={index}
-                      href={item.disabled ? "#" : item.href}
-                      className={cn(
-                        buttonVariants({
-                          variant: "navigationButton",
-                          size: "navigationSize",
-                        }),
-                        "my-2 flex w-full items-center justify-between",
-                        item.disabled && "cursor-not-allowed opacity-60",
-                      )}
-                    >
-                      <p>{item.title}</p>
-                      <Icons.chevronRight />
-                    </Link>
-                  </>
-                ))} */}
                 <Link
                   onClick={closeMobileMenu}
                   href={t("matches.href")}
