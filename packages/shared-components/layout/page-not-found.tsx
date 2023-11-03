@@ -24,7 +24,7 @@ export default function PageNotFoundLayout({
           {message}
         </div>
         <div className="mx-auto text-center">
-          <h1 className="text-highlight text-4xl font-bold md:text-5xl lg:text-6xl">
+          <h1 className="text-standard-hover text-4xl font-bold md:text-5xl lg:text-6xl">
             {title}
           </h1>
           <div className="mx-auto my-6 px-8 text-center md:px-20 xl:px-44">

@@ -64,7 +64,7 @@ export function LocaleChooseIcon() {
             className="justify-center px-4 w-20 h-12 md:h-9 group"
           >
             {getFlagIconForLocale(locale)}
-            <Icons.chevronDown className="ml-2.5 h-4 text-standard md:group-hover:text-highlight group" />
+            <Icons.chevronDown className="ml-2.5 h-4 text-standard md:group-hover:text-standard-hover group" />
           </Button>
         </DialogTrigger>
         <LocaleSelectionDialog />
@@ -96,7 +96,7 @@ export function LocaleSwitcher() {
     >
       <p className="sr-only">{t("label")}</p>
       <select
-        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-md md:text-sm h-12 w-full border bg-transparent transition-all md:h-10 md:w-48"
+        className="border-separator rounded-md md:hover:border-standard-hover md:hover:text-standard-hover text-md md:text-sm h-12 w-full border bg-transparent transition-all md:h-10 md:w-48"
         defaultValue={locale}
         disabled={isPending}
         onChange={(e) => handleLocaleChange(e.target.value)}

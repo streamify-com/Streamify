@@ -19,7 +19,7 @@ export function BackToHomepageButton() {
             variant: "navigationButton",
             size: "navigationSize",
           }),
-          "md:hover:border-separator md:hover:bg-background/75 group border border-transparent px-2 py-1 text-highlight md:hover:backdrop-blur-xl",
+          "md:hover:border-separator md:hover:bg-background/75 group border border-transparent px-2 py-1 text-standard-hover md:hover:backdrop-blur-xl",
         )}
       >
         <ExpandingArrowLeft />

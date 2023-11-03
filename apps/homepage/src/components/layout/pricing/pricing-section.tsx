@@ -96,7 +96,7 @@ export default function PricingSection() {
               {t("title")}
             </h2>
           </div>
-          <p className="font-regular text-highlight mx-auto mt-6 text-center text-lg">
+          <p className="font-regular text-standard-hover mx-auto mt-6 text-center text-lg">
             {t("subtitle")}
           </p>
           <p className="font-regular text-standard mx-auto mb-6 mt-2 text-center text-lg">
@@ -169,7 +169,7 @@ export default function PricingSection() {
                 <h3
                   id={tier.id}
                   className={classNames(
-                    tier.mostPopular ? "text-primary" : "text-highlight",
+                    tier.mostPopular ? "text-primary" : "text-standard-hover",
                     "text-lg font-bold uppercase",
                   )}
                 >
@@ -179,7 +179,7 @@ export default function PricingSection() {
                   {tier.description}
                 </p>
                 <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-highlight text-4xl font-bold tracking-tight">
+                  <span className="text-standard-hover text-4xl font-bold tracking-tight">
                     {tier.price[frequency.value]}
                   </span>
                   <span className="text-md text-standard">
@@ -191,8 +191,8 @@ export default function PricingSection() {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.mostPopular
-                      ? "bg-primary text-background md:hover:text-highlight border-primary md:hover:bg-hoverground md:hover:border-highlight border"
-                      : "text-standard md:hover:text-highlight border-separator md:hover:bg-hoverground md:hover:border-highlight border bg-transparent",
+                      ? "bg-primary text-background md:hover:text-standard-hover border-primary md:hover:bg-background-hover md:hover:border-standard-hover border"
+                      : "text-standard md:hover:text-standard-hover border-separator md:hover:bg-background-hover md:hover:border-standard-hover border bg-transparent",
                     "text-md focus-visible:ring-separator mt-6 inline-flex h-12 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-12 md:w-full",
                   )}
                 >

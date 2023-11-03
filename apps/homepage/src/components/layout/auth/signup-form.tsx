@@ -210,7 +210,7 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/terms-of-services"
-              className="md:hover:text-highlight underline underline-offset-4 transition-colors"
+              className="md:hover:text-standard-hover underline underline-offset-4 transition-colors"
             >
               {termsandconditions}
             </Link>
@@ -218,7 +218,7 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/privacy-policy"
-              className="md:hover:text-highlight underline underline-offset-4 transition-colors"
+              className="md:hover:text-standard-hover underline underline-offset-4 transition-colors"
             >
               {privacypolicy}
             </Link>
@@ -228,7 +228,7 @@ export function SignUpForm({
         <Separator className="my-4" />
         <Button
           disabled={isPending || !isChecked}
-          className="bg-highlight w-full md:w-full"
+          className="bg-standard-hover w-full md:w-full"
         >
           {isPending && (
             <Icons.spinner

@@ -48,28 +48,41 @@ export default {
         customFont: ["var(--font-heading)", ...fontFamily.sans],
       },
       colors: {
-        foreground: "rgba(var(--foreground))",
-        background: "rgba(var(--background))",
-        hoverground: "rgba(var(--hoverground))",
-        standard: "rgba(var(--standard))",
-        highlight: "rgba(var(--highlight))",
+        foreground: {
+          DEFAULT: "rgba(var(--foreground))",
+          hover: "rgba(var(--foreground-hover))",
+        },
+        background: {
+          DEFAULT: "rgba(var(--background))",
+          hover: "rgba(var(--background-hover))",
+        },
+        standard: {
+          DEFAULT: "rgba(var(--standard))",
+          hover: "rgba(var(--standard-hover))",
+        },
         primary: {
           DEFAULT: "rgba(var(--primary))",
-          transparent: "rgba(var(--primary-transparent))",
+          hover: "rgba(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "rgba(var(--secondary))",
-          transparent: "rgba(var(--secondary-transparent))",
+          hover: "rgba(var(--secondary-hover))",
         },
         tertiary: {
           DEFAULT: "rgba(var(--tertiary))",
-          transparent: "rgba(var(--tertiary-transparent))",
+          hover: "rgba(var(--tertiary-hover))",
         },
         active: "rgba(var(--active))",
         passive: "rgba(var(--passive))",
-        destructive: "rgba(var(--destructive))",
+        destructive: {
+          DEFAULT: "rgba(var(--destructive))",
+          hover: "rgba(var(--destructive-hover))",
+        },
         skeleton: "rgba(var(--skeleton))",
-        separator: "rgba(var(--separator))",
+        separator: {
+          DEFAULT: "rgba(var(--separator))",
+          hover: "rgba(var(--separator-hover))",
+        },
         test: "rgba(var(--test))",
       },
       keyframes: {

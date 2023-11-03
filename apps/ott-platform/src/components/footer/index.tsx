@@ -120,7 +120,7 @@ export function FooterDeclarationLayout() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-standard md:hover:text-highlight h-8 w-8 rounded-md bg-transparent md:hover:bg-hoverground flex justify-center items-center border border-transparent md:hover:border-separator"
+                className="text-standard md:hover:text-standard-hover h-8 w-8 rounded-md bg-transparent md:hover:bg-background-hover flex justify-center items-center border border-transparent md:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
                 {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}
@@ -146,31 +146,31 @@ export function FooterPlatformLayout() {
             <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">
               <Link
                 href={t("terms-of-services.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("terms-of-services.name")}
               </Link>
               <Link
                 href={t("privacy-policy.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("privacy-policy.name")}
               </Link>
               <Link
                 href={t("cookie-policy.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("cookie-policy.name")}
               </Link>
               <Link
                 href={t("imprint.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("imprint.name")}
               </Link>
               <Link
                 href={t("cancel-subscription.href")}
-                className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("cancel-subscription.name")}
               </Link>
@@ -181,38 +181,38 @@ export function FooterPlatformLayout() {
               className="w-full md:hidden block"
             >
               <AccordionItem value="item-1" className="border-transparent">
-                <AccordionTrigger className="text-md text-highlight leading-6">
+                <AccordionTrigger className="text-md text-standard-hover leading-6">
                   {t("sitemap.name")}
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col items-start">
                     <Link
                       href={t("terms-of-services.href")}
-                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("terms-of-services.name")}
                     </Link>
                     <Link
                       href={t("privacy-policy.href")}
-                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("privacy-policy.name")}
                     </Link>
                     <Link
                       href={t("cookie-policy.href")}
-                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("cookie-policy.name")}
                     </Link>
                     <Link
                       href={t("imprint.href")}
-                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("imprint.name")}
                     </Link>
                     <Link
                       href={t("cancel-subscription.href")}
-                      className="font-regular text-standard md:hover:text-highlight md:hover:bg-hoverground md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("cancel-subscription.name")}
                     </Link>
@@ -265,7 +265,7 @@ export function FooterPaymentLayout() {
             {logos.map((logoData, index) => (
               <div
                 key={index}
-                className="flex items-center h-10 w-20 rounded-md border border-separator bg-hoverground justify-center md:order-2"
+                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover justify-center md:order-2"
               >
                 <logoData.logo
                   className={logoData.className}

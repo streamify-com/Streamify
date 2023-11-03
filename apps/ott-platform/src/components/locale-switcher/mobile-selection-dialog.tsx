@@ -65,7 +65,7 @@ export default function MobileSelectionDialog() {
                 className={
                   cur === locale
                     ? "justify-between md:w-full text-primary"
-                    : "justify-between md:w-full text-highlight"
+                    : "justify-between md:w-full text-standard-hover"
                 }
               >
                 <p className="flex items-center">

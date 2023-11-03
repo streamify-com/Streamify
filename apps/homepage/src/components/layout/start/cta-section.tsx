@@ -6,7 +6,7 @@ import { Banner } from "@shared-components/components/banner";
 
 export default function CtaSection() {
   return (
-    <div className="bg-hoverground border-separator border-y">
+    <div className="bg-background-hover border-separator border-y">
       <HomepageContainer>
         <div className="my-10 flex-col gap-4 space-y-4 md:flex md:flex-row md:items-center md:justify-center md:space-x-4 md:space-y-0">
           <Link

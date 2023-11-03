@@ -9,29 +9,29 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primaryButton:
-          "bg-highlight text-background border border-standard md:hover:bg-hoverground md:hover:text-highlight md:hover:border md:hover:border-highlight",
+          "bg-standard-hover text-background border border-standard md:hover:bg-background-hover md:hover:text-standard-hover md:hover:border-standard-hover",
         secondaryButton:
-          "bg-background border border-separator md:hover:bg-hoverground md:hover:border md:hover:border-highlight md:hover:text-highlight text-standard",
+          "bg-background border border-separator md:hover:bg-background-hover md:hover:border-standard-hover md:hover:text-standard-hover text-standard",
         actionButton:
-          "bg-primary text-background border border-primary md:hover:border md:hover:bg-background md:hover:border-primary md:hover:text-primary",
+          "bg-primary text-background border border-primary md:hover:bg-primary-hover md:hover:border-primary-hover",
         outlineButton: "bg-transparent text-standard border border-separator",
         intentionButton:
-          "bg-transparent text-primary border border-primary md:border-transparent md:hover:border md:hover:border-primary md:hover:text-primary",
+          "bg-transparent text-primary border border-primary md:border-transparent md:hover:border-primary md:hover:text-primary",
         menuButton:
-          "md:hover:text-highlight bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator text-highlight",
+          "md:hover:text-standard-hover bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator text-standard-hover",
         languageButton:
-          "md:hover:text-highlight bg-transparent border border-separator md:border-transparent md:hover:border-separator text-highlight justify-start",
+          "md:hover:text-standard-hover bg-transparent border border-separator md:border-transparent md:hover:border-separator text-standard-hover justify-start",
         navigationButton: "bg-transparent transition-all",
         closeButton:
-          "bg-background md:hover:bg-hoverground text-standard border border-separator md:hover:text-highlight md:hover:border-highlight items-center justify-center transition duration-100",
+          "bg-background md:hover:bg-background-hover text-standard border border-separator md:hover:text-standard-hover md:hover:border-standard-hover items-center justify-center transition duration-100",
         ghostButton: "text-md md:text-2xl font-bold text-white",
         leafletButton: "text-standard font-bold text-md",
         avatarButton:
-          "md:hover:bg-hoverground border border-transparent md:hover:border-separator",
+          "md:hover:bg-background-hover border border-transparent md:hover:border-separator",
         oauthButton:
-          "bg-background text-standard text-sm border-separator border md:hover:text-background md:hover:bg-highlight md:hover:border-highlight",
+          "bg-background text-standard text-sm border-separator border md:hover:text-background md:hover:bg-standard-hover md:hover:border-standard-hover",
         linkButton:
-          "text-standard md:hover:text-highlight underline underline-offset-4 transition-colors",
+          "text-standard md:hover:text-standard-hover underline underline-offset-4 transition-colors",
         StripeButton:
           "bg-[#635BFF] md:hover:bg-[#5951e5] text-white border border-separator",
         PaypalButton:
@@ -108,12 +108,12 @@ const ShiningButton = React.forwardRef<HTMLButtonElement, ShiningButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className="from-standard to-separator font-regular group relative inline-flex h-12 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] md:w-48 hover:bg-highlight"
+        className="from-standard to-separator font-regular group relative inline-flex h-12 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] md:w-48 hover:bg-standard-hover"
         ref={ref}
         {...props}
       >
         <span className="bg-background hover:bg-background flex h-full w-full items-center justify-center rounded-md">
-          <p className="font-regular from-standard via-highlight to-standard text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent group-hover:text-highlight">
+          <p className="font-regular from-standard via-standard-hover to-standard text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent group-hover:text-standard-hover">
             {children}
           </p>
         </span>

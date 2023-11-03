@@ -30,7 +30,7 @@ export default function FaqSection() {
       <HomepageContainer>
         <div className="mx-auto py-20">
           <div className="divide-separator mx-auto divide-y">
-            <h2 className="text-highlight text-2xl font-bold leading-10 tracking-tight">
+            <h2 className="text-standard-hover text-2xl font-bold leading-10 tracking-tight">
               Frequently asked questions
             </h2>
             <dl className="divide-separator mt-10 space-y-6 divide-y">
@@ -39,7 +39,7 @@ export default function FaqSection() {
                   {({ open }) => (
                     <>
                       <dt>
-                        <Disclosure.Button className="text-highlight flex w-full items-start justify-between text-left">
+                        <Disclosure.Button className="text-standard-hover flex w-full items-start justify-between text-left">
                           <span className="text-standard leading-7">
                             {faq.question}
                           </span>
@@ -59,7 +59,9 @@ export default function FaqSection() {
                         </Disclosure.Button>
                       </dt>
                       <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                        <p className="text-highlight leading-7">{faq.answer}</p>
+                        <p className="text-standard-hover leading-7">
+                          {faq.answer}
+                        </p>
                       </Disclosure.Panel>
                     </>
                   )}

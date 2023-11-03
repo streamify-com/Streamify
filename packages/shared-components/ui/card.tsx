@@ -35,7 +35,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-highlight text-center text-2xl font-bold leading-none tracking-tight md:text-left",
+      "text-standard-hover text-center text-2xl font-bold leading-none tracking-tight md:text-left",
       className,
     )}
     {...props}
@@ -50,7 +50,7 @@ const CardSubtitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-primary-transparent mb-2 text-center text-xs font-bold uppercase leading-none tracking-tight md:text-left",
+      "text-primary mb-2 text-center text-xs font-bold uppercase leading-none tracking-tight md:text-left",
       className,
     )}
     {...props}

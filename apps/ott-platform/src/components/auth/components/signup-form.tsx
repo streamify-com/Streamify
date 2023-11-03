@@ -192,7 +192,7 @@ export function SignUpForm({
             onClick={handleCheckboxClick}
           />
           <div className="grid gap-1.5 leading-none">
-            <label htmlFor="terms1" className="text-highlight text-sm">
+            <label htmlFor="terms1" className="text-standard-hover text-sm">
               {termsandconditionsheader}
             </label>
             <p className="text-standard text-sm">
@@ -224,7 +224,7 @@ export function SignUpForm({
         </div>
         <Button
           disabled={isPending || !isChecked}
-          className="bg-highlight w-full md:w-full"
+          className="bg-standard-hover w-full md:w-full"
         >
           {isPending && (
             <Icons.spinner

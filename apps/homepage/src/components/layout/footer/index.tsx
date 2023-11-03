@@ -128,7 +128,7 @@ export function FooterHomepageLayout() {
             <div className="md:grid grid-cols-2 gap-8 xl:col-span-2 hidden">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-md text-highlight font-bold leading-6 px-2">
+                  <h3 className="text-md text-standard-hover font-bold leading-6 px-2">
                     {t("solutions.name")}
                   </h3>
                   {/* <ul role="list" className="mt-6 space-y-4"> */}
@@ -136,7 +136,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -146,7 +146,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.studio.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.studio.name")}
                       </Link>
@@ -154,7 +154,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.sports.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.sports.name")}
                       </Link>
@@ -162,7 +162,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.analytics.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.analytics.name")}
                       </Link>
@@ -170,7 +170,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.atlas.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.atlas.name")}
                       </Link>
@@ -178,7 +178,7 @@ export function FooterHomepageLayout() {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-md text-highlight font-bold leading-6 px-2">
+                  <h3 className="text-md text-standard-hover font-bold leading-6 px-2">
                     {t("support.name")}
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -186,7 +186,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -195,7 +195,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.pricing.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.pricing.name")}
                       </Link>
@@ -203,7 +203,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.documentation.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.documentation.name")}
                       </Link>
@@ -211,7 +211,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.guides.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.guides.name")}
                       </Link>
@@ -219,7 +219,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.programs.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.programs.name")}
                       </Link>
@@ -229,7 +229,7 @@ export function FooterHomepageLayout() {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-md text-highlight font-bold leading-6 px-2">
+                  <h3 className="text-md text-standard-hover font-bold leading-6 px-2">
                     {t("company.name")}
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -237,7 +237,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -246,7 +246,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.about-us.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.about-us.name")}
                       </Link>
@@ -254,7 +254,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.blog.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.blog.name")}
                       </Link>
@@ -262,7 +262,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.jobs.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.jobs.name")}
                       </Link>
@@ -270,7 +270,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.partners.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.partners.name")}
                       </Link>
@@ -278,7 +278,7 @@ export function FooterHomepageLayout() {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-md text-highlight font-bold leading-6 px-2">
+                  <h3 className="text-md text-standard-hover font-bold leading-6 px-2">
                     {t("legal.name")}
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -286,7 +286,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -295,7 +295,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.terms-of-services.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.terms-of-services.name")}
                       </Link>
@@ -303,7 +303,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.privacy-policy.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.privacy-policy.name")}
                       </Link>
@@ -311,7 +311,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.cookie-policy.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.cookie-policy.name")}
                       </Link>
@@ -319,7 +319,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.imprint.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.imprint.name")}
                       </Link>
@@ -334,7 +334,7 @@ export function FooterHomepageLayout() {
               className="w-full md:hidden block"
             >
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
+                <AccordionTrigger className="text-md text-standard-hover leading-6 px-2">
                   {t("solutions.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -342,7 +342,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.studio.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.studio.name")}
                       </Link>
@@ -350,7 +350,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.sports.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.sports.name")}
                       </Link>
@@ -358,7 +358,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.analytics.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.analytics.name")}
                       </Link>
@@ -366,7 +366,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.atlas.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("solutions.atlas.name")}
                       </Link>
@@ -375,7 +375,7 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
+                <AccordionTrigger className="text-md text-standard-hover leading-6 px-2">
                   {t("support.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -384,7 +384,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -393,7 +393,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.pricing.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.pricing.name")}
                       </Link>
@@ -401,7 +401,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.documentation.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.documentation.name")}
                       </Link>
@@ -409,7 +409,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.guides.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.guides.name")}
                       </Link>
@@ -417,7 +417,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.programs.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("support.programs.name")}
                       </Link>
@@ -426,7 +426,7 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
+                <AccordionTrigger className="text-md text-standard-hover leading-6 px-2">
                   {t("company.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -435,7 +435,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -444,7 +444,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.about-us.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.about-us.name")}
                       </Link>
@@ -452,7 +452,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.blog.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.blog.name")}
                       </Link>
@@ -460,7 +460,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.jobs.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.jobs.name")}
                       </Link>
@@ -468,7 +468,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.partners.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("company.partners.name")}
                       </Link>
@@ -477,7 +477,7 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="border-transparent">
-                <AccordionTrigger className="text-md text-highlight leading-6 px-2">
+                <AccordionTrigger className="text-md text-standard-hover leading-6 px-2">
                   {t("legal.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -486,7 +486,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -495,7 +495,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.terms-of-services.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.terms-of-services.name")}
                       </Link>
@@ -503,7 +503,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.privacy-policy.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.privacy-policy.name")}
                       </Link>
@@ -511,7 +511,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.cookie-policy.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.cookie-policy.name")}
                       </Link>
@@ -519,7 +519,7 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.imprint.href")}
-                        className="font-regular text-md text-standard md:hover:text-highlight leading-6 p-2 rounded-md bg-transparent md:hover:bg-hoverground border border-transparent md:hover:border-separator"
+                        className="font-regular text-md text-standard md:hover:text-standard-hover leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
                       >
                         {t("legal.imprint.name")}
                       </Link>
@@ -529,7 +529,7 @@ export function FooterHomepageLayout() {
               </AccordionItem>
             </Accordion>
             <div className="mt-10 md:mt-0 md:ml-4">
-              <h3 className="text-md text-highlight font-bold leading-6">
+              <h3 className="text-md text-standard-hover font-bold leading-6">
                 {t("newsletter.title")}
               </h3>
               <p className="text-md text-standard mt-2 leading-6">
@@ -582,7 +582,7 @@ export function FooterDeclarationLayout() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-standard md:hover:text-highlight h-8 w-8 rounded-md bg-transparent md:hover:bg-hoverground flex justify-center items-center border border-transparent md:hover:border-separator"
+                className="text-standard md:hover:text-standard-hover h-8 w-8 rounded-md bg-transparent md:hover:bg-background-hover flex justify-center items-center border border-transparent md:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
                 {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}

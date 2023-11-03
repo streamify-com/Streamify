@@ -28,7 +28,7 @@ export default function SigninPageForm() {
             href={t("alternative.href")}
             className={cn(
               buttonVariants({ variant: "linkButton", size: "linkSize" }),
-              "text-highlight md:hover:text-primary",
+              "text-standard-hover md:hover:text-primary",
             )}
           >
             {t("alternative.name")}

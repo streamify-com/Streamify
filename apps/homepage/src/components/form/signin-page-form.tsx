@@ -23,7 +23,7 @@ export default function SigninPageForm() {
           <Link
             aria-label="Sign up"
             href="/signup"
-            className="text-highlight underline-offset-4 transition-colors md:hover:underline"
+            className="text-standard-hover underline-offset-4 transition-colors md:hover:underline"
           >
             {t("alternative")}
           </Link>
@@ -51,7 +51,7 @@ export default function SigninPageForm() {
           <Link
             aria-label="Reset password"
             href="/signin/reset-password"
-            className="md:hover:text-highlight underline underline-offset-4 transition-colors"
+            className="md:hover:text-standard-hover underline underline-offset-4 transition-colors"
           >
             {t("reset-password")}
           </Link>

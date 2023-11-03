@@ -54,7 +54,7 @@ export default function NavigationMain({
               "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "home"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                : "text-standard-hover md:border-b-2 md:border-transparent",
             )}
           >
             {t("home.name")}
@@ -65,7 +65,7 @@ export default function NavigationMain({
               "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "matches"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                : "text-standard-hover md:border-b-2 md:border-transparent",
             )}
           >
             {t("matches.name")}
@@ -76,7 +76,7 @@ export default function NavigationMain({
               "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "players"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                : "text-standard-hover md:border-b-2 md:border-transparent",
             )}
           >
             {t("players.name")}
@@ -87,7 +87,7 @@ export default function NavigationMain({
               "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "plus"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                : "text-standard-hover md:border-b-2 md:border-transparent",
             )}
           >
             {t("plus.name")}
@@ -98,7 +98,7 @@ export default function NavigationMain({
               "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
               selectedSegment === "live"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                : "text-standard-hover md:border-b-2 md:border-transparent",
             )}
           >
             {t("live.name")}
@@ -107,7 +107,7 @@ export default function NavigationMain({
       ) : null}
       <div className="flex items-center space-x-2">
         <button
-          className="active:bg-hoverground flex h-10 w-10 items-center justify-center rounded-md md:hidden"
+          className="active:bg-background-hover flex h-10 w-10 items-center justify-center rounded-md md:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (

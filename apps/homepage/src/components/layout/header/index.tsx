@@ -65,7 +65,7 @@ export function Header({ user }: HeaderProps) {
       } `}
     >
       {/* <nav
-        className={`border-separator bg-hoverground sticky top-0 z-40 border-b backdrop-blur-xl ${
+        className={`border-separator bg-background-hover sticky top-0 z-40 border-b backdrop-blur-xl ${
           isComponentOpen ? '' : 'hidden'
         }`}
       >
@@ -133,7 +133,7 @@ export function Header({ user }: HeaderProps) {
                     >
                       <DropdownMenuLabel className="font-normal">
                         <div className="flex flex-col space-y-1">
-                          <p className="text-md font-regular text-highlight leading-none">
+                          <p className="text-md font-regular text-standard-hover leading-none">
                             {user.firstName} {user.lastName}
                           </p>
                           <p className="text-standard text-xs leading-none">
@@ -146,7 +146,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-hoverground my-2 rounded-md"
+                            className="md:hover:bg-background-hover my-2 rounded-md"
                           >
                             <Icons.AccountIcon
                               className="mr-4 h-4 w-4"
@@ -159,7 +159,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-hoverground my-1 rounded-lg"
+                            className="md:hover:bg-background-hover my-1 rounded-lg"
                           >
                             <Icons.BillingIcon
                               className="mr-4 h-4 w-4"
@@ -172,7 +172,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-hoverground my-1 rounded-lg"
+                            className="md:hover:bg-background-hover my-1 rounded-lg"
                           >
                             <Icons.SettingsIcon
                               className="mr-4 h-4 w-4"
@@ -185,7 +185,7 @@ export function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-hoverground my-1 rounded-lg"
+                            className="md:hover:bg-background-hover my-1 rounded-lg"
                           >
                             <Icons.SupportIcon
                               className="mr-4 h-4 w-4"
@@ -200,7 +200,7 @@ export function Header({ user }: HeaderProps) {
                       <DropdownMenuItem asChild>
                         <Link
                           href="/signout"
-                          className="md:hover:bg-hoverground my-1 rounded-lg"
+                          className="md:hover:bg-background-hover my-1 rounded-lg"
                         >
                           <Icons.LogOutIcon
                             className="mr-4 h-4 w-4"

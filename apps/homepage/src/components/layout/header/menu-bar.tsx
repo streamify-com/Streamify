@@ -53,15 +53,15 @@ export default function MenuBar() {
             />
             {/* <Separator className="my-2" />
             <div className="flex">
-                <span className="flex-1 text-highlight uppercase">Kontakt</span>
+                <span className="flex-1 text-standard-hover uppercase">Kontakt</span>
             </div>
             <div className="flex">
                 <span className="flex-1">E-Mail</span>
-                <span className="text-highlight">support@streamify.com</span>
+                <span className="text-standard-hover">support@streamify.com</span>
             </div>
             <div className="flex">
                 <span className="flex-1">Telefon</span>
-                <span className="text-highlight">+49 173 7692475</span>
+                <span className="text-standard-hover">+49 173 7692475</span>
             </div>
             <Separator className="my-2" />
             <div className="flex">

@@ -32,7 +32,7 @@ export function LogOutButtons({
         <Button
           aria-label="Log out"
           size="defaultSize"
-          className="bg-highlight w-full md:w-full"
+          className="bg-standard-hover w-full md:w-full"
           disabled={isPending}
         >
           {isPending && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}

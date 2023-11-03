@@ -24,7 +24,7 @@ export default function SignUpPageForm() {
           <Link
             aria-label={t("alternative.name")}
             href={t("alternative.href")}
-            className="text-highlight underline-offset-4 transition-colors md:hover:underline"
+            className="text-standard-hover underline-offset-4 transition-colors md:hover:underline"
           >
             {t("alternative.name")}
           </Link>

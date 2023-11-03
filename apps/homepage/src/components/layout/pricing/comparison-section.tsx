@@ -137,7 +137,7 @@ const ComparisonSection: React.FC = () => {
         </div>
         {showContent && (
           <div>
-            <p className="text-highlight mt-10 text-2xl font-bold tracking-tight sm:text-2xl">
+            <p className="text-standard-hover mt-10 text-2xl font-bold tracking-tight sm:text-2xl">
               Compare all plan features
             </p>
             <p className="text-md text-standard mx-auto mt-6 text-left leading-8">
@@ -181,15 +181,15 @@ const ComparisonSection: React.FC = () => {
                         </th>
                         {tiers.map((tier) => (
                           <td key={tier.id} className="px-6 pt-2 xl:px-8">
-                            <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-highlight">
+                            <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-standard-hover">
                               {tier.name}
                             </div>
                             <a
                               href={tier.href}
                               className={classNames(
                                 tier.mostPopular
-                                  ? "bg-primary text-background md:hover:text-highlight border-primary md:hover:bg-background md:hover:border-highlight font-regular border"
-                                  : "text-standard md:hover:text-highlight border-separator md:hover:bg-hoverground md:hover:border-highlight border bg-transparent",
+                                  ? "bg-primary text-background md:hover:text-standard-hover border-primary md:hover:bg-background md:hover:border-standard-hover font-regular border"
+                                  : "text-standard md:hover:text-standard-hover border-separator md:hover:bg-background-hover md:hover:border-standard-hover border bg-transparent",
                                 "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-12 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-12 md:w-full",
                               )}
                             >
@@ -206,7 +206,7 @@ const ComparisonSection: React.FC = () => {
                               colSpan={4}
                               className={classNames(
                                 sectionIdx === 0 ? "pt-8" : "pt-16",
-                                "pb-4 text-md leading-6 text-highlight",
+                                "pb-4 text-md leading-6 text-standard-hover",
                               )}
                             >
                               {section.name}
@@ -226,7 +226,7 @@ const ComparisonSection: React.FC = () => {
                                 <td key={tier.id} className="px-6 py-4 xl:px-8">
                                   {typeof (feature.tiers as any)[tier.name] ===
                                   "string" ? (
-                                    <div className="text-center text-sm leading-6 text-highlight">
+                                    <div className="text-center text-sm leading-6 text-standard-hover">
                                       {(feature.tiers as any)[tier.name]}
                                     </div>
                                   ) : (

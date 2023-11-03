@@ -111,7 +111,10 @@ export function SignInForm({
           )}
         />
         <Separator className="my-4" />
-        <Button disabled={isPending} className="bg-highlight w-full md:w-full">
+        <Button
+          disabled={isPending}
+          className="bg-standard-hover w-full md:w-full"
+        >
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"

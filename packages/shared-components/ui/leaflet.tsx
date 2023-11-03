@@ -63,7 +63,7 @@ export default function Leaflet({
           Done
         </Button>
         <div
-          className={`border-separator bg-hoverground -mb-1 flex h-12 w-full items-center justify-center rounded-t-lg border`}
+          className={`border-separator bg-background-hover -mb-1 flex h-12 w-full items-center justify-center rounded-t-lg border`}
         >
           <div className="bg-standard -mr-1 h-1 w-6 rounded-full transition-all group-active:rotate-12" />
           <div className="bg-standard h-1 w-6 rounded-full transition-all group-active:-rotate-12" />

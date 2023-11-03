@@ -13,12 +13,11 @@ import {
   StripeLogo,
   VercelLogo,
 } from "@shared-components/graphics/logo";
-import { AnimatePresence, motion } from "framer-motion";
 
 export default function LogoCloudSection() {
   const t = useTranslations("logo-cloud-homepage");
   return (
-    <div className="my-4">
+    <div className="-mt-16 mb-14">
       <HomepageContainer>
         <div className="relative flex justify-center text-md uppercase">
           <span className="px-2 font-bold">{t("title")}</span>
