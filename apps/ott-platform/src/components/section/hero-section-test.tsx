@@ -12,6 +12,7 @@ import {
 import InstallPWA from "@shared-components/components/install-pwa";
 import { useTranslations } from "next-intl";
 import { ThemeModeIcon } from "@/components/mode-theme";
+import { VotanIcon } from "@shared-components/graphics/icons";
 
 export default function HeroSectionTest() {
   const t = useTranslations("signin");
@@ -48,6 +49,7 @@ export default function HeroSectionTest() {
           >
             {t("card-title")}
           </Link>
+          <VotanIcon className="text-active" />
         </div>
       </PlatformContainer>
     </>

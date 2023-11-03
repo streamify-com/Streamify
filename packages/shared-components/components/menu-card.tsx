@@ -1,12 +1,6 @@
 "use client";
 
-import React from "react";
-import {
-  CopyIcon,
-  ScheduleIcon,
-  Icons,
-} from "@shared-components/graphics/icons";
-import useCopyToClipboard from "@shared-components/hooks/use-copy-to-clipboard";
+import { ScheduleIcon, Icons } from "@shared-components/graphics/icons";
 import Link from "next-intl/link";
 import CopyToClipboardComponent from "./copy-to-clipboard";
 

@@ -23,6 +23,7 @@
     "clsx": "^2.0.0",
     "cmdk": "^0.2.0",
     "cookies-next": "^4.0.0",
+    "framer-motion": "^10.16.1",
     "next": "^13.5.6",
     "next-intl": "2.20.2",
     "next-pwa": "^5.6.0",

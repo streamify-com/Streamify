@@ -1615,3 +1615,20 @@ export function PrimaryIcon(
     </svg>
   );
 }
+
+export function VotanIcon(
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+) {
+  return (
+    <svg
+      width="302"
+      height="302"
+      viewBox="0 0 302 302"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M1 1H301V301H1V1Z" stroke="currentColor" />
+    </svg>
+  );
+}

@@ -91,7 +91,12 @@ export function SignInForm({
             <FormItem>
               {/* <FormLabel>{email}</FormLabel> */}
               <FormControl>
-                <Input placeholder={email} type="email" {...field} />
+                <Input
+                  placeholder={email}
+                  autoComplete="on"
+                  type="email"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -104,7 +109,11 @@ export function SignInForm({
             <FormItem>
               {/* <FormLabel>{password}</FormLabel> */}
               <FormControl>
-                <PasswordInput placeholder={password} {...field} />
+                <PasswordInput
+                  placeholder={password}
+                  autoComplete="current-password"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

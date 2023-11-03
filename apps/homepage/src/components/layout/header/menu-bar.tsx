@@ -57,7 +57,7 @@ export default function MenuBar() {
             </div>
             <div className="flex">
                 <span className="flex-1">E-Mail</span>
-                <span className="text-highlight">hello@streamify.com</span>
+                <span className="text-highlight">support@streamify.com</span>
             </div>
             <div className="flex">
                 <span className="flex-1">Telefon</span>

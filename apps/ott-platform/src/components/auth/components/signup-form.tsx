@@ -121,7 +121,11 @@ export function SignUpForm({
               <FormItem>
                 {/* <FormLabel>{firstname}</FormLabel> */}
                 <FormControl>
-                  <Input placeholder={firstname} {...field} />
+                  <Input
+                    placeholder={firstname}
+                    autoComplete="given-name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -134,7 +138,11 @@ export function SignUpForm({
               <FormItem>
                 {/* <FormLabel>{lastname}</FormLabel> */}
                 <FormControl>
-                  <Input placeholder={lastname} {...field} />
+                  <Input
+                    placeholder={lastname}
+                    autoComplete="family-name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -148,7 +156,12 @@ export function SignUpForm({
             <FormItem>
               {/* <FormLabel>{email}</FormLabel> */}
               <FormControl>
-                <Input placeholder={email} type="email" {...field} />
+                <Input
+                  placeholder={email}
+                  autoComplete="on"
+                  type="email"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -161,7 +174,11 @@ export function SignUpForm({
             <FormItem>
               {/* <FormLabel>{password}</FormLabel> */}
               <FormControl>
-                <PasswordInput placeholder={password} {...field} />
+                <PasswordInput
+                  placeholder={password}
+                  autoComplete="new-password"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
