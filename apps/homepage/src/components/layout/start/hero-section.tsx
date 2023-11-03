@@ -16,7 +16,7 @@ export default function HeroSection() {
   const t = useTranslations("hero-homepage");
   return (
     <AnimatePresence>
-      <div className="bg-transparent min-h-screen">
+      <div className="bg-transparent flex flex-col justify-center min-h-screen h-[90%] static overflow-hidden">
         <HomepageContainer>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
