@@ -35,11 +35,7 @@ export function LocaleChoose() {
     <>
       <Dialog>
         <DialogTrigger asChild className="hidden md:flex">
-          <Button
-            variant="languageButton"
-            size="languageSize"
-            className="md:text-sm"
-          >
+          <Button variant="ghostButton" size="fixedSize" className="md:text-sm">
             {getFlagIconForLocale(locale)}
             <span className="ml-2.5">{t("locale", { locale })}</span>
           </Button>
@@ -59,12 +55,12 @@ export function LocaleChooseIcon() {
       <Dialog>
         <DialogTrigger asChild className="hidden md:flex">
           <Button
-            variant="languageButton"
+            variant="ghostButton"
             size="avatarSize"
-            className="justify-center px-4 w-20 h-12 md:h-9 group"
+            className="justify-center px-4 w-20 h-10 md:h-9 group"
           >
             {getFlagIconForLocale(locale)}
-            <Icons.chevronDown className="ml-2.5 h-4 text-standard md:group-hover:text-standard-hover group" />
+            <Icons.chevronDown className="ml-2.5 h-4 text-primary md:group-hover:text-primary group" />
           </Button>
         </DialogTrigger>
         <LocaleSelectionDialog />
@@ -90,13 +86,13 @@ export function LocaleSwitcher() {
   return (
     <label
       className={clsx(
-        "relative text-standard",
+        "relative text-primary",
         isPending && "transition-opacity [&:disabled]:opacity-30",
       )}
     >
       <p className="sr-only">{t("label")}</p>
       <select
-        className="border-separator rounded-md md:hover:border-standard-hover md:hover:text-standard-hover text-md md:text-sm h-12 w-full border bg-transparent transition-all md:h-10 md:w-48"
+        className="border-separator rounded-md md:hover:border-primary md:hover:text-primary text-md md:text-sm h-10 w-full border bg-transparent transition-all md:h-10 md:w-48"
         defaultValue={locale}
         disabled={isPending}
         onChange={(e) => handleLocaleChange(e.target.value)}

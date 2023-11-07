@@ -13,14 +13,14 @@ const CopyToClipboardComponent = ({
   return (
     <>
       <Button
-        className="flex transition duration-100 border-separator border p-1.5 bg-transparent rounded-md md:hover:bg-background-hover md:hover:border-standard-hover md:hover:text-standard-hover text-xs"
+        className="flex transition duration-100 border-separator border p-1.5 bg-transparent rounded-md md:hover:bg-background-hover md:hover:border-primary md:hover:text-primary text-xs"
         size="iconSize"
         onClick={onCopy}
       >
         {copied ? (
           <Icons.check className="h-4 w-auto text-active" />
         ) : (
-          <CopyIcon className="h-4 w-auto text-standard-hover" />
+          <CopyIcon className="h-4 w-auto text-primary" />
         )}
       </Button>
       <div ref={ref} className="hidden">

@@ -26,7 +26,7 @@ export function ModeSelection() {
       <select
         id="selectTheme"
         name="Theme selector"
-        className="border-separator rounded-md md:hover:border-standard-hover md:hover:text-standard-hover text-md md:text-sm h-12 w-full border bg-transparent transition-all md:h-10 md:w-48"
+        className="border-separator rounded-md md:hover:border-primary md:hover:text-primary text-md md:text-sm h-10 w-full border bg-transparent transition-all md:h-10 md:w-48"
         value={resolvedTheme}
         onChange={handleThemeChange}
       >
@@ -65,7 +65,7 @@ export function ModeToggle() {
       <span
         className={classNames(
           enabled ? "translate-x-5" : "translate-x-0",
-          "bg-standard pointer-events-none relative inline-block h-5 w-5 transform rounded-full ring-0 transition duration-200 ease-in-out",
+          "bg-primary pointer-events-none relative inline-block h-5 w-5 transform rounded-full ring-0 transition duration-200 ease-in-out",
         )}
       >
         <span
@@ -160,14 +160,14 @@ export function ThemeModeSelector() {
   });
 
   return (
-    <Tabs defaultValue="system" className="border-standard w-full md:w-48">
+    <Tabs defaultValue="system" className="border-primary w-full md:w-48">
       <TabsList className="grid w-full grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.position}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-standard text-sm md:text-xs"
+            className="data-[state=active]:bg-primary text-sm md:text-xs"
           >
             {opt.text}
           </TabsTrigger>
@@ -248,7 +248,7 @@ export function ThemeModeIcon() {
             key={opt.text}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-standard text-sm md:text-xs px-2 py-1 rounded-full"
+            className="data-[state=active]:bg-primary text-sm md:text-xs px-2 py-1 rounded-full"
           >
             {opt.icon}
           </TabsTrigger>

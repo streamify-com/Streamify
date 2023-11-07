@@ -101,11 +101,11 @@ export function FooterDeclarationLayout() {
       <PlatformContainer>
         <div className="md:flex md:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="hidden font-regular text-standard text-xs leading-5 md:order-2 order-1 md:absolute md:flex md:left-1/2 md:-translate-x-1/2">
+            <p className="hidden font-regular text-primary text-xs leading-5 md:order-2 order-1 md:absolute md:flex md:left-1/2 md:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
-            <p className="md:hidden font-regular text-standard text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
+            <p className="md:hidden font-regular text-primary text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}
             </p>
             <div className="md:order-1 order-2 md:hidden block">
@@ -120,7 +120,7 @@ export function FooterDeclarationLayout() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-standard md:hover:text-standard-hover h-8 w-8 rounded-md bg-transparent md:hover:bg-background-hover flex justify-center items-center border border-transparent md:hover:border-separator"
+                className="text-primary md:hover:text-primary h-8 w-8 rounded-md bg-transparent md:hover:bg-background-hover flex justify-center items-center border border-transparent md:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
                 {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}
@@ -146,31 +146,31 @@ export function FooterPlatformLayout() {
             <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">
               <Link
                 href={t("terms-of-services.href")}
-                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("terms-of-services.name")}
               </Link>
               <Link
                 href={t("privacy-policy.href")}
-                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("privacy-policy.name")}
               </Link>
               <Link
                 href={t("cookie-policy.href")}
-                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("cookie-policy.name")}
               </Link>
               <Link
                 href={t("imprint.href")}
-                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("imprint.name")}
               </Link>
               <Link
                 href={t("cancel-subscription.href")}
-                className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
               >
                 {t("cancel-subscription.name")}
               </Link>
@@ -181,38 +181,38 @@ export function FooterPlatformLayout() {
               className="w-full md:hidden block"
             >
               <AccordionItem value="item-1" className="border-transparent">
-                <AccordionTrigger className="text-md text-standard-hover leading-6">
+                <AccordionTrigger className="text-md text-primary leading-6">
                   {t("sitemap.name")}
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col items-start">
                     <Link
                       href={t("terms-of-services.href")}
-                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("terms-of-services.name")}
                     </Link>
                     <Link
                       href={t("privacy-policy.href")}
-                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("privacy-policy.name")}
                     </Link>
                     <Link
                       href={t("cookie-policy.href")}
-                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("cookie-policy.name")}
                     </Link>
                     <Link
                       href={t("imprint.href")}
-                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("imprint.name")}
                     </Link>
                     <Link
                       href={t("cancel-subscription.href")}
-                      className="font-regular text-standard md:hover:text-standard-hover md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
                     >
                       {t("cancel-subscription.name")}
                     </Link>
@@ -229,7 +229,7 @@ export function FooterPlatformLayout() {
                   variant: "primaryButton",
                   size: "headerSize",
                 }),
-                "text-md h-12 w-full px-4 py-2 md:h-9",
+                "text-md h-10 w-full px-4 py-2 md:h-9",
               )}
             >
               {t("support.name")}
@@ -247,7 +247,7 @@ export function FooterPaymentLayout() {
   const logos = [
     { logo: VisaLogo, className: "h-6 md:h-8 w-auto" },
     { logo: MastercardLogo, className: "h-4 md:h-6 w-auto" },
-    { logo: PaypalLogo, className: "h-8 md:h-12 w-auto" },
+    { logo: PaypalLogo, className: "h-8 md:h-10 w-auto" },
     { logo: SofortLogo, className: "h-3 md:h-4 w-auto" },
     // { logo: KlarnaLogo, className: 'h-3 md:h-4 w-auto' },
     { logo: ApplepayLogo, className: "h-6 md:h-8 w-auto" },

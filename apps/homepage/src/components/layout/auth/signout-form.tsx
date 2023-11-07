@@ -21,14 +21,14 @@ export function SignOutForm({
     <div className={cn("grid gap-1", className)} {...props}>
       <h1
         className={cn(
-          "text-standard-hover text-2xl font-bold tracking-tight",
+          "text-primary text-2xl font-bold tracking-tight",
           size === "default" && "md:text-4xl",
         )}
       >
         {title}
       </h1>
       {description ? (
-        <p className={cn("text-standard", size === "default" && "text-md")}>
+        <p className={cn("text-primary", size === "default" && "text-md")}>
           {description}
         </p>
       ) : null}

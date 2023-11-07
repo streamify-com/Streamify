@@ -40,8 +40,8 @@ export default function MobileSelectionDialog() {
     <Sheet>
       <SheetTrigger asChild className="flex md:hidden">
         <Button
-          variant="languageButton"
-          size="languageSize"
+          variant="secondaryButton"
+          size="defaultSize"
           className="justify-center"
         >
           {getFlagIconForLocale(locale)}
@@ -51,7 +51,7 @@ export default function MobileSelectionDialog() {
       <SheetContent
         title={t("label")}
         side="bottom"
-        className="border-separator h-[65%] rounded-t-lg border-t text-standard"
+        className="border-separator h-[65%] rounded-t-lg border-t text-primary"
       >
         <ScrollArea className="mt-10 h-[90%] w-full border-t border-separator">
           <div className="grid gap-4 mt-4">
@@ -60,12 +60,12 @@ export default function MobileSelectionDialog() {
                 key={cur}
                 disabled={isPending}
                 onClick={() => handleLocaleChange(cur)}
-                variant="languageButton"
-                size="languageSize"
+                variant="ghostButton"
+                size="defaultSize"
                 className={
                   cur === locale
                     ? "justify-between md:w-full text-primary"
-                    : "justify-between md:w-full text-standard-hover"
+                    : "justify-between md:w-full text-primary"
                 }
               >
                 <p className="flex items-center">

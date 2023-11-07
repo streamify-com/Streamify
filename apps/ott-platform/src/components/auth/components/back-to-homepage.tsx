@@ -16,10 +16,10 @@ export function BackToHomepageButton() {
         href={t("href")}
         className={cn(
           buttonVariants({
-            variant: "navigationButton",
+            variant: "ghostButton",
             size: "navigationSize",
           }),
-          "md:hover:border-separator md:hover:bg-background/75 group border border-transparent px-2 py-1 text-standard-hover md:hover:backdrop-blur-xl",
+          "md:hover:border-separator md:hover:bg-background/75 group border border-transparent px-2 py-1 text-primary md:hover:backdrop-blur-xl",
         )}
       >
         <ExpandingArrowLeft />
@@ -36,7 +36,7 @@ export function GoBackButton() {
   return (
     <Button
       aria-label="Go back to the previous page"
-      variant="navigationButton"
+      variant="ghostButton"
       size="navigationSize"
       className="w-14"
       onClick={() => router.back()}

@@ -31,8 +31,8 @@ export function LogOutButtons({
       >
         <Button
           aria-label="Log out"
-          size="defaultSize"
-          className="bg-standard-hover w-full md:w-full"
+          size="fixedSize"
+          className="bg-primary w-full md:w-full"
           disabled={isPending}
         >
           {isPending && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
@@ -42,7 +42,7 @@ export function LogOutButtons({
       <Button
         aria-label="Go back to the previous page"
         variant="secondaryButton"
-        size="defaultSize"
+        size="fixedSize"
         className="w-full md:w-full"
         onClick={() => router.back()}
         disabled={isPending}

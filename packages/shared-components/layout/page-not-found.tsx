@@ -20,11 +20,9 @@ export default function PageNotFoundLayout({
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="grid place-items-center text-center">
-        <div className="text-primary mx-auto mt-10 py-8 text-3xl">
-          {message}
-        </div>
+        <div className="text-action mx-auto mt-10 py-8 text-3xl">{message}</div>
         <div className="mx-auto text-center">
-          <h1 className="text-standard-hover text-4xl font-bold md:text-5xl lg:text-6xl">
+          <h1 className="text-primary text-4xl font-bold md:text-5xl lg:text-6xl">
             {title}
           </h1>
           <div className="mx-auto my-6 px-8 text-center md:px-20 xl:px-44">
@@ -38,7 +36,7 @@ export default function PageNotFoundLayout({
               className={cn(
                 buttonVariants({
                   variant: "primaryButton",
-                  size: "defaultSize",
+                  size: "fixedSize",
                 }),
               )}
             >
@@ -49,7 +47,7 @@ export default function PageNotFoundLayout({
               className={cn(
                 buttonVariants({
                   variant: "secondaryButton",
-                  size: "defaultSize",
+                  size: "fixedSize",
                 }),
               )}
             >

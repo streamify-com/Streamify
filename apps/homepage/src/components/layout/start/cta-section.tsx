@@ -2,7 +2,6 @@ import { HomepageContainer } from "@shared-components/ui/container";
 import Link from "next-intl/link";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
-import { Banner } from "@shared-components/components/banner";
 
 export default function CtaSection() {
   return (
@@ -14,13 +13,12 @@ export default function CtaSection() {
             className={cn(
               buttonVariants({
                 variant: "primaryButton",
-                size: "defaultSize",
+                size: "fixedSize",
               }),
             )}
           >
             Get started
           </Link>
-          <Banner firstButtonName={"1"} secondButtonName={"2"} />
         </div>
       </HomepageContainer>
     </div>

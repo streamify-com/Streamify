@@ -57,10 +57,10 @@ export default function NavigationMain({
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "font-regular text-md md:text-md md:hover:text-standard flex items-center px-2 py-5 transition-colors",
+                "font-regular text-md md:hover:text-primary flex items-center px-2 py-5 transition-colors",
                 item.href.startsWith(`/${segment}`)
                   ? "text-primary md:border-primary md:border-b-2"
-                  : "text-standard-hover md:border-b-2 md:border-transparent",
+                  : "text-primary md:border-b-2 md:border-transparent",
                 item.disabled && "cursor-not-allowed opacity-80",
               )}
             >
@@ -71,7 +71,7 @@ export default function NavigationMain({
       ) : null}
       <div className="flex items-center space-x-2">
         <button
-          className="active:bg-background-hover flex h-10 w-10 items-center justify-center rounded-md md:hidden"
+          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md md:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (
@@ -94,7 +94,7 @@ export default function NavigationMain({
                       href={item.disabled ? "#" : item.href}
                       className={cn(
                         buttonVariants({
-                          variant: "navigationButton",
+                          variant: "ghostButton",
                           size: "navigationSize",
                         }),
                         "my-2 flex w-full items-center justify-between",
@@ -111,7 +111,7 @@ export default function NavigationMain({
                   href={t("products.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -125,7 +125,7 @@ export default function NavigationMain({
                   href={t("templates.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -139,7 +139,7 @@ export default function NavigationMain({
                   href={t("showcases.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -153,7 +153,7 @@ export default function NavigationMain({
                   href={t("pricing.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -170,7 +170,7 @@ export default function NavigationMain({
                     <Link
                       className={cn(
                         buttonVariants({
-                          variant: "avatarButton",
+                          variant: "ghostButton",
                           size: "avatarSize",
                         }),
                         "justify-between",
@@ -192,7 +192,7 @@ export default function NavigationMain({
                       href="/signin"
                       className={cn(
                         buttonVariants({
-                          variant: "secondaryButton",
+                          variant: "insentiveButton",
                           size: "defaultSize",
                         }),
                       )}
@@ -206,7 +206,7 @@ export default function NavigationMain({
                       href="/signout"
                       className={cn(
                         buttonVariants({
-                          variant: "secondaryButton",
+                          variant: "insentiveButton",
                           size: "defaultSize",
                         }),
                       )}

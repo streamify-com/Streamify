@@ -20,9 +20,11 @@ export default function LogoCloudSection() {
     <div className="-mt-16 mb-14">
       <HomepageContainer>
         <div className="relative flex justify-center text-md uppercase">
-          <span className="px-2 font-bold">{t("title")}</span>
+          <span className="px-2 font-bold text-primary-muted">
+            {t("title")}
+          </span>
         </div>
-        <div className="text-foreground mx-auto mt-12 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-8 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-8">
+        <div className="text-primary-muted mx-auto mt-12 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-8 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-8">
           {/* <Image
               src="https://assets.streamify.dev/logo/streamify_logo-red.svg"
               alt="Logo 1"

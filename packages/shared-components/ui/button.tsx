@@ -4,34 +4,23 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@shared-components/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center group rounded-md text-md font-regular transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-separator disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center group rounded-md text-md font-regular transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-testing disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         primaryButton:
-          "bg-standard-hover text-background border border-standard md:hover:bg-background-hover md:hover:text-standard-hover md:hover:border-standard-hover",
+          "bg-primary md:hover:bg-primary-muted text-primary-inner border border-primary md:hover:border-primary-muted",
         secondaryButton:
-          "bg-background border border-separator md:hover:bg-background-hover md:hover:border-standard-hover md:hover:text-standard-hover text-standard",
+          "bg-secondary md:hover:bg-secondary-muted text-secondary-inner md:hover:text-secondary-hover border border-separator",
         actionButton:
-          "bg-primary text-background border border-primary md:hover:bg-primary-hover md:hover:border-primary-hover",
-        outlineButton: "bg-transparent text-standard border border-separator",
-        intentionButton:
-          "bg-transparent text-primary border border-primary md:border-transparent md:hover:border-primary md:hover:text-primary",
-        menuButton:
-          "md:hover:text-standard-hover bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator text-standard-hover",
-        languageButton:
-          "md:hover:text-standard-hover bg-transparent border border-separator md:border-transparent md:hover:border-separator text-standard-hover justify-start",
-        navigationButton: "bg-transparent transition-all",
-        closeButton:
-          "bg-background md:hover:bg-background-hover text-standard border border-separator md:hover:text-standard-hover md:hover:border-standard-hover items-center justify-center transition duration-100",
-        ghostButton: "text-md md:text-2xl font-bold text-white",
-        leafletButton: "text-standard font-bold text-md",
-        avatarButton:
-          "md:hover:bg-background-hover border border-transparent md:hover:border-separator",
-        oauthButton:
-          "bg-background text-standard text-sm border-separator border md:hover:text-background md:hover:bg-standard-hover md:hover:border-standard-hover",
-        linkButton:
-          "text-standard md:hover:text-standard-hover underline underline-offset-4 transition-colors",
+          "bg-action md:hover:bg-action-muted text-background border border-action md:hover:border-action-muted",
+        insentiveButton:
+          "bg-transparent md:hover:bg-action text-action md:hover:text-background border border-action",
+        ghostButton:
+          "bg-transparent md:hover:bg-secondary-muted text-secondary-inner md:hover:text-secondary-hover border border-transparent md:hover:border-separator",
+        linkButton: "text-link underline underline-offset-4 transition-colors",
+        deleteButton:
+          "bg-negative md:hover:bg-negative-muted text-background border border-negative md:hover:border-negative-muted",
         StripeButton:
           "bg-[#635BFF] md:hover:bg-[#5951e5] text-white border border-separator",
         PaypalButton:
@@ -54,20 +43,17 @@ const buttonVariants = cva(
           "bg-[#232F3E] md:hover:bg-[#394351] text-white border border-separator",
       },
       size: {
-        defaultSize: "h-12 py-2 px-4 w-full md:w-48",
-        headerSize: "h-12 md:h-9 py-2 w-full sm:w-fit px-4 text-md sm:text-sm",
+        defaultSize: "h-12 md:h-10 w-full md:w-auto py-2 px-4",
+        fixedSize: "h-12 md:h-10 w-full md:w-48 py-2 px-4",
+        headerSize: "h-12 md:h-8 w-full md:w-auto py-1 px-2 md:text-sm",
+        footerSize: "h-12 md:h-8 w-full md:w-auto py-1 px-2",
         navigationSize: "h-8",
-        iconSize: "h-9 w-9 rounded-md",
+        iconSize: "h-9 w-9",
         avatarSize: "py-1 px-2",
-        menuSize: "w-full text-left h-auto rounded-md",
-        languageSize: "h-12 md:h-9 w-full md:w-36 px-4 text-md",
-        leafletSize: "h-7 w-16 rounded-md",
-        oauthSize: "h-12 md:h-10 w-full px-2 py-1 md:w-auto",
-        linkSize: "px-0 py-0",
-        seeAllSize: "md:h-12 w-full text-right py-2 px-4 md:w-auto",
-        labelSize: "md:h-12 w-full py-2 md:w-auto",
-        paymentSize: "h-12 p-2 w-full md:w-52 text-left",
-        closeSize: "h-8 w-8 p-1 rounded-full",
+        menuSize: "h-auto w-full text-left",
+        linkSize: "p-0",
+        seeAllSize: "h-10 md:h-10 w-full md:w-auto py-2 px-4 text-right",
+        paymentSize: "h-12 md:h-10 w-full md:w-48 p-2 text-left",
       },
     },
     defaultVariants: {
@@ -108,12 +94,12 @@ const ShiningButton = React.forwardRef<HTMLButtonElement, ShiningButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className="from-standard to-separator font-regular group relative inline-flex h-12 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] md:w-48 hover:bg-standard-hover"
+        className="from-primary to-separator font-regular group relative inline-flex h-12 md:h-10 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] md:w-48 md:hover:bg-primary"
         ref={ref}
         {...props}
       >
-        <span className="bg-background hover:bg-background flex h-full w-full items-center justify-center rounded-md">
-          <p className="font-regular from-standard via-standard-hover to-standard text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent group-hover:text-standard-hover">
+        <span className="bg-background md:hover:bg-background-hover flex h-full w-full items-center justify-center rounded-md">
+          <p className="font-regular from-primary-muted via-primary to-primary-muted text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent md:group-hover:text-primary">
             {children}
           </p>
         </span>

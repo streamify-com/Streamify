@@ -21,14 +21,13 @@ import {
   DiscordCard,
   ScheduleMeetingCard,
 } from "@shared-components/components/menu-card";
-import CopyToClipboardComponent from "@shared-components/components/copy-to-clipboard";
 
 export default function MenuBar() {
   const t = useTranslations("header-homepage");
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="menuButton" size="headerSize">
+        <Button variant="ghostButton" size="headerSize">
           {t("call-to-action.menu.name")}
         </Button>
       </SheetTrigger>
@@ -53,15 +52,15 @@ export default function MenuBar() {
             />
             {/* <Separator className="my-2" />
             <div className="flex">
-                <span className="flex-1 text-standard-hover uppercase">Kontakt</span>
+                <span className="flex-1 text-primary uppercase">Kontakt</span>
             </div>
             <div className="flex">
                 <span className="flex-1">E-Mail</span>
-                <span className="text-standard-hover">support@streamify.com</span>
+                <span className="text-primary">support@streamify.com</span>
             </div>
             <div className="flex">
                 <span className="flex-1">Telefon</span>
-                <span className="text-standard-hover">+49 173 7692475</span>
+                <span className="text-primary">+49 173 7692475</span>
             </div>
             <Separator className="my-2" />
             <div className="flex">
@@ -74,7 +73,7 @@ export default function MenuBar() {
                     aria-label="View your cart"
                     href="/cart"
                     className={buttonVariants({
-                    size: "defaultSize",
+                    size: "fixedSize",
                     className: "w-full",
                     })}
                 >

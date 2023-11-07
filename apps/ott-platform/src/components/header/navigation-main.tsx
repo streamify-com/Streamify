@@ -51,10 +51,10 @@ export default function NavigationMain({
           <Link
             href={t("home.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
               selectedSegment === "home"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-standard-hover md:border-b-2 md:border-transparent",
+                : "text-primary md:border-b-2 md:border-transparent",
             )}
           >
             {t("home.name")}
@@ -62,10 +62,10 @@ export default function NavigationMain({
           <Link
             href={t("matches.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
               selectedSegment === "matches"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-standard-hover md:border-b-2 md:border-transparent",
+                : "text-primary md:border-b-2 md:border-transparent",
             )}
           >
             {t("matches.name")}
@@ -73,10 +73,10 @@ export default function NavigationMain({
           <Link
             href={t("players.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
               selectedSegment === "players"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-standard-hover md:border-b-2 md:border-transparent",
+                : "text-primary md:border-b-2 md:border-transparent",
             )}
           >
             {t("players.name")}
@@ -84,10 +84,10 @@ export default function NavigationMain({
           <Link
             href={t("plus.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
               selectedSegment === "plus"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-standard-hover md:border-b-2 md:border-transparent",
+                : "text-primary md:border-b-2 md:border-transparent",
             )}
           >
             {t("plus.name")}
@@ -95,10 +95,10 @@ export default function NavigationMain({
           <Link
             href={t("live.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
               selectedSegment === "live"
                 ? "text-primary md:border-primary md:border-b-2"
-                : "text-standard-hover md:border-b-2 md:border-transparent",
+                : "text-primary md:border-b-2 md:border-transparent",
             )}
           >
             {t("live.name")}
@@ -131,7 +131,7 @@ export default function NavigationMain({
                   href={t("matches.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -145,7 +145,7 @@ export default function NavigationMain({
                   href={t("players.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -159,7 +159,7 @@ export default function NavigationMain({
                   href={t("plus.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -173,7 +173,7 @@ export default function NavigationMain({
                   href={t("live.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -190,7 +190,7 @@ export default function NavigationMain({
                     <Link
                       className={cn(
                         buttonVariants({
-                          variant: "avatarButton",
+                          variant: "ghostButton",
                           size: "avatarSize",
                         }),
                         "justify-between",
@@ -213,7 +213,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -227,7 +227,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -243,7 +243,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -256,7 +256,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "actionButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -268,7 +268,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "actionButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >

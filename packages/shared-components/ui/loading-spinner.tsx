@@ -4,7 +4,7 @@ export default function LoadingSpinner() {
   return (
     <div className="relative block items-center">
       <div className="text-md text-center">
-        <PrimaryLogo className="text-primary h-12 w-auto" />
+        <PrimaryLogo className="text-primary h-10 w-auto" />
         Loading ...
       </div>
       <div

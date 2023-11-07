@@ -24,7 +24,7 @@ export default function LocaleSwitcher() {
   return (
     <label
       className={clsx(
-        "relative text-standard",
+        "relative text-primary",
         isPending && "transition-opacity [&:disabled]:opacity-30",
       )}
     >
@@ -33,7 +33,7 @@ export default function LocaleSwitcher() {
         className={cn(
           buttonVariants({
             variant: "secondaryButton",
-            size: "defaultSize",
+            size: "fixedSize",
           }),
         )}
         defaultValue={locale}

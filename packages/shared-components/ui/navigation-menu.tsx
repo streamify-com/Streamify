@@ -40,7 +40,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent md:px-1 lg:px-2 xl:px-4 py-2 text-md font-regular transition-colors md:hover:bg-background-hover md:hover:text-standard-hover focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 border border-transparent md:hover:border-separator",
+  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent md:px-1 lg:px-2 xl:px-4 py-2 text-md font-regular transition-colors md:hover:bg-background-hover text-primary-muted md:hover:text-primary focus:bg-primary focus:text-primary-inner focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-secondary-muted data-[state=open]:border-separator data-[state=open]:text-secondary-hover border border-transparent md:hover:border-separator",
 );
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -85,7 +85,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "origin-top-center border-separator bg-background text-standard relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full rounded-md border md:w-[var(--radix-navigation-menu-viewport-width)]",
+        "origin-top-center border-separator bg-background text-primary relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full rounded-md border md:w-[var(--radix-navigation-menu-viewport-width)]",
         className,
       )}
       ref={ref}

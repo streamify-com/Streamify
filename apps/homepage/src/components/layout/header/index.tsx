@@ -30,6 +30,7 @@ import NavigationMain from "@/components/layout/header/navigation-main";
 import { useScroll } from "@shared-components/lib/use-scroll";
 import { useTranslations } from "next-intl";
 import MenuBar from "@/components/layout/header/menu-bar";
+import { LocaleChooseIcon } from "@/components/locale-switcher";
 
 interface HeaderProps {
   user: User | null;
@@ -79,9 +80,9 @@ export function Header({ user }: HeaderProps) {
                 className={cn(
                   buttonVariants({
                     variant: 'ghostButton',
-                    size: 'defaultSize',
+                    size: 'fixedSize',
                   }),
-                  'border-separator text-standard h-4 w-4 rounded-full border bg-transparent p-0 md:h-4 md:w-4',
+                  'border-separator text-primary h-4 w-4 rounded-full border bg-transparent p-0 md:h-4 md:w-4',
                 )}
               >
                 <Icons.close className="h-2 w-2" />
@@ -94,13 +95,14 @@ export function Header({ user }: HeaderProps) {
         <HomepageContainer>
           <div className="relative flex h-14 items-center justify-between md:h-16">
             <Link href="/" className="items-center w-72">
-              <PrimaryLogo className="text-primary h-8 w-auto md:w-auto" />
+              <PrimaryLogo className="text-action h-8 w-auto md:w-auto" />
             </Link>
             <div className="hidden md:flex">
               <NavigationBar />
             </div>
             <div className="hidden md:block w-72">
               <ul className="bottom-14 flex flex-row items-right justify-end gap-3">
+                <LocaleChooseIcon />
                 <Link
                   href={t("call-to-action.open-studio.href")}
                   className={cn(
@@ -116,7 +118,7 @@ export function Header({ user }: HeaderProps) {
                 {/* {user ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="avatarButton" size="avatarSize">
+                      <Button variant="ghostButton" size="avatarSize">
                         <Avatar className="">
                           <AvatarImage
                             src={user.imageUrl}
@@ -133,10 +135,10 @@ export function Header({ user }: HeaderProps) {
                     >
                       <DropdownMenuLabel className="font-normal">
                         <div className="flex flex-col space-y-1">
-                          <p className="text-md font-regular text-standard-hover leading-none">
+                          <p className="text-md font-regular text-primary leading-none">
                             {user.firstName} {user.lastName}
                           </p>
-                          <p className="text-standard text-xs leading-none">
+                          <p className="text-primary text-xs leading-none">
                             {email}
                           </p>
                         </div>
@@ -217,7 +219,7 @@ export function Header({ user }: HeaderProps) {
                     href="/signin"
                     className={cn(
                       buttonVariants({
-                        variant: "intentionButton",
+                        variant: "insentiveButton",
                         size: "headerSize",
                       }),
                     )}

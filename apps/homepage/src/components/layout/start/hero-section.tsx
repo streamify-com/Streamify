@@ -34,13 +34,11 @@ export default function HeroSection() {
                 href={t("badge.href")}
               >
                 {t("badge.headless-streaming")}
-                <span className="text-standard-hover">
-                  &nbsp;&nbsp;|&nbsp;&nbsp;
-                </span>
-                <span className="text-standard-hover font-italic">
+                <span className="text-primary ">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <span className="text-primary md:group-hover:text-action font-italic">
                   {t("badge.read-the-story")}
                 </span>
-                <ArrowRightCircle className="font-regular text-standard group md:group-hover:text-primary ml-2 h-4 w-4" />
+                <ArrowRightCircle className="font-regular text-primary group md:group-hover:text-action ml-2 h-4 w-4" />
               </Link>
             </motion.div>
             <div className="mx-auto text-center">
@@ -52,7 +50,7 @@ export default function HeroSection() {
                   duration: 0.95,
                   ease: [0.165, 0.84, 0.44, 1],
                 }}
-                className="font-customFont from-standard via-standard-hover to-standard inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent md:text-5xl lg:text-6xl"
+                className="font-special from-primary via-primary-muted to-primary inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent md:text-5xl lg:text-6xl"
               >
                 {t("title-1")}
                 &nbsp;
@@ -70,7 +68,7 @@ export default function HeroSection() {
                   duration: 0.95,
                   ease: [0.165, 0.84, 0.44, 1],
                 }}
-                className="hidden md:block my-10 md:px-44 md:text-md text-sm lg:text-lg"
+                className="hidden md:block my-10 md:px-44 md:text-md text-sm lg:text-lg text-primary-muted"
               >
                 {t("description")}
               </motion.h3>
@@ -82,9 +80,9 @@ export default function HeroSection() {
                   duration: 0.95,
                   ease: [0.165, 0.84, 0.44, 1],
                 }}
-                className="my-10 text-standard-hover md:text-sm text-xs uppercase"
+                className="my-10 text-primary md:text-sm text-xs uppercase"
               >
-                {t("standard-hover")}
+                {t("highlight")}
               </motion.h3>
             </div>
             <div className="mx-auto text-center">
@@ -103,7 +101,7 @@ export default function HeroSection() {
                   className={cn(
                     buttonVariants({
                       variant: "actionButton",
-                      size: "defaultSize",
+                      size: "fixedSize",
                     }),
                     // "font-regular md:font-bold",
                   )}
@@ -111,7 +109,7 @@ export default function HeroSection() {
                   {t("button.call-to-action.name")}
                 </Link>
                 <ShiningButton>
-                  <PlayIcon className="h-5 w-5 flex-none text-standard md:group-hover:text-standard-hover" />
+                  <PlayIcon className="h-5 w-5 flex-none text-primary md:group-hover:text-primary" />
                   <span className="ml-3">{t("button.watch-video")}</span>
                 </ShiningButton>
               </motion.div>

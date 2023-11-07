@@ -67,7 +67,7 @@ export default function Header({ user }: HeaderProps) {
                       href={t("signin.href")}
                       className={cn(
                         buttonVariants({
-                          variant: "intentionButton",
+                          variant: "insentiveButton",
                           size: "headerSize",
                         }),
                       )}
@@ -79,11 +79,11 @@ export default function Header({ user }: HeaderProps) {
                 {user ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="avatarButton" size="avatarSize">
-                        <p className="font-regular text-standard-hover text-sm leading-none">
+                      <Button variant="ghostButton" size="avatarSize">
+                        <p className="font-regular text-primary text-sm leading-none">
                           {t("dropdown.greeting")}&nbsp;
                         </p>
-                        <p className="text-standard-hover text-sm font-bold leading-none">
+                        <p className="text-primary text-sm font-bold leading-none">
                           {user.firstName}&nbsp;{user.lastName}
                         </p>
                         <Avatar className="ml-4">
@@ -102,10 +102,10 @@ export default function Header({ user }: HeaderProps) {
                     >
                       <DropdownMenuLabel className="font-normal">
                         <div className="flex flex-col space-y-1">
-                          <p className="text-md font-regular text-standard-hover leading-none">
+                          <p className="text-md font-regular text-primary leading-none">
                             {user.firstName}&nbsp;{user.lastName}
                           </p>
-                          <p className="text-standard text-xs leading-none">
+                          <p className="text-primary text-xs leading-none">
                             {email}
                           </p>
                         </div>
@@ -115,7 +115,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-background-hover md:hover:text-standard-hover my-2 rounded-md text-sm"
+                            className="md:hover:bg-background-hover md:hover:text-primary my-2 rounded-md text-sm"
                           >
                             <Icons.AccountIcon
                               className="mr-4 h-4 w-4"
@@ -128,7 +128,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/subscription"
-                            className="md:hover:bg-background-hover md:hover:text-standard-hover my-2 rounded-md text-sm"
+                            className="md:hover:bg-background-hover md:hover:text-primary my-2 rounded-md text-sm"
                           >
                             <Icons.billing
                               className="mr-4 h-4 w-4"
@@ -141,7 +141,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-background-hover md:hover:text-standard-hover my-2 rounded-md text-sm"
+                            className="md:hover:bg-background-hover md:hover:text-primary my-2 rounded-md text-sm"
                           >
                             <Icons.SupportIcon
                               className="mr-4 h-4 w-4"

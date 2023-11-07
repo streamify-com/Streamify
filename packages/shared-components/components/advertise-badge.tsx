@@ -9,7 +9,7 @@ export default function AdvertiseBadge() {
         target="_blank"
         aria-label="Streamify ad"
       >
-        <StreamifyBadge className="text-background border-separator bg-primary h-8 w-auto rounded-md border shadow-lg drop-shadow-lg" />
+        <StreamifyBadge className="text-background border-separator bg-primary h-8 w-auto rounded-md border" />
       </Link>
     </div>
   );

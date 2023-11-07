@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       url: "https://github.com/Vintotan",
     },
   ],
-  creator: "streamify",
+  creator: "Streamify",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",

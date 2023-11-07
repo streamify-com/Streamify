@@ -92,14 +92,14 @@ export default function PricingSection() {
       <HomepageContainer>
         <div className="mx-auto">
           <div className="mx-auto text-center">
-            <h2 className="font-customFont text-primary text-4xl tracking-tight md:text-5xl">
+            <h2 className="font-special text-primary text-4xl tracking-tight md:text-5xl">
               {t("title")}
             </h2>
           </div>
-          <p className="font-regular text-standard-hover mx-auto mt-6 text-center text-lg">
+          <p className="font-regular text-primary mx-auto mt-6 text-center text-lg">
             {t("subtitle")}
           </p>
-          <p className="font-regular text-standard mx-auto mb-6 mt-2 text-center text-lg">
+          <p className="font-regular text-primary mx-auto mb-6 mt-2 text-center text-lg">
             {t("description")}
           </p>
           <div className="mt-16 flex justify-center">
@@ -119,7 +119,7 @@ export default function PricingSection() {
                     classNames(
                       checked
                         ? "bg-primary text-background font-regular"
-                        : "text-standard font-regular",
+                        : "text-primary font-regular",
                       "cursor-pointer rounded-full px-3 py-1",
                     )
                   }
@@ -133,7 +133,7 @@ export default function PricingSection() {
                   classNames(
                     checked
                       ? "bg-primary text-background font-regular"
-                      : "text-standard font-regular",
+                      : "text-primary font-regular",
                     "cursor-pointer rounded-full px-3 py-1",
                   )
                 }
@@ -146,7 +146,7 @@ export default function PricingSection() {
                   classNames(
                     checked
                       ? "bg-primary text-background font-regular"
-                      : "text-standard font-regular",
+                      : "text-primary font-regular",
                     "cursor-pointer rounded-full px-3 py-1",
                   )
                 }
@@ -169,20 +169,20 @@ export default function PricingSection() {
                 <h3
                   id={tier.id}
                   className={classNames(
-                    tier.mostPopular ? "text-primary" : "text-standard-hover",
+                    tier.mostPopular ? "text-primary" : "text-primary",
                     "text-lg font-bold uppercase",
                   )}
                 >
                   {tier.name}
                 </h3>
-                <p className="text-md font-regular text-standard mt-4 h-20">
+                <p className="text-md font-regular text-primary mt-4 h-20">
                   {tier.description}
                 </p>
                 <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-standard-hover text-4xl font-bold tracking-tight">
+                  <span className="text-primary text-4xl font-bold tracking-tight">
                     {tier.price[frequency.value]}
                   </span>
-                  <span className="text-md text-standard">
+                  <span className="text-md text-primary">
                     {frequency.priceSuffix}
                   </span>
                 </p>
@@ -191,16 +191,16 @@ export default function PricingSection() {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.mostPopular
-                      ? "bg-primary text-background md:hover:text-standard-hover border-primary md:hover:bg-background-hover md:hover:border-standard-hover border"
-                      : "text-standard md:hover:text-standard-hover border-separator md:hover:bg-background-hover md:hover:border-standard-hover border bg-transparent",
-                    "text-md focus-visible:ring-separator mt-6 inline-flex h-12 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-12 md:w-full",
+                      ? "bg-primary text-background md:hover:text-primary border-primary md:hover:bg-background-hover md:hover:border-primary border"
+                      : "text-primary md:hover:text-primary border-separator md:hover:bg-background-hover md:hover:border-primary border bg-transparent",
+                    "text-md focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-10 md:w-full",
                   )}
                 >
                   Choose plan
                 </Link>
                 <ul
                   role="list"
-                  className="text-md font-regular text-standard mt-8 space-y-3"
+                  className="text-md font-regular text-primary mt-8 space-y-3"
                 >
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
@@ -220,7 +220,7 @@ export default function PricingSection() {
               <h3 className="text-primary text-lg font-bold uppercase leading-8 tracking-tight">
                 Your are a sports club?
               </h3>
-              <p className="font-regular text-standard mt-4 leading-7">
+              <p className="font-regular text-primary mt-4 leading-7">
                 Streamify Sports is the perfect solution for dedicated sports
                 OTT with additional features to serve your content and optimzed
                 for fan engagement.
@@ -231,7 +231,7 @@ export default function PricingSection() {
               className={cn(
                 buttonVariants({
                   variant: "actionButton",
-                  size: "defaultSize",
+                  size: "fixedSize",
                 }),
                 "mt-4 w-full md:w-64",
               )}

@@ -22,7 +22,7 @@ export default function SignUpPageForm() {
           <Link
             aria-label="Sign in"
             href="/signin"
-            className="text-standard-hover underline-offset-4 transition-colors md:hover:underline"
+            className="text-primary underline-offset-4 transition-colors md:hover:underline"
           >
             {t("alternative")}
           </Link>
@@ -35,7 +35,7 @@ export default function SignUpPageForm() {
             <span className="border-separator w-full border" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background text-standard px-2">
+            <span className="bg-background text-primary px-2">
               {t("or-continue-with")}
             </span>
           </div>

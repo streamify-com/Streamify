@@ -5,80 +5,112 @@
 @layer base {
   :root {
     /* Grounding colors */
-    --foreground: 217, 217, 217, 1;
-    --foreground-hover: 217, 217, 217, 0.6;
-    --background: 255, 255, 255, 1;
-    --background-hover: 255, 255, 255, 0.6;
+    --foreground: 247, 247, 247, 1;
+    --foreground-hover: 255, 255, 255, 1;
 
-    /* Text colors */
-    --standard: 112, 112, 112, 1;
-    --standard-hover: 0, 0, 0, 1;
+    --background: 255, 255, 255, 1;
+    --background-hover: 247, 247, 247, 1;
 
     /* Brand colors */
-    --primary: 220, 5, 45, 1;
-    --primary-hover: 128, 0, 24, 1;
+    --primary: 0, 0, 0, 1;
+    --primary-muted: 112, 112, 112, 1;
+    --primary-inner: 255, 255, 255, 1;
+    --primary-hover: 255, 255, 255, 1;
 
-    --secondary: 0, 0, 0, 1;
-    --secondary-hover: 0, 0, 0, 0.5;
+    --secondary: 0, 0, 0, 0;
+    --secondary-muted: 247, 247, 247, 1;
+    --secondary-inner: 112, 112, 112, 1;
+    --secondary-hover: 0, 0, 0, 1;
 
-    --tertiary: 101, 22, 27, 1;
-    --tertiary-hover: 255, 255, 255, 0.5;
+    --action: 220, 5, 45, 1;
+    --action-muted: 132, 3, 27, 1;
 
-    /* Call-to-Action colors */
+    /* Signal colors */
     --active: 13, 153, 255, 1;
-    --passive: 217, 217, 217, 1;
+    --active-muted: 8, 92, 153, 1;
 
-    /* Destructive / Warning colors */
-    --destructive: 88, 101, 242, 1;
-    --destructive-hover: 200, 0, 0, 1;
+    --passive: 255, 204, 0, 1;
+    --passive-muted: 153, 122, 0, 1;
 
-    /* Skeleton colors */
-    --skeleton: 217, 217, 217, 0.5;
+    --positive: 34, 197, 94, 1;
+    --positive-muted: 20, 118, 56, 1;
+
+    --negative: 169, 70, 229, 1;
+    --negative-muted: 101, 42, 137, 1;
+
+    /* Transparent color */
+    --transparent: 0, 0, 0, 0;
+
+    /* External link color */
+    --link: 13, 153, 255, 1;
+
+    /* Skeleton color */
+    --skeleton: 221, 221, 221, 1;
 
     /* Separator colors */
-    --separator: 112, 112, 112, 0.3;
-    --separator-hover: 0, 0, 0, 1;
+    --separator: 221, 221, 221, 1;
+    --separator-hover: 112, 112, 112, 1;
 
-    --test: 62, 180, 137, 1;
+    /* Test colors */
+    --testing: 62, 180, 137, 1;
+
+    /* Default border radius */
+    --radius: 0.5rem;
   }
 
   .dark {
     /* Grounding colors */
-    --foreground: 112, 112, 112, 1;
-    --foreground-hover: 112, 112, 112, 0.6;
-    --background: 0, 0, 0, 1;
-    --background-hover: 0, 0, 0, 0.6;
+    --foreground: 16, 16, 16, 1;
+    --foreground-hover: 0, 0, 0, 1;
 
-    /* Text colors */
-    --standard: 112, 112, 112, 1;
-    --standard-hover: 217, 217, 217, 1;
+    --background: 0, 0, 0, 1;
+    --background-hover: 16, 16, 16, 1;
 
     /* Brand colors */
-    --primary: 220, 5, 45, 1;
-    --primary-hover: 128, 0, 24, 1;
+    --primary: 255, 255, 255, 1;
+    --primary-muted: 112, 112, 112, 1;
+    --primary-inner: 0, 0, 0, 1;
+    --primary-hover: 0, 0, 0, 1;
 
-    --secondary: 0, 0, 0, 1;
-    --secondary-hover: 0, 0, 0, 0.5;
+    --secondary: 0, 0, 0, 0;
+    --secondary-muted: 16, 16, 16, 1;
+    --secondary-inner: 112, 112, 112, 1;
+    --secondary-hover: 255, 255, 255, 1;
 
-    --tertiary: 101, 22, 27, 1;
-    --tertiary-hover: 255, 255, 255, 0.5;
+    --action: 220, 5, 45, 1;
+    --action-muted: 132, 3, 27, 1;
 
-    /* Call-to-Action colors */
+    /* Signal colors */
     --active: 13, 153, 255, 1;
-    --passive: 112, 112, 112, 1;
+    --active-muted: 8, 92, 153, 1;
 
-    /* Destructive / Warning colors */
-    --destructive: 255, 0, 0, 1;
-    --destructive-hover: 200, 0, 0, 1;
+    --passive: 255, 204, 0, 1;
+    --passive-muted: 153, 122, 0, 1;
 
-    /* Skeleton colors */
-    --skeleton: 217, 217, 217, 0.5;
+    --positive: 34, 197, 94, 1;
+    --positive-muted: 20, 118, 56, 1;
+
+    --negative: 169, 70, 229, 1;
+    --negative-muted: 101, 42, 137, 1;
+
+    /* Transparent color */
+    --transparent: 0, 0, 0, 0;
+
+    /* External link color */
+    --link: 13, 153, 255, 1;
+
+    /* Skeleton color */
+    --skeleton: 47, 47, 47, 1;
 
     /* Separator colors */
-    --separator: 112, 112, 112, 0.3;
-    --separator-hover: 255, 255, 255, 1;
+    --separator: 47, 47, 47, 1;
+    --separator-hover: 112, 112, 112, 1;
 
-    --test: 62, 180, 137, 1;
+    /* Test colors */
+    --testing: 62, 180, 137, 1;
+
+    /* Default border radius */
+    --radius: 0.5rem;
   }
 
   ::selection {
@@ -87,7 +119,7 @@
   }
 
   body {
-    @apply bg-background font-regular text-standard;
+    @apply bg-background font-regular text-primary;
   }
 }
 

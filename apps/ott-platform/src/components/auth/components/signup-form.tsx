@@ -192,10 +192,10 @@ export function SignUpForm({
             onClick={handleCheckboxClick}
           />
           <div className="grid gap-1.5 leading-none">
-            <label htmlFor="terms1" className="text-standard-hover text-sm">
+            <label htmlFor="terms1" className="text-primary text-sm">
               {termsandconditionsheader}
             </label>
-            <p className="text-standard text-sm">
+            <p className="text-primary text-sm">
               {termsandconditionsdescriptionpart1}&nbsp;
               <Link
                 aria-label="Terms of Services"
@@ -224,7 +224,7 @@ export function SignUpForm({
         </div>
         <Button
           disabled={isPending || !isChecked}
-          className="bg-standard-hover w-full md:w-full"
+          className="bg-primary w-full md:w-full"
         >
           {isPending && (
             <Icons.spinner
@@ -238,7 +238,7 @@ export function SignUpForm({
         <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="defaultSize"
+          size="fixedSize"
           className="w-full md:w-full"
           onClick={() => router.back()}
           disabled={isPending}

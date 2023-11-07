@@ -45,7 +45,7 @@ export default {
         italic: ["var(--font-italic)", ...fontFamily.sans],
         regular: ["var(--font-regular)", ...fontFamily.sans],
         bold: ["var(--font-bold)", ...fontFamily.sans],
-        customFont: ["var(--font-heading)", ...fontFamily.sans],
+        special: ["var(--font-heading)", ...fontFamily.sans],
       },
       colors: {
         foreground: {
@@ -56,34 +56,51 @@ export default {
           DEFAULT: "rgba(var(--background))",
           hover: "rgba(var(--background-hover))",
         },
-        standard: {
-          DEFAULT: "rgba(var(--standard))",
-          hover: "rgba(var(--standard-hover))",
-        },
         primary: {
           DEFAULT: "rgba(var(--primary))",
+          muted: "rgba(var(--primary-muted))",
+          inner: "rgba(var(--primary-inner))",
           hover: "rgba(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "rgba(var(--secondary))",
+          muted: "rgba(var(--secondary-muted))",
+          inner: "rgba(var(--secondary-inner))",
           hover: "rgba(var(--secondary-hover))",
         },
-        tertiary: {
-          DEFAULT: "rgba(var(--tertiary))",
-          hover: "rgba(var(--tertiary-hover))",
+        action: {
+          DEFAULT: "rgba(var(--action))",
+          muted: "rgba(var(--action-muted))",
         },
-        active: "rgba(var(--active))",
-        passive: "rgba(var(--passive))",
-        destructive: {
-          DEFAULT: "rgba(var(--destructive))",
-          hover: "rgba(var(--destructive-hover))",
+        active: {
+          DEFAULT: "rgba(var(--active))",
+          muted: "rgba(var(--active-muted))",
         },
+        passive: {
+          DEFAULT: "rgba(var(--passive))",
+          muted: "rgba(var(--passive-muted))",
+        },
+        positive: {
+          DEFAULT: "rgba(var(--positive))",
+          muted: "rgba(var(--positive-muted))",
+        },
+        negative: {
+          DEFAULT: "rgba(var(--negative))",
+          muted: "rgba(var(--negative-muted))",
+        },
+        transparent: "rgba(var(--transparent))",
+        link: "rgba(var(--link))",
         skeleton: "rgba(var(--skeleton))",
         separator: {
           DEFAULT: "rgba(var(--separator))",
           hover: "rgba(var(--separator-hover))",
         },
-        test: "rgba(var(--test))",
+        testing: "rgba(var(--testing))",
+      },
+      borderRadius: {
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
         "accordion-down": {

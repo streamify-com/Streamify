@@ -32,7 +32,7 @@ export default function HeroSectionTest() {
             className={cn(
               buttonVariants({
                 variant: "actionButton",
-                size: "defaultSize",
+                size: "fixedSize",
               }),
             )}
           >
@@ -43,13 +43,25 @@ export default function HeroSectionTest() {
             className={cn(
               buttonVariants({
                 variant: "primaryButton",
-                size: "defaultSize",
+                size: "fixedSize",
               }),
             )}
           >
             {t("card-title")}
           </Link>
           <VotanIcon className="text-active" />
+          <Link
+            href="/signin"
+            className={cn(
+              buttonVariants({
+                variant: "primaryButton",
+                size: "fixedSize",
+              }),
+              "bg-foreground",
+            )}
+          >
+            {t("card-title")}
+          </Link>
         </div>
       </PlatformContainer>
     </>

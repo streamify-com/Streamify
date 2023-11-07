@@ -41,10 +41,10 @@ const DialogContent = React.forwardRef<
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="ring-background focus:ring-separator data-[state=open]:bg-background-hover data-[state=open]:text-standard absolute right-8 top-4 md:top-7 rounded-sm opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none md:hover:opacity-100">
+      <DialogPrimitive.Close className="ring-background focus:ring-separator data-[state=open]:bg-background-hover data-[state=open]:text-primary absolute right-8 top-4 md:top-7 rounded-sm opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none md:hover:opacity-100">
         <button className="active:bg-background-hover flex h-7 w-7 items-center justify-center rounded-sm group">
-          {/* <X className="h-5 w-5 text-standard-hover" /> */}
-          <Icons.close className="text-standard md:group-hover:text-standard-hover group z-50 h-5 w-5 md:h-4 md:w-4" />
+          {/* <X className="h-5 w-5 text-primary" /> */}
+          <Icons.close className="text-primary md:group-hover:text-primary group z-50 h-5 w-5 md:h-4 md:w-4" />
           <span className="sr-only">Close</span>
         </button>
       </DialogPrimitive.Close>
@@ -102,7 +102,7 @@ const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
-    className={cn("text-standard text-md text-left", className)}
+    className={cn("text-primary text-md text-left", className)}
     {...props}
   />
 ));

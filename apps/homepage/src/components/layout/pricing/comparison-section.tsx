@@ -128,7 +128,7 @@ const ComparisonSection: React.FC = () => {
             className={cn(
               buttonVariants({
                 variant: "secondaryButton",
-                size: "defaultSize",
+                size: "fixedSize",
               }),
             )}
           >
@@ -137,10 +137,10 @@ const ComparisonSection: React.FC = () => {
         </div>
         {showContent && (
           <div>
-            <p className="text-standard-hover mt-10 text-2xl font-bold tracking-tight sm:text-2xl">
+            <p className="text-primary mt-10 text-2xl font-bold tracking-tight sm:text-2xl">
               Compare all plan features
             </p>
-            <p className="text-md text-standard mx-auto mt-6 text-left leading-8">
+            <p className="text-md text-primary mx-auto mt-6 text-left leading-8">
               Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
               quasi iusto modi velit ut non voluptas in. Explicabo id ut
               laborum.
@@ -181,16 +181,16 @@ const ComparisonSection: React.FC = () => {
                         </th>
                         {tiers.map((tier) => (
                           <td key={tier.id} className="px-6 pt-2 xl:px-8">
-                            <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-standard-hover">
+                            <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-primary">
                               {tier.name}
                             </div>
                             <a
                               href={tier.href}
                               className={classNames(
                                 tier.mostPopular
-                                  ? "bg-primary text-background md:hover:text-standard-hover border-primary md:hover:bg-background md:hover:border-standard-hover font-regular border"
-                                  : "text-standard md:hover:text-standard-hover border-separator md:hover:bg-background-hover md:hover:border-standard-hover border bg-transparent",
-                                "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-12 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-12 md:w-full",
+                                  ? "bg-primary text-background md:hover:text-primary border-primary md:hover:bg-background md:hover:border-primary font-regular border"
+                                  : "text-primary md:hover:text-primary border-separator md:hover:bg-background-hover md:hover:border-primary border bg-transparent",
+                                "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-10 md:w-full",
                               )}
                             >
                               Choose plan
@@ -206,18 +206,18 @@ const ComparisonSection: React.FC = () => {
                               colSpan={4}
                               className={classNames(
                                 sectionIdx === 0 ? "pt-8" : "pt-16",
-                                "pb-4 text-md leading-6 text-standard-hover",
+                                "pb-4 text-md leading-6 text-primary",
                               )}
                             >
                               {section.name}
-                              <div className="absolute inset-x-8 mt-4 h-px bg-standard" />
+                              <div className="absolute inset-x-8 mt-4 h-px bg-primary" />
                             </th>
                           </tr>
                           {section.features.map((feature) => (
                             <tr key={feature.name}>
                               <th
                                 scope="row"
-                                className="py-4 text-md leading-6 text-standard"
+                                className="py-4 text-md leading-6 text-primary"
                               >
                                 {feature.name}
                                 <div className="absolute inset-x-8 mt-4 h-px bg-separator" />
@@ -226,7 +226,7 @@ const ComparisonSection: React.FC = () => {
                                 <td key={tier.id} className="px-6 py-4 xl:px-8">
                                   {typeof (feature.tiers as any)[tier.name] ===
                                   "string" ? (
-                                    <div className="text-center text-sm leading-6 text-standard-hover">
+                                    <div className="text-center text-sm leading-6 text-primary">
                                       {(feature.tiers as any)[tier.name]}
                                     </div>
                                   ) : (
@@ -239,7 +239,7 @@ const ComparisonSection: React.FC = () => {
                                         />
                                       ) : (
                                         <Icons.minus
-                                          className="mx-auto h-5 w-5 text-standard"
+                                          className="mx-auto h-5 w-5 text-primary"
                                           aria-hidden="true"
                                         />
                                       )}

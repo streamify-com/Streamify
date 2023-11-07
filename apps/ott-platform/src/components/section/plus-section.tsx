@@ -8,7 +8,7 @@ export default function PlusSection() {
   return (
     <>
       <PlatformContainer>
-        <h1 className="text-3xl font-customFont text-primary">{t("name")}</h1>
+        <h1 className="text-3xl font-special text-primary">{t("name")}</h1>
       </PlatformContainer>
     </>
   );
