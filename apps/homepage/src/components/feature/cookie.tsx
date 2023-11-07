@@ -42,12 +42,12 @@ export default function Cookie() {
           </Link>
           .
         </p>
-        <div className="mt-4 space-y-4 md:flex md:items-center md:gap-x-3 md:space-y-0">
+        <div className="mt-4 space-y-4 sm:flex sm:items-center sm:gap-x-3 sm:space-y-0">
           <Button
             onClick={acceptCookie}
             variant="primaryButton"
             size="fixedSize"
-            className="md:px-5 md:py-2"
+            className="sm:px-5 sm:py-2"
           >
             {t("accept-all")}
           </Button>
@@ -55,7 +55,7 @@ export default function Cookie() {
             onClick={declineCookie}
             variant="secondaryButton"
             size="fixedSize"
-            className="md:px-5 md:py-2"
+            className="sm:px-5 sm:py-2"
           >
             {t("only-necessary")}
           </Button>

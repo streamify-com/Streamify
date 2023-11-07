@@ -33,20 +33,20 @@ export function Header({ user }: HeaderProps) {
       className={`sticky top-0 z-40 ${
         scrolled
           ? "border-separator border-b bg-white/60 backdrop-blur-xl dark:bg-black/60"
-          : "md:bg-transparent bg-background border-separator border-b md:border-transparent"
+          : "sm:bg-transparent bg-background border-separator border-b sm:border-transparent"
       } `}
     >
       <nav>
         <HomepageContainer>
-          <div className="relative flex h-14 items-center justify-between md:h-16">
+          <div className="relative flex h-14 items-center justify-between sm:h-16">
             <Link href="/" className="items-center w-72">
-              <PrimaryLogo className="text-action h-8 w-auto md:w-auto" />
+              <PrimaryLogo className="text-action h-8 w-auto sm:w-auto" />
             </Link>
-            <div className="hidden md:flex">
+            <div className="hidden sm:flex">
               <NavigationBar />
             </div>
-            <div className="hidden md:block">
-              <ul className="bottom-14 flex flex-row items-right justify-end gap-2">
+            <div className="hidden sm:block">
+              <ul className="bottom-14 flex flex-row items-right justify-end gap-4">
                 <LocaleChooseIcon />
                 <Link
                   href={t("call-to-action.open-studio.href")}
@@ -62,7 +62,7 @@ export function Header({ user }: HeaderProps) {
                 <MenuBar />
               </ul>
             </div>
-            <div className="flex items-center gap-6 md:hidden">
+            <div className="flex items-center gap-6 sm:hidden">
               <NavigationMain
                 items={homepageConfig.mainNav}
                 user={user}

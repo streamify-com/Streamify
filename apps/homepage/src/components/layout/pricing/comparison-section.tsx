@@ -120,7 +120,7 @@ const ComparisonSection: React.FC = () => {
   const buttonLabel = showContent ? "Hide comparison" : "Show comparison";
 
   return (
-    <div className="bg-background mt-6 hidden md:block">
+    <div className="bg-background mt-6 hidden sm:block">
       <HomepageContainer>
         <div className="flex flex-col items-center justify-center">
           <Button
@@ -146,7 +146,7 @@ const ComparisonSection: React.FC = () => {
               laborum.
             </p>
             <div className="mx-auto">
-              <div className="isolate mt-20 hidden lg:block">
+              <div className="isolate mt-20 hidden md:block">
                 <div className="relative -mx-8">
                   {tiers.some((tier) => tier.mostPopular) ? (
                     <div className="absolute inset-x-4 inset-y-0 -z-10 flex">
@@ -180,7 +180,7 @@ const ComparisonSection: React.FC = () => {
                           <span className="sr-only">Price</span>
                         </th>
                         {tiers.map((tier) => (
-                          <td key={tier.id} className="px-6 pt-2 xl:px-8">
+                          <td key={tier.id} className="px-6 pt-2 lg:px-8">
                             <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-primary">
                               {tier.name}
                             </div>
@@ -188,9 +188,9 @@ const ComparisonSection: React.FC = () => {
                               href={tier.href}
                               className={classNames(
                                 tier.mostPopular
-                                  ? "bg-primary text-background md:hover:text-primary border-primary md:hover:bg-background md:hover:border-primary font-regular border"
-                                  : "text-primary md:hover:text-primary border-separator md:hover:bg-background-hover md:hover:border-primary border bg-transparent",
-                                "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-10 md:w-full",
+                                  ? "bg-primary text-background sm:hover:text-primary border-primary sm:hover:bg-background sm:hover:border-primary font-regular border"
+                                  : "text-primary sm:hover:text-primary border-separator sm:hover:bg-background-hover sm:hover:border-primary border bg-transparent",
+                                "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:h-10 sm:w-full",
                               )}
                             >
                               Choose plan
@@ -223,7 +223,7 @@ const ComparisonSection: React.FC = () => {
                                 <div className="absolute inset-x-8 mt-4 h-px bg-separator" />
                               </th>
                               {tiers.map((tier) => (
-                                <td key={tier.id} className="px-6 py-4 xl:px-8">
+                                <td key={tier.id} className="px-6 py-4 lg:px-8">
                                   {typeof (feature.tiers as any)[tier.name] ===
                                   "string" ? (
                                     <div className="text-center text-sm leading-6 text-primary">

@@ -119,7 +119,7 @@ export function SignUpForm({
                 <FormControl>
                   <select
                     {...field}
-                    className="h-10 md:h-10 py-2 px-4 md:w-full w-full rounded-md border border-separator"
+                    className="h-10 sm:h-10 py-2 px-4 sm:w-full w-full rounded-md border border-separator"
                   >
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -140,7 +140,7 @@ export function SignUpForm({
                 <FormControl>
                   <input
                     type="date"
-                    className="h-10 md:h-10 py-2 px-4 md:w-full w-full rounded-md border border-separator"
+                    className="h-10 sm:h-10 py-2 px-4 sm:w-full w-full rounded-md border border-separator"
                   ></input>
                 </FormControl>
                 <FormMessage />
@@ -210,7 +210,7 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/terms-of-services"
-              className="md:hover:text-primary underline underline-offset-4 transition-colors"
+              className="sm:hover:text-primary underline underline-offset-4 transition-colors"
             >
               {termsandconditions}
             </Link>
@@ -218,7 +218,7 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/privacy-policy"
-              className="md:hover:text-primary underline underline-offset-4 transition-colors"
+              className="sm:hover:text-primary underline underline-offset-4 transition-colors"
             >
               {privacypolicy}
             </Link>
@@ -228,7 +228,7 @@ export function SignUpForm({
         <Separator className="my-4" />
         <Button
           disabled={isPending || !isChecked}
-          className="bg-primary w-full md:w-full"
+          className="bg-primary w-full sm:w-full"
         >
           {isPending && (
             <Icons.spinner
@@ -243,7 +243,7 @@ export function SignUpForm({
           aria-label="Go back to the previous page"
           variant="secondaryButton"
           size="fixedSize"
-          className="w-full md:w-full"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

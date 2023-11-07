@@ -167,14 +167,14 @@ export function ThemeModeSelector() {
   });
 
   return (
-    <Tabs defaultValue="system" className="border-separator w-full md:w-48">
+    <Tabs defaultValue="system" className="border-separator w-full sm:w-48">
       <TabsList className="grid w-full grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.position}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm md:text-xs"
+            className="data-[state=active]:bg-primary text-sm sm:text-xs"
           >
             {opt.text}
           </TabsTrigger>
@@ -248,14 +248,14 @@ export function ThemeModeIcon() {
   });
 
   return (
-    <Tabs defaultValue="system" className="w-28 md:w-28 rounded-full">
+    <Tabs defaultValue="system" className="w-28 sm:w-28 rounded-full">
       <TabsList className="grid w-full grid-cols-3 gap-2 p-1 rounded-full">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.text}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm md:text-xs px-2 py-1 rounded-full"
+            className="data-[state=active]:bg-primary text-sm sm:text-xs px-2 py-1 rounded-full"
           >
             {opt.icon}
           </TabsTrigger>

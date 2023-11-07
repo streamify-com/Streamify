@@ -122,7 +122,7 @@ export function SignInForm({
         <Separator className="my-2" />
         <Button
           disabled={isPending}
-          className="w-full md:w-full"
+          className="w-full sm:w-full"
           variant="primaryButton"
           size="fixedSize"
         >
@@ -139,7 +139,7 @@ export function SignInForm({
           aria-label="Go back to the previous page"
           variant="secondaryButton"
           size="fixedSize"
-          className="w-full md:w-full"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

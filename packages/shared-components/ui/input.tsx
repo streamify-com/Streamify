@@ -8,10 +8,10 @@ const inputVariants = cva(
     variants: {
       variant: {
         defaultInput:
-          "bg-transparent border border-separator border md:hover:border-primary md:hover:text-primary text-primary transition-all",
+          "bg-transparent border border-separator border sm:hover:border-primary sm:hover:text-primary text-primary transition-all",
       },
       size: {
-        inputSize: "h-12 md:h-10 py-2 px-4 md:w-full w-full",
+        inputSize: "h-12 sm:h-10 py-2 px-4 sm:w-full w-full",
       },
     },
     defaultVariants: {

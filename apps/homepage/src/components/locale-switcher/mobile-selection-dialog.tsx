@@ -38,7 +38,7 @@ export default function MobileSelectionDialog() {
 
   return (
     <Sheet>
-      <SheetTrigger asChild className="flex md:hidden">
+      <SheetTrigger asChild className="flex sm:hidden">
         <Button
           variant="secondaryButton"
           size="defaultSize"
@@ -64,8 +64,8 @@ export default function MobileSelectionDialog() {
                 size="defaultSize"
                 className={
                   cur === locale
-                    ? "justify-between md:w-full text-active"
-                    : "justify-between md:w-full text-primary"
+                    ? "justify-between sm:w-full text-active"
+                    : "justify-between sm:w-full text-primary"
                 }
               >
                 <p className="flex items-center">

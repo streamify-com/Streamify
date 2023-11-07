@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 export function BackToHomepageButton() {
   const t = useTranslations("back-to-homepage");
   return (
-    <div className="absolute bottom-0 z-30 hidden p-20 lg:flex">
+    <div className="absolute bottom-0 z-30 hidden md:flex group m-20">
       <Link
         href={t("href")}
         className={cn(
@@ -19,7 +19,7 @@ export function BackToHomepageButton() {
             variant: "ghostButton",
             size: "navigationSize",
           }),
-          "md:hover:border-separator md:hover:bg-background/75 group border border-transparent px-2 py-1 text-primary md:hover:backdrop-blur-xl",
+          "sm:hover:border-separator sm:hover:bg-background/75 border border-transparent px-4 py-2 text-primary-inner sm:group-hover:text-primary-hover sm:hover:backdrop-blur-xl",
         )}
       >
         <ExpandingArrowLeft />

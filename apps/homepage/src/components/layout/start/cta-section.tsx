@@ -7,7 +7,7 @@ export default function CtaSection() {
   return (
     <div className="bg-background-hover border-separator border-y">
       <HomepageContainer>
-        <div className="my-10 flex-col gap-4 space-y-4 md:flex md:flex-row md:items-center md:justify-center md:space-x-4 md:space-y-0">
+        <div className="my-10 flex-col gap-4 space-y-4 sm:flex sm:flex-row sm:items-center sm:justify-center sm:space-x-4 sm:space-y-0">
           <Link
             href="/subscribe"
             className={cn(

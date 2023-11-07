@@ -45,16 +45,16 @@ export default function NavigationMain({
       ?.emailAddress ?? "";
 
   return (
-    <div className="flex sm:gap-2 md:gap-4">
+    <div className="flex sm:gap-4">
       {items?.length ? (
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-8 sm:flex">
           <Link
             href={t("home.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "home"
-                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
-                : "text-primary-muted md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("home.name")}
@@ -62,10 +62,10 @@ export default function NavigationMain({
           <Link
             href={t("matches.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "matches"
-                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
-                : "text-primary-muted md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("matches.name")}
@@ -73,10 +73,10 @@ export default function NavigationMain({
           <Link
             href={t("players.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "players"
-                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
-                : "text-primary-muted md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("players.name")}
@@ -84,10 +84,10 @@ export default function NavigationMain({
           <Link
             href={t("plus.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "plus"
-                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
-                : "text-primary-muted md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("plus.name")}
@@ -95,10 +95,10 @@ export default function NavigationMain({
           <Link
             href={t("live.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "plus"
-                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
-                : "text-primary-muted md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("live.name")}
@@ -107,7 +107,7 @@ export default function NavigationMain({
       ) : null}
       <div className="flex items-center">
         <button
-          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md md:hidden"
+          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md sm:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (
@@ -120,7 +120,7 @@ export default function NavigationMain({
       {showMobileMenu && items && (
         <div
           className={cn(
-            "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 top-14 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 lg:static lg:block",
+            "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 top-14 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 md:static md:block",
           )}
         >
           <PlatformContainer>

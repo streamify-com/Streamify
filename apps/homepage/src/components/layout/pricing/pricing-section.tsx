@@ -92,7 +92,7 @@ export default function PricingSection() {
       <HomepageContainer>
         <div className="mx-auto">
           <div className="mx-auto text-center">
-            <h2 className="font-special text-primary text-4xl tracking-tight md:text-5xl">
+            <h2 className="font-special text-primary text-4xl tracking-tight sm:text-5xl">
               {t("title")}
             </h2>
           </div>
@@ -155,7 +155,7 @@ export default function PricingSection() {
               </RadioGroup.Option>
             </RadioGroup>
           </div>
-          <div className="isolate mx-auto mt-10 grid grid-cols-1 gap-10 md:grid-cols-3 xl:mx-0 xl:grid-cols-3">
+          <div className="isolate mx-auto mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3 lg:mx-0 lg:grid-cols-3">
             {tiers.map((tier) => (
               <div
                 key={tier.id}
@@ -191,9 +191,9 @@ export default function PricingSection() {
                   aria-describedby={tier.id}
                   className={classNames(
                     tier.mostPopular
-                      ? "bg-primary text-background md:hover:text-primary border-primary md:hover:bg-background-hover md:hover:border-primary border"
-                      : "text-primary md:hover:text-primary border-separator md:hover:bg-background-hover md:hover:border-primary border bg-transparent",
-                    "text-md focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-10 md:w-full",
+                      ? "bg-primary text-background sm:hover:text-primary border-primary sm:hover:bg-background-hover sm:hover:border-primary border"
+                      : "text-primary sm:hover:text-primary border-separator sm:hover:bg-background-hover sm:hover:border-primary border bg-transparent",
+                    "text-md focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:h-10 sm:w-full",
                   )}
                 >
                   Choose plan
@@ -215,8 +215,8 @@ export default function PricingSection() {
               </div>
             ))}
           </div>
-          <div className="ring-separator mt-10 flex flex-col items-start gap-x-8 gap-y-6 rounded-md p-8 ring-1 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
-            <div className="lg:min-w-0 lg:flex-1">
+          <div className="ring-separator mt-10 flex flex-col items-start gap-x-8 gap-y-6 rounded-md p-8 ring-1 sm:gap-y-10 sm:p-10 md:col-span-2 md:flex-row md:items-center">
+            <div className="md:min-w-0 md:flex-1">
               <h3 className="text-primary text-lg font-bold uppercase leading-8 tracking-tight">
                 Your are a sports club?
               </h3>
@@ -233,7 +233,7 @@ export default function PricingSection() {
                   variant: "actionButton",
                   size: "fixedSize",
                 }),
-                "mt-4 w-full md:w-64",
+                "mt-4 w-full sm:w-64",
               )}
             >
               <span className="mr-2.5">Streamify Sports</span>

@@ -22,14 +22,14 @@ export function CopyCard({ title, value_string }: CopyCardProps) {
 export function DiscordCard({ title }: { title: string }) {
   return (
     <Link
-      className="flex items-center transition duration-200 border-separator border p-4 group bg-transparent md:hover:bg-[#5865F2] md:hover:text-primary rounded-md"
+      className="flex items-center transition duration-200 border-separator border p-4 group bg-transparent sm:hover:bg-[#5865F2] sm:hover:text-primary rounded-md"
       href="https://discord.gg/G2eAUj3y"
       target="_blank"
     >
       <span className="flex">
-        <Icons.DiscordIcon className="h-7 w-auto text-primary md:group-hover:text-white" />
+        <Icons.DiscordIcon className="h-7 w-auto text-primary sm:group-hover:text-white" />
       </span>
-      <span className="text-primary md:group-hover:text-white ml-4">
+      <span className="text-primary sm:group-hover:text-white ml-4">
         {title}
       </span>
     </Link>
@@ -39,14 +39,14 @@ export function DiscordCard({ title }: { title: string }) {
 export function ScheduleMeetingCard({ title }: { title: string }) {
   return (
     <Link
-      className="flex items-center transition duration-200 border-separator border p-4 group bg-primary md:hover:bg-background-hover md:hover:text-background rounded-md"
+      className="flex items-center transition duration-200 border-separator border p-4 group bg-primary sm:hover:bg-background-hover sm:hover:text-background rounded-md"
       href="https://cal.com/streamify/30min"
       target="_blank"
     >
       <span className="flex">
-        <ScheduleIcon className="h-7 w-auto text-background md:group-hover:text-primary" />
+        <ScheduleIcon className="h-7 w-auto text-background sm:group-hover:text-primary" />
       </span>
-      <span className="text-background md:group-hover:text-primary ml-4">
+      <span className="text-background sm:group-hover:text-primary ml-4">
         {title}
       </span>
     </Link>

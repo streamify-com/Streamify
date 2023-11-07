@@ -99,31 +99,31 @@ export function FooterDeclarationLayout() {
   return (
     <footer className="border-separator bg-background/75 z-0 border-t py-6 backdrop-blur-xl">
       <PlatformContainer>
-        <div className="md:flex md:justify-between">
+        <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="hidden font-regular text-primary-muted text-xs leading-5 md:order-2 order-1 md:absolute md:flex md:left-1/2 md:-translate-x-1/2">
+            <p className="hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
-            <p className="md:hidden font-regular text-primary text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
+            <p className="sm:hidden font-regular text-primary text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}
             </p>
-            <div className="md:order-1 order-2 md:hidden block">
+            <div className="sm:order-1 order-2 sm:hidden block">
               <ThemeModeIcon />
             </div>
-            <div className="md:order-1 order-2 hidden md:block">
+            <div className="sm:order-1 order-2 hidden sm:block">
               <ThemeModeSelector />
             </div>
           </div>
-          <div className="flex justify-center md:justify-end space-x-2 md:order-3 order-1 w-full mt-4 md:mt-0">
+          <div className="flex justify-center sm:justify-end space-x-2 sm:order-3 order-1 w-full mt-4 sm:mt-0">
             {navigationWebsite.social.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-primary md:hover:text-primary h-8 w-8 rounded-md bg-transparent md:hover:bg-background-hover flex justify-center items-center border border-transparent md:hover:border-separator"
+                className="text-primary sm:hover:text-primary h-8 w-8 rounded-md bg-transparent sm:hover:bg-background-hover flex justify-center items-center border border-transparent sm:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
-                {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}
+                {item.icon({ className: "h-4 w-4 sm:h-5 sm:w-5" } as IconProps)}
               </Link>
             ))}
           </div>
@@ -138,7 +138,7 @@ export function FooterPlatformLayout() {
   return (
     <footer className="border-separator bg-background/75 z-0 border-t backdrop-blur-xl">
       <PlatformContainer>
-        <div className="mx-auto md:flex md:items-center md:justify-between">
+        <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <nav
             className="text-center my-6 sm:flex sm:justify-center sm:space-x-10"
             aria-label="Footer"
@@ -151,7 +151,7 @@ export function FooterPlatformLayout() {
                     variant: "ghostButton",
                     size: "footerSize",
                   }),
-                  "md:text-sm",
+                  "sm:text-sm",
                 )}
               >
                 {t("terms-of-services.name")}
@@ -163,7 +163,7 @@ export function FooterPlatformLayout() {
                     variant: "ghostButton",
                     size: "footerSize",
                   }),
-                  "md:text-sm",
+                  "sm:text-sm",
                 )}
               >
                 {t("privacy-policy.name")}
@@ -175,7 +175,7 @@ export function FooterPlatformLayout() {
                     variant: "ghostButton",
                     size: "footerSize",
                   }),
-                  "md:text-sm",
+                  "sm:text-sm",
                 )}
               >
                 {t("cookie-policy.name")}
@@ -187,7 +187,7 @@ export function FooterPlatformLayout() {
                     variant: "ghostButton",
                     size: "footerSize",
                   }),
-                  "md:text-sm",
+                  "sm:text-sm",
                 )}
               >
                 {t("imprint.name")}
@@ -199,7 +199,7 @@ export function FooterPlatformLayout() {
                     variant: "ghostButton",
                     size: "footerSize",
                   }),
-                  "md:text-sm",
+                  "sm:text-sm",
                 )}
               >
                 {t("cancel-subscription.name")}
@@ -208,7 +208,7 @@ export function FooterPlatformLayout() {
             <Accordion
               type="single"
               collapsible
-              className="w-full md:hidden block"
+              className="w-full sm:hidden block"
             >
               <AccordionItem value="item-1" className="border-transparent">
                 <AccordionTrigger className="text-md text-primary leading-6">
@@ -223,7 +223,7 @@ export function FooterPlatformLayout() {
                           variant: "ghostButton",
                           size: "footerSize",
                         }),
-                        "md:text-sm",
+                        "sm:text-sm",
                       )}
                     >
                       {t("terms-of-services.name")}
@@ -235,7 +235,7 @@ export function FooterPlatformLayout() {
                           variant: "ghostButton",
                           size: "footerSize",
                         }),
-                        "md:text-sm",
+                        "sm:text-sm",
                       )}
                     >
                       {t("privacy-policy.name")}
@@ -247,7 +247,7 @@ export function FooterPlatformLayout() {
                           variant: "ghostButton",
                           size: "footerSize",
                         }),
-                        "md:text-sm",
+                        "sm:text-sm",
                       )}
                     >
                       {t("cookie-policy.name")}
@@ -259,7 +259,7 @@ export function FooterPlatformLayout() {
                           variant: "ghostButton",
                           size: "footerSize",
                         }),
-                        "md:text-sm",
+                        "sm:text-sm",
                       )}
                     >
                       {t("imprint.name")}
@@ -271,7 +271,7 @@ export function FooterPlatformLayout() {
                           variant: "ghostButton",
                           size: "footerSize",
                         }),
-                        "md:text-sm",
+                        "sm:text-sm",
                       )}
                     >
                       {t("cancel-subscription.name")}
@@ -281,7 +281,7 @@ export function FooterPlatformLayout() {
               </AccordionItem>
             </Accordion>
           </nav>
-          <div className="mb-6 md:mb-0">
+          <div className="mb-6 sm:mb-0">
             <Link
               href={t("support.href")}
               className={cn(
@@ -304,27 +304,27 @@ export function FooterPaymentLayout() {
   const t = useTranslations("footer-payment");
 
   const logos = [
-    { logo: VisaLogo, className: "h-6 md:h-8 w-auto" },
-    { logo: MastercardLogo, className: "h-4 md:h-6 w-auto" },
-    { logo: PaypalLogo, className: "h-8 md:h-10 w-auto" },
-    { logo: SofortLogo, className: "h-3 md:h-4 w-auto" },
-    // { logo: KlarnaLogo, className: 'h-3 md:h-4 w-auto' },
-    { logo: ApplepayLogo, className: "h-6 md:h-8 w-auto" },
-    { logo: GooglepayLogo, className: "h-6 md:h-8 w-auto" },
+    { logo: VisaLogo, className: "h-6 sm:h-8 w-auto" },
+    { logo: MastercardLogo, className: "h-4 sm:h-6 w-auto" },
+    { logo: PaypalLogo, className: "h-8 sm:h-10 w-auto" },
+    { logo: SofortLogo, className: "h-3 sm:h-4 w-auto" },
+    // { logo: KlarnaLogo, className: 'h-3 sm:h-4 w-auto' },
+    { logo: ApplepayLogo, className: "h-6 sm:h-8 w-auto" },
+    { logo: GooglepayLogo, className: "h-6 sm:h-8 w-auto" },
   ];
 
   return (
     <footer className="bg-background/75 border-t border-separator z-0 py-6 backdrop-blur-xl">
       <PlatformContainer>
-        <div className="mx-auto md:flex md:items-center md:justify-between">
-          <div className="md:order-1 md:mt-0">
+        <div className="mx-auto sm:flex sm:items-center sm:justify-between">
+          <div className="sm:order-1 sm:mt-0">
             <LocaleChoose />
           </div>
-          <div className="flex gap-x-2 justify-between md:order-2 mt-4 md:mt-0">
+          <div className="flex gap-x-2 justify-between sm:order-2 mt-4 sm:mt-0">
             {logos.map((logoData, index) => (
               <div
                 key={index}
-                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center md:order-2"
+                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center sm:order-2"
               >
                 <logoData.logo
                   className={logoData.className}

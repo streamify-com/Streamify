@@ -103,7 +103,7 @@ export function VerifyEmailForm({
           )}
         />
         <Separator className="my-4" />
-        <Button disabled={isPending} className="bg-primary w-full md:w-full">
+        <Button disabled={isPending} className="bg-primary w-full sm:w-full">
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"
@@ -117,7 +117,7 @@ export function VerifyEmailForm({
           aria-label="Go back to the previous page"
           variant="secondaryButton"
           size="fixedSize"
-          className="w-full md:w-full"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

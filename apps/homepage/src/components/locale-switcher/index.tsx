@@ -35,7 +35,7 @@ export function LocaleChoose() {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild className="hidden md:flex">
+        <DialogTrigger asChild className="hidden sm:flex">
           <Button
             variant="ghostButton"
             size="avatarSize"
@@ -58,14 +58,14 @@ export function LocaleChooseIcon() {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild className="hidden md:flex">
+        <DialogTrigger asChild className="hidden sm:flex">
           <Button
             variant="ghostButton"
             size="avatarSize"
-            className="justify-center px-4 w-20 h-10 md:h-9 group"
+            className="justify-center px-4 w-20 h-10 sm:h-9 group"
           >
             {getFlagIconForLocale(locale)}
-            <Icons.chevronDown className="ml-2.5 h-4 text-primary md:group-hover:text-primary group" />
+            <Icons.chevronDown className="ml-2.5 h-4 text-primary sm:group-hover:text-primary group" />
           </Button>
         </DialogTrigger>
         <LocaleSelectionDialog />

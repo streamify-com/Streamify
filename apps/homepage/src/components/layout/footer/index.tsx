@@ -12,7 +12,7 @@ import {
   InstagramIcon,
   TiktokIcon,
 } from "@shared-components/graphics/icons";
-import { buttonVariants } from "@shared-components/ui/button";
+import { Button, buttonVariants } from "@shared-components/ui/button";
 import { cn } from "@shared-components/lib/utils";
 import { Icons } from "@shared-components/graphics/icons";
 import { Input } from "@shared-components/ui/input";
@@ -41,6 +41,7 @@ import {
   SofortLogo,
   VisaLogo,
 } from "@shared-components/graphics/logo";
+import { StripeClimateBadge } from "@shared-components/graphics/badge";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
@@ -136,25 +137,14 @@ export function FooterHomepageLayout() {
         <div className="item-center mt-5 flex justify-between">
           <PrimaryLogo className="text-action h-8 w-auto" />
         </div>
-        <div className="pb-8 pt-12 sm:pt-12 lg:pt-12">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="md:grid grid-cols-2 gap-8 xl:col-span-2 hidden">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
+        <div className="pb-8 pt-12 sm:pt-12 md:pt-12">
+          <div className="sm:grid sm:grid-cols-2 sm:gap-8">
+            <div className="sm:grid grid-cols-2 gap-8 sm:col-span-2 hidden">
+              <div className="grid grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-md text-primary font-bold leading-6 px-2">
                     {t("solutions.name")}
                   </h3>
-                  {/* <ul role="list" className="mt-6 space-y-4"> */}
-                  {/* {navigationWebsite.solutions.map((item) => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          className="font-regular text-md text-primary md:hover:text-primary leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))} */}
                   <ul role="list" className="mt-6 space-y-4">
                     <li>
                       <Link
@@ -210,7 +200,7 @@ export function FooterHomepageLayout() {
                     </li>
                   </ul>
                 </div>
-                <div className="mt-10 md:mt-0">
+                <div className="mt-10 sm:mt-0">
                   <h3 className="text-md text-primary font-bold leading-6 px-2">
                     {t("support.name")}
                   </h3>
@@ -219,7 +209,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary md:hover:text-primary leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -280,7 +270,7 @@ export function FooterHomepageLayout() {
                   </ul>
                 </div>
               </div>
-              <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div className="sm:grid sm:grid-cols-2 sm:gap-8">
                 <div>
                   <h3 className="text-md text-primary font-bold leading-6 px-2">
                     {t("company.name")}
@@ -290,7 +280,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary md:hover:text-primary leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -350,7 +340,7 @@ export function FooterHomepageLayout() {
                     </li>
                   </ul>
                 </div>
-                <div className="mt-10 md:mt-0">
+                <div className="mt-10 sm:mt-0">
                   <h3 className="text-md text-primary font-bold leading-6 px-2">
                     {t("legal.name")}
                   </h3>
@@ -359,7 +349,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary md:hover:text-primary leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -424,7 +414,7 @@ export function FooterHomepageLayout() {
             <Accordion
               type="single"
               collapsible
-              className="w-full md:hidden block"
+              className="w-full sm:hidden block"
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-md text-primary leading-6">
@@ -440,7 +430,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("solutions.studio.name")}
@@ -454,7 +444,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("solutions.sports.name")}
@@ -468,7 +458,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("solutions.analytics.name")}
@@ -482,7 +472,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("solutions.atlas.name")}
@@ -501,7 +491,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary md:hover:text-primary leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -515,7 +505,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("support.pricing.name")}
@@ -529,7 +519,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("support.documentation.name")}
@@ -543,7 +533,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("support.guides.name")}
@@ -557,7 +547,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("support.programs.name")}
@@ -576,7 +566,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary md:hover:text-primary leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -590,7 +580,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("company.about-us.name")}
@@ -604,7 +594,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("company.blog.name")}
@@ -618,7 +608,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("company.jobs.name")}
@@ -632,7 +622,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("company.partners.name")}
@@ -651,7 +641,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary md:hover:text-primary leading-6 p-2 rounded-md bg-transparent md:hover:bg-background-hover border border-transparent md:hover:border-separator"
+                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -665,7 +655,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("legal.terms-of-services.name")}
@@ -679,7 +669,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("legal.privacy-policy.name")}
@@ -693,7 +683,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("legal.cookie-policy.name")}
@@ -707,7 +697,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
-                          "md:text-sm",
+                          "sm:text-sm",
                         )}
                       >
                         {t("legal.imprint.name")}
@@ -717,7 +707,15 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <div className="mt-10 md:mt-0 md:ml-4">
+            <div className="item-center left-0 mt-5 flex gap-5">
+              <Link href="https://gdpr-info.eu/" target="_blank">
+                <Icons.GDPRIcon className="border-separator md:hover:border-highlight h-14 w-14 rounded-full border bg-[#00349A] p-2 text-[#FFCC00]" />
+              </Link>
+              <Link href="https://climate.stripe.com/s7VDJQ" target="_blank">
+                <StripeClimateBadge className="border-separator text-standard bg-background md:hover:border-highlight md:hover:bg-hoverground h-14 w-14 rounded-full border p-3" />
+              </Link>
+            </div>
+            <div className="mt-6">
               <h3 className="text-md text-primary font-bold leading-6">
                 {t("newsletter.title")}
               </h3>
@@ -725,14 +723,13 @@ export function FooterHomepageLayout() {
                 {t("newsletter.description")}
               </p>
               <form className="mt-6">
-                <div className="space-x-2mt-10 flex flex-col items-center gap-4 md:flex-row">
+                <div className="space-x-2 mt-10 flex flex-col items-center gap-4 sm:flex-row">
                   <Input
                     type="email"
                     autoComplete="on"
                     placeholder={t("newsletter.placeholder")}
                   />
-                  <Link
-                    href="/"
+                  <Button
                     className={cn(
                       buttonVariants({
                         variant: "primaryButton",
@@ -741,14 +738,14 @@ export function FooterHomepageLayout() {
                     )}
                   >
                     {t("newsletter.button")}
-                  </Link>
+                  </Button>
                 </div>
               </form>
             </div>
           </div>
         </div>
         {/* <div className="item-center left-0 mt-5 flex gap-5">
-          <Icons.GDPRIcon className="border-separator text-primary h-16 w-16 rounded-full border p-2 md:hover:border-white md:hover:bg-[#00349A] md:hover:text-[#FFCC00]" />
+          <Icons.GDPRIcon className="border-separator text-primary h-16 w-16 rounded-full border p-2 sm:hover:border-white sm:hover:bg-[#00349A] sm:hover:text-[#FFCC00]" />
         </div> */}
       </HomepageContainer>
     </footer>
@@ -760,31 +757,31 @@ export function FooterDeclarationLayout() {
   return (
     <footer className="border-separator bg-background/75 z-0 border-t py-6 backdrop-blur-xl">
       <HomepageContainer>
-        <div className="md:flex md:justify-between">
+        <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="hidden font-regular text-primary-muted text-xs leading-5 md:order-2 order-1 md:absolute md:flex md:left-1/2 md:-translate-x-1/2">
+            <p className="hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
-            <p className="md:hidden font-regular text-primary-muted text-xs leading-5 md:order-2 order-1 md:absolute flex md:left-1/2 md:-translate-x-1/2">
+            <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}
             </p>
-            <div className="md:order-1 order-2 md:hidden block">
+            <div className="sm:order-1 order-2 sm:hidden block">
               <ThemeModeIcon />
             </div>
-            <div className="md:order-1 order-2 hidden md:block">
+            <div className="sm:order-1 order-2 hidden sm:block">
               <ThemeModeSelector />
             </div>
           </div>
-          <div className="flex justify-center md:justify-end space-x-2 md:order-3 order-1 w-full mt-4 md:mt-0">
+          <div className="flex justify-center sm:justify-end space-x-2 sm:order-3 order-1 w-full mt-4 sm:mt-0">
             {navigationWebsite.social.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-primary md:hover:text-primary h-8 w-8 rounded-md bg-transparent md:hover:bg-background-hover flex justify-center items-center border border-transparent md:hover:border-separator"
+                className="text-primary sm:hover:text-primary h-8 w-8 rounded-md bg-transparent sm:hover:bg-background-hover flex justify-center items-center border border-transparent sm:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
-                {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}
+                {item.icon({ className: "h-4 w-4 sm:h-5 sm:w-5" } as IconProps)}
               </Link>
             ))}
           </div>
@@ -798,27 +795,27 @@ export function FooterPaymentLayout() {
   const t = useTranslations("footer-payment");
 
   const logos = [
-    { logo: VisaLogo, className: "h-6 md:h-8 w-auto" },
-    { logo: MastercardLogo, className: "h-4 md:h-6 w-auto" },
-    { logo: PaypalLogo, className: "h-8 md:h-10 w-auto" },
-    { logo: SofortLogo, className: "h-3 md:h-4 w-auto" },
-    // { logo: KlarnaLogo, className: 'h-3 md:h-4 w-auto' },
-    { logo: ApplepayLogo, className: "h-6 md:h-8 w-auto" },
-    { logo: GooglepayLogo, className: "h-6 md:h-8 w-auto" },
+    { logo: VisaLogo, className: "h-6 sm:h-8 w-auto" },
+    { logo: MastercardLogo, className: "h-4 sm:h-6 w-auto" },
+    { logo: PaypalLogo, className: "h-8 sm:h-10 w-auto" },
+    { logo: SofortLogo, className: "h-3 sm:h-4 w-auto" },
+    // { logo: KlarnaLogo, className: 'h-3 sm:h-4 w-auto' },
+    { logo: ApplepayLogo, className: "h-6 sm:h-8 w-auto" },
+    { logo: GooglepayLogo, className: "h-6 sm:h-8 w-auto" },
   ];
 
   return (
     <footer className="bg-background/75 border-t border-separator z-0 py-6 backdrop-blur-xl">
       <HomepageContainer>
-        <div className="mx-auto md:flex md:items-center md:justify-between">
-          <div className="md:order-1 md:mt-0">
+        <div className="mx-auto sm:flex sm:items-center sm:justify-between">
+          <div className="sm:order-1 sm:mt-0">
             <LocaleChoose />
           </div>
-          <div className="flex gap-x-2 justify-between md:order-2 mt-4 md:mt-0">
+          <div className="flex gap-x-2 justify-between sm:order-2 mt-4 sm:mt-0">
             {logos.map((logoData, index) => (
               <div
                 key={index}
-                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center md:order-2"
+                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center sm:order-2"
               >
                 <logoData.logo
                   className={logoData.className}

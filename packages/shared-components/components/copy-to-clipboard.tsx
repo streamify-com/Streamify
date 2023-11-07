@@ -13,7 +13,7 @@ const CopyToClipboardComponent = ({
   return (
     <>
       <Button
-        className="flex transition duration-100 border-separator border p-1.5 bg-transparent rounded-md md:hover:bg-background-hover md:hover:border-primary md:hover:text-primary text-xs"
+        className="flex transition duration-100 border-separator border p-1.5 bg-transparent rounded-md sm:hover:bg-background-hover sm:hover:border-primary sm:hover:text-primary text-xs"
         size="iconSize"
         onClick={onCopy}
       >

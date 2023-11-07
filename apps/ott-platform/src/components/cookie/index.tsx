@@ -42,19 +42,19 @@ export default function Cookie() {
                 variant: "linkButton",
                 size: "linkSize",
               }),
-              "text-sm md:text-sm",
+              "text-sm sm:text-sm",
             )}
           >
             {t("cookie-policy")}
           </Link>
           .
         </p>
-        <div className="mt-4 space-y-4 md:flex md:items-center md:gap-x-3 md:space-y-0">
+        <div className="mt-4 space-y-4 sm:flex sm:items-center sm:gap-x-3 sm:space-y-0">
           <Button
             onClick={acceptCookie}
             variant="primaryButton"
             size="headerSize"
-            className="md:w-full sm:text-sm"
+            className="sm:w-full sm:text-sm"
           >
             {t("accept-all")}
           </Button>
@@ -62,7 +62,7 @@ export default function Cookie() {
             onClick={declineCookie}
             variant="secondaryButton"
             size="headerSize"
-            className="md:w-full sm:text-sm"
+            className="sm:w-full sm:text-sm"
           >
             {t("only-necessary")}
           </Button>

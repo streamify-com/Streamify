@@ -26,7 +26,7 @@ export function ModeSelection() {
       <select
         id="selectTheme"
         name="Theme selector"
-        className="border-separator rounded-md md:hover:border-primary md:hover:text-primary text-md md:text-sm h-10 w-full border bg-transparent transition-all md:h-10 md:w-48"
+        className="border-separator rounded-md sm:hover:border-primary sm:hover:text-primary text-md sm:text-sm h-10 w-full border bg-transparent transition-all sm:h-10 sm:w-48"
         value={resolvedTheme}
         onChange={handleThemeChange}
       >
@@ -160,14 +160,14 @@ export function ThemeModeSelector() {
   });
 
   return (
-    <Tabs defaultValue="system" className="border-primary w-full md:w-48">
+    <Tabs defaultValue="system" className="border-primary w-full sm:w-48">
       <TabsList className="grid w-full grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.position}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm md:text-xs"
+            className="data-[state=active]:bg-primary text-sm sm:text-xs"
           >
             {opt.text}
           </TabsTrigger>
@@ -241,14 +241,14 @@ export function ThemeModeIcon() {
   });
 
   return (
-    <Tabs defaultValue="system" className="w-28 md:w-28 rounded-full">
+    <Tabs defaultValue="system" className="w-28 sm:w-28 rounded-full">
       <TabsList className="grid w-full grid-cols-3 gap-2 p-1 rounded-full">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.text}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm md:text-xs px-2 py-1 rounded-full"
+            className="data-[state=active]:bg-primary text-sm sm:text-xs px-2 py-1 rounded-full"
           >
             {opt.icon}
           </TabsTrigger>

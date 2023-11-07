@@ -50,13 +50,13 @@ export default function Header({ user }: HeaderProps) {
           <div className="relative flex h-14 items-center justify-between gap-16">
             <div className="relative flex items-center gap-16">
               <Link href="/home" className="items-center">
-                <PrimaryLogo className="text-action h-7 w-auto md:w-auto" />
+                <PrimaryLogo className="text-action h-7 w-auto sm:w-auto" />
               </Link>
-              <div className="hidden gap-10 overflow-y-auto md:flex">
+              <div className="hidden gap-10 overflow-y-auto sm:flex">
                 <NavigationMain items={platformConfig.mainNav} user={user} />
               </div>
             </div>
-            <div className="hidden md:inline-block">
+            <div className="hidden sm:inline-block">
               <ul className="bottom-20 flex flex-row items-center gap-4">
                 {user ? (
                   <></>
@@ -96,7 +96,7 @@ export default function Header({ user }: HeaderProps) {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
-                      className="bg-background border-separator z-40 mt-3 w-full border p-4 md:w-56"
+                      className="bg-background border-separator z-40 mt-3 w-full border p-4 sm:w-56"
                       align="end"
                       forceMount
                     >
@@ -115,7 +115,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-background-hover md:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
+                            className="sm:hover:bg-background-hover sm:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.AccountIcon
                               className="mr-4 h-4 w-4"
@@ -128,7 +128,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/subscription"
-                            className="md:hover:bg-background-hover md:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
+                            className="sm:hover:bg-background-hover sm:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.billing
                               className="mr-4 h-4 w-4"
@@ -141,7 +141,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-background-hover md:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
+                            className="sm:hover:bg-background-hover sm:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.SupportIcon
                               className="mr-4 h-4 w-4"
@@ -163,7 +163,7 @@ export default function Header({ user }: HeaderProps) {
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
                       <DropdownMenuItem
                         asChild
-                        className="bg-transparent md:hover:bg-action text-action md:hover:text-background border border-action"
+                        className="bg-transparent sm:hover:bg-action text-action sm:hover:text-background border border-action"
                       >
                         <Link
                           href="/signout"
@@ -172,7 +172,7 @@ export default function Header({ user }: HeaderProps) {
                               variant: "insentiveButton",
                               size: "menuSize",
                             }),
-                            "md:text-sm",
+                            "sm:text-sm",
                           )}
                         >
                           <Icons.LogOutIcon
@@ -195,12 +195,12 @@ export default function Header({ user }: HeaderProps) {
                       }),
                     )}
                   >
-                    <SecondaryLogo className="text-background md:group-hover:text-primary h-7 w-auto md:h-9" />
+                    <SecondaryLogo className="text-background sm:group-hover:text-primary h-7 w-auto sm:h-9" />
                   </Link>
                 )}
               </ul>
             </div>
-            <div className="flex items-center gap-6 md:hidden">
+            <div className="flex items-center gap-6 sm:hidden">
               <NavigationMain items={platformConfig.mainNav} user={user} />
             </div>
           </div>

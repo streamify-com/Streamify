@@ -22,7 +22,7 @@ export function SignOutForm({
       <h1
         className={cn(
           "text-primary text-2xl font-bold tracking-tight",
-          size === "default" && "md:text-4xl",
+          size === "default" && "sm:text-4xl",
         )}
       >
         {title}

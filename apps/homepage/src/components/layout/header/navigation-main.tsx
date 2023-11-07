@@ -35,7 +35,7 @@ export default function NavigationMain({
 }: MainNavProps) {
   const t = useTranslations("header-homepage");
   const mobileMenuClassName = cn(
-    "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 lg:static lg:block",
+    "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 md:static md:block",
     isComponentOpen ? "top-14" : "top-14",
   );
   const segment = useSelectedLayoutSegment();
@@ -49,18 +49,18 @@ export default function NavigationMain({
       ?.emailAddress ?? "";
 
   return (
-    <div className="flex sm:gap-2 md:gap-4">
+    <div className="flex sm:gap-4">
       {items?.length ? (
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-8 sm:flex">
           {items?.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "font-regular text-md md:hover:text-primary flex items-center px-2 py-5 transition-colors",
+                "font-regular text-md sm:hover:text-primary flex items-center px-2 py-5 transition-colors",
                 item.href.startsWith(`/${segment}`)
-                  ? "text-action md:border-action md:border-b-2"
-                  : "text-primary md:border-b-2 md:border-transparent",
+                  ? "text-action sm:border-action sm:border-b-2"
+                  : "text-primary sm:border-b-2 sm:border-transparent",
                 item.disabled && "cursor-not-allowed opacity-80",
               )}
             >
@@ -71,7 +71,7 @@ export default function NavigationMain({
       ) : null}
       <div className="flex items-center">
         <button
-          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md md:hidden"
+          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md sm:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (
