@@ -10,6 +10,7 @@ import {
 import { SignUpForm } from "@/components/layout/auth/signup-form";
 import { OAuthSignIn } from "@/components/layout/auth/oauth-signin";
 import { useTranslations } from "next-intl";
+import { Separator } from "@shared-components/ui/separator";
 
 export default function SignUpPageForm() {
   const t = useTranslations("signup");
