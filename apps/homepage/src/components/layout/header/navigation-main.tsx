@@ -35,7 +35,7 @@ export default function NavigationMain({
 }: MainNavProps) {
   const t = useTranslations("header-homepage");
   const mobileMenuClassName = cn(
-    "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 lg:static lg:block",
+    "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 md:static md:block",
     isComponentOpen ? "top-14" : "top-14",
   );
   const segment = useSelectedLayoutSegment();
@@ -49,18 +49,18 @@ export default function NavigationMain({
       ?.emailAddress ?? "";
 
   return (
-    <div className="flex sm:gap-2 md:gap-4">
+    <div className="flex sm:gap-4">
       {items?.length ? (
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-8 sm:flex">
           {items?.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "font-regular text-md md:text-md md:hover:text-standard flex items-center px-2 py-5 transition-colors",
+                "font-regular text-md sm:hover:text-primary flex items-center px-2 py-5 transition-colors",
                 item.href.startsWith(`/${segment}`)
-                  ? "text-primary md:border-primary md:border-b-2"
-                  : "text-highlight md:border-b-2 md:border-transparent",
+                  ? "text-action sm:border-action sm:border-b-2"
+                  : "text-primary sm:border-b-2 sm:border-transparent",
                 item.disabled && "cursor-not-allowed opacity-80",
               )}
             >
@@ -69,9 +69,9 @@ export default function NavigationMain({
           ))}
         </nav>
       ) : null}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center">
         <button
-          className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-md md:hidden"
+          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md sm:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (
@@ -86,32 +86,12 @@ export default function NavigationMain({
           <HomepageContainer>
             <div className="relative z-20 grid gap-4">
               <nav className="no-scrollbar font-regular mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
-                {/* {items.map((item, index) => (
-                  <>
-                    <Link
-                      onClick={closeMobileMenu}
-                      key={index}
-                      href={item.disabled ? "#" : item.href}
-                      className={cn(
-                        buttonVariants({
-                          variant: "navigationButton",
-                          size: "navigationSize",
-                        }),
-                        "my-2 flex w-full items-center justify-between",
-                        item.disabled && "cursor-not-allowed opacity-60",
-                      )}
-                    >
-                      <p>{item.title}</p>
-                      <Icons.chevronRight />
-                    </Link>
-                  </>
-                ))} */}
                 <Link
                   onClick={closeMobileMenu}
                   href={t("products.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -125,7 +105,7 @@ export default function NavigationMain({
                   href={t("templates.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -139,7 +119,7 @@ export default function NavigationMain({
                   href={t("showcases.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -153,7 +133,7 @@ export default function NavigationMain({
                   href={t("pricing.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -163,14 +143,14 @@ export default function NavigationMain({
                   <Icons.chevronRight />
                 </Link>
               </nav>
-              <Separator className="border-separator my-2 border-t" />
+              <Separator className="my-2" />
               <div>
                 <ul className="bottom-12 flex flex-col gap-4">
                   {user ? (
                     <Link
                       className={cn(
                         buttonVariants({
-                          variant: "avatarButton",
+                          variant: "ghostButton",
                           size: "avatarSize",
                         }),
                         "justify-between",
@@ -192,7 +172,7 @@ export default function NavigationMain({
                       href="/signin"
                       className={cn(
                         buttonVariants({
-                          variant: "secondaryButton",
+                          variant: "insentiveButton",
                           size: "defaultSize",
                         }),
                       )}
@@ -200,13 +180,13 @@ export default function NavigationMain({
                       Sign in
                     </Link>
                   )}
-                  <Separator className="border-separator my-2 border-t" />
+                  <Separator className="my-2" />
                   {user ? (
                     <Link
                       href="/signout"
                       className={cn(
                         buttonVariants({
-                          variant: "secondaryButton",
+                          variant: "insentiveButton",
                           size: "defaultSize",
                         }),
                       )}
@@ -257,7 +237,7 @@ export default function NavigationMain({
                   )}
                 </ul>
               </div>
-              <Separator className="border-separator my-2 border-t" />
+              <Separator className="my-2" />
               <LocaleSwitcher />
               <ModeSelection />
               {children}

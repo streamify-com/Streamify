@@ -10,79 +10,113 @@ import { ShiningButton, buttonVariants } from "@shared-components/ui/button";
 import { PlayIcon } from "@shared-components/graphics/icons";
 import { useTranslations } from "next-intl";
 import HeroGradientTitle from "@/components/feature/hero-gradient-title";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function HeroSection() {
   const t = useTranslations("hero-homepage");
   return (
-    <div className="bg-transparent">
-      <HomepageContainer>
-        <div className="mx-auto py-8 text-center">
-          <Link
-            className={badgeVariants({ variant: "outline" })}
-            href={t("badge.href")}
-          >
-            {t("badge.headless-streaming")}
-            <span className="text-highlight">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <span className="text-highlight font-italic">
-              {t("badge.read-the-story")}
-            </span>
-            <ArrowRightCircle className="font-regular text-standard group group-hover:text-primary ml-2 h-4 w-4" />
-          </Link>
-        </div>
-        <div className="mx-auto text-center">
-          <h1 className="font-customFont from-standard via-highlight to-standard inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent md:text-5xl lg:text-6xl">
-            {t("title-1")}
-            &nbsp;
-            {/* <span className="text-primary">{t("title-2")}</span> */}
-            <HeroGradientTitle className="inline-block">
-              {t("title-2")}
-            </HeroGradientTitle>
-            &nbsp;
-            {t("title-3")}
-          </h1>
-          <div className="my-10">
-            <h3 className="md:text-md text-sm lg:text-lg">
-              {t("description")}
-            </h3>
-          </div>
-          <div className="my-10">
-            <h3 className="text-highlight md:text-sm text-xs uppercase">
-              {t("highlight")}
-            </h3>
-          </div>
-        </div>
-        <div className="mx-auto text-center">
-          <div className="flex-col gap-4 space-y-4 md:flex md:flex-row md:items-center md:justify-center md:space-x-4 md:space-y-0">
-            <Link
-              href={t("button.call-to-action.href")}
-              className={cn(
-                buttonVariants({
-                  variant: "actionButton",
-                  size: "defaultSize",
-                }),
-              )}
+    <AnimatePresence>
+      <div className="bg-transparent flex flex-col justify-center min-h-screen static overflow-hidden">
+        <HomepageContainer>
+          <div className="-mt-44">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.65,
+                duration: 0.55,
+                ease: [0.075, 0.82, 0.965, 1],
+              }}
+              className="mx-auto py-8 text-center"
             >
-              {t("button.call-to-action.name")}
-            </Link>
-            {/* <Link
-              href="/subscribe"
-              className={cn(
-                buttonVariants({
-                  variant: "secondaryButton",
-                  size: "defaultSize",
-                }),
-              )}
-            >
-              <PlayIcon className="h-5 w-5 flex-none" />
-              <span className="ml-2">Watch video</span>
-            </Link> */}
-            <ShiningButton>
-              <PlayIcon className="h-5 w-5 flex-none text-standard group-hover:text-highlight" />
-              <span className="ml-3">{t("button.watch-video")}</span>
-            </ShiningButton>
+              <Link
+                className={badgeVariants({ variant: "outline" })}
+                href={t("badge.href")}
+              >
+                {t("badge.headless-streaming")}
+                <span className="text-primary ">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <span className="text-primary sm:group-hover:text-action font-italic">
+                  {t("badge.read-the-story")}
+                </span>
+                <ArrowRightCircle className="font-regular text-primary group sm:group-hover:text-action ml-2 h-4 w-4" />
+              </Link>
+            </motion.div>
+            <div className="mx-auto text-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.15,
+                  duration: 0.95,
+                  ease: [0.165, 0.84, 0.44, 1],
+                }}
+                className="font-special from-primary via-primary-muted to-primary inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent sm:text-5xl md:text-6xl"
+              >
+                {t("title-1")}
+                &nbsp;
+                <HeroGradientTitle className="inline-block">
+                  {t("title-2")}
+                </HeroGradientTitle>
+                &nbsp;
+                {t("title-3")}
+              </motion.h1>
+              <motion.h3
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.15,
+                  duration: 0.95,
+                  ease: [0.165, 0.84, 0.44, 1],
+                }}
+                className="hidden sm:block my-10 sm:px-44 sm:text-md text-sm md:text-lg text-primary-muted"
+              >
+                {t("description")}
+              </motion.h3>
+              <motion.h3
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.15,
+                  duration: 0.95,
+                  ease: [0.165, 0.84, 0.44, 1],
+                }}
+                className="my-10 text-primary sm:text-sm text-xs uppercase"
+              >
+                {t("highlight")}
+              </motion.h3>
+            </div>
+            <div className="mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.65,
+                  duration: 0.55,
+                  ease: [0.075, 0.82, 0.965, 1],
+                }}
+                className="flex-col gap-4 space-y-4 sm:flex sm:flex-row sm:items-center sm:justify-center sm:space-x-4 sm:space-y-0"
+              >
+                <Link
+                  href={t("button.call-to-action.href")}
+                  className={cn(
+                    buttonVariants({
+                      variant: "actionButton",
+                      size: "fixedSize",
+                    }),
+                    // "font-regular sm:font-bold",
+                  )}
+                >
+                  {t("button.call-to-action.name")}
+                </Link>
+                <ShiningButton>
+                  <PlayIcon className="h-5 w-5 flex-none text-primary sm:group-hover:text-primary" />
+                  <span className="ml-3">{t("button.watch-video")}</span>
+                </ShiningButton>
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </HomepageContainer>
-    </div>
+        </HomepageContainer>
+      </div>
+    </AnimatePresence>
   );
 }

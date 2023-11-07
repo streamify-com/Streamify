@@ -120,7 +120,7 @@ const ComparisonSection: React.FC = () => {
   const buttonLabel = showContent ? "Hide comparison" : "Show comparison";
 
   return (
-    <div className="bg-background mt-6 hidden md:block">
+    <div className="bg-background mt-6 hidden sm:block">
       <HomepageContainer>
         <div className="flex flex-col items-center justify-center">
           <Button
@@ -128,7 +128,7 @@ const ComparisonSection: React.FC = () => {
             className={cn(
               buttonVariants({
                 variant: "secondaryButton",
-                size: "defaultSize",
+                size: "fixedSize",
               }),
             )}
           >
@@ -137,16 +137,16 @@ const ComparisonSection: React.FC = () => {
         </div>
         {showContent && (
           <div>
-            <p className="text-highlight mt-10 text-2xl font-bold tracking-tight sm:text-2xl">
+            <p className="text-primary mt-10 text-2xl font-bold tracking-tight sm:text-2xl">
               Compare all plan features
             </p>
-            <p className="text-md text-standard mx-auto mt-6 text-left leading-8">
+            <p className="text-md text-primary mx-auto mt-6 text-left leading-8">
               Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
               quasi iusto modi velit ut non voluptas in. Explicabo id ut
               laborum.
             </p>
             <div className="mx-auto">
-              <div className="isolate mt-20 hidden lg:block">
+              <div className="isolate mt-20 hidden md:block">
                 <div className="relative -mx-8">
                   {tiers.some((tier) => tier.mostPopular) ? (
                     <div className="absolute inset-x-4 inset-y-0 -z-10 flex">
@@ -180,17 +180,17 @@ const ComparisonSection: React.FC = () => {
                           <span className="sr-only">Price</span>
                         </th>
                         {tiers.map((tier) => (
-                          <td key={tier.id} className="px-6 pt-2 xl:px-8">
-                            <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-highlight">
+                          <td key={tier.id} className="px-6 pt-2 lg:px-8">
+                            <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-primary">
                               {tier.name}
                             </div>
                             <a
                               href={tier.href}
                               className={classNames(
                                 tier.mostPopular
-                                  ? "bg-primary text-background hover:text-highlight border-primary hover:bg-background hover:border-highlight font-regular border"
-                                  : "text-standard hover:text-highlight border-separator hover:bg-hoverground hover:border-highlight border bg-transparent",
-                                "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-12 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:h-12 md:w-full",
+                                  ? "bg-primary text-background sm:hover:text-primary border-primary sm:hover:bg-background sm:hover:border-primary font-regular border"
+                                  : "text-primary sm:hover:text-primary border-separator sm:hover:bg-background-hover sm:hover:border-primary border bg-transparent",
+                                "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:h-10 sm:w-full",
                               )}
                             >
                               Choose plan
@@ -206,27 +206,27 @@ const ComparisonSection: React.FC = () => {
                               colSpan={4}
                               className={classNames(
                                 sectionIdx === 0 ? "pt-8" : "pt-16",
-                                "pb-4 text-md leading-6 text-highlight",
+                                "pb-4 text-md leading-6 text-primary",
                               )}
                             >
                               {section.name}
-                              <div className="absolute inset-x-8 mt-4 h-px bg-standard" />
+                              <div className="absolute inset-x-8 mt-4 h-px bg-primary" />
                             </th>
                           </tr>
                           {section.features.map((feature) => (
                             <tr key={feature.name}>
                               <th
                                 scope="row"
-                                className="py-4 text-md leading-6 text-standard"
+                                className="py-4 text-md leading-6 text-primary"
                               >
                                 {feature.name}
                                 <div className="absolute inset-x-8 mt-4 h-px bg-separator" />
                               </th>
                               {tiers.map((tier) => (
-                                <td key={tier.id} className="px-6 py-4 xl:px-8">
+                                <td key={tier.id} className="px-6 py-4 lg:px-8">
                                   {typeof (feature.tiers as any)[tier.name] ===
                                   "string" ? (
-                                    <div className="text-center text-sm leading-6 text-highlight">
+                                    <div className="text-center text-sm leading-6 text-primary">
                                       {(feature.tiers as any)[tier.name]}
                                     </div>
                                   ) : (
@@ -239,7 +239,7 @@ const ComparisonSection: React.FC = () => {
                                         />
                                       ) : (
                                         <Icons.minus
-                                          className="mx-auto h-5 w-5 text-standard"
+                                          className="mx-auto h-5 w-5 text-primary"
                                           aria-hidden="true"
                                         />
                                       )}

@@ -91,7 +91,12 @@ export function SignInForm({
             <FormItem>
               {/* <FormLabel>{email}</FormLabel> */}
               <FormControl>
-                <Input placeholder={email} type="email" {...field} />
+                <Input
+                  placeholder={email}
+                  autoComplete="on"
+                  type="email"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -104,7 +109,11 @@ export function SignInForm({
             <FormItem>
               {/* <FormLabel>{password}</FormLabel> */}
               <FormControl>
-                <PasswordInput placeholder={password} {...field} />
+                <PasswordInput
+                  placeholder={password}
+                  autoComplete="current-password"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -113,9 +122,9 @@ export function SignInForm({
         <Separator className="my-2" />
         <Button
           disabled={isPending}
-          className="w-full md:w-full"
+          className="w-full sm:w-full"
           variant="primaryButton"
-          size="defaultSize"
+          size="fixedSize"
         >
           {isPending && (
             <Icons.spinner
@@ -129,8 +138,8 @@ export function SignInForm({
         <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="defaultSize"
-          className="w-full md:w-full"
+          size="fixedSize"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

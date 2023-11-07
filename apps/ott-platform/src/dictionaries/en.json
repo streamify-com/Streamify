@@ -205,6 +205,9 @@
     "cancel-subscription": {
       "name": "Cancel subscription",
       "href": "/cancel-subscription"
+    },
+    "sitemap": {
+      "name": "Sitemap"
     }
   },
   "header-platform": {

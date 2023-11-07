@@ -22,11 +22,11 @@ export default {
       },
     },
     screens: {
-      sm: "950px",
-      md: "1000px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+      sm: "1180px",
+      md: "1280px",
+      lg: "1920px",
+      xl: "3840px",
+      "2xl": "7680px",
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
@@ -45,31 +45,72 @@ export default {
         italic: ["var(--font-italic)", ...fontFamily.sans],
         regular: ["var(--font-regular)", ...fontFamily.sans],
         bold: ["var(--font-bold)", ...fontFamily.sans],
-        customFont: ["var(--font-heading)", ...fontFamily.sans],
+        special: ["var(--font-heading)", ...fontFamily.sans],
       },
       colors: {
-        foreground: "rgba(var(--foreground))",
-        background: "rgba(var(--background))",
-        hoverground: "rgba(var(--hoverground))",
-        standard: "rgba(var(--standard))",
-        highlight: "rgba(var(--highlight))",
+        foreground: {
+          DEFAULT: "rgba(var(--foreground))",
+          hover: "rgba(var(--foreground-hover))",
+        },
+        background: {
+          DEFAULT: "rgba(var(--background))",
+          hover: "rgba(var(--background-hover))",
+        },
         primary: {
           DEFAULT: "rgba(var(--primary))",
-          transparent: "rgba(var(--primary-transparent))",
+          muted: "rgba(var(--primary-muted))",
+          inner: "rgba(var(--primary-inner))",
+          hover: "rgba(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "rgba(var(--secondary))",
-          transparent: "rgba(var(--secondary-transparent))",
+          muted: "rgba(var(--secondary-muted))",
+          inner: "rgba(var(--secondary-inner))",
+          hover: "rgba(var(--secondary-hover))",
         },
-        tertiary: {
-          DEFAULT: "rgba(var(--tertiary))",
-          transparent: "rgba(var(--tertiary-transparent))",
+        action: {
+          DEFAULT: "rgba(var(--action))",
+          muted: "rgba(var(--action-muted))",
         },
-        active: "rgba(var(--active))",
-        passive: "rgba(var(--passive))",
+        active: {
+          DEFAULT: "rgba(var(--active))",
+          muted: "rgba(var(--active-muted))",
+        },
+        passive: {
+          DEFAULT: "rgba(var(--passive))",
+          muted: "rgba(var(--passive-muted))",
+        },
+        positive: {
+          DEFAULT: "rgba(var(--positive))",
+          muted: "rgba(var(--positive-muted))",
+        },
+        negative: {
+          DEFAULT: "rgba(var(--negative))",
+          muted: "rgba(var(--negative-muted))",
+        },
+        transparent: "rgba(var(--transparent))",
+        link: "rgba(var(--link))",
         skeleton: "rgba(var(--skeleton))",
-        separator: "rgba(var(--separator))",
-        test: "rgba(var(--test))",
+        separator: {
+          DEFAULT: "rgba(var(--separator))",
+          hover: "rgba(var(--separator-hover))",
+        },
+        testing: "rgba(var(--testing))",
+      },
+      borderRadius: {
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

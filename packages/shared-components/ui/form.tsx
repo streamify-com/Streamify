@@ -133,7 +133,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-standard text-sm", className)}
+      className={cn("text-primary text-sm", className)}
       {...props}
     />
   );
@@ -155,7 +155,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-primary font-regular text-sm", className)}
+      className={cn("text-negative font-regular text-sm", className)}
       {...props}
     >
       {body}
@@ -181,7 +181,7 @@ const UncontrolledFormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-standard text-md font-regular", className)}
+      className={cn("text-primary text-md font-regular", className)}
       {...props}
     >
       {body}

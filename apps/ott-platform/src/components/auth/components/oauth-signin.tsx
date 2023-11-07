@@ -43,7 +43,7 @@ export function OAuthSignIn() {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-4 group group-hover:text-highlight">
+    <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-4 group sm:group-hover:text-primary">
       {oauthProviders.map((provider) => {
         const Icon = Icons[provider.icon];
 
@@ -52,7 +52,10 @@ export function OAuthSignIn() {
             aria-label={`Sign in with ${provider.name}`}
             key={provider.strategy}
             className={cn(
-              buttonVariants({ variant: "oauthButton", size: "oauthSize" }),
+              buttonVariants({
+                variant: "secondaryButton",
+                size: "defaultSize",
+              }),
             )}
             onClick={() => void oauthSignIn(provider.strategy)}
           >

@@ -50,12 +50,12 @@ export default function LocaleSelectionDialog() {
             key={cur}
             disabled={isPending}
             onClick={() => handleLocaleChange(cur)}
-            variant="languageButton"
-            size="languageSize"
+            variant="ghostButton"
+            size="defaultSize"
             className={
               cur === locale
-                ? "justify-between md:w-full text-primary"
-                : "justify-between md:w-full text-highlight"
+                ? "justify-between sm:w-full text-active"
+                : "justify-between sm:w-full text-primary-muted"
             }
           >
             <p className="flex items-center">

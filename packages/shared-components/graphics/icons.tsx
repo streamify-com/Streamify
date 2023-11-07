@@ -939,7 +939,7 @@ export function ExpandingArrowRight({ className }: { className?: string }) {
       <svg
         className={`${
           className ? className : "h-4 w-4"
-        } absolute transition-all group-hover:translate-x-1 group-hover:opacity-0`}
+        } absolute transition-all sm:group-hover:translate-x-1 sm:group-hover:opacity-0`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -953,7 +953,7 @@ export function ExpandingArrowRight({ className }: { className?: string }) {
       <svg
         className={`${
           className ? className : "h-4 w-4"
-        } absolute opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100`}
+        } absolute opacity-0 transition-all sm:group-hover:translate-x-1 sm:group-hover:opacity-100`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -967,7 +967,7 @@ export function ExpandingArrowRight({ className }: { className?: string }) {
       <svg
         className={`${
           className ? className : "h-4 w-4"
-        } absolute opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100`}
+        } absolute opacity-0 transition-all sm:group-hover:translate-x-1 sm:group-hover:opacity-100`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -988,7 +988,7 @@ export function ExpandingArrowLeft({ className }: { className?: string }) {
       <svg
         className={`${
           className ? className : "h-4 w-4"
-        } absolute transition-all group-hover:-translate-x-1 group-hover:opacity-0`}
+        } absolute transition-all sm:group-hover:-translate-x-1 sm:group-hover:opacity-0`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -1002,7 +1002,7 @@ export function ExpandingArrowLeft({ className }: { className?: string }) {
       <svg
         className={`${
           className ? className : "h-4 w-4"
-        } absolute opacity-0 transition-all group-hover:-translate-x-1 group-hover:opacity-100`}
+        } absolute opacity-0 transition-all sm:group-hover:-translate-x-1 sm:group-hover:opacity-100`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -1016,7 +1016,7 @@ export function ExpandingArrowLeft({ className }: { className?: string }) {
       <svg
         className={`${
           className ? className : "h-4 w-4"
-        } absolute opacity-0 transition-all group-hover:-translate-x-1 group-hover:opacity-100`}
+        } absolute opacity-0 transition-all sm:group-hover:-translate-x-1 sm:group-hover:opacity-100`}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -1612,6 +1612,23 @@ export function PrimaryIcon(
           />
         </clipPath>
       </defs>
+    </svg>
+  );
+}
+
+export function VotanIcon(
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+) {
+  return (
+    <svg
+      width="302"
+      height="302"
+      viewBox="0 0 302 302"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M1 1H301V301H1V1Z" stroke="currentColor" />
     </svg>
   );
 }

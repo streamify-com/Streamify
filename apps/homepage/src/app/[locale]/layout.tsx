@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { cn } from "@shared-components/lib/utils";
 import { ThemeProvider } from "@/components/feature/theme-provider";
 import { Analytics } from "@shared-components/components/vercel-analytics";
-import { Toaster } from "@shared-components/ui/toaster";
+import { Toaster } from "@shared-components/ui/sonner-toaster";
 import { ClerkProvider } from "@clerk/nextjs";
 import { siteConfig } from "@/config/site";
 import {

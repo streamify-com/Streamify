@@ -38,7 +38,7 @@ const InstallPWA: React.FC = () => {
       title="Install app"
       onClick={onClick}
       variant="actionButton"
-      size="defaultSize"
+      size="fixedSize"
     >
       Launch App
     </Button>

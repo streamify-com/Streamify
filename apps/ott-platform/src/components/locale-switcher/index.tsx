@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import { useTransition } from "react";
-import { Button } from "@shared-components/ui/button";
+import { Button, buttonVariants } from "@shared-components/ui/button";
 import {
   CircleFlagsDe,
   CircleFlagsUk,
@@ -13,6 +13,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import LocaleSelectionDialog from "./locale-selection-dialog";
 import { Dialog, DialogTrigger } from "@shared-components/ui/dialog";
 import MobileSelectionDialog from "./mobile-selection-dialog";
+import { cn } from "@shared-components/lib/utils";
 
 const SUPPORTED_LOCALES = ["en", "de"];
 
@@ -34,11 +35,11 @@ export function LocaleChoose() {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild className="hidden md:flex">
+        <DialogTrigger asChild className="hidden sm:flex">
           <Button
-            variant="languageButton"
-            size="languageSize"
-            className="md:text-sm"
+            variant="ghostButton"
+            size="avatarSize"
+            className="justify-start px-4 w-36"
           >
             {getFlagIconForLocale(locale)}
             <span className="ml-2.5">{t("locale", { locale })}</span>
@@ -51,20 +52,42 @@ export function LocaleChoose() {
   );
 }
 
+export function LocaleChooseIconHeader() {
+  const t = useTranslations("locale-switcher");
+  const locale = useLocale();
+
+  return (
+    <>
+      <Dialog>
+        <DialogTrigger asChild className="hidden sm:flex">
+          <Button
+            variant="ghostButton"
+            size="avatarSize"
+            className="justify-end"
+          >
+            {getFlagIconForLocale(locale)}
+          </Button>
+        </DialogTrigger>
+      </Dialog>
+      <MobileSelectionDialog />
+    </>
+  );
+}
+
 export function LocaleChooseIcon() {
   const locale = useLocale();
 
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild className="hidden md:flex">
+        <DialogTrigger asChild className="hidden sm:flex">
           <Button
-            variant="languageButton"
+            variant="ghostButton"
             size="avatarSize"
-            className="justify-center px-4 w-20 h-12 md:h-9 group"
+            className="justify-center px-4 w-20 h-10 sm:h-9 group"
           >
             {getFlagIconForLocale(locale)}
-            <Icons.chevronDown className="ml-2.5 h-4 text-standard md:group-hover:text-highlight group" />
+            <Icons.chevronDown className="ml-2.5 h-4 text-primary sm:group-hover:text-primary group" />
           </Button>
         </DialogTrigger>
         <LocaleSelectionDialog />
@@ -90,13 +113,18 @@ export function LocaleSwitcher() {
   return (
     <label
       className={clsx(
-        "relative text-standard",
+        "relative text-primary",
         isPending && "transition-opacity [&:disabled]:opacity-30",
       )}
     >
       <p className="sr-only">{t("label")}</p>
       <select
-        className="border-separator rounded-md md:hover:border-highlight md:hover:text-highlight text-md md:text-sm h-12 w-full border bg-transparent transition-all md:h-10 md:w-48"
+        className={cn(
+          buttonVariants({
+            variant: "secondaryButton",
+            size: "fixedSize",
+          }),
+        )}
         defaultValue={locale}
         disabled={isPending}
         onChange={(e) => handleLocaleChange(e.target.value)}

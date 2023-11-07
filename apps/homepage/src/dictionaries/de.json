@@ -3,6 +3,11 @@
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
   },
+  "mode-theme": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
   "cookie": {
     "description": "Diese Seite speichert Daten in Form von Cookies, um essenzielle Funktionen zu ermöglichen, sowie für Marketing-, Personalisierungs- und Analysezwecke. Du kannst deine Einstellungen jederzeit ändern oder die Standardeinstellungen aktivieren. Weiterhin kannst du diese Seite mit den Mindesteinstellungen verwenden. Erfahre mehr unter ",
     "cookie-policy": "Cookie-Richtlinie",
@@ -201,13 +206,11 @@
         "href": "/streamify-studio"
       },
       "menu": {
-        "name": "Menü",
+        "name": "Kontakt",
         "schedule-a-call": "Vereinbare einen Termin mit uns",
         "join-our-discord": "Tritt unserem Discord-Channel bei",
         "email-title": "E-Mail",
-        "email-value": "hello@streamify.com",
-        "phone-title": "Telefon",
-        "phone-value": "+49 173 7692475"
+        "email-value": "support@streamify.com"
       }
     }
   },
@@ -220,9 +223,10 @@
       "read-the-story": "Erfahre mehr dazu",
       "href": "/about-us"
     },
-    "title-1": "Empower your",
-    "title-2": "streaming",
-    "title-3": "empire",
+    "title-1": "Entwickle deine eigene Video",
+    "title-2": "Streaming",
+    "title-3": "Plattform",
+    "title-4": "Verdiene Geld mit deinem Content",
     "description": "Die All-in-One Lösung mit der du deine eigene angepasste Video-Streaming-Plattform bauen kannst. Verwalte nahtlos deine Inhalte, Nutzer, Zahlungen und mehr - einfach und effizient.",
     "highlight": "Deine Inhalte • Deine Plattform • Deine Regeln",
     "button": {

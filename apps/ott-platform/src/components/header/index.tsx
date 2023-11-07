@@ -49,14 +49,14 @@ export default function Header({ user }: HeaderProps) {
         <PlatformContainer>
           <div className="relative flex h-14 items-center justify-between gap-16">
             <div className="relative flex items-center gap-16">
-              <Link href="/home" className="items-center space-x-2">
-                <PrimaryLogo className="text-primary h-7 w-auto md:w-auto" />
+              <Link href="/home" className="items-center">
+                <PrimaryLogo className="text-action h-7 w-auto sm:w-auto" />
               </Link>
-              <div className="hidden gap-10 overflow-y-auto md:flex">
+              <div className="hidden gap-10 overflow-y-auto sm:flex">
                 <NavigationMain items={platformConfig.mainNav} user={user} />
               </div>
             </div>
-            <div className="hidden md:inline-block">
+            <div className="hidden sm:inline-block">
               <ul className="bottom-20 flex flex-row items-center gap-4">
                 {user ? (
                   <></>
@@ -67,7 +67,7 @@ export default function Header({ user }: HeaderProps) {
                       href={t("signin.href")}
                       className={cn(
                         buttonVariants({
-                          variant: "intentionButton",
+                          variant: "insentiveButton",
                           size: "headerSize",
                         }),
                       )}
@@ -79,11 +79,11 @@ export default function Header({ user }: HeaderProps) {
                 {user ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="avatarButton" size="avatarSize">
-                        <p className="font-regular text-highlight text-sm leading-none">
+                      <Button variant="ghostButton" size="avatarSize">
+                        <p className="font-regular text-primary text-sm leading-none">
                           {t("dropdown.greeting")}&nbsp;
                         </p>
-                        <p className="text-highlight text-sm font-bold leading-none">
+                        <p className="text-primary text-sm font-bold leading-none">
                           {user.firstName}&nbsp;{user.lastName}
                         </p>
                         <Avatar className="ml-4">
@@ -96,16 +96,16 @@ export default function Header({ user }: HeaderProps) {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
-                      className="bg-background border-separator z-40 mt-3 w-full border p-4 md:w-56"
+                      className="bg-background border-separator z-40 mt-3 w-full border p-4 sm:w-56"
                       align="end"
                       forceMount
                     >
                       <DropdownMenuLabel className="font-normal">
                         <div className="flex flex-col space-y-1">
-                          <p className="text-md font-regular text-highlight leading-none">
+                          <p className="text-md font-regular text-primary leading-none">
                             {user.firstName}&nbsp;{user.lastName}
                           </p>
-                          <p className="text-standard text-xs leading-none">
+                          <p className="text-primary-muted text-xs leading-none">
                             {email}
                           </p>
                         </div>
@@ -115,7 +115,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-hoverground md:hover:text-highlight my-2 rounded-md text-sm"
+                            className="sm:hover:bg-background-hover sm:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.AccountIcon
                               className="mr-4 h-4 w-4"
@@ -128,7 +128,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/subscription"
-                            className="md:hover:bg-hoverground md:hover:text-highlight my-2 rounded-md text-sm"
+                            className="sm:hover:bg-background-hover sm:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.billing
                               className="mr-4 h-4 w-4"
@@ -138,49 +138,10 @@ export default function Header({ user }: HeaderProps) {
                             {/* <DropdownMenuShortcut>⌘A</DropdownMenuShortcut> */}
                           </Link>
                         </DropdownMenuItem>
-                        {/* <DropdownMenuItem asChild>
-                          <Link
-                            href="/dashboard/account"
-                            className="hover:bg-hoverground my-2 rounded-md"
-                          >
-                            <Icons.AccountIcon
-                              className="mr-4 h-4 w-4"
-                              aria-hidden="true"
-                            />
-                            Account
-                            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
-                          </Link>
-                        </DropdownMenuItem>
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="hover:bg-hoverground my-1 rounded-lg"
-                          >
-                            <Icons.BillingIcon
-                              className="mr-4 h-4 w-4"
-                              aria-hidden="true"
-                            />
-                            Billing
-                            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
-                          </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href="/dashboard/account"
-                            className="hover:bg-hoverground my-1 rounded-lg"
-                          >
-                            <Icons.SettingsIcon
-                              className="mr-4 h-4 w-4"
-                              aria-hidden="true"
-                            />
-                            Settings
-                            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
-                          </Link>
-                        </DropdownMenuItem> */}
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href="/dashboard/account"
-                            className="md:hover:bg-hoverground md:hover:text-highlight my-2 rounded-md text-sm"
+                            className="sm:hover:bg-background-hover sm:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.SupportIcon
                               className="mr-4 h-4 w-4"
@@ -200,10 +161,19 @@ export default function Header({ user }: HeaderProps) {
                         <ThemeModeSelector />
                       </DropdownMenuItem>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
-                      <DropdownMenuItem asChild>
+                      <DropdownMenuItem
+                        asChild
+                        className="bg-transparent sm:hover:bg-action text-action sm:hover:text-background border border-action"
+                      >
                         <Link
                           href="/signout"
-                          className="md:hover:bg-primary md:hover:text-background text-primary my-1 rounded-md text-sm"
+                          className={cn(
+                            buttonVariants({
+                              variant: "insentiveButton",
+                              size: "menuSize",
+                            }),
+                            "sm:text-sm",
+                          )}
                         >
                           <Icons.LogOutIcon
                             className="mr-4 h-4 w-4"
@@ -225,12 +195,12 @@ export default function Header({ user }: HeaderProps) {
                       }),
                     )}
                   >
-                    <SecondaryLogo className="text-background md:group-hover:text-primary h-7 w-auto md:h-9" />
+                    <SecondaryLogo className="text-background sm:group-hover:text-primary h-7 w-auto sm:h-9" />
                   </Link>
                 )}
               </ul>
             </div>
-            <div className="flex items-center gap-6 md:hidden">
+            <div className="flex items-center gap-6 sm:hidden">
               <NavigationMain items={platformConfig.mainNav} user={user} />
             </div>
           </div>

@@ -35,7 +35,7 @@
       "href": "/signup"
     },
     "or-continue-with": "Oder weiter mit",
-    "email": "E-Mail",
+    "email": "E-Mail-Adresse",
     "password": "Passwort",
     "sign-in": "Anmelden",
     "reset-password": "Passwort zurücksetzen",
@@ -76,12 +76,12 @@
     "or-continue-with": "oder weiter mit",
     "first-name": "Vorname",
     "last-name": "Nachname",
-    "email": "E-Mail",
+    "email": "E-Mail-Adresse",
     "password": "Passwort",
     "terms-and-conditions": "Nutzungsvereinbarung",
     "terms-and-conditions-header": "Akzeptieren der Nutzungsvereinbarung und Datenschutzbestimmungen",
     "terms-and-conditions-description-part-1": "Durch die Registrierung nehme ich die Bestimmungen der",
-    "terms-and-conditions-description-part-2": "zur Kenntnis und akzeptiere diese.",
+    "terms-and-conditions-description-part-2": " zur Kenntnis und akzeptiere diese.",
     "privacy-policy": "Datenschutzerklärung",
     "and": "und",
     "form-button": "Weiter",
@@ -168,7 +168,7 @@
         "href": "/terms-of-services"
       },
       "privacy-policy": {
-        "name": "Datenschutzerklärung",
+        "name": "Datenschutz",
         "href": "/privacy-policy"
       },
       "cookie-policy": {
@@ -187,7 +187,7 @@
       "href": "/terms-of-services"
     },
     "privacy-policy": {
-      "name": "Datenschutzerklärung",
+      "name": "Datenschutz",
       "href": "/privacy-policy"
     },
     "cookie-policy": {
@@ -205,6 +205,9 @@
     "cancel-subscription": {
       "name": "Vertrag kündigen",
       "href": "/cancel-subscription"
+    },
+    "sitemap": {
+      "name": "Seitenverzeichnis"
     }
   },
   "header-platform": {

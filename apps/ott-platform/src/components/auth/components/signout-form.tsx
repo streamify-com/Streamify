@@ -18,17 +18,19 @@ export function SignOutForm({
   ...props
 }: HeaderProps) {
   return (
-    <div className={cn("grid gap-1", className)} {...props}>
+    <div className={cn("grid gap-2", className)} {...props}>
       <h1
         className={cn(
-          "text-highlight text-2xl font-bold tracking-tight",
-          size === "default" && "md:text-4xl",
+          "text-primary text-2xl font-bold tracking-tight",
+          size === "default" && "sm:text-4xl",
         )}
       >
         {title}
       </h1>
       {description ? (
-        <p className={cn("text-standard", size === "default" && "text-md")}>
+        <p
+          className={cn("text-primary-muted", size === "default" && "text-md")}
+        >
           {description}
         </p>
       ) : null}

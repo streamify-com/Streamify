@@ -79,7 +79,7 @@ export function VerifyEmailForm({
   return (
     <Form {...form}>
       <form
-        className="grid gap-4"
+        className="grid gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <FormField
@@ -102,8 +102,8 @@ export function VerifyEmailForm({
             </FormItem>
           )}
         />
-        <Separator className="border-separator my-4 border-t" />
-        <Button disabled={isPending} className="bg-highlight w-full md:w-full">
+        <Separator className="my-4" />
+        <Button disabled={isPending} className="bg-primary w-full sm:w-full">
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"
@@ -116,8 +116,8 @@ export function VerifyEmailForm({
         <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="defaultSize"
-          className="w-full md:w-full"
+          size="fixedSize"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

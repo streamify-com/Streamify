@@ -14,6 +14,7 @@ import {
 } from "@shared-components/ui/navigation-menu";
 import { PrimaryLogo } from "@shared-components/graphics/logo";
 import { useTranslations } from "next-intl";
+import { buttonVariants } from "@shared-components/ui/button";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -59,24 +60,34 @@ export default function NavigationBar() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href={t("products.href")} legacyBehavior passHref>
+          <Link
+            href={t("products.href")}
+            legacyBehavior
+            passHref
+            className={cn(
+              buttonVariants({
+                variant: "actionButton",
+                size: "headerSize",
+              }),
+            )}
+          >
             <NavigationMenuTrigger>{t("products.name")}</NavigationMenuTrigger>
           </Link>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3 p-6 sm:w-[400px] md:w-[500px] md:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="hover:bg-hoverground hover:border-separator hover:text-highlight flex h-full w-full select-none flex-col justify-end rounded-md border border-transparent p-6 no-underline outline-none"
+                    className="sm:hover:bg-background-hover sm:hover:border-separator sm:hover:text-primary flex h-full w-full select-none flex-col justify-end rounded-md border border-transparent p-6 no-underline outline-none"
                     href="/"
                   >
                     <div className="mb-2 mt-4">
-                      <PrimaryLogo className="text-primary h-8 w-auto" />
+                      <PrimaryLogo className="text-action h-8 w-auto" />
                     </div>
-                    <div className="mb-2 text-lg font-bold text-highlight">
+                    <div className="mb-2 text-lg font-bold text-primary">
                       Studio
                     </div>
-                    <p className="text-standard text-sm leading-tight">
+                    <p className="text-primary-muted text-sm leading-tight">
                       Build your own video streaming platform to monetize your
                       content.
                     </p>
@@ -95,30 +106,12 @@ export default function NavigationBar() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        {/* <NavigationMenuItem>
-          <Link href="/features" legacyBehavior passHref>
-            <NavigationMenuTrigger>Features</NavigationMenuTrigger>
-          </Link>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <Link href={t("templates.href")} legacyBehavior passHref>
             <NavigationMenuTrigger>{t("templates.name")}</NavigationMenuTrigger>
           </Link>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 sm:w-[500px] sm:grid-cols-2 md:w-[600px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -160,13 +153,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:bg-hoverground hover:border-separator hover:text-highlight focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md border border-transparent p-3 leading-none no-underline outline-none transition-colors",
+            "sm:hover:bg-background-hover sm:hover:border-separator sm:hover:text-primary focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md border border-transparent p-3 leading-none no-underline outline-none transition-colors",
             className,
           )}
           {...props}
         >
           <div className="text-sm font-bold leading-none">{title}</div>
-          <p className="text-standard line-clamp-2 text-sm leading-snug">
+          <p className="text-primary-muted line-clamp-2 text-sm leading-snug">
             {children}
           </p>
         </a>

@@ -139,8 +139,8 @@ export function ResetPasswordStep2Form({
             </FormItem>
           )}
         />
-        <Separator className="border-separator my-4 border-t" />
-        <Button disabled={isPending} className="bg-highlight w-full md:w-full">
+        <Separator className="my-4" />
+        <Button disabled={isPending} className="bg-primary w-full sm:w-full">
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"
@@ -153,8 +153,8 @@ export function ResetPasswordStep2Form({
         <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="defaultSize"
-          className="w-full md:w-full"
+          size="fixedSize"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

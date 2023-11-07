@@ -121,7 +121,11 @@ export function SignUpForm({
               <FormItem>
                 {/* <FormLabel>{firstname}</FormLabel> */}
                 <FormControl>
-                  <Input placeholder={firstname} {...field} />
+                  <Input
+                    placeholder={firstname}
+                    autoComplete="given-name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -134,7 +138,11 @@ export function SignUpForm({
               <FormItem>
                 {/* <FormLabel>{lastname}</FormLabel> */}
                 <FormControl>
-                  <Input placeholder={lastname} {...field} />
+                  <Input
+                    placeholder={lastname}
+                    autoComplete="family-name"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -148,7 +156,12 @@ export function SignUpForm({
             <FormItem>
               {/* <FormLabel>{email}</FormLabel> */}
               <FormControl>
-                <Input placeholder={email} type="email" {...field} />
+                <Input
+                  placeholder={email}
+                  autoComplete="on"
+                  type="email"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -161,7 +174,11 @@ export function SignUpForm({
             <FormItem>
               {/* <FormLabel>{password}</FormLabel> */}
               <FormControl>
-                <PasswordInput placeholder={password} {...field} />
+                <PasswordInput
+                  placeholder={password}
+                  autoComplete="new-password"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -173,12 +190,13 @@ export function SignUpForm({
             id="terms1"
             checked={isChecked}
             onClick={handleCheckboxClick}
+            className="mt-1"
           />
           <div className="grid gap-1.5 leading-none">
-            <label htmlFor="terms1" className="text-highlight text-sm">
+            <label htmlFor="terms1" className="text-primary text-sm">
               {termsandconditionsheader}
             </label>
-            <p className="text-standard text-sm">
+            <p className="text-primary-muted text-sm">
               {termsandconditionsdescriptionpart1}&nbsp;
               <Link
                 aria-label="Terms of Services"
@@ -201,13 +219,13 @@ export function SignUpForm({
               >
                 {privacypolicy}
               </Link>
-              &nbsp;{termsandconditionsdescriptionpart2}
+              {termsandconditionsdescriptionpart2}
             </p>
           </div>
         </div>
         <Button
           disabled={isPending || !isChecked}
-          className="bg-highlight w-full md:w-full"
+          className="bg-primary w-full sm:w-full"
         >
           {isPending && (
             <Icons.spinner
@@ -221,8 +239,8 @@ export function SignUpForm({
         <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="defaultSize"
-          className="w-full md:w-full"
+          size="fixedSize"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

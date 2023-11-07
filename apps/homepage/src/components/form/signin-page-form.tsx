@@ -11,6 +11,7 @@ import {
 import { SignInForm } from "@/components/layout/auth/signin-form";
 import { OAuthSignIn } from "@/components/layout/auth/oauth-signin";
 import { useTranslations } from "next-intl";
+import { Separator } from "@shared-components/ui/separator";
 
 export default function SigninPageForm() {
   const t = useTranslations("signin");
@@ -23,7 +24,7 @@ export default function SigninPageForm() {
           <Link
             aria-label="Sign up"
             href="/signup"
-            className="text-highlight underline-offset-4 transition-colors hover:underline"
+            className="text-primary underline-offset-4 transition-colors sm:hover:underline"
           >
             {t("alternative")}
           </Link>
@@ -33,10 +34,10 @@ export default function SigninPageForm() {
         <OAuthSignIn />
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <span className="border-separator w-full border" />
+            <Separator />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background text-standard px-2">
+            <span className="bg-background text-primary-muted px-2">
               {t("or-continue-with")}
             </span>
           </div>
@@ -51,7 +52,7 @@ export default function SigninPageForm() {
           <Link
             aria-label="Reset password"
             href="/signin/reset-password"
-            className="hover:text-highlight underline underline-offset-4 transition-colors"
+            className="sm:hover:text-primary underline underline-offset-4 transition-colors"
           >
             {t("reset-password")}
           </Link>

@@ -20,7 +20,7 @@ export default function HeroSectionTest() {
       <PlatformContainer>
         <div className="grid grid-cols-1 gap-2 gap-y-4">
           <InstallPWA />
-          <div className="md:w-48 w-full">
+          <div className="sm:w-48 w-full">
             <ThemeModeIcon />
           </div>
           <LocaleChooseIcon />
@@ -31,7 +31,7 @@ export default function HeroSectionTest() {
             className={cn(
               buttonVariants({
                 variant: "actionButton",
-                size: "defaultSize",
+                size: "fixedSize",
               }),
             )}
           >
@@ -42,7 +42,7 @@ export default function HeroSectionTest() {
             className={cn(
               buttonVariants({
                 variant: "primaryButton",
-                size: "defaultSize",
+                size: "fixedSize",
               }),
             )}
           >

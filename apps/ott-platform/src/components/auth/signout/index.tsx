@@ -14,7 +14,7 @@ export default function SignOutPageForm() {
           title={t("card-title")}
           description={t("card-description")}
           size="sm"
-          className="text-center md:text-left"
+          className="text-center sm:text-left"
         />
       </CardHeader>
       <CardContent className="grid gap-4">

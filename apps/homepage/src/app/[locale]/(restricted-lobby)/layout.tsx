@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import {
   FooterDeclarationLayout,
   FooterHomepageLayout,
+  FooterPaymentLayout,
 } from "@/components/layout/footer";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
@@ -26,6 +27,7 @@ export default async function RestrictedLobbyLayout({
       <main className="flex-1 my-10">{children}</main>
       <Cookie />
       <FooterHomepageLayout />
+      <FooterPaymentLayout />
       <FooterDeclarationLayout />
     </div>
   );

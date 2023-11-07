@@ -11,6 +11,9 @@ import {
 import { SignUpForm } from "@/components/auth/components/signup-form";
 import { OAuthSignIn } from "@/components/auth/components/oauth-signin";
 import { useTranslations } from "next-intl";
+import { cn } from "@shared-components/lib/utils";
+import { buttonVariants } from "@shared-components/ui/button";
+import { Separator } from "@shared-components/ui/separator";
 
 export default function SignUpPageForm() {
   const t = useTranslations("signup");
@@ -24,7 +27,9 @@ export default function SignUpPageForm() {
           <Link
             aria-label={t("alternative.name")}
             href={t("alternative.href")}
-            className="text-highlight underline-offset-4 transition-colors hover:underline"
+            className={cn(
+              buttonVariants({ variant: "linkButton", size: "linkSize" }),
+            )}
           >
             {t("alternative.name")}
           </Link>
@@ -34,10 +39,10 @@ export default function SignUpPageForm() {
         <OAuthSignIn />
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <span className="border-separator w-full border" />
+            <Separator />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background text-standard px-2">
+            <span className="bg-background text-primary-muted px-2">
               {t("or-continue-with")}
             </span>
           </div>

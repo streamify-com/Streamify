@@ -32,7 +32,7 @@ export default function Cookie() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 px-10 pb-10">
       <div className="bg-background ring-separator pointer-events-auto max-w-md rounded-md p-6 ring-1">
-        <p className="text-standard text-sm">
+        <p className="text-primary text-sm">
           {t("description")}
           <Link
             href="/cookie-policy"
@@ -42,20 +42,20 @@ export default function Cookie() {
           </Link>
           .
         </p>
-        <div className="mt-4 space-y-4 md:flex md:items-center md:gap-x-3 md:space-y-0">
+        <div className="mt-4 space-y-2 sm:flex sm:items-center sm:gap-x-3 sm:space-y-0">
           <Button
             onClick={acceptCookie}
             variant="primaryButton"
-            size="defaultSize"
-            className="md:px-5 md:py-2"
+            size="fixedSize"
+            className="sm:px-5 sm:py-2"
           >
             {t("accept-all")}
           </Button>
           <Button
             onClick={declineCookie}
             variant="secondaryButton"
-            size="defaultSize"
-            className="md:px-5 md:py-2"
+            size="fixedSize"
+            className="sm:px-5 sm:py-2"
           >
             {t("only-necessary")}
           </Button>

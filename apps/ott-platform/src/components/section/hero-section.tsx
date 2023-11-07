@@ -12,13 +12,13 @@ export default function HeroSection() {
   return (
     <>
       <PlatformContainer>
-        <h1 className="font-customFont">{t("card-title")}</h1>
+        <h1 className="font-special">{t("card-title")}</h1>
         <Link
           href="/plus"
           className={cn(
             buttonVariants({
               variant: "primaryButton",
-              size: "defaultSize",
+              size: "fixedSize",
             }),
           )}
         >

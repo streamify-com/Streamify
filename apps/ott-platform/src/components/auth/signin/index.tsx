@@ -28,7 +28,6 @@ export default function SigninPageForm() {
             href={t("alternative.href")}
             className={cn(
               buttonVariants({ variant: "linkButton", size: "linkSize" }),
-              "text-highlight md:hover:text-primary",
             )}
           >
             {t("alternative.name")}
@@ -42,7 +41,7 @@ export default function SigninPageForm() {
             <Separator />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background text-standard px-2">
+            <span className="bg-background text-primary-muted px-2">
               {t("or-continue-with")}
             </span>
           </div>

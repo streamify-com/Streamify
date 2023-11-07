@@ -29,7 +29,7 @@ const NavigationMenuList = React.forwardRef<
   <NavigationMenuPrimitive.List
     ref={ref}
     className={cn(
-      "group flex flex-1 list-none items-center justify-center space-x-1",
+      "group flex flex-1 list-none items-center justify-center sm:space-x-1 md:space-x-4",
       className,
     )}
     {...props}
@@ -40,7 +40,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent md:px-1 lg:px-2 xl:px-4 py-2 text-md font-regular transition-colors md:hover:bg-hoverground md:hover:text-highlight focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 border border-transparent md:hover:border-separator",
+  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent sm:px-1 md:px-2 lg:px-4 py-2 text-md font-regular transition-colors sm:hover:bg-background-hover text-primary-muted sm:hover:text-primary focus:bg-primary-muted focus:text-primary-inner focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[state=open]:bg-background-hover data-[state=open]:border-separator data-[state=open]:text-secondary-hover border border-transparent sm:hover:border-separator",
 );
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -68,7 +68,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 left-0 top-0 w-full md:absolute md:w-auto ",
+      "data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 left-0 top-0 w-full sm:absolute sm:w-auto ",
       className,
     )}
     {...props}
@@ -85,7 +85,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "origin-top-center border-separator bg-background text-standard relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full rounded-md border md:w-[var(--radix-navigation-menu-viewport-width)]",
+        "origin-top-center border-separator bg-background text-primary relative mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full rounded-md border sm:w-[var(--radix-navigation-menu-viewport-width)]",
         className,
       )}
       ref={ref}

@@ -119,7 +119,7 @@ export function SignUpForm({
                 <FormControl>
                   <select
                     {...field}
-                    className="h-12 md:h-12 py-2 px-4 md:w-full w-full rounded-md border border-separator"
+                    className="h-10 sm:h-10 py-2 px-4 sm:w-full w-full rounded-md border border-separator"
                   >
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -140,7 +140,7 @@ export function SignUpForm({
                 <FormControl>
                   <input
                     type="date"
-                    className="h-12 md:h-12 py-2 px-4 md:w-full w-full rounded-md border border-separator"
+                    className="h-10 sm:h-10 py-2 px-4 sm:w-full w-full rounded-md border border-separator"
                   ></input>
                 </FormControl>
                 <FormMessage />
@@ -200,7 +200,7 @@ export function SignUpForm({
             </FormItem>
           )}
         />
-        <div className="items-center flex space-x-2 mt-4">
+        <div className="items-top mb-2 flex space-x-2 text-left">
           <Checkbox
             id="terms1"
             checked={isChecked}
@@ -210,7 +210,7 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/terms-of-services"
-              className="hover:text-highlight underline underline-offset-4 transition-colors"
+              className="sm:hover:text-primary underline underline-offset-4 transition-colors"
             >
               {termsandconditions}
             </Link>
@@ -218,17 +218,17 @@ export function SignUpForm({
             <Link
               aria-label="Terms of Services"
               href="/privacy-policy"
-              className="hover:text-highlight underline underline-offset-4 transition-colors"
+              className="sm:hover:text-primary underline underline-offset-4 transition-colors"
             >
               {privacypolicy}
             </Link>
           </div>
         </div>
-        <p className="text-standard text-sm">{termsandconditionsdescription}</p>
-        <Separator className="border-separator my-4 border-t" />
+        <p className="text-primary text-sm">{termsandconditionsdescription}</p>
+        <Separator className="my-4" />
         <Button
           disabled={isPending || !isChecked}
-          className="bg-highlight w-full md:w-full"
+          className="bg-primary w-full sm:w-full"
         >
           {isPending && (
             <Icons.spinner
@@ -242,8 +242,8 @@ export function SignUpForm({
         <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="defaultSize"
-          className="w-full md:w-full"
+          size="fixedSize"
+          className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}
         >

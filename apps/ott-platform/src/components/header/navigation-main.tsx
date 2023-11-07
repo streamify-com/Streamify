@@ -10,7 +10,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import { SecondaryLogo } from "@shared-components/graphics/logo";
 import { PlatformContainer } from "@shared-components/ui/container";
 import { Separator } from "@shared-components/ui/separator";
-import { ThemeModeIcon } from "@/components/mode-theme";
+import { ThemeModeSelector } from "@/components/mode-theme";
 import type { User } from "@clerk/nextjs/dist/types/server";
 import { buttonVariants } from "@shared-components/ui/button";
 import {
@@ -45,16 +45,16 @@ export default function NavigationMain({
       ?.emailAddress ?? "";
 
   return (
-    <div className="flex sm:gap-2 md:gap-4">
+    <div className="flex sm:gap-4">
       {items?.length ? (
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-8 sm:flex">
           <Link
             href={t("home.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "home"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("home.name")}
@@ -62,10 +62,10 @@ export default function NavigationMain({
           <Link
             href={t("matches.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "matches"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("matches.name")}
@@ -73,10 +73,10 @@ export default function NavigationMain({
           <Link
             href={t("players.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "players"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("players.name")}
@@ -84,10 +84,10 @@ export default function NavigationMain({
           <Link
             href={t("plus.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "plus"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("plus.name")}
@@ -95,19 +95,19 @@ export default function NavigationMain({
           <Link
             href={t("live.href")}
             className={cn(
-              "font-regular text-md md:hover:text-standard flex items-center px-2 py-4 transition-colors text-standard md:border-b-2 md:border-transparent",
-              selectedSegment === "live"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-highlight md:border-b-2 md:border-transparent",
+              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
+              selectedSegment === "plus"
+                ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
+                : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}
           >
             {t("live.name")}
           </Link>
         </nav>
       ) : null}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center">
         <button
-          className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-md md:hidden"
+          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md sm:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (
@@ -120,38 +120,18 @@ export default function NavigationMain({
       {showMobileMenu && items && (
         <div
           className={cn(
-            "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 top-14 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 lg:static lg:block",
+            "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 top-14 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 md:static md:block",
           )}
         >
           <PlatformContainer>
             <div className="relative z-20 grid gap-4">
               <nav className="no-scrollbar font-regular mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
-                {/* {items.map((item, index) => (
-                  <>
-                    <Link
-                      onClick={closeMobileMenu}
-                      key={index}
-                      href={item.disabled ? "#" : item.href}
-                      className={cn(
-                        buttonVariants({
-                          variant: "navigationButton",
-                          size: "navigationSize",
-                        }),
-                        "my-2 flex w-full items-center justify-between",
-                        item.disabled && "cursor-not-allowed opacity-60",
-                      )}
-                    >
-                      <p>{item.title}</p>
-                      <Icons.chevronRight />
-                    </Link>
-                  </>
-                ))} */}
                 <Link
                   onClick={closeMobileMenu}
                   href={t("matches.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -165,7 +145,7 @@ export default function NavigationMain({
                   href={t("players.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -179,7 +159,7 @@ export default function NavigationMain({
                   href={t("plus.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -193,7 +173,7 @@ export default function NavigationMain({
                   href={t("live.href")}
                   className={cn(
                     buttonVariants({
-                      variant: "navigationButton",
+                      variant: "ghostButton",
                       size: "navigationSize",
                     }),
                     "my-2 flex w-full items-center justify-between",
@@ -210,7 +190,7 @@ export default function NavigationMain({
                     <Link
                       className={cn(
                         buttonVariants({
-                          variant: "avatarButton",
+                          variant: "ghostButton",
                           size: "avatarSize",
                         }),
                         "justify-between",
@@ -233,7 +213,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -247,7 +227,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -263,7 +243,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "secondaryButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -276,7 +256,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "actionButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -288,7 +268,7 @@ export default function NavigationMain({
                       className={cn(
                         buttonVariants({
                           variant: "actionButton",
-                          size: "defaultSize",
+                          size: "fixedSize",
                         }),
                       )}
                     >
@@ -299,7 +279,7 @@ export default function NavigationMain({
               </div>
               <Separator className="my-2" />
               <LocaleSwitcher />
-              <ThemeModeIcon />
+              <ThemeModeSelector />
               {children}
             </div>
           </PlatformContainer>

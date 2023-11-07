@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { SignOutButton } from "@clerk/nextjs";
-import { useMounted } from "@shared-components/hooks/use-mounted";
+import useMounted from "@shared-components/hooks/use-mounted";
 import { Button } from "@shared-components/ui/button";
 import { Icons } from "@shared-components/graphics/icons";
 
@@ -21,7 +21,7 @@ export function LogOutButtons({
   const [isPending, startTransition] = React.useTransition();
 
   return (
-    <div className="flex w-full flex-col items-center gap-4 space-x-2">
+    <div className="flex w-full flex-col items-center gap-2">
       <SignOutButton
         signOutCallback={() =>
           startTransition(() => {
@@ -31,8 +31,8 @@ export function LogOutButtons({
       >
         <Button
           aria-label="Log out"
-          size="defaultSize"
-          className="bg-highlight w-full md:w-full"
+          size="fixedSize"
+          className="bg-primary w-full sm:w-full"
           disabled={isPending}
         >
           {isPending && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
@@ -42,8 +42,8 @@ export function LogOutButtons({
       <Button
         aria-label="Go back to the previous page"
         variant="secondaryButton"
-        size="defaultSize"
-        className="w-full md:w-full"
+        size="fixedSize"
+        className="w-full sm:w-full"
         onClick={() => router.back()}
         disabled={isPending}
       >

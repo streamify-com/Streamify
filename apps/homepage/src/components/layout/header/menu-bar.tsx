@@ -27,7 +27,7 @@ export default function MenuBar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="menuButton" size="headerSize">
+        <Button variant="ghostButton" size="headerSize">
           {t("call-to-action.menu.name")}
         </Button>
       </SheetTrigger>
@@ -50,39 +50,9 @@ export default function MenuBar() {
               title={t("call-to-action.menu.email-title")}
               value_string={t("call-to-action.menu.email-value")}
             />
-            <CopyCard
-              title={t("call-to-action.menu.phone-title")}
-              value_string={t("call-to-action.menu.phone-value")}
-            />
-            {/* <Separator className="my-2" />
-            <div className="flex">
-                <span className="flex-1 text-highlight uppercase">Kontakt</span>
-            </div>
-            <div className="flex">
-                <span className="flex-1">E-Mail</span>
-                <span className="text-highlight">hello@streamify.com</span>
-            </div>
-            <div className="flex">
-                <span className="flex-1">Telefon</span>
-                <span className="text-highlight">+49 173 7692475</span>
-            </div>
-            <Separator className="my-2" />
-            <div className="flex">
-                <span className="flex-1">Total</span>
-            </div> */}
             <Separator className="my-2" />
             <SheetFooter className="my-2 sm:justify-between">
               <SheetTrigger asChild>
-                {/* <Link
-                    aria-label="View your cart"
-                    href="/cart"
-                    className={buttonVariants({
-                    size: "defaultSize",
-                    className: "w-full",
-                    })}
-                >
-                    View your cart
-                </Link> */}
                 <LocaleSwitcher />
               </SheetTrigger>
               <SheetTrigger asChild>

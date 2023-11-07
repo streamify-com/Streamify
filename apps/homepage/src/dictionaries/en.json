@@ -3,6 +3,11 @@
     "label": "Change language",
     "locale": "{locale, select, de {German} en {English} other {Unknown}}"
   },
+  "mode-theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "cookie": {
     "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
     "cookie-policy": "Cookie Policy",
@@ -201,11 +206,11 @@
         "href": "/streamify-studio"
       },
       "menu": {
-        "name": "Menu",
+        "name": "Contact us",
         "schedule-a-call": "Schedula a call with us",
         "join-our-discord": "Join our Discord channel",
         "email-title": "Email",
-        "email-value": "hello@streamify.com",
+        "email-value": "support@streamify.com",
         "phone-title": "Phone",
         "phone-value": "+49 173 7692475"
       }
@@ -220,9 +225,10 @@
       "read-the-story": "Read the story",
       "href": "/about-us"
     },
-    "title-1": "Empower your",
+    "title-1": "Build your own custom video",
     "title-2": "streaming",
-    "title-3": "empire",
+    "title-3": "platform",
+    "title-4": "Monetize your content",
     "description": "The All-in-One solution that lets you build your own customizable video streaming platform. Seamlessly manage content, users, payments and more with ease and efficiency.",
     "highlight": "Your content • Your platform • Your rules",
     "button": {
