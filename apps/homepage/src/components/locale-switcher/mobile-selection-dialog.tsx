@@ -54,7 +54,7 @@ export default function MobileSelectionDialog() {
         className="border-separator h-[65%] rounded-t-xl border-t text-primary-muted"
       >
         <ScrollArea className="mt-10 h-[90%] w-full border-t border-separator">
-          <div className="grid gap-4 mt-4">
+          <div className="grid gap-2 mt-4">
             {SUPPORTED_LOCALES.map((cur) => (
               <Button
                 key={cur}

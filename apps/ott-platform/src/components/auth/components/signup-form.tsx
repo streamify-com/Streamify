@@ -190,12 +190,13 @@ export function SignUpForm({
             id="terms1"
             checked={isChecked}
             onClick={handleCheckboxClick}
+            className="mt-1"
           />
           <div className="grid gap-1.5 leading-none">
             <label htmlFor="terms1" className="text-primary text-sm">
               {termsandconditionsheader}
             </label>
-            <p className="text-primary text-sm">
+            <p className="text-primary-muted text-sm">
               {termsandconditionsdescriptionpart1}&nbsp;
               <Link
                 aria-label="Terms of Services"
@@ -218,7 +219,7 @@ export function SignUpForm({
               >
                 {privacypolicy}
               </Link>
-              &nbsp;{termsandconditionsdescriptionpart2}
+              {termsandconditionsdescriptionpart2}
             </p>
           </div>
         </div>

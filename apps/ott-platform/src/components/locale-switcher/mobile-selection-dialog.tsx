@@ -39,13 +39,9 @@ export default function MobileSelectionDialog() {
   return (
     <Sheet>
       <SheetTrigger asChild className="flex sm:hidden">
-        <Button
-          variant="secondaryButton"
-          size="defaultSize"
-          className="justify-center"
-        >
+        <Button variant="ghostButton" size="linkSize" className="justify-end">
           {getFlagIconForLocale(locale)}
-          <span className="ml-2.5">{t("locale", { locale })}</span>
+          {/* <span className="ml-2.5">{t("locale", { locale })}</span> */}
         </Button>
       </SheetTrigger>
       <SheetContent
@@ -54,7 +50,7 @@ export default function MobileSelectionDialog() {
         className="border-separator h-[65%] rounded-t-xl border-t text-primary-muted"
       >
         <ScrollArea className="mt-10 h-[90%] w-full border-t border-separator">
-          <div className="grid gap-4 mt-4">
+          <div className="grid gap-2 mt-4">
             {SUPPORTED_LOCALES.map((cur) => (
               <Button
                 key={cur}

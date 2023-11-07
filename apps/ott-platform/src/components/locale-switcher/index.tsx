@@ -52,6 +52,28 @@ export function LocaleChoose() {
   );
 }
 
+export function LocaleChooseIconHeader() {
+  const t = useTranslations("locale-switcher");
+  const locale = useLocale();
+
+  return (
+    <>
+      <Dialog>
+        <DialogTrigger asChild className="hidden sm:flex">
+          <Button
+            variant="ghostButton"
+            size="avatarSize"
+            className="justify-end"
+          >
+            {getFlagIconForLocale(locale)}
+          </Button>
+        </DialogTrigger>
+      </Dialog>
+      <MobileSelectionDialog />
+    </>
+  );
+}
+
 export function LocaleChooseIcon() {
   const locale = useLocale();
 

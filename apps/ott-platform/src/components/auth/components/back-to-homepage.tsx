@@ -38,7 +38,7 @@ export function GoBackButton() {
       aria-label="Go back to the previous page"
       variant="ghostButton"
       size="navigationSize"
-      className="w-14"
+      className="w-14 text-sm"
       onClick={() => router.back()}
       disabled={isPending}
     >

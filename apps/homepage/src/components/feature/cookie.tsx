@@ -42,7 +42,7 @@ export default function Cookie() {
           </Link>
           .
         </p>
-        <div className="mt-4 space-y-4 sm:flex sm:items-center sm:gap-x-3 sm:space-y-0">
+        <div className="mt-4 space-y-2 sm:flex sm:items-center sm:gap-x-3 sm:space-y-0">
           <Button
             onClick={acceptCookie}
             variant="primaryButton"

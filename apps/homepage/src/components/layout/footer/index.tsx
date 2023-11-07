@@ -134,10 +134,10 @@ export function FooterHomepageLayout() {
       aria-labelledby="footer-heading"
     >
       <HomepageContainer>
-        <div className="item-center mt-5 flex justify-between">
+        <div className="item-center mt-2 flex justify-between">
           <PrimaryLogo className="text-action h-8 w-auto" />
         </div>
-        <div className="pb-8 pt-12 sm:pt-12 md:pt-12">
+        <div className="pb-2 pt-10">
           <div className="sm:grid sm:grid-cols-2 sm:gap-8">
             <div className="sm:grid grid-cols-2 gap-8 sm:col-span-2 hidden">
               <div className="grid grid-cols-2 gap-8">
@@ -709,21 +709,21 @@ export function FooterHomepageLayout() {
             </Accordion>
             <div className="item-center left-0 mt-5 flex gap-5">
               <Link href="https://gdpr-info.eu/" target="_blank">
-                <Icons.GDPRIcon className="border-separator md:hover:border-highlight h-14 w-14 rounded-full border bg-[#00349A] p-2 text-[#FFCC00]" />
+                <Icons.GDPRIcon className="border-separator sm:hover:border-separator-hover h-12 w-12 rounded-full border bg-[#00349A] p-2 text-[#FFCC00]" />
               </Link>
               <Link href="https://climate.stripe.com/s7VDJQ" target="_blank">
-                <StripeClimateBadge className="border-separator text-standard bg-background md:hover:border-highlight md:hover:bg-hoverground h-14 w-14 rounded-full border p-3" />
+                <StripeClimateBadge className="border-separator text-standard bg-background sm:hover:border-separator-hover sm:hover:bg-hoverground h-12 w-12 rounded-full border p-3" />
               </Link>
             </div>
-            <div className="mt-6">
+            <div className="mt-8 sm:mt-4">
               <h3 className="text-md text-primary font-bold leading-6">
                 {t("newsletter.title")}
               </h3>
-              <p className="text-md text-primary-muted mt-2 leading-6">
+              <p className="text-md text-primary-muted sm:mt-2 leading-6">
                 {t("newsletter.description")}
               </p>
-              <form className="mt-6">
-                <div className="space-x-2 mt-10 flex flex-col items-center gap-4 sm:flex-row">
+              <form className="mt-2">
+                <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
                   <Input
                     type="email"
                     autoComplete="on"
@@ -744,9 +744,6 @@ export function FooterHomepageLayout() {
             </div>
           </div>
         </div>
-        {/* <div className="item-center left-0 mt-5 flex gap-5">
-          <Icons.GDPRIcon className="border-separator text-primary h-16 w-16 rounded-full border p-2 sm:hover:border-white sm:hover:bg-[#00349A] sm:hover:text-[#FFCC00]" />
-        </div> */}
       </HomepageContainer>
     </footer>
   );
