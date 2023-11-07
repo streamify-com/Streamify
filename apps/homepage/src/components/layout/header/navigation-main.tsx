@@ -59,7 +59,7 @@ export default function NavigationMain({
               className={cn(
                 "font-regular text-md md:hover:text-primary flex items-center px-2 py-5 transition-colors",
                 item.href.startsWith(`/${segment}`)
-                  ? "text-primary md:border-primary md:border-b-2"
+                  ? "text-action md:border-action md:border-b-2"
                   : "text-primary md:border-b-2 md:border-transparent",
                 item.disabled && "cursor-not-allowed opacity-80",
               )}
@@ -69,7 +69,7 @@ export default function NavigationMain({
           ))}
         </nav>
       ) : null}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center">
         <button
           className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md md:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}

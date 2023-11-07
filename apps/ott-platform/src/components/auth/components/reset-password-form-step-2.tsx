@@ -90,7 +90,7 @@ export function ResetPasswordStep2Form({
   return (
     <Form {...form}>
       <form
-        className="grid gap-4"
+        className="grid gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <FormField
@@ -98,7 +98,7 @@ export function ResetPasswordStep2Form({
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{passwordformlabel}</FormLabel>
+              {/* <FormLabel>{passwordformlabel}</FormLabel> */}
               <FormControl>
                 <PasswordInput placeholder={passwordformlabel} {...field} />
               </FormControl>
@@ -111,7 +111,7 @@ export function ResetPasswordStep2Form({
           name="confirmPassword"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{confirmationformlabel}</FormLabel>
+              {/* <FormLabel>{confirmationformlabel}</FormLabel> */}
               <FormControl>
                 <PasswordInput placeholder={confirmationformlabel} {...field} />
               </FormControl>
@@ -124,7 +124,7 @@ export function ResetPasswordStep2Form({
           name="code"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{codeformlabel}</FormLabel>
+              {/* <FormLabel>{codeformlabel}</FormLabel> */}
               <FormControl>
                 <Input
                   placeholder={verifycodeformlabel}

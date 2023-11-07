@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@shared-components/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center group rounded-md text-md font-regular transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-testing disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center group rounded-md text-md font-regular transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -18,7 +18,10 @@ const buttonVariants = cva(
           "bg-transparent md:hover:bg-action text-action md:hover:text-background border border-action",
         ghostButton:
           "bg-transparent md:hover:bg-secondary-muted text-secondary-inner md:hover:text-secondary-hover border border-transparent md:hover:border-separator",
-        linkButton: "text-link underline underline-offset-4 transition-colors",
+        linkButton:
+          "text-primary md:hover:text-action underline underline-offset-4 transition-colors",
+        externalLinkButton:
+          "text-link underline underline-offset-4 transition-colors",
         deleteButton:
           "bg-negative md:hover:bg-negative-muted text-background border border-negative md:hover:border-negative-muted",
         StripeButton:
@@ -46,7 +49,8 @@ const buttonVariants = cva(
         defaultSize: "h-12 md:h-10 w-full md:w-auto py-2 px-4",
         fixedSize: "h-12 md:h-10 w-full md:w-48 py-2 px-4",
         headerSize: "h-12 md:h-8 w-full md:w-auto py-1 px-2 md:text-sm",
-        footerSize: "h-12 md:h-8 w-full md:w-auto py-1 px-2",
+        footerSize:
+          "h-12 md:h-8 w-full md:w-auto md:py-1 md:px-2 py-0 px-0 md:justify-center justify-start",
         navigationSize: "h-8",
         iconSize: "h-9 w-9",
         avatarSize: "py-1 px-2",

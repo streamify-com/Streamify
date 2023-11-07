@@ -51,10 +51,10 @@ export default function NavigationMain({
           <Link
             href={t("home.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
               selectedSegment === "home"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-primary md:border-b-2 md:border-transparent",
+                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
+                : "text-primary-muted md:border-b-2 md:border-transparent",
             )}
           >
             {t("home.name")}
@@ -62,10 +62,10 @@ export default function NavigationMain({
           <Link
             href={t("matches.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
               selectedSegment === "matches"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-primary md:border-b-2 md:border-transparent",
+                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
+                : "text-primary-muted md:border-b-2 md:border-transparent",
             )}
           >
             {t("matches.name")}
@@ -73,10 +73,10 @@ export default function NavigationMain({
           <Link
             href={t("players.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
               selectedSegment === "players"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-primary md:border-b-2 md:border-transparent",
+                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
+                : "text-primary-muted md:border-b-2 md:border-transparent",
             )}
           >
             {t("players.name")}
@@ -84,10 +84,10 @@ export default function NavigationMain({
           <Link
             href={t("plus.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
               selectedSegment === "plus"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-primary md:border-b-2 md:border-transparent",
+                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
+                : "text-primary-muted md:border-b-2 md:border-transparent",
             )}
           >
             {t("plus.name")}
@@ -95,19 +95,19 @@ export default function NavigationMain({
           <Link
             href={t("live.href")}
             className={cn(
-              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary md:border-b-2 md:border-transparent",
-              selectedSegment === "live"
-                ? "text-primary md:border-primary md:border-b-2"
-                : "text-primary md:border-b-2 md:border-transparent",
+              "font-regular text-md md:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted md:border-b-2 md:border-transparent",
+              selectedSegment === "plus"
+                ? "text-action md:hover:text-action-muted md:border-action md:border-b-2"
+                : "text-primary-muted md:border-b-2 md:border-transparent",
             )}
           >
             {t("live.name")}
           </Link>
         </nav>
       ) : null}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center">
         <button
-          className="active:bg-background-hover flex h-10 w-10 items-center justify-center rounded-md md:hidden"
+          className="active:bg-background-hover text-primary-muted flex h-10 w-10 items-center justify-center rounded-md md:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           {showMobileMenu ? (

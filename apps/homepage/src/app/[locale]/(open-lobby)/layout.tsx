@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import {
   FooterDeclarationLayout,
   FooterHomepageLayout,
+  FooterPaymentLayout,
 } from "@/components/layout/footer";
 import { currentUser } from "@clerk/nextjs";
 import Cookie from "@/components/feature/cookie";
@@ -26,6 +27,7 @@ export default async function OpenLobbyLayout({
       <main className="flex-1">{children}</main>
       <Cookie />
       <FooterHomepageLayout />
+      <FooterPaymentLayout />
       <FooterDeclarationLayout />
     </div>
   );

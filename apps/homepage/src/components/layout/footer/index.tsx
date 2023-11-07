@@ -23,7 +23,6 @@ import {
   ThemeModeIcon,
   ThemeModeSelector,
 } from "@/components/mode-theme";
-import LocaleSwitcher from "@/components/feature/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -32,6 +31,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@shared-components/ui/accordion";
+import { LocaleChoose } from "@/components/locale-switcher";
+import {
+  ApplepayLogo,
+  GooglepayLogo,
+  KlarnaLogo,
+  MastercardLogo,
+  PaypalLogo,
+  SofortLogo,
+  VisaLogo,
+} from "@shared-components/graphics/logo";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
@@ -418,15 +427,21 @@ export function FooterHomepageLayout() {
               className="w-full md:hidden block"
             >
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-md text-primary leading-6 px-2">
+                <AccordionTrigger className="text-md text-primary leading-6">
                   {t("solutions.name")}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list">
                     <li>
                       <Link
                         href={t("solutions.studio.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("solutions.studio.name")}
                       </Link>
@@ -434,7 +449,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.sports.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("solutions.sports.name")}
                       </Link>
@@ -442,7 +463,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.analytics.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("solutions.analytics.name")}
                       </Link>
@@ -450,7 +477,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("solutions.atlas.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("solutions.atlas.name")}
                       </Link>
@@ -459,11 +492,11 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-md text-primary leading-6 px-2">
+                <AccordionTrigger className="text-md text-primary leading-6">
                   {t("support.name")}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list">
                     {/* {navigationWebsite.support.map((item) => (
                       <li key={item.name}>
                         <Link
@@ -477,7 +510,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.pricing.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("support.pricing.name")}
                       </Link>
@@ -485,7 +524,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.documentation.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("support.documentation.name")}
                       </Link>
@@ -493,7 +538,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.guides.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("support.guides.name")}
                       </Link>
@@ -501,7 +552,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("support.programs.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("support.programs.name")}
                       </Link>
@@ -510,11 +567,11 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-md text-primary leading-6 px-2">
+                <AccordionTrigger className="text-md text-primary leading-6">
                   {t("company.name")}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list">
                     {/* {navigationWebsite.company.map((item) => (
                       <li key={item.name}>
                         <Link
@@ -528,7 +585,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.about-us.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("company.about-us.name")}
                       </Link>
@@ -536,7 +599,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.blog.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("company.blog.name")}
                       </Link>
@@ -544,7 +613,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.jobs.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("company.jobs.name")}
                       </Link>
@@ -552,7 +627,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("company.partners.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("company.partners.name")}
                       </Link>
@@ -561,11 +642,11 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="border-transparent">
-                <AccordionTrigger className="text-md text-primary leading-6 px-2">
+                <AccordionTrigger className="text-md text-primary leading-6">
                   {t("legal.name")}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list">
                     {/* {navigationWebsite.legal.map((item) => (
                       <li key={item.name}>
                         <Link
@@ -579,7 +660,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.terms-of-services.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("legal.terms-of-services.name")}
                       </Link>
@@ -587,7 +674,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.privacy-policy.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("legal.privacy-policy.name")}
                       </Link>
@@ -595,7 +688,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.cookie-policy.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("legal.cookie-policy.name")}
                       </Link>
@@ -603,7 +702,13 @@ export function FooterHomepageLayout() {
                     <li>
                       <Link
                         href={t("legal.imprint.href")}
-                        className="font-regular text-md text-primary-muted leading-6 p-2 rounded-md bg-transparent border border-transparent"
+                        className={cn(
+                          buttonVariants({
+                            variant: "ghostButton",
+                            size: "footerSize",
+                          }),
+                          "md:text-sm",
+                        )}
                       >
                         {t("legal.imprint.name")}
                       </Link>
@@ -631,7 +736,7 @@ export function FooterHomepageLayout() {
                     className={cn(
                       buttonVariants({
                         variant: "primaryButton",
-                        size: "fixedSize",
+                        size: "defaultSize",
                       }),
                     )}
                   >
@@ -681,6 +786,45 @@ export function FooterDeclarationLayout() {
                 <span className="sr-only">{item.name}</span>
                 {item.icon({ className: "h-4 w-4 md:h-5 md:w-5" } as IconProps)}
               </Link>
+            ))}
+          </div>
+        </div>
+      </HomepageContainer>
+    </footer>
+  );
+}
+
+export function FooterPaymentLayout() {
+  const t = useTranslations("footer-payment");
+
+  const logos = [
+    { logo: VisaLogo, className: "h-6 md:h-8 w-auto" },
+    { logo: MastercardLogo, className: "h-4 md:h-6 w-auto" },
+    { logo: PaypalLogo, className: "h-8 md:h-10 w-auto" },
+    { logo: SofortLogo, className: "h-3 md:h-4 w-auto" },
+    // { logo: KlarnaLogo, className: 'h-3 md:h-4 w-auto' },
+    { logo: ApplepayLogo, className: "h-6 md:h-8 w-auto" },
+    { logo: GooglepayLogo, className: "h-6 md:h-8 w-auto" },
+  ];
+
+  return (
+    <footer className="bg-background/75 border-t border-separator z-0 py-6 backdrop-blur-xl">
+      <HomepageContainer>
+        <div className="mx-auto md:flex md:items-center md:justify-between">
+          <div className="md:order-1 md:mt-0">
+            <LocaleChoose />
+          </div>
+          <div className="flex gap-x-2 justify-between md:order-2 mt-4 md:mt-0">
+            {logos.map((logoData, index) => (
+              <div
+                key={index}
+                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center md:order-2"
+              >
+                <logoData.logo
+                  className={logoData.className}
+                  aria-hidden="true"
+                />
+              </div>
             ))}
           </div>
         </div>

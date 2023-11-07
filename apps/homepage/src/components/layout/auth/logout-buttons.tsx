@@ -21,7 +21,7 @@ export function LogOutButtons({
   const [isPending, startTransition] = React.useTransition();
 
   return (
-    <div className="flex w-full flex-col items-center gap-4 space-x-2">
+    <div className="flex w-full flex-col items-center gap-4">
       <SignOutButton
         signOutCallback={() =>
           startTransition(() => {

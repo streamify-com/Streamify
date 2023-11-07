@@ -101,7 +101,7 @@ export function FooterDeclarationLayout() {
       <PlatformContainer>
         <div className="md:flex md:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="hidden font-regular text-primary text-xs leading-5 md:order-2 order-1 md:absolute md:flex md:left-1/2 md:-translate-x-1/2">
+            <p className="hidden font-regular text-primary-muted text-xs leading-5 md:order-2 order-1 md:absolute md:flex md:left-1/2 md:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
@@ -146,31 +146,61 @@ export function FooterPlatformLayout() {
             <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">
               <Link
                 href={t("terms-of-services.href")}
-                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                  "md:text-sm",
+                )}
               >
                 {t("terms-of-services.name")}
               </Link>
               <Link
                 href={t("privacy-policy.href")}
-                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                  "md:text-sm",
+                )}
               >
                 {t("privacy-policy.name")}
               </Link>
               <Link
                 href={t("cookie-policy.href")}
-                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                  "md:text-sm",
+                )}
               >
                 {t("cookie-policy.name")}
               </Link>
               <Link
                 href={t("imprint.href")}
-                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                  "md:text-sm",
+                )}
               >
                 {t("imprint.name")}
               </Link>
               <Link
                 href={t("cancel-subscription.href")}
-                className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                  "md:text-sm",
+                )}
               >
                 {t("cancel-subscription.name")}
               </Link>
@@ -188,31 +218,61 @@ export function FooterPlatformLayout() {
                   <div className="flex flex-col items-start">
                     <Link
                       href={t("terms-of-services.href")}
-                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                        "md:text-sm",
+                      )}
                     >
                       {t("terms-of-services.name")}
                     </Link>
                     <Link
                       href={t("privacy-policy.href")}
-                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                        "md:text-sm",
+                      )}
                     >
                       {t("privacy-policy.name")}
                     </Link>
                     <Link
                       href={t("cookie-policy.href")}
-                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                        "md:text-sm",
+                      )}
                     >
                       {t("cookie-policy.name")}
                     </Link>
                     <Link
                       href={t("imprint.href")}
-                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                        "md:text-sm",
+                      )}
                     >
                       {t("imprint.name")}
                     </Link>
                     <Link
                       href={t("cancel-subscription.href")}
-                      className="font-regular text-primary md:hover:text-primary md:hover:bg-background-hover md:hover:border-separator rounded-md border border-transparent bg-transparent px-2 py-1 text-sm leading-6"
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                        "md:text-sm",
+                      )}
                     >
                       {t("cancel-subscription.name")}
                     </Link>
@@ -229,7 +289,6 @@ export function FooterPlatformLayout() {
                   variant: "primaryButton",
                   size: "headerSize",
                 }),
-                "text-md h-10 w-full px-4 py-2 md:h-9",
               )}
             >
               {t("support.name")}
@@ -265,7 +324,7 @@ export function FooterPaymentLayout() {
             {logos.map((logoData, index) => (
               <div
                 key={index}
-                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover justify-center md:order-2"
+                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center md:order-2"
               >
                 <logoData.logo
                   className={logoData.className}

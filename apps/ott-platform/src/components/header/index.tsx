@@ -49,8 +49,8 @@ export default function Header({ user }: HeaderProps) {
         <PlatformContainer>
           <div className="relative flex h-14 items-center justify-between gap-16">
             <div className="relative flex items-center gap-16">
-              <Link href="/home" className="items-center space-x-2">
-                <PrimaryLogo className="text-primary h-7 w-auto md:w-auto" />
+              <Link href="/home" className="items-center">
+                <PrimaryLogo className="text-action h-7 w-auto md:w-auto" />
               </Link>
               <div className="hidden gap-10 overflow-y-auto md:flex">
                 <NavigationMain items={platformConfig.mainNav} user={user} />
@@ -105,7 +105,7 @@ export default function Header({ user }: HeaderProps) {
                           <p className="text-md font-regular text-primary leading-none">
                             {user.firstName}&nbsp;{user.lastName}
                           </p>
-                          <p className="text-primary text-xs leading-none">
+                          <p className="text-primary-muted text-xs leading-none">
                             {email}
                           </p>
                         </div>
@@ -115,7 +115,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-background-hover md:hover:text-primary my-2 rounded-md text-sm"
+                            className="md:hover:bg-background-hover md:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.AccountIcon
                               className="mr-4 h-4 w-4"
@@ -128,7 +128,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/subscription"
-                            className="md:hover:bg-background-hover md:hover:text-primary my-2 rounded-md text-sm"
+                            className="md:hover:bg-background-hover md:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.billing
                               className="mr-4 h-4 w-4"
@@ -141,7 +141,7 @@ export default function Header({ user }: HeaderProps) {
                         <DropdownMenuItem asChild>
                           <Link
                             href="/dashboard/account"
-                            className="md:hover:bg-background-hover md:hover:text-primary my-2 rounded-md text-sm"
+                            className="md:hover:bg-background-hover md:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.SupportIcon
                               className="mr-4 h-4 w-4"
@@ -161,10 +161,19 @@ export default function Header({ user }: HeaderProps) {
                         <ThemeModeSelector />
                       </DropdownMenuItem>
                       <DropdownMenuSeparator className="border-separator my-2 border-t" />
-                      <DropdownMenuItem asChild>
+                      <DropdownMenuItem
+                        asChild
+                        className="bg-transparent md:hover:bg-action text-action md:hover:text-background border border-action"
+                      >
                         <Link
                           href="/signout"
-                          className="md:hover:bg-primary md:hover:text-background md:text-primary text-primary my-1 rounded-md text-sm"
+                          className={cn(
+                            buttonVariants({
+                              variant: "insentiveButton",
+                              size: "menuSize",
+                            }),
+                            "md:text-sm",
+                          )}
                         >
                           <Icons.LogOutIcon
                             className="mr-4 h-4 w-4"

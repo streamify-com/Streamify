@@ -21,7 +21,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
             <div className="relative flex h-16 items-center justify-between gap-16 md:h-20">
               <GoBackButton />
               <div className="relative flex items-center gap-16">
-                <Link href="/" className="items-center space-x-2">
+                <Link href="/" className="items-center">
                   <div className="relative">
                     <PrimaryLogo className="text-primary h-8 w-auto" />
                   </div>

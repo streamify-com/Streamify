@@ -17,7 +17,7 @@ export default function ResetPasswordPageForm() {
         <CardTitle>{t("card-title")}</CardTitle>
         <CardDescription>{t("card-description")}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4">
+      <CardContent className="grid gap-2">
         <ResetPasswordForm
           formlabel={t("card-title")}
           formbutton={t("form-button")}

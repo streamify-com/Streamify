@@ -32,7 +32,7 @@ export function ModeSelection() {
           buttonVariants({
             variant: "secondaryButton",
             size: "fixedSize",
-          })
+          }),
         )}
         value={resolvedTheme}
         onChange={handleThemeChange}

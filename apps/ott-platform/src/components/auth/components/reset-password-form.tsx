@@ -79,7 +79,7 @@ export function ResetPasswordForm({
   return (
     <Form {...form}>
       <form
-        className="grid gap-4"
+        className="grid gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <FormField
@@ -87,7 +87,7 @@ export function ResetPasswordForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{formlabel}</FormLabel>
+              {/* <FormLabel>{formlabel}</FormLabel> */}
               <FormControl>
                 <Input placeholder={inputplaceholder} {...field} />
               </FormControl>

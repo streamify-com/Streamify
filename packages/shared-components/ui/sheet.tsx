@@ -68,7 +68,7 @@ const SheetContent = React.forwardRef<
     >
       {children}
       <div className="absolute left-8 top-5 block sm:hidden">
-        <span className="text-primary">{title}</span>
+        <span className="text-primary-muted">{title}</span>
       </div>
       <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute right-8 top-4 rounded-sm opacity-70 transition-opacity md:hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
         <button className="active:bg-background-hover flex h-7 w-7 items-center justify-center rounded-sm">

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import { useTransition } from "react";
-import { Button } from "@shared-components/ui/button";
+import { Button, buttonVariants } from "@shared-components/ui/button";
 import {
   CircleFlagsDe,
   CircleFlagsUk,
@@ -13,6 +13,7 @@ import { Icons } from "@shared-components/graphics/icons";
 import LocaleSelectionDialog from "./locale-selection-dialog";
 import { Dialog, DialogTrigger } from "@shared-components/ui/dialog";
 import MobileSelectionDialog from "./mobile-selection-dialog";
+import { cn } from "@shared-components/lib/utils";
 
 const SUPPORTED_LOCALES = ["en", "de"];
 
@@ -35,7 +36,11 @@ export function LocaleChoose() {
     <>
       <Dialog>
         <DialogTrigger asChild className="hidden md:flex">
-          <Button variant="ghostButton" size="fixedSize" className="md:text-sm border border-primary">
+          <Button
+            variant="ghostButton"
+            size="avatarSize"
+            className="justify-start px-4 w-36"
+          >
             {getFlagIconForLocale(locale)}
             <span className="ml-2.5">{t("locale", { locale })}</span>
           </Button>
@@ -92,7 +97,12 @@ export function LocaleSwitcher() {
     >
       <p className="sr-only">{t("label")}</p>
       <select
-        className="border-separator rounded-md md:hover:border-primary md:hover:text-primary text-md md:text-sm h-10 w-full border bg-transparent transition-all md:h-10 md:w-48"
+        className={cn(
+          buttonVariants({
+            variant: "secondaryButton",
+            size: "fixedSize",
+          }),
+        )}
         defaultValue={locale}
         disabled={isPending}
         onChange={(e) => handleLocaleChange(e.target.value)}

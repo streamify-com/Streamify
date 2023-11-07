@@ -200,7 +200,7 @@ export function SignUpForm({
             </FormItem>
           )}
         />
-        <div className="items-center flex space-x-2 mt-4">
+        <div className="items-top mb-2 flex space-x-2 text-left">
           <Checkbox
             id="terms1"
             checked={isChecked}

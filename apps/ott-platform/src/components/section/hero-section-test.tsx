@@ -12,7 +12,6 @@ import {
 import InstallPWA from "@shared-components/components/install-pwa";
 import { useTranslations } from "next-intl";
 import { ThemeModeIcon } from "@/components/mode-theme";
-import { VotanIcon } from "@shared-components/graphics/icons";
 
 export default function HeroSectionTest() {
   const t = useTranslations("signin");
@@ -45,19 +44,6 @@ export default function HeroSectionTest() {
                 variant: "primaryButton",
                 size: "fixedSize",
               }),
-            )}
-          >
-            {t("card-title")}
-          </Link>
-          <VotanIcon className="text-active" />
-          <Link
-            href="/signin"
-            className={cn(
-              buttonVariants({
-                variant: "primaryButton",
-                size: "fixedSize",
-              }),
-              "bg-foreground",
             )}
           >
             {t("card-title")}
