@@ -86,26 +86,6 @@ export default function NavigationMain({
           <HomepageContainer>
             <div className="relative z-20 grid gap-4">
               <nav className="no-scrollbar font-regular mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
-                {/* {items.map((item, index) => (
-                  <>
-                    <Link
-                      onClick={closeMobileMenu}
-                      key={index}
-                      href={item.disabled ? "#" : item.href}
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghostButton",
-                          size: "navigationSize",
-                        }),
-                        "my-2 flex w-full items-center justify-between",
-                        item.disabled && "cursor-not-allowed opacity-60",
-                      )}
-                    >
-                      <p>{item.title}</p>
-                      <Icons.chevronRight />
-                    </Link>
-                  </>
-                ))} */}
                 <Link
                   onClick={closeMobileMenu}
                   href={t("products.href")}

@@ -22,11 +22,11 @@ export default {
       },
     },
     screens: {
-      sm: "950px",
-      md: "1000px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+      sm: "1180px",
+      md: "1280px",
+      lg: "1920px",
+      xl: "3840px",
+      "2xl": "7680px",
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

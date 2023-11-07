@@ -4,12 +4,12 @@ export default function LoadingSpinner() {
   return (
     <div className="relative block items-center">
       <div className="text-md text-center">
-        <PrimaryLogo className="text-primary h-10 w-auto" />
+        <PrimaryLogo className="text-action h-10 w-auto" />
         Loading ...
       </div>
       <div
         role="status"
-        className="text-primary absolute left-1/2 top-2/4 h-64 w-64 -translate-x-1/2 -translate-y-1/2"
+        className="text-action absolute left-1/2 top-2/4 h-64 w-64 -translate-x-1/2 -translate-y-1/2"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <g stroke="currentColor">

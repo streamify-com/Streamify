@@ -67,7 +67,7 @@ export default function NavigationBar() {
             className={cn(
               buttonVariants({
                 variant: "actionButton",
-                size: "navigationSize",
+                size: "headerSize",
               }),
             )}
           >
