@@ -6,6 +6,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - apps
+      - packages
+
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
