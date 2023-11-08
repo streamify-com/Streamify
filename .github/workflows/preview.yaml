@@ -6,9 +6,6 @@ on:
   push:
     branches-ignore:
       - main
-    paths:
-      - apps
-      - packages
 
 jobs:
   Deploy-Preview:
