@@ -10,10 +10,19 @@ on:
 jobs:
   create-licenses-pr:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        pnpm-version: [8.x]
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use pnpm ${{ matrix.pnpm-version }}
+        uses: pnpm/action-setup@v2
         with:
-          fetch-depth: 0
+          version: ${{ matrix.pnpm-version }}
+
       - name: Update licenses
         # In the long run, we should decide which of these tools we want to use. For now, save output of all to
         # be able to compare.
