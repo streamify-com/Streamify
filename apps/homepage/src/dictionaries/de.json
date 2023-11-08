@@ -159,6 +159,9 @@
       "description": "Die neuesten Nachrichten, Artikel und Materialien in deinem Postfach.",
       "placeholder": "E-Mail",
       "button": "Abonnieren"
+    },
+    "we-support": {
+      "title": "Wir unterstützen diese Projekte:"
     }
   },
   "footer-platform": {

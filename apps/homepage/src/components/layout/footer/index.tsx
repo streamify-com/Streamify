@@ -42,6 +42,7 @@ import {
   VisaLogo,
 } from "@shared-components/graphics/logo";
 import { StripeClimateBadge } from "@shared-components/graphics/badge";
+import { Separator } from "@shared-components/ui/separator";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
@@ -707,36 +708,55 @@ export function FooterHomepageLayout() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <div className="mt-8 sm:mt-0">
-              <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
-                {t("newsletter.title")}
-              </h3>
-              <p className="text-md text-primary-muted my-2 leading-6">
-                {t("newsletter.description")}
-              </p>
-              <form>
-                <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
-                  <Input
-                    type="email"
-                    autoComplete="on"
-                    placeholder={t("newsletter.placeholder")}
-                  />
-                  <Button
-                    className={cn(
-                      buttonVariants({
-                        variant: "primaryButton",
-                        size: "defaultSize",
-                      }),
-                    )}
-                  >
-                    {t("newsletter.button")}
-                  </Button>
+            <div className="mt-8 sm:mt-0 sm:border-l border-transparend sm:border-separator">
+              <div className="sm:ml-8">
+                <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
+                  {t("newsletter.title")}
+                </h3>
+                <p className="text-md text-primary-muted my-2 leading-6">
+                  {t("newsletter.description")}
+                </p>
+                <form>
+                  <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
+                    <Input
+                      type="email"
+                      autoComplete="on"
+                      placeholder={t("newsletter.placeholder")}
+                    />
+                    <Button
+                      className={cn(
+                        buttonVariants({
+                          variant: "primaryButton",
+                          size: "defaultSize",
+                        }),
+                      )}
+                    >
+                      {t("newsletter.button")}
+                    </Button>
+                  </div>
+                </form>
+                <Separator className="my-6" />
+                <div className="hidden sm:block">
+                  <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
+                    {t("we-support.title")}
+                  </h3>
+                  <div className="mt-2 flex items-center gap-4 flex-row">
+                    <Link href="https://gdpr-info.eu/" target="_blank">
+                      <Icons.GDPRIcon className="border-separator sm:hover:border-separator-hover h-10 w-10 rounded-full border bg-[#00349A] p-1 text-[#FFCC00]" />
+                    </Link>
+                    <Link
+                      href="https://climate.stripe.com/s7VDJQ"
+                      target="_blank"
+                    >
+                      <StripeClimateBadge className="border-separator text-standard bg-background sm:hover:border-separator-hover sm:hover:bg-hoverground h-10 w-10 rounded-full border p-2" />
+                    </Link>
+                  </div>
                 </div>
-              </form>
+              </div>
             </div>
-            <div className="mt-8 sm:mt-0">
+            <div className="block sm:hidden">
               <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
-                We support
+                {t("we-support.title")}
               </h3>
               <div className="mt-4 flex items-center gap-4 flex-row">
                 <Link href="https://gdpr-info.eu/" target="_blank">

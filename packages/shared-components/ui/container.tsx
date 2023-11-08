@@ -6,9 +6,9 @@ interface ContainerProps {
 }
 
 export function PlatformContainer({ children }: ContainerProps) {
-  return <div className={clsx("px-8 sm:px-20")}>{children}</div>;
+  return <div className={clsx("px-8 sm:px-24")}>{children}</div>;
 }
 
 export function HomepageContainer({ children }: ContainerProps) {
-  return <div className={clsx("px-8 sm:px-24")}>{children}</div>;
+  return <div className={clsx("px-8 sm:px-16")}>{children}</div>;
 }

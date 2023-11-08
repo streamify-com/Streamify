@@ -32,13 +32,13 @@ export default function LogoCloudSection() {
               height={144}
               className="col-span-2 max-h-8 w-full object-contain md:col-span-1"
             /> */}
-          <AWSLogo className="col-span-2 max-h-4 sm:max-h-8 w-full object-contain md:col-span-1" />
+          <AWSLogo className="col-span-2 max-h-6 sm:max-h-7 w-full object-contain md:col-span-1" />
           <VercelLogo className="col-span-2 max-h-4 sm:max-h-6 w-full object-contain md:col-span-1" />
           <PlanetscaleLogo className="col-span-2 max-h-4 sm:max-h-8 w-full object-contain md:col-span-1" />
           <ClerkLogo className="col-span-2 max-h-4 sm:max-h-8 w-full object-contain md:col-span-1" />
-          <StripeLogo className="col-span-2 max-h-4 sm:max-h-8 w-full object-contain md:col-span-1" />
-          <MuxLogo className="col-span-2 max-h-4 sm:max-h-6 w-full object-contain md:col-span-1" />
-          <SanityLogo className="col-span-2 max-h-4 sm:max-h-6 w-full object-contain md:col-span-1" />
+          <StripeLogo className="col-span-2 max-h-4 sm:max-h-7 w-full object-contain md:col-span-1" />
+          <MuxLogo className="col-span-2 max-h-3 sm:max-h-5 w-full object-contain md:col-span-1" />
+          <SanityLogo className="col-span-2 max-h-3 sm:max-h-4 w-full object-contain md:col-span-1" />
           <ResendLogo className="col-span-2 max-h-4 sm:max-h-6 w-full object-contain md:col-span-1" />
         </div>
       </HomepageContainer>

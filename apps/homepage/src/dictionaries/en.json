@@ -159,6 +159,9 @@
       "description": "The latest news, articles, and resources, sent to your inbox weekly.",
       "placeholder": "Email",
       "button": "Subscribe"
+    },
+    "we-support": {
+      "title": "We support these projects:"
     }
   },
   "footer-platform": {

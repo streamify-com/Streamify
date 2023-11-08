@@ -92,7 +92,7 @@ export default function PricingSection() {
       <HomepageContainer>
         <div className="mx-auto">
           <div className="mx-auto text-center">
-            <h2 className="font-special text-primary text-4xl tracking-tight sm:text-5xl">
+            <h2 className="font-special text-action text-4xl tracking-tight sm:text-5xl">
               {t("title")}
             </h2>
           </div>
