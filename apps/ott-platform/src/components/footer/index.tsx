@@ -19,11 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@shared-components/ui/accordion";
-import {
-  LocaleChoose,
-  LocaleChooseIcon,
-  LocaleSwitcher,
-} from "@/components/locale-switcher";
+import { LocaleChoose } from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -38,7 +34,6 @@ import {
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 import { ThemeModeIcon, ThemeModeSelector } from "@/components/mode-theme";
-import { Separator } from "@shared-components/ui/separator";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
@@ -140,7 +135,7 @@ export function FooterPlatformLayout() {
       <PlatformContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <nav
-            className="text-center my-6 sm:flex sm:justify-center sm:space-x-10"
+            className="text-center my-2 sm:my-4 sm:flex sm:justify-center sm:space-x-10"
             aria-label="Footer"
           >
             <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">

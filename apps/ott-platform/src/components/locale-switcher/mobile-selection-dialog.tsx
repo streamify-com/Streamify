@@ -39,9 +39,9 @@ export default function MobileSelectionDialog() {
   return (
     <Sheet>
       <SheetTrigger asChild className="flex sm:hidden">
-        <Button variant="ghostButton" size="linkSize" className="justify-end">
+        <Button variant="secondaryButton" size="defaultSize">
           {getFlagIconForLocale(locale)}
-          {/* <span className="ml-2.5">{t("locale", { locale })}</span> */}
+          <span className="ml-2.5">{t("locale", { locale })}</span>
         </Button>
       </SheetTrigger>
       <SheetContent

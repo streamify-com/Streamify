@@ -2,13 +2,9 @@ name: Node Continuous Integration
 
 on:
   push:
-    branches-ignore:
-      - Production
-      - Preview
+    branches:
+      - main
   pull_request:
-    branches-ignore:
-      - Production
-      - Preview
 
 jobs:
   build:
@@ -32,13 +28,13 @@ jobs:
         run: pnpm install
 
       - name: Prettier formatting
-        run: pnpm format
+        run: pnpm format:write
 
       - name: Froze yarn.lock file
         run: pnpm install --frozen-lockfile
 
       - name: Check format
-        run: pnpm run format:check
+        run: pnpm format:check
 
       - name: Build packages
         run: pnpm build

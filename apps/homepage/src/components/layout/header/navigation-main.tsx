@@ -35,7 +35,7 @@ export default function NavigationMain({
 }: MainNavProps) {
   const t = useTranslations("header-homepage");
   const mobileMenuClassName = cn(
-    "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 z-50 mt-px grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-y-auto pb-32 md:static md:block",
+    "animate-in slide-in-from-right-80 bg-background fixed inset-x-0 bottom-0 z-50 mt-px grid h-[calc(100vh-3rem)] grid-flow-row auto-rows-max no-scrollbar overflow-y-auto pb-32 md:static md:block",
     isComponentOpen ? "top-14" : "top-14",
   );
   const segment = useSelectedLayoutSegment();

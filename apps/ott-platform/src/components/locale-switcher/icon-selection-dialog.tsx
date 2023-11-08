@@ -23,7 +23,7 @@ function getFlagIconForLocale(locale: string) {
   }
 }
 
-export default function MobileSelectionDialog() {
+export default function IconSelectionDialog() {
   const t = useTranslations("locale-switcher");
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
@@ -39,9 +39,12 @@ export default function MobileSelectionDialog() {
   return (
     <Sheet>
       <SheetTrigger asChild className="flex sm:hidden">
-        <Button variant="secondaryButton" size="defaultSize">
+        <Button
+          variant="ghostButton"
+          size="iconSize"
+          className="justify-center"
+        >
           {getFlagIconForLocale(locale)}
-          <span className="ml-2.5">{t("locale", { locale })}</span>
         </Button>
       </SheetTrigger>
       <SheetContent
