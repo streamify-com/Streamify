@@ -74,6 +74,14 @@
       "href": "/signin"
     },
     "or-continue-with": "oder weiter mit",
+    "gender": {
+      "title": "Anrede",
+      "placeholder": "Anrede",
+      "male": "Herr",
+      "female": "Frau",
+      "diverse": "Divers"
+    },
+    "birth-date": "Geburtsdatum",
     "first-name": "Vorname",
     "last-name": "Nachname",
     "email": "E-Mail-Adresse",

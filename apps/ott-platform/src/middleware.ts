@@ -13,6 +13,7 @@ export default authMiddleware({
   publicRoutes: [
     "/",
     "/:locale",
+    "/:locale/test",
     "/:locale/subscribe",
     "/:locale/home",
     "/:locale/matches",

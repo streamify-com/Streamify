@@ -64,6 +64,11 @@ export default function SignUpPageForm() {
           and={t("and")}
           formbutton={t("form-button")}
           previousstep={t("previous-step")}
+          genderplaceholder={t("gender.placeholder")}
+          gendermale={t("gender.male")}
+          genderfemale={t("gender.female")}
+          genderdiverse={t("gender.diverse")}
+          birthdate={t("birth-date")}
         />
       </CardContent>
     </>

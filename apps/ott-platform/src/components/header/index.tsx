@@ -140,7 +140,7 @@ export default function Header({ user }: HeaderProps) {
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild>
                           <Link
-                            href="/dashboard/account"
+                            href="/dashboard/support"
                             className="sm:hover:bg-background-hover sm:hover:text-primary text-primary-muted my-2 rounded-md text-sm"
                           >
                             <Icons.SupportIcon

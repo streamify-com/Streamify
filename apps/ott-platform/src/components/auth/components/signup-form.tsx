@@ -24,12 +24,25 @@ import {
   FormMessage,
 } from "@shared-components/ui/form";
 import { cn } from "@shared-components/lib/utils";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@shared-components/ui/select";
+import { DateInput } from "./date-input";
 
 type Inputs = z.infer<typeof signUpSchema>;
 
 interface SignUpFormProps {
+  genderplaceholder: string;
+  gendermale: string;
+  genderfemale: string;
+  genderdiverse: string;
   firstname: string;
   lastname: string;
+  birthdate: string;
   email: string;
   password: string;
   termsandconditions: string;
@@ -43,8 +56,13 @@ interface SignUpFormProps {
 }
 
 export function SignUpForm({
+  genderplaceholder,
+  gendermale,
+  genderfemale,
+  genderdiverse,
   firstname,
   lastname,
+  birthdate,
   email,
   password,
   termsandconditions,
@@ -69,6 +87,7 @@ export function SignUpForm({
   const form = useForm<Inputs>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
+      birthday: "",
       firstname: "",
       lastname: "",
       email: "",
@@ -82,6 +101,12 @@ export function SignUpForm({
     startTransition(async () => {
       try {
         await signUp.create({
+          unsafeMetadata: {
+            gender: data.gender,
+            birthday: data.birthday,
+          },
+          gender: data.gender,
+          birthday: data.birthday,
           firstName: data.firstname,
           lastName: data.lastname,
           emailAddress: data.email,
@@ -114,6 +139,55 @@ export function SignUpForm({
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-2">
+          <FormField
+            control={form.control}
+            name="gender"
+            render={({ field }) => (
+              <FormItem>
+                {/* <FormLabel>Gender</FormLabel> */}
+                <FormControl>
+                  {/* <Select {...field}>
+                    <SelectTrigger>
+                      <SelectValue placeholder={genderplaceholder} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="male">{gendermale}</SelectItem>
+                      <SelectItem value="female">{genderfemale}</SelectItem>
+                      <SelectItem value="diverse">{genderdiverse}</SelectItem>
+                    </SelectContent>
+                  </Select> */}
+                  <select
+                    {...field}
+                    className={cn(
+                      buttonVariants({
+                        variant: "secondaryButton",
+                        size: "defaultSize",
+                      }),
+                      "sm:w-full",
+                    )}
+                  >
+                    <option value="">{genderplaceholder}</option>
+                    <option value="male">{gendermale}</option>
+                    <option value="female">{genderfemale}</option>
+                    <option value="diverse">{genderdiverse}</option>
+                  </select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="birthday"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <DateInput placeholder={birthdate} {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <FormField
             control={form.control}
             name="firstname"
