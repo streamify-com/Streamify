@@ -35,7 +35,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-primary text-center text-2xl font-bold leading-none tracking-tight sm:text-left",
+      "text-primary text-center text-2xl font-special leading-none tracking-tight sm:text-left",
       className,
     )}
     {...props}
@@ -87,7 +87,10 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("max-w-full py-4 text-sm", className)}
+    className={cn(
+      "max-w-full py-4 text-sm text-center sm:text-right",
+      className,
+    )}
     {...props}
   />
 ));

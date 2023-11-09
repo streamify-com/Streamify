@@ -195,7 +195,7 @@ export default function Header({ user }: HeaderProps) {
                       }),
                     )}
                   >
-                    <SecondaryLogo className="text-background h-7 w-auto sm:h-9" />
+                    <SecondaryLogo className="h-7 w-auto sm:h-9" />
                   </Link>
                 )}
               </ul>

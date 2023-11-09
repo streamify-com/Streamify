@@ -24,7 +24,7 @@ export default function LogoCloudSection() {
             {t("title")}
           </span>
         </div>
-        <div className="text-primary-muted mx-auto mt-12 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-8 sm:gap-x-10 md:mx-0 md:max-w-none md:grid-cols-8">
+        <div className="text-primary-muted mx-auto mt-12 grid max-w-lg grid-cols-4 items-center justify-between gap-x-8 gap-y-10 sm:grid-cols-7 sm:gap-x-10 sm:mx-0 sm:max-w-none">
           {/* <Image
               src="https://assets.streamify.dev/logo/streamify_logo-red.svg"
               alt="Logo 1"
@@ -37,7 +37,7 @@ export default function LogoCloudSection() {
           <PlanetscaleLogo className="col-span-2 max-h-4 sm:max-h-8 w-full object-contain md:col-span-1" />
           <ClerkLogo className="col-span-2 max-h-4 sm:max-h-8 w-full object-contain md:col-span-1" />
           <StripeLogo className="col-span-2 max-h-4 sm:max-h-7 w-full object-contain md:col-span-1" />
-          <MuxLogo className="col-span-2 max-h-3 sm:max-h-5 w-full object-contain md:col-span-1" />
+          {/* <MuxLogo className="col-span-2 max-h-3 sm:max-h-5 w-full object-contain md:col-span-1" /> */}
           <SanityLogo className="col-span-2 max-h-3 sm:max-h-4 w-full object-contain md:col-span-1" />
           <ResendLogo className="col-span-2 max-h-4 sm:max-h-6 w-full object-contain md:col-span-1" />
         </div>

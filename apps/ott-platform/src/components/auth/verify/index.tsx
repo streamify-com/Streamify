@@ -4,6 +4,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
+  CardSubtitle,
   CardTitle,
 } from "@shared-components/ui/card";
 import { VerifyEmailForm } from "@/components/auth/components/verify-email-form";
@@ -13,7 +14,8 @@ export default function VerifyEmailPageForm() {
   const t = useTranslations("verify");
   return (
     <>
-      <CardHeader className="space-y-1">
+      <CardHeader>
+        <CardSubtitle>{t("step")}</CardSubtitle>
         <CardTitle>{t("card-title")}</CardTitle>
         <CardDescription>{t("card-description")}</CardDescription>
       </CardHeader>

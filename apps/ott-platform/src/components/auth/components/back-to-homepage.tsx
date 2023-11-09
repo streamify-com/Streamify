@@ -16,10 +16,9 @@ export function BackToHomepageButton() {
         href={t("href")}
         className={cn(
           buttonVariants({
-            variant: "ghostButton",
-            size: "navigationSize",
+            variant: "blurButton",
+            size: "defaultSize",
           }),
-          "sm:hover:border-separator sm:hover:bg-background/75 border border-transparent px-4 py-2 text-primary-inner sm:group-hover:text-primary-hover sm:hover:backdrop-blur-xl",
         )}
       >
         <ExpandingArrowLeft />

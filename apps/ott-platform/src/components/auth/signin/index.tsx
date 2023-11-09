@@ -61,7 +61,7 @@ export default function SigninPageForm() {
                 variant: "linkButton",
                 size: "linkSize",
               }),
-              "text-sm",
+              "sm:text-sm",
             )}
           >
             {t("reset-password")}

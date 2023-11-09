@@ -67,7 +67,7 @@
   },
   "signup": {
     "card-title": "Sign up",
-    "step-1-of-5": "Step 1 of 5",
+    "step": "Step 1 of 5",
     "card-description": "Already have an account?",
     "alternative": {
       "name": "Sign in",
