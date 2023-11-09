@@ -32,7 +32,7 @@ export function Header({ user }: HeaderProps) {
     <header
       className={`sticky top-0 z-40 ${
         scrolled
-          ? "border-separator border-b bg-white/60 backdrop-blur-xl dark:bg-black/60"
+          ? "border-separator border-b bg-background/60 backdrop-blur-xl"
           : "sm:bg-transparent bg-background border-separator border-b sm:border-transparent"
       } `}
     >

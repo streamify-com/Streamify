@@ -7,6 +7,7 @@ import {
   BackToHomepageButton,
   GoBackButton,
 } from "@/components/auth/components/back-to-homepage";
+import { LocaleChooseIconHeader } from "@/components/locale-switcher";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -20,15 +21,17 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
           <PlatformContainer>
             <div className="relative flex h-16 items-center justify-between gap-16 sm:h-20">
               <GoBackButton />
-              <div className="relative flex items-center gap-16">
+              <div className="absolute flex left-1/2 -translate-x-1/2">
                 <Link href="/" className="items-center">
                   <div className="relative">
-                    <PrimaryLogo className="text-primary h-8 w-auto" />
+                    <PrimaryLogo className="text-action h-8 w-auto" />
                   </div>
                 </Link>
                 <div className="hidden gap-10 sm:flex"></div>
               </div>
-              <div className="w-14" />
+              <div className="w-auto">
+                <LocaleChooseIconHeader />
+              </div>
             </div>
           </PlatformContainer>
         </nav>
@@ -45,8 +48,8 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
               alt="Authentication"
             />
           </div>
-          <Link href="/home" className="absolute z-30 hidden p-20 md:flex">
-            <PrimaryLogo className="text-primary h-8 w-auto sm:h-14 sm:w-auto" />
+          <Link href="/home" className="absolute z-30 hidden m-20 md:flex">
+            <PrimaryLogo className="text-action sm:hover:text-action-muted h-8 w-auto sm:h-14 sm:w-auto" />
           </Link>
         </div>
         <BackToHomepageButton />

@@ -20,7 +20,7 @@ export default function SignUpPageForm() {
   return (
     <>
       <CardHeader>
-        <CardSubtitle>{t("step-1-of-5")}</CardSubtitle>
+        <CardSubtitle>{t("step")}</CardSubtitle>
         <CardTitle>{t("card-title")}</CardTitle>
         <CardDescription>
           {t("card-description")}&nbsp;

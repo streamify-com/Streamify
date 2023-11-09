@@ -109,7 +109,7 @@ export function SignUpForm({
         className="grid gap-4"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-2">
           <FormField
             control={form.control}
             name="gender"
@@ -140,6 +140,7 @@ export function SignUpForm({
                 <FormControl>
                   <input
                     type="date"
+                    value="Date of birth"
                     className="h-10 sm:h-10 py-2 px-4 sm:w-full w-full rounded-md border border-separator"
                   ></input>
                 </FormControl>

@@ -12,6 +12,8 @@ import { SignInForm } from "@/components/layout/auth/signin-form";
 import { OAuthSignIn } from "@/components/layout/auth/oauth-signin";
 import { useTranslations } from "next-intl";
 import { Separator } from "@shared-components/ui/separator";
+import { cn } from "@shared-components/lib/utils";
+import { buttonVariants } from "@shared-components/ui/button";
 
 export default function SigninPageForm() {
   const t = useTranslations("signin");
@@ -52,7 +54,13 @@ export default function SigninPageForm() {
           <Link
             aria-label="Reset password"
             href="/signin/reset-password"
-            className="sm:hover:text-primary underline underline-offset-4 transition-colors"
+            className={cn(
+              buttonVariants({
+                variant: "linkButton",
+                size: "linkSize",
+              }),
+              "sm:text-sm",
+            )}
           >
             {t("reset-password")}
           </Link>

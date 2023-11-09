@@ -14,6 +14,7 @@ import LocaleSelectionDialog from "./locale-selection-dialog";
 import { Dialog, DialogTrigger } from "@shared-components/ui/dialog";
 import MobileSelectionDialog from "./mobile-selection-dialog";
 import { cn } from "@shared-components/lib/utils";
+import IconSelectionDialog from "./icon-selection-dialog";
 
 const SUPPORTED_LOCALES = ["en", "de"];
 
@@ -69,7 +70,7 @@ export function LocaleChooseIconHeader() {
           </Button>
         </DialogTrigger>
       </Dialog>
-      <MobileSelectionDialog />
+      <IconSelectionDialog />
     </>
   );
 }
@@ -83,11 +84,11 @@ export function LocaleChooseIcon() {
         <DialogTrigger asChild className="hidden sm:flex">
           <Button
             variant="ghostButton"
-            size="avatarSize"
-            className="justify-center px-4 w-20 h-10 sm:h-9 group"
+            size="iconSize"
+            className="justify-center px-1 w-16 h-8 group bg-transparent sm:hover:bg-secondary-muted border border-transparent sm:hover:border-transparent"
           >
             {getFlagIconForLocale(locale)}
-            <Icons.chevronDown className="ml-2.5 h-4 text-primary sm:group-hover:text-primary group" />
+            <Icons.chevronDown className="ml-1 h-3 text-primary-muted sm:group-hover:text-primary group" />
           </Button>
         </DialogTrigger>
         <LocaleSelectionDialog />

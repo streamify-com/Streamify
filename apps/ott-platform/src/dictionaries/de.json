@@ -67,7 +67,7 @@
   },
   "signup": {
     "card-title": "Registrieren",
-    "step-1-of-5": "Schritt 1 von 5",
+    "step": "Schritt 1 von 5",
     "card-description": "Bereits registriert?",
     "alternative": {
       "name": "Anmelden",
@@ -89,6 +89,7 @@
   },
   "verify": {
     "card-title": "Verifiziere E-Mail-Adresse",
+    "step": "Schritt 2 von 5",
     "card-description": "Ein Verifizierungscode wurde an deine E-Mail-Adresse gesendet.",
     "form-label": "Verifizierungscode",
     "verify-code-form-label": "6-stelliger Code",

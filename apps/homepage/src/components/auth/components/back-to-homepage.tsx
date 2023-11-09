@@ -11,15 +11,14 @@ import { useRouter } from "next/navigation";
 export function BackToHomepageButton() {
   const t = useTranslations("back-to-homepage");
   return (
-    <div className="absolute bottom-0 z-30 hidden p-20 md:flex">
+    <div className="absolute bottom-0 z-30 hidden md:flex group m-20">
       <Link
         href={t("href")}
         className={cn(
           buttonVariants({
-            variant: "ghostButton",
-            size: "navigationSize",
+            variant: "blurButton",
+            size: "defaultSize",
           }),
-          "sm:hover:border-separator sm:hover:bg-background/75 group border border-transparent px-2 py-1 text-primary sm:hover:backdrop-blur-xl",
         )}
       >
         <ExpandingArrowLeft />
@@ -38,7 +37,7 @@ export function GoBackButton() {
       aria-label="Go back to the previous page"
       variant="ghostButton"
       size="navigationSize"
-      className="w-14"
+      className="w-14 text-sm"
       onClick={() => router.back()}
       disabled={isPending}
     >

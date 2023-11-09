@@ -87,10 +87,11 @@ export function VerifyEmailForm({
           name="code"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{formlabel}</FormLabel>
+              {/* <FormLabel>{formlabel}</FormLabel> */}
               <FormControl>
                 <Input
                   placeholder={verifycodeformlabel}
+                  type="tel"
                   {...field}
                   onChange={(e) => {
                     e.target.value = e.target.value.trim();
@@ -103,7 +104,7 @@ export function VerifyEmailForm({
           )}
         />
         <Separator className="my-4" />
-        <Button disabled={isPending} className="bg-primary w-full sm:w-full">
+        <Button disabled={isPending} variant="actionButton" size="defaultSize">
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"

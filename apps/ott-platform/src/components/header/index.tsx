@@ -44,7 +44,7 @@ export default function Header({ user }: HeaderProps) {
       ?.emailAddress ?? "";
 
   return (
-    <header className="border-separator sticky top-0 z-40 border-b bg-white/60 backdrop-blur-xl dark:bg-black/60">
+    <header className="border-separator sticky top-0 z-40 border-b bg-background/60 backdrop-blur-xl">
       <nav>
         <PlatformContainer>
           <div className="relative flex h-14 items-center justify-between gap-16">
@@ -195,7 +195,7 @@ export default function Header({ user }: HeaderProps) {
                       }),
                     )}
                   >
-                    <SecondaryLogo className="text-background sm:group-hover:text-primary h-7 w-auto sm:h-9" />
+                    <SecondaryLogo className="h-7 w-auto sm:h-9" />
                   </Link>
                 )}
               </ul>

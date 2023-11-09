@@ -12,14 +12,18 @@ const buttonVariants = cva(
           "bg-primary sm:hover:bg-primary-muted text-primary-inner border border-primary sm:hover:border-primary-muted",
         secondaryButton:
           "bg-secondary sm:hover:bg-secondary-muted text-secondary-inner sm:hover:text-secondary-hover border border-separator",
+        tertiaryButton:
+          "bg-secondary sm:hover:bg-primary text-secondary-inner sm:hover:text-primary-hover border border-separator sm:hover:border-primary-muted",
         actionButton:
-          "bg-action sm:hover:bg-action-muted text-background border border-action sm:hover:border-action-muted",
+          "bg-action sm:hover:bg-action-muted text-background sm:hover:text-white border border-action sm:hover:border-action-muted",
         insentiveButton:
           "bg-transparent sm:hover:bg-action text-action sm:hover:text-background border border-action",
         ghostButton:
           "bg-transparent sm:hover:bg-secondary-muted text-secondary-inner sm:hover:text-secondary-hover border border-transparent sm:hover:border-separator",
+        blurButton:
+          "sm:hover:border-separator bg-background/75 sm:hover:bg-secondary-muted border border-transparent text-white sm:hover:text-secondary-hover backdrop-blur-xl",
         linkButton:
-          "text-primary sm:hover:text-action underline underline-offset-4 transition-colors",
+          "text-primary-muted sm:hover:text-link underline underline-offset-4 transition-colors",
         externalLinkButton:
           "text-link underline underline-offset-4 transition-colors",
         deleteButton:
