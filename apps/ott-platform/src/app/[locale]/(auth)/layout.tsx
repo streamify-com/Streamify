@@ -16,7 +16,7 @@ interface AuthLayoutProps {
   children: React.ReactNode;
 }
 
-export default function AuthLayout({ children }: AuthLayoutProps) {
+export default async function AuthLayout({ children }: AuthLayoutProps) {
   return (
     <div>
       <header className="border-separator bg-background/75 sticky top-0 z-50 block border-b backdrop-blur-xl sm:hidden">

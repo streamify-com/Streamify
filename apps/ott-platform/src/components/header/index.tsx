@@ -39,6 +39,7 @@ export default function Header({ user }: HeaderProps) {
   const initials = `${user?.firstName?.charAt(0) ?? ""} ${
     user?.lastName?.charAt(0) ?? ""
   }`;
+
   const email =
     user?.emailAddresses?.find((e) => e.id === user.primaryEmailAddressId)
       ?.emailAddress ?? "";
@@ -50,7 +51,7 @@ export default function Header({ user }: HeaderProps) {
           <div className="relative flex h-14 items-center justify-between gap-16">
             <div className="relative flex items-center gap-16">
               <Link href="/home" className="items-center">
-                <PrimaryLogo className="text-action h-7 w-auto sm:w-auto" />
+                <PrimaryLogo className="text-action sm:hover:text-action-muted h-7 w-auto sm:w-auto" />
               </Link>
               <div className="hidden gap-10 overflow-y-auto sm:flex">
                 <NavigationMain items={platformConfig.mainNav} user={user} />

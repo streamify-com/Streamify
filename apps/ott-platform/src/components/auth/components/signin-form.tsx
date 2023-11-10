@@ -81,7 +81,7 @@ export function SignInForm({
   return (
     <Form {...form}>
       <form
-        className="grid gap-2"
+        className="grid gap-4 sm:gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <FormField
@@ -89,7 +89,7 @@ export function SignInForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              {/* <FormLabel>{email}</FormLabel> */}
+              <FormLabel className="sm:hidden block">{email}</FormLabel>
               <FormControl>
                 <Input
                   placeholder={email}
@@ -107,7 +107,7 @@ export function SignInForm({
           name="password"
           render={({ field }) => (
             <FormItem>
-              {/* <FormLabel>{password}</FormLabel> */}
+              <FormLabel className="sm:hidden block">{password}</FormLabel>
               <FormControl>
                 <PasswordInput
                   placeholder={password}
