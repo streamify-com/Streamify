@@ -4,8 +4,8 @@ import { VotanIcon } from "@shared-components/graphics/icons";
 export default function Page() {
   return (
     <div>
-      {/* <TestComponent /> */}
-      <VotanIcon />
+      <TestComponent />
+      {/* <VotanIcon /> */}
     </div>
   );
 }

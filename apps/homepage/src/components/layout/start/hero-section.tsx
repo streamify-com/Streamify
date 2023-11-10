@@ -50,7 +50,7 @@ export default function HeroSection() {
                   duration: 0.95,
                   ease: [0.165, 0.84, 0.44, 1],
                 }}
-                className="font-special from-primary via-primary-muted to-primary inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent sm:text-5xl md:text-6xl px-20"
+                className="font-special from-primary via-primary-muted to-primary inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent sm:text-5xl md:text-6xl px-0 sm:px-20"
               >
                 {t("title-1")}
                 &nbsp;

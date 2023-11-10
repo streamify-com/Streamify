@@ -7,7 +7,7 @@ export const signInSchema = z.object({
   password: z
     .string()
     .min(4, {
-      message: "Password must be at least 4 characters long.",
+      message: "Password must contain at least 4 characters.",
     })
     .max(100)
     .regex(/^(?=.{4,})/, {

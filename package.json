@@ -2,18 +2,44 @@
   "name": "streamify.com",
   "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Streamify",
+    "url": "https://www.streamify.com"
+  },
+  "description": "Monorepo of Streamify - An All-in-One solution to develop, maintain and deploy custom video streaming platforms.",
+  "keywords": [
+    "streamify",
+    "streaming",
+    "video",
+    "ott",
+    "cms",
+    "template",
+    "visual-editor",
+    "content-monetization"
+  ],
+  "homepage": "https://www.streamify.com",
+  "bugs": {
+    "url": "https://github.com/streamify-com/streamify.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/streamify-com/streamify.com.git"
+  },
   "scripts": {
-    "easy": "pnpm i && pnpm build && pnpm format && pnpm dev",
+    "easy": "pnpm i && pnpm build && pnpm format:write && pnpm dev",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "test": "turbo run test",
+    "update": "pnpm update --latest",
+    "upgrade": "pnpm upgrade --latest",
     "format:write": "prettier --write \"**/*.{ts,js,tsx,css,json}\"",
     "format:check": "prettier --check \"**/*.{ts,js,tsx,css,json}\"",
     "ui:add": "pnpm --filter ui ui:add"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.16",
-    "eslint": "^8.51.0",
+    "eslint": "^8.53.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "^3.0.3",
     "turbo": "^1.10.16"

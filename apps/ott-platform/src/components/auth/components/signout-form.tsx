@@ -21,7 +21,7 @@ export function SignOutForm({
     <div className={cn("grid gap-2", className)} {...props}>
       <h1
         className={cn(
-          "text-primary text-2xl font-bold tracking-tight",
+          "text-primary text-2xl font-special tracking-tight",
           size === "default" && "sm:text-4xl",
         )}
       >
