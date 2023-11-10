@@ -1,59 +1,48 @@
 "use client";
 
 import { cn } from "@shared-components/lib/utils";
-import { Button, buttonVariants } from "@shared-components/ui/button";
+import { buttonVariants } from "@shared-components/ui/button";
 import { Input } from "@shared-components/ui/input";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const DateInput = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, placeholder, ...props }) => {
-    const [inputType, setInputType] = useState("text");
+  ({ className, type, placeholder, ...props }, ref) => {
+    // Function to check if the device is mobile
+    const isMobileDevice = () => {
+      return (
+        typeof window.orientation !== "undefined" ||
+        navigator.userAgent.indexOf("IEMobile") !== -1
+      );
+    };
+
+    // Set initial input type based on device
+    const initialInputType = isMobileDevice() ? "date" : "text";
+    const [inputType, setInputType] = useState(initialInputType);
 
     const handleFocus = () => setInputType("date");
-    const handleBlur = () => setInputType("text");
+    const handleBlur = () =>
+      isMobileDevice() ? setInputType("date") : setInputType("text");
 
     return (
       <div className="relative">
-        <div className="hidden sm:block">
-          <Input
-            placeholder={placeholder}
-            type={inputType}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            id="date"
-            className={cn(
-              buttonVariants({
-                variant: "secondaryButton",
-                size: "defaultSize",
-              }),
-            )}
-            {...props}
-          />
-        </div>
-        <div className="block sm:hidden">
-          <Input
-            placeholder={placeholder}
-            type="date"
-            className={cn(
-              buttonVariants({
-                variant: "secondaryButton",
-                size: "defaultSize",
-              }),
-              "text-right",
-            )}
-            {...props}
-          />
-          <Button
-            variant="ghostButton"
-            size="linkSize"
-            className="absolute right-0 top-0 h-full px-3"
-          >
-            {placeholder}
-          </Button>
-        </div>
+        <Input
+          placeholder={placeholder}
+          type={inputType}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          id="date"
+          ref={ref}
+          className={cn(
+            buttonVariants({
+              variant: "secondaryButton",
+              size: "defaultSize",
+            }),
+          )}
+          {...props}
+        />
       </div>
     );
   },
