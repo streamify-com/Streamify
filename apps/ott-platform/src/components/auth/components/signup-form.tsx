@@ -138,15 +138,18 @@ export function SignUpForm({
         className="grid gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-2">
-          <FormField
-            control={form.control}
-            name="gender"
-            render={({ field }) => (
-              <FormItem>
-                {/* <FormLabel>Gender</FormLabel> */}
-                <FormControl>
-                  {/* <Select {...field}>
+        <div className="grid grid-cols-1 gap-4 sm:gap-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-2">
+            <FormField
+              control={form.control}
+              name="gender"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">
+                    {genderplaceholder}
+                  </FormLabel>
+                  <FormControl>
+                    {/* <Select {...field}>
                     <SelectTrigger>
                       <SelectValue placeholder={genderplaceholder} />
                     </SelectTrigger>
@@ -156,48 +159,85 @@ export function SignUpForm({
                       <SelectItem value="diverse">{genderdiverse}</SelectItem>
                     </SelectContent>
                   </Select> */}
-                  <select
-                    {...field}
-                    className={cn(
-                      buttonVariants({
-                        variant: "secondaryButton",
-                        size: "defaultSize",
-                      }),
-                      "sm:w-full",
-                    )}
-                  >
-                    <option value="">{genderplaceholder}</option>
-                    <option value="male">{gendermale}</option>
-                    <option value="female">{genderfemale}</option>
-                    <option value="diverse">{genderdiverse}</option>
-                  </select>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+                    <select
+                      {...field}
+                      className={cn(
+                        buttonVariants({
+                          variant: "secondaryButton",
+                          size: "defaultSize",
+                        }),
+                        "sm:w-full",
+                      )}
+                    >
+                      <option value="">{genderplaceholder}</option>
+                      <option value="male">{gendermale}</option>
+                      <option value="female">{genderfemale}</option>
+                      <option value="diverse">{genderdiverse}</option>
+                    </select>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="birthday"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">{birthdate}</FormLabel>
+                  <FormControl>
+                    <DateInput placeholder={birthdate} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="firstname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">{firstname}</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={firstname}
+                      autoComplete="given-name"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="lastname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">{lastname}</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={lastname}
+                      autoComplete="family-name"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
           <FormField
             control={form.control}
-            name="birthday"
+            name="email"
             render={({ field }) => (
               <FormItem>
-                <FormControl>
-                  <DateInput placeholder={birthdate} {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="firstname"
-            render={({ field }) => (
-              <FormItem>
-                {/* <FormLabel>{firstname}</FormLabel> */}
+                <FormLabel className="sm:hidden block">{email}</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={firstname}
-                    autoComplete="given-name"
+                    placeholder={email}
+                    autoComplete="on"
+                    type="email"
                     {...field}
                   />
                 </FormControl>
@@ -207,14 +247,14 @@ export function SignUpForm({
           />
           <FormField
             control={form.control}
-            name="lastname"
+            name="password"
             render={({ field }) => (
               <FormItem>
-                {/* <FormLabel>{lastname}</FormLabel> */}
+                <FormLabel className="sm:hidden block">{password}</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder={lastname}
-                    autoComplete="family-name"
+                  <PasswordInput
+                    placeholder={password}
+                    autoComplete="new-password"
                     {...field}
                   />
                 </FormControl>
@@ -223,61 +263,26 @@ export function SignUpForm({
             )}
           />
         </div>
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              {/* <FormLabel>{email}</FormLabel> */}
-              <FormControl>
-                <Input
-                  placeholder={email}
-                  autoComplete="on"
-                  type="email"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              {/* <FormLabel>{password}</FormLabel> */}
-              <FormControl>
-                <PasswordInput
-                  placeholder={password}
-                  autoComplete="new-password"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
         <Separator className="my-2" />
         <div className="items-top mb-2 flex space-x-2 text-left">
           <Checkbox
             id="terms1"
             checked={isChecked}
             onClick={handleCheckboxClick}
-            className="mt-0"
+            className="mt-1 sm:mt-0"
           />
           <div className="grid gap-1.5 leading-none">
-            <label htmlFor="terms1" className="text-primary text-xs">
+            <label htmlFor="terms1" className="text-primary sm:text-xs text-sm">
               {termsandconditionsheader}
             </label>
-            <p className="text-primary-muted text-xs">
+            <p className="text-primary-muted sm:text-xs text-sm">
               {termsandconditionsdescriptionpart1}&nbsp;
               <Link
                 aria-label="Terms of Services"
                 href="/terms-of-services"
                 className={cn(
                   buttonVariants({ variant: "linkButton", size: "linkSize" }),
-                  "text-xs",
+                  "sm:text-xs text-sm",
                 )}
               >
                 {termsandconditions}
@@ -288,7 +293,7 @@ export function SignUpForm({
                 href="/privacy-policy"
                 className={cn(
                   buttonVariants({ variant: "linkButton", size: "linkSize" }),
-                  "text-xs",
+                  "sm:text-xs text-sm",
                 )}
               >
                 {privacypolicy}

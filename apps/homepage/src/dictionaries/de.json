@@ -26,7 +26,7 @@
     "card-description": "Noch nicht registriert?",
     "alternative": "Registrieren",
     "or-continue-with": "Oder weiter mit",
-    "email": "E-Mail",
+    "email": "E-Mail-Adresse",
     "password": "Passwort",
     "sign-in": "Anmelden",
     "reset-password": "Passwort zurücksetzen",
@@ -36,7 +36,7 @@
     "card-title": "Passwort zurücksetzen",
     "card-description": "Gib deine E-Mail-Adresse ein und wir schicken dir einen Verifizierungscode.",
     "password": "Passwort",
-    "input-placeholder": "E-Mail",
+    "input-placeholder": "E-Mail-Adresse",
     "form-button": "Weiter",
     "previous-step": "Zurück",
     "form-button-description": "Weiter, um die Passwortrücksetzung zu verifizieren."
@@ -63,7 +63,7 @@
     "or-continue-with": "Oder weiter mit",
     "first-name": "Vorname",
     "last-name": "Nachname",
-    "email": "E-Mail",
+    "email": "E-Mail-Adresse",
     "password": "Passwort",
     "terms-and-conditions": "Nutzungsvereinbarung",
     "terms-and-conditions-description": "Durch die Registrierung nehme ich die Bestimmungen der Nutzungsvereinbarung und Datenschutzerklärung zur Kenntnis und akzeptiere diese.",
@@ -164,7 +164,7 @@
     "newsletter": {
       "title": "Abonniere unseren Newsletter",
       "description": "Die neuesten Nachrichten, Artikel und Materialien in deinem Postfach.",
-      "placeholder": "E-Mail",
+      "placeholder": "E-Mail-Adresse",
       "button": "Abonnieren"
     },
     "we-support": {
@@ -219,7 +219,7 @@
         "name": "Kontakt",
         "schedule-a-call": "Vereinbare einen Termin mit uns",
         "join-our-discord": "Tritt unserem Discord-Channel bei",
-        "email-title": "E-Mail",
+        "email-title": "E-Mail-Adresse",
         "email-value": "support@streamify.com"
       }
     }
