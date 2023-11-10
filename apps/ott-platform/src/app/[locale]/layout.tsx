@@ -76,13 +76,13 @@ export const metadata: Metadata = {
   ],
   creator: "Streamify",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon-16x16.png",
+    apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
-    locale: "de_DE",
+    locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,

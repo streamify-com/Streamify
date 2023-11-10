@@ -18,15 +18,14 @@ const LoadingTopBar: React.FC = () => {
       }
     }, 800);
 
-    // Clear the interval on component unmount
     return () => clearInterval(interval);
   }, [currentProgress]);
 
   return (
     <div
       style={{ width: `${currentProgress}%` }}
-      className="h-1 bg-red-500 transition-all duration-200 absolute z-40 top-0"
-    ></div>
+      className="h-1 bg-action transition-all duration-200 absolute z-40 top-0"
+    />
   );
 };
 

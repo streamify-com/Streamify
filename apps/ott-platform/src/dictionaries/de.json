@@ -45,7 +45,7 @@
     "card-title": "Passwort zurücksetzen",
     "card-description": "Gib deine E-Mail-Adresse ein und wir schicken dir einen Verifizierungscode.",
     "password": "Passwort",
-    "input-placeholder": "E-Mail",
+    "input-placeholder": "E-Mail-Adresse",
     "form-button": "Weiter",
     "previous-step": "Zurück",
     "form-button-description": "Weiter, um die Passwortrücksetzung zu verifizieren."

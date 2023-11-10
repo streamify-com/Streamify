@@ -1,3 +1,12 @@
+// import { chain } from "@/middlewares/chain";
+// import Authentication from "@/middlewares/authentication";
+
+// export default chain([Authentication]);
+
+// export const config = {
+//   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+// };
+
 import { authMiddleware } from "@clerk/nextjs";
 import createMiddleware from "next-intl/middleware";
 
@@ -11,23 +20,24 @@ export default authMiddleware({
     return intlMiddleware(req);
   },
   publicRoutes: [
-    "/",
-    "/:locale",
-    "/:locale/test",
-    "/:locale/subscribe",
-    "/:locale/home",
-    "/:locale/matches",
-    "/:locale/players",
-    "/:locale/plus",
-    "/:locale/live",
-    "/:locale/signin",
-    "/:locale/signin/reset-password",
-    "/:locale/signin/reset-password/step-2",
-    "/:locale/signup",
-    "/:locale/signup/verify",
-    "/:locale/sso-callback",
-    "/:locale/privacy-policy",
-    "/:locale/terms-of-services",
+    "/(.*)",
+    "/:locale(.*)",
+    "/:locale/test(.*)",
+    "/:locale/subscribe(.*)",
+    "/:locale/home(.*)",
+    "/:locale/matches(.*)",
+    "/:locale/players(.*)",
+    "/:locale/plus(.*)",
+    "/:locale/live(.*)",
+    "/:locale/signin(.*)",
+    "/:locale/signin/reset-password(.*)",
+    "/:locale/signin/reset-password/step-2(.*)",
+    "/:locale/signup(.*)",
+    "/:locale/signup/verify(.*)",
+    "/:locale/signout(.*)",
+    "/:locale/sso-callback(.*)",
+    "/:locale/privacy-policy(.*)",
+    "/:locale/terms-of-services(.*)",
   ],
 });
 

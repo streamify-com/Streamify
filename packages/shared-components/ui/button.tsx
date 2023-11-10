@@ -15,7 +15,7 @@ const buttonVariants = cva(
         tertiaryButton:
           "bg-secondary sm:hover:bg-primary text-secondary-inner sm:hover:text-primary-hover border border-separator sm:hover:border-primary-muted",
         actionButton:
-          "bg-action sm:hover:bg-action-muted text-background sm:hover:text-white border border-action sm:hover:border-action-muted",
+          "bg-action sm:hover:bg-action-muted text-background sm:hover:text-white border border-action sm:hover:border-separator",
         insentiveButton:
           "bg-transparent sm:hover:bg-action text-action sm:hover:text-background border border-action",
         ghostButton:
@@ -23,9 +23,11 @@ const buttonVariants = cva(
         blurButton:
           "sm:hover:border-separator bg-background/75 sm:hover:bg-secondary-muted border border-transparent text-white sm:hover:text-secondary-hover backdrop-blur-xl",
         linkButton:
-          "text-primary-muted sm:hover:text-link underline underline-offset-4 transition-colors",
+          "text-primary-muted sm:hover:text-primary underline underline-offset-4 transition-colors",
+        highlightLinkButton:
+          "text-primary sm:hover:text-action underline underline-offset-4 transition-colors",
         externalLinkButton:
-          "text-link underline underline-offset-4 transition-colors",
+          "text-link hover:underline hover:underline-offset-4 transition-colors",
         deleteButton:
           "bg-negative sm:hover:bg-negative-muted text-background border border-negative sm:hover:border-negative-muted",
         StripeButton:
@@ -52,6 +54,7 @@ const buttonVariants = cva(
       size: {
         defaultSize: "h-12 sm:h-10 w-full sm:w-auto py-2 px-4",
         fixedSize: "h-12 sm:h-10 w-full sm:w-48 py-2 px-4",
+        fullSize: "h-12 sm:h-10 w-full sm:w-full py-2 px-4",
         headerSize: "h-12 sm:h-8 w-full sm:w-auto py-1 px-2 sm:text-sm",
         footerSize:
           "h-12 sm:h-8 w-full sm:w-auto sm:py-1 sm:px-2 py-0 px-0 sm:justify-center justify-start",

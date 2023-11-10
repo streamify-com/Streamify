@@ -10,15 +10,17 @@ import Cookie from "@/components/cookie";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
+  params: { locale: string };
 }
 
 export default async function PlatformLayout({
   children,
+  params: { locale },
 }: PlatformLayoutProps) {
   const user = await currentUser();
 
   if (!user) {
-    redirect("/subscribe");
+    redirect(`/${locale}/subscribe`);
   }
 
   return (

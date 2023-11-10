@@ -90,7 +90,7 @@
     "terms-and-conditions-header": "Accept terms and conditions",
     "terms-and-conditions-description-part-1": "By signing up you accept to our",
     "terms-and-conditions-description-part-2": ".",
-    "privacy-policy": "Privacy policy",
+    "privacy-policy": "Privacy Policy",
     "and": "and",
     "form-button": "Continue",
     "previous-step": "Previous step"
@@ -176,7 +176,7 @@
         "href": "/terms-of-services"
       },
       "privacy-policy": {
-        "name": "Privacy policy",
+        "name": "Privacy Policy",
         "href": "/privacy-policy"
       },
       "cookie-policy": {
@@ -195,7 +195,7 @@
       "href": "/terms-of-services"
     },
     "privacy-policy": {
-      "name": "Privacy policy",
+      "name": "Privacy Policy",
       "href": "/privacy-policy"
     },
     "cookie-policy": {

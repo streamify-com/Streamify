@@ -67,7 +67,7 @@
     "password": "Password",
     "terms-and-conditions": "Terms of services",
     "terms-and-conditions-description": "By signing up you accept to the terms of services and privacy policy.",
-    "privacy-policy": "Privacy policy",
+    "privacy-policy": "Privacy Policy",
     "and": "and",
     "form-button": "Continue",
     "previous-step": "Previous step"
@@ -149,7 +149,7 @@
         "href": "/terms-of-services"
       },
       "privacy-policy": {
-        "name": "Privacy policy",
+        "name": "Privacy Policy",
         "href": "/privacy-policy"
       },
       "cookie-policy": {
@@ -177,7 +177,7 @@
       "href": "/terms-of-services"
     },
     "privacy-policy": {
-      "name": "Privacy policy",
+      "name": "Privacy Policy",
       "href": "/privacy-policy"
     },
     "cookie-policy": {

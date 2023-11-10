@@ -79,7 +79,7 @@ export function ResetPasswordForm({
   return (
     <Form {...form}>
       <form
-        className="grid gap-2"
+        className="grid gap-4 sm:gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
         <FormField
@@ -87,7 +87,9 @@ export function ResetPasswordForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              {/* <FormLabel>{formlabel}</FormLabel> */}
+              <FormLabel className="sm:hidden block">
+                {inputplaceholder}
+              </FormLabel>
               <FormControl>
                 <Input placeholder={inputplaceholder} {...field} />
               </FormControl>
@@ -96,7 +98,7 @@ export function ResetPasswordForm({
           )}
         />
         <Separator className="my-4" />
-        <Button disabled={isPending} className="bg-primary w-full sm:w-full">
+        <Button disabled={isPending} variant="primaryButton" size="fullSize">
           {isPending && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"
@@ -109,8 +111,7 @@ export function ResetPasswordForm({
         <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="fixedSize"
-          className="w-full sm:w-full"
+          size="fullSize"
           onClick={() => router.back()}
           disabled={isPending}
         >
