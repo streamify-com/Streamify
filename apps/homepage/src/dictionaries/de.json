@@ -80,6 +80,12 @@
     "form-button": "Profil erstellen",
     "previous-step": "Zurück"
   },
+  "newsletter": {
+    "title": "Abonniere unseren Newsletter",
+    "description": "Die neuesten Nachrichten, Artikel und Ressourcen werden wöchentlich an deinen Posteingang geschickt.",
+    "placeholder": "E-Mail-Adresse eingeben",
+    "button": "Abonnieren"
+  },
   "footer-declaration": {
     "company": "Streamify",
     "all-rights-reserved": "Alle Rechte vorbehalten."

@@ -89,9 +89,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "https://assets.streamify.dev/card/streamify-card.png",
-        width: 1200,
-        height: 630,
+        url: "https://ott.streamify.com/opengraph-image",
         alt: siteConfig.name,
       },
     ],
