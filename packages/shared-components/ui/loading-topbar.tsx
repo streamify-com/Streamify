@@ -18,7 +18,6 @@ const LoadingTopBar: React.FC = () => {
       }
     }, 800);
 
-    // Clear the interval on component unmount
     return () => clearInterval(interval);
   }, [currentProgress]);
 

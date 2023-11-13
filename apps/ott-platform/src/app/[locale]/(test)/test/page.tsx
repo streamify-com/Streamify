@@ -1,11 +1,11 @@
 import TestComponent from "@/components/test";
-import { VotanIcon } from "@shared-components/graphics/icons";
+import LoadingTopBar from "@shared-components/ui/loading-topbar";
 
 export default function Page() {
   return (
     <div>
+      <LoadingTopBar />
       <TestComponent />
-      {/* <VotanIcon /> */}
     </div>
   );
 }

@@ -138,6 +138,7 @@ export function SignUpForm({
         className="grid gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
+<<<<<<< HEAD
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-2">
           <FormField
             control={form.control}
@@ -149,6 +150,20 @@ export function SignUpForm({
                 </FormLabel>
                 <FormControl>
                   {/* <Select {...field}>
+=======
+        <div className="grid grid-cols-1 gap-4 sm:gap-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-2">
+            <FormField
+              control={form.control}
+              name="gender"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">
+                    {genderplaceholder}
+                  </FormLabel>
+                  <FormControl>
+                    {/* <Select {...field}>
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
                     <SelectTrigger>
                       <SelectValue placeholder={genderplaceholder} />
                     </SelectTrigger>
@@ -158,31 +173,80 @@ export function SignUpForm({
                       <SelectItem value="diverse">{genderdiverse}</SelectItem>
                     </SelectContent>
                   </Select> */}
-                  <select
-                    {...field}
-                    className={cn(
-                      buttonVariants({
-                        variant: "secondaryButton",
-                        size: "defaultSize",
-                      }),
-                      "sm:w-full",
-                    )}
-                  >
-                    <option value="">{genderplaceholder}</option>
-                    <option value="male">{gendermale}</option>
-                    <option value="female">{genderfemale}</option>
-                    <option value="diverse">{genderdiverse}</option>
-                  </select>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+                    <select
+                      {...field}
+                      className={cn(
+                        buttonVariants({
+                          variant: "secondaryButton",
+                          size: "defaultSize",
+                        }),
+                        "sm:w-full",
+                      )}
+                    >
+                      <option value="">{genderplaceholder}</option>
+                      <option value="male">{gendermale}</option>
+                      <option value="female">{genderfemale}</option>
+                      <option value="diverse">{genderdiverse}</option>
+                    </select>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="birthday"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">{birthdate}</FormLabel>
+                  <FormControl>
+                    <DateInput placeholder={birthdate} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="firstname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">{firstname}</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={firstname}
+                      autoComplete="given-name"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="lastname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="sm:hidden block">{lastname}</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={lastname}
+                      autoComplete="family-name"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
           <FormField
             control={form.control}
-            name="birthday"
+            name="email"
             render={({ field }) => (
               <FormItem>
+<<<<<<< HEAD
                 <FormLabel className="sm:hidden block">{birthdate}</FormLabel>
                 <FormControl>
                   <DateInput placeholder={birthdate} {...field} />
@@ -197,10 +261,14 @@ export function SignUpForm({
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="sm:hidden block">{firstname}</FormLabel>
+=======
+                <FormLabel className="sm:hidden block">{email}</FormLabel>
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
                 <FormControl>
                   <Input
-                    placeholder={firstname}
-                    autoComplete="given-name"
+                    placeholder={email}
+                    autoComplete="on"
+                    type="email"
                     {...field}
                   />
                 </FormControl>
@@ -210,14 +278,18 @@ export function SignUpForm({
           />
           <FormField
             control={form.control}
-            name="lastname"
+            name="password"
             render={({ field }) => (
               <FormItem>
+<<<<<<< HEAD
                 <FormLabel className="sm:hidden block">{lastname}</FormLabel>
+=======
+                <FormLabel className="sm:hidden block">{password}</FormLabel>
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
                 <FormControl>
-                  <Input
-                    placeholder={lastname}
-                    autoComplete="family-name"
+                  <PasswordInput
+                    placeholder={password}
+                    autoComplete="new-password"
                     {...field}
                   />
                 </FormControl>
@@ -226,6 +298,7 @@ export function SignUpForm({
             )}
           />
         </div>
+<<<<<<< HEAD
         <FormField
           control={form.control}
           name="email"
@@ -261,6 +334,8 @@ export function SignUpForm({
             </FormItem>
           )}
         />
+=======
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
         <Separator className="my-2" />
         <div className="items-top mb-2 flex space-x-2 text-left">
           <Checkbox

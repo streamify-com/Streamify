@@ -27,7 +27,11 @@ const buttonVariants = cva(
         highlightLinkButton:
           "text-primary sm:hover:text-action underline underline-offset-4 transition-colors",
         externalLinkButton:
+<<<<<<< HEAD
           "text-link sm:hover:underline hover:underline-offset-4 transition-colors",
+=======
+          "text-link hover:underline hover:underline-offset-4 transition-colors",
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
         deleteButton:
           "bg-negative sm:hover:bg-negative-muted text-background border border-negative sm:hover:border-negative-muted",
         StripeButton:

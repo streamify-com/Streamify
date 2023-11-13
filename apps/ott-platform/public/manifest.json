@@ -9,22 +9,38 @@
   "description": "Streamify: All-in-One streaming platform for content creators",
   "icons": [
     {
+<<<<<<< HEAD
       "src": "/icon/icon-192x192.png",
+=======
+      "src": "/icons/icon-192x192.png",
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
       "sizes": "192x192",
       "type": "image/png"
     },
     {
+<<<<<<< HEAD
       "src": "/icon/icon-256x256.png",
+=======
+      "src": "/icons/icon-256x256.png",
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
       "sizes": "256x256",
       "type": "image/png"
     },
     {
+<<<<<<< HEAD
       "src": "/icon/icon-384x384.png",
+=======
+      "src": "/icons/icon-384x384.png",
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
       "sizes": "384x384",
       "type": "image/png"
     },
     {
+<<<<<<< HEAD
       "src": "/icon/icon-512x512.png",
+=======
+      "src": "/icons/icon-512x512.png",
+>>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
       "sizes": "512x512",
       "type": "image/png"
     }

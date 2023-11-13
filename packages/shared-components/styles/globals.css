@@ -190,25 +190,3 @@ body {
     background-position-x: 0%;
   }
 }
-
-.datepicker::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #00c851;
-}
-
-.datepicker:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #00c851;
-  opacity: 1;
-}
-
-.datepicker::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #00c851;
-  opacity: 1;
-}
-
-.datepicker:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #00c851;
-}
