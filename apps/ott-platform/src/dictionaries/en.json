@@ -103,6 +103,13 @@
     "form-button": "Create account",
     "previous-step": "Previous step"
   },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "description": "The latest news, articles, and resources, sent to your inbox weekly.",
+    "placeholder": "Email address",
+    "button": "Subscribe",
+    "notification": "You have been successfully added to the newsletter."
+  },
   "footer-declaration": {
     "company": "Streamify",
     "all-rights-reserved": "All rights reserved."

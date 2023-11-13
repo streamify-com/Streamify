@@ -8,6 +8,10 @@ export const env = createEnv({
    */
   server: {
     CLERK_SECRET_KEY: z.string(),
+    RESEND_API_KEY: z.string(),
+    COMPANY_NAME: z.string(),
+    COMPANY_URL: z.string(),
+    MAIL_FROM: z.string(),
   },
 
   /**
@@ -16,12 +20,12 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
+    NEXT_PUBLIC_APP_URL: z.string().url(),
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string(),
     NEXT_PUBLIC_CLERK_SIGN_IN_URL: z.string(),
     NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string(),
     NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z.string(),
     NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: z.string(),
-    NEXT_PUBLIC_APP_URL: z.string().url(),
   },
 
   /**
@@ -38,6 +42,12 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_SIGN_UP_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL,
     NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL,
     NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL,
+    // Resend
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
+    COMPANY_NAME: process.env.COMPANY_NAME,
+    COMPANY_URL: process.env.COMPANY_URL,
+    MAIL_FROM: process.env.MAIL_FROM,
+
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
