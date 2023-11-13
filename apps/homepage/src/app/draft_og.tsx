@@ -1,3 +1,4 @@
+// opengraph-image.tsx
 // /* eslint-disable @next/next/no-img-element */
 // import { ImageResponse } from "next/server";
 
