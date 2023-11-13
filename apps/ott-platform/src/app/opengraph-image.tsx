@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/server";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 export const alt =
   "Streamify - All-in-One solution to build an entire video streaming platform";
 export const contentType = "image/png";
