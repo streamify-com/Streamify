@@ -138,19 +138,6 @@ export function SignUpForm({
         className="grid gap-2"
         onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
       >
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-2">
-          <FormField
-            control={form.control}
-            name="gender"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="sm:hidden block">
-                  {genderplaceholder}
-                </FormLabel>
-                <FormControl>
-                  {/* <Select {...field}>
-=======
         <div className="grid grid-cols-1 gap-4 sm:gap-2">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-2">
             <FormField
@@ -163,7 +150,6 @@ export function SignUpForm({
                   </FormLabel>
                   <FormControl>
                     {/* <Select {...field}>
->>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
                     <SelectTrigger>
                       <SelectValue placeholder={genderplaceholder} />
                     </SelectTrigger>
@@ -246,24 +232,7 @@ export function SignUpForm({
             name="email"
             render={({ field }) => (
               <FormItem>
-<<<<<<< HEAD
-                <FormLabel className="sm:hidden block">{birthdate}</FormLabel>
-                <FormControl>
-                  <DateInput placeholder={birthdate} {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="firstname"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="sm:hidden block">{firstname}</FormLabel>
-=======
                 <FormLabel className="sm:hidden block">{email}</FormLabel>
->>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
                 <FormControl>
                   <Input
                     placeholder={email}
@@ -281,11 +250,7 @@ export function SignUpForm({
             name="password"
             render={({ field }) => (
               <FormItem>
-<<<<<<< HEAD
-                <FormLabel className="sm:hidden block">{lastname}</FormLabel>
-=======
                 <FormLabel className="sm:hidden block">{password}</FormLabel>
->>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
                 <FormControl>
                   <PasswordInput
                     placeholder={password}
@@ -298,44 +263,6 @@ export function SignUpForm({
             )}
           />
         </div>
-<<<<<<< HEAD
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="sm:hidden block">{email}</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder={email}
-                  autoComplete="on"
-                  type="email"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="sm:hidden block">{password}</FormLabel>
-              <FormControl>
-                <PasswordInput
-                  placeholder={password}
-                  autoComplete="new-password"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-=======
->>>>>>> 47ce9099091d98b3e79bf71681324d8fa0298c1b
         <Separator className="my-2" />
         <div className="items-top mb-2 flex space-x-2 text-left">
           <Checkbox
