@@ -31,7 +31,7 @@ async function getMessages(locale: string) {
 
 export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1.0",
-  manifest: "@/public/manifest.json",
+  manifest: "../../../public/manifest.json",
   themeColor: "#000000",
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
   title: {
@@ -70,9 +70,9 @@ export const metadata: Metadata = {
   ],
   creator: "streamify",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon-16x16.png",
+    apple: "/favicon/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",

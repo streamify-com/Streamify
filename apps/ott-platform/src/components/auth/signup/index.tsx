@@ -28,7 +28,10 @@ export default function SignUpPageForm() {
             aria-label={t("alternative.name")}
             href={t("alternative.href")}
             className={cn(
-              buttonVariants({ variant: "linkButton", size: "linkSize" }),
+              buttonVariants({
+                variant: "highlightLinkButton",
+                size: "linkSize",
+              }),
             )}
           >
             {t("alternative.name")}

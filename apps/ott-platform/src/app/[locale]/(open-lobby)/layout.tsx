@@ -17,7 +17,7 @@ export default async function PlatformLayout({
   const user = await currentUser();
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col h-[2000px]">
       <Header user={user} />
       <main className="flex-1 my-10">{children}</main>
       <Cookie />

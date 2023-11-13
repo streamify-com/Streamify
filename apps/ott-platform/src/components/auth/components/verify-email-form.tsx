@@ -87,7 +87,7 @@ export function VerifyEmailForm({
           name="code"
           render={({ field }) => (
             <FormItem>
-              {/* <FormLabel>{formlabel}</FormLabel> */}
+              <FormLabel className="sm:hidden block">{formlabel}</FormLabel>
               <FormControl>
                 <Input
                   placeholder={verifycodeformlabel}

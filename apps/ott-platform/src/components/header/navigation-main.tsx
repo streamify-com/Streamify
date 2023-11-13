@@ -96,7 +96,7 @@ export default function NavigationMain({
             href={t("live.href")}
             className={cn(
               "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
-              selectedSegment === "plus"
+              selectedSegment === "live"
                 ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
                 : "text-primary-muted sm:border-b-2 sm:border-transparent",
             )}

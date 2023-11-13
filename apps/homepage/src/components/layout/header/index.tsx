@@ -40,7 +40,7 @@ export function Header({ user }: HeaderProps) {
         <HomepageContainer>
           <div className="relative flex h-14 items-center justify-between sm:h-16">
             <Link href="/" className="items-center w-72">
-              <PrimaryLogo className="text-action h-8 w-auto sm:w-auto" />
+              <PrimaryLogo className="text-action sm:hover:text-action-muted h-8 w-auto sm:w-auto" />
             </Link>
             <div className="hidden sm:flex">
               <NavigationBar />
