@@ -40,7 +40,7 @@ export function LocaleChoose() {
           <Button
             variant="ghostButton"
             size="avatarSize"
-            className="justify-start px-4 w-36"
+            className="justify-start px-4 w-fit"
           >
             {getFlagIconForLocale(locale)}
             <span className="ml-2.5">{t("locale", { locale })}</span>

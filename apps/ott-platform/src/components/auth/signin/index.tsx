@@ -14,13 +14,18 @@ import { useTranslations } from "next-intl";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 import { Separator } from "@shared-components/ui/separator";
+import { LocaleChoose } from "@/components/locale-switcher";
 
 export default function SigninPageForm() {
   const t = useTranslations("signin");
   return (
     <>
       <CardHeader>
-        <CardTitle>{t("card-title")}</CardTitle>
+        <CardTitle className="sm:hidden block ">{t("card-title")}</CardTitle>
+        <div className="justify-between hidden sm:flex">
+          <CardTitle>{t("card-title")}</CardTitle>
+          <LocaleChoose />
+        </div>
         <CardDescription>
           {t("card-description")}&nbsp;
           <Link

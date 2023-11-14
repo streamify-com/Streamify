@@ -7,10 +7,7 @@ import {
   BackToHomepageButton,
   GoBackButton,
 } from "@/components/auth/components/back-to-homepage";
-import {
-  LocaleChoose,
-  LocaleChooseIconHeader,
-} from "@/components/locale-switcher";
+import { LocaleChooseIconHeader } from "@/components/locale-switcher";
 
 interface AuthLayoutProps {
   children: React.ReactNode;

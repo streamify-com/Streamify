@@ -9,6 +9,7 @@ import {
 } from "@shared-components/ui/card";
 import { VerifyEmailForm } from "@/components/auth/components/verify-email-form";
 import { useTranslations } from "next-intl";
+import { LocaleChoose } from "@/components/locale-switcher";
 
 export default function VerifyEmailPageForm() {
   const t = useTranslations("verify");
@@ -16,7 +17,11 @@ export default function VerifyEmailPageForm() {
     <>
       <CardHeader>
         <CardSubtitle>{t("step")}</CardSubtitle>
-        <CardTitle>{t("card-title")}</CardTitle>
+        <CardTitle className="sm:hidden block ">{t("card-title")}</CardTitle>
+        <div className="justify-between hidden sm:flex">
+          <CardTitle>{t("card-title")}</CardTitle>
+          <LocaleChoose />
+        </div>
         <CardDescription>{t("card-description")}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
