@@ -100,7 +100,7 @@ export function FooterDeclarationLayout() {
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
-            <p className="sm:hidden font-regular text-primary text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
+            <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}
             </p>
             <div className="sm:order-1 order-2 sm:hidden block">
@@ -115,7 +115,7 @@ export function FooterDeclarationLayout() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-primary sm:hover:text-primary h-8 w-8 rounded-md bg-transparent sm:hover:bg-background-hover flex justify-center items-center border border-transparent sm:hover:border-separator"
+                className="text-primary-muted sm:hover:text-primary h-8 w-8 rounded-md bg-transparent sm:hover:bg-background-hover flex justify-center items-center border border-transparent sm:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
                 {item.icon({ className: "h-4 w-4 sm:h-5 sm:w-5" } as IconProps)}
@@ -206,7 +206,7 @@ export function FooterPlatformLayout() {
               className="w-full sm:hidden block"
             >
               <AccordionItem value="item-1" className="border-transparent">
-                <AccordionTrigger className="text-md text-primary leading-6">
+                <AccordionTrigger className="text-md text-primary-muted leading-6">
                   {t("sitemap.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -281,7 +281,7 @@ export function FooterPlatformLayout() {
               href={t("support.href")}
               className={cn(
                 buttonVariants({
-                  variant: "primaryButton",
+                  variant: "secondaryButton",
                   size: "headerSize",
                 }),
               )}

@@ -13,7 +13,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-interface WaitlistEmailProps {
+interface NewsletterEmailProps {
   firstName: string;
   lastName: string;
 }
@@ -24,7 +24,10 @@ const baseUrl = process.env.COMPANY_URL
 
 const companyName = process.env.COMPANY_NAME;
 
-export const WaitlistEmail = ({ firstName, lastName }: WaitlistEmailProps) => (
+export const NewsletterEmail = ({
+  firstName,
+  lastName,
+}: NewsletterEmailProps) => (
   <Html>
     <Head />
     <Preview>Streamify - All-in-One video streaming platform</Preview>
@@ -60,7 +63,7 @@ export const WaitlistEmail = ({ firstName, lastName }: WaitlistEmailProps) => (
   </Html>
 );
 
-export default WaitlistEmail;
+export default NewsletterEmail;
 
 const main = {
   backgroundColor: "#ffffff",

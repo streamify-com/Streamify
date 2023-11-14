@@ -120,6 +120,7 @@ export function ThemeModeSelector() {
     },
   ];
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function onWindowMatch() {
     if (
       localStorage.theme === "dark" ||
@@ -167,7 +168,7 @@ export function ThemeModeSelector() {
             key={opt.position}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm sm:text-xs"
+            className="data-[state=active]:bg-primary-muted text-sm sm:text-xs"
           >
             {opt.text}
           </TabsTrigger>
@@ -201,6 +202,7 @@ export function ThemeModeIcon() {
     },
   ];
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function onWindowMatch() {
     if (
       localStorage.theme === "dark" ||
@@ -248,7 +250,7 @@ export function ThemeModeIcon() {
             key={opt.text}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm sm:text-xs px-2 py-1 rounded-full"
+            className="data-[state=active]:bg-primary-muted text-sm sm:text-xs px-2 py-1 rounded-full"
           >
             {opt.icon}
           </TabsTrigger>

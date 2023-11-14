@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import WaitlistEmail from "@/emails/waitlist";
+import NewsletterEmail from "@/emails/newsletter";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -11,8 +11,8 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: `${process.env.COMPANY_NAME} <${process.env.MAIL_FROM}>`,
       to: email,
-      subject: "Warteliste für Databrix",
-      react: WaitlistEmail({
+      subject: "Newsletter for Streamify",
+      react: NewsletterEmail({
         firstName,
         lastName,
       }),
