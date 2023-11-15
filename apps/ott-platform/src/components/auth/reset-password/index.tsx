@@ -8,18 +8,13 @@ import {
 } from "@shared-components/ui/card";
 import { ResetPasswordForm } from "@/components/auth/components/reset-password-form";
 import { useTranslations } from "next-intl";
-import { LocaleChoose } from "@/components/locale-switcher";
 
 export default function ResetPasswordPageForm() {
   const t = useTranslations("reset-password");
   return (
     <>
       <CardHeader className="space-y-1">
-        <CardTitle className="sm:hidden block ">{t("card-title")}</CardTitle>
-        <div className="justify-between hidden sm:flex">
-          <CardTitle>{t("card-title")}</CardTitle>
-          <LocaleChoose />
-        </div>
+        <CardTitle>{t("card-title")}</CardTitle>
         <CardDescription>{t("card-description")}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-2">

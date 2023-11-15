@@ -36,7 +36,8 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  viewport: "width=device-width, initial-scale=1.0",
+  viewport:
+    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover",
   manifest: "../../../public/manifest.json",
   themeColor: "#000000",
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),

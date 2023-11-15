@@ -36,7 +36,6 @@ const nextConfig = withPWA({
     ],
   },
   experimental: {
-    serverActions: true,
     esmExternals: "loose",
   },
 });

@@ -1,4 +1,4 @@
-const withPWA = require("@ducanh2912/next-pwa").default({
+const withPWA = require("next-pwa")({
   dest: "public",
 });
 
@@ -34,7 +34,6 @@ module.exports = withPWA({
     ],
   },
   experimental: {
-    serverActions: true,
     esmExternals: "loose",
   },
 });
