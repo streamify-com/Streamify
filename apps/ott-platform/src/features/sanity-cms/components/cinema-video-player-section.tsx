@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { SanityDocument } from '@sanity/client';
-import MuxPlayer from '@mux/mux-player-react';
-import * as React from 'react';
-import { useRouter } from 'next/navigation';
-import { Button } from '@shared-components/ui/button';
-import { ExpandingArrowLeft } from '@shared-components/graphics/icons';
+import { SanityDocument } from "@sanity/client";
+import MuxPlayer from "@mux/mux-player-react";
+import * as React from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@shared-components/ui/button";
+import { ExpandingArrowLeft } from "@shared-components/graphics/icons";
 
 interface CinemaVideoPlayerProps {
   post: SanityDocument;
@@ -25,10 +25,10 @@ export default function CinemaVideoPlayer({ post }: CinemaVideoPlayerProps) {
       timer = setTimeout(() => setIsMouseMoving(false), 2000);
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
       clearTimeout(timer);
     };
   }, []);
@@ -46,7 +46,7 @@ export default function CinemaVideoPlayer({ post }: CinemaVideoPlayerProps) {
             disabled={isPending}
           >
             <ExpandingArrowLeft />
-              <span className="ml-5">Back</span>
+            <span className="ml-5">Back</span>
           </Button>
         </div>
       )}

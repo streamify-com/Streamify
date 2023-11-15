@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import imageUrlBuilder from '@sanity/image-url';
-import { SanityDocument } from '@sanity/client';
-import { PortableText } from '@portabletext/react';
-import MuxPlayer from '@mux/mux-player-react';
-import { client } from '@/features/sanity-cms/sanity/lib/sanity.client';
+import Image from "next/image";
+import imageUrlBuilder from "@sanity/image-url";
+import { SanityDocument } from "@sanity/client";
+import { PortableText } from "@portabletext/react";
+import MuxPlayer from "@mux/mux-player-react";
+import { client } from "@/features/sanity-cms/sanity/lib/sanity.client";
 
 const builder = imageUrlBuilder(client);
 
 export default function VideoDetailCard({ post }: { post: SanityDocument }) {
   const videoUrl = post?.playbackId
     ? `https://stream.mux.com/${post.playbackId}.m3u8`
-    : '';
+    : "";
 
   return (
     <main className="prose prose-lg container mx-auto p-4">

@@ -1,20 +1,37 @@
-'use client';
+"use client";
 
-import { SanityDocument } from '@sanity/client';
-import MuxPlayer from '@mux/mux-player-react';
-import * as React from 'react';
-import { PortableText } from '@portabletext/react';
-import { usePathname } from 'next/navigation';
+import { SanityDocument } from "@sanity/client";
+import MuxPlayer from "@mux/mux-player-react";
+import * as React from "react";
+import { PortableText } from "@portabletext/react";
+import { usePathname } from "next/navigation";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
-import { absoluteUrl, cn, formatTime } from '@shared-components/lib/utils';
-import { PlatformContainer } from '@shared-components/ui/container';
-import { Button, buttonVariants } from '@shared-components/ui/button';
-import { Separator } from '@shared-components/ui/separator';
-import { PlayIcon } from '@shared-components/graphics/icons';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@shared-components/ui/dialog';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@shared-components/ui/alert-dialog';
-
+import { absoluteUrl, cn, formatTime } from "@shared-components/lib/utils";
+import { PlatformContainer } from "@shared-components/ui/container";
+import { Button, buttonVariants } from "@shared-components/ui/button";
+import { Separator } from "@shared-components/ui/separator";
+import { PlayIcon } from "@shared-components/graphics/icons";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@shared-components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@shared-components/ui/alert-dialog";
 
 interface VideoDetailsProps {
   post: SanityDocument;
@@ -54,8 +71,8 @@ export default function VideoDetail({ post }: VideoDetailsProps) {
               href={`/watch/${post.slug.current}/`}
               className={cn(
                 buttonVariants({
-                  variant: 'secondaryButton',
-                  size: 'headerSize',
+                  variant: "secondaryButton",
+                  size: "headerSize",
                 }),
               )}
             >
