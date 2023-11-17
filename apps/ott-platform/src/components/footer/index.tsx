@@ -92,7 +92,7 @@ const navigationWebsite = {
 export function FooterDeclarationLayout() {
   const t = useTranslations("footer-declaration");
   return (
-    <footer className="border-separator bg-background/75 z-0 border-t py-6 backdrop-blur-xl">
+    <footer className="border-separator bg-foreground z-0 border-t py-6">
       <PlatformContainer>
         <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
@@ -131,7 +131,7 @@ export function FooterDeclarationLayout() {
 export function FooterPlatformLayout() {
   const t = useTranslations("footer-platform");
   return (
-    <footer className="border-separator bg-background/75 z-0 border-t backdrop-blur-xl">
+    <footer className="border-separator bg-foreground z-0 border-t">
       <PlatformContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <nav
@@ -309,7 +309,7 @@ export function FooterPaymentLayout() {
   ];
 
   return (
-    <footer className="bg-background/75 border-t border-separator z-0 py-6 backdrop-blur-xl">
+    <footer className="bg-foreground border-t border-separator z-0 py-6">
       <PlatformContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <div className="sm:order-1 sm:mt-0">

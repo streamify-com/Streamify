@@ -16,9 +16,9 @@ export default function HeroSection() {
   const t = useTranslations("hero-homepage");
   return (
     <AnimatePresence>
-      <div className="bg-transparent flex flex-col justify-center min-h-screen static overflow-hidden">
+      <div className="bg-transparent flex flex-col justify-center static overflow-hidden mt-8">
         <HomepageContainer>
-          <div className="-mt-44">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function HeroSection() {
                   duration: 0.95,
                   ease: [0.165, 0.84, 0.44, 1],
                 }}
-                className="font-special from-primary via-primary-muted to-primary inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent sm:text-5xl md:text-6xl px-0 sm:px-20"
+                className="font-special from-primary-muted via-primary to-primary-muted inline-block bg-gradient-to-t bg-clip-text text-4xl text-transparent sm:text-4xl md:text-5xl px-0 sm:px-14"
               >
                 {t("title-1")}
                 &nbsp;
@@ -72,7 +72,7 @@ export default function HeroSection() {
               >
                 {t("description")}
               </motion.h3>
-              <motion.h3
+              {/* <motion.h3
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -83,7 +83,7 @@ export default function HeroSection() {
                 className="my-10 text-primary sm:text-sm text-xs uppercase"
               >
                 {t("highlight")}
-              </motion.h3>
+              </motion.h3> */}
             </div>
             <div className="mx-auto text-center">
               <motion.div

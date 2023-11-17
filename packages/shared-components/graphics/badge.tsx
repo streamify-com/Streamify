@@ -16,8 +16,8 @@ export function StreamifyBadge(
         width="425"
         height="68"
         rx="14"
-        fill="#DC052D"
-        stroke="#DC052D"
+        fill="#B21064"
+        stroke="#B21064"
         stroke-width="2"
       />
       <path

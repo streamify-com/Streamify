@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { createEnv } from "@t3-oss/env-nextjs";
+import { z } from "zod";
 
 export const env = createEnv({
   /**
@@ -10,10 +10,8 @@ export const env = createEnv({
     CLERK_SECRET_KEY: z.string(),
     RESEND_API_KEY: z.string(),
     COMPANY_NAME: z.string(),
-    COMPANY_URL: z.string(),
+    COMPANY_URL: z.string().url(),
     MAIL_FROM: z.string(),
-    SANITY_API_READ_TOKEN: z.string(),
-    SANITY_API_WRITE_TOKEN: z.string(),
     MUX_ACCESS_TOKEN_ID: z.string(),
     MUX_SECRET_KEY: z.string(),
   },
@@ -30,8 +28,6 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string(),
     NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z.string(),
     NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: z.string(),
-    NEXT_PUBLIC_SANITY_PROJECT_ID: z.string(),
-    NEXT_PUBLIC_SANITY_DATASET: z.string(),
   },
 
   /**
@@ -53,11 +49,6 @@ export const env = createEnv({
     COMPANY_NAME: process.env.COMPANY_NAME,
     COMPANY_URL: process.env.COMPANY_URL,
     MAIL_FROM: process.env.MAIL_FROM,
-    // Sanity
-    SANITY_API_READ_TOKEN: process.env.SANITY_API_READ_TOKEN,
-    SANITY_API_WRITE_TOKEN: process.env.SANITY_API_WRITE_TOKEN,
-    NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
     // Mux
     MUX_ACCESS_TOKEN_ID: process.env.MUX_ACCESS_TOKEN_ID,
     MUX_SECRET_KEY: process.env.MUX_SECRET_KEY

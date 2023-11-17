@@ -22,7 +22,7 @@ interface HeaderProps {
 
 export function Header({ user }: HeaderProps) {
   const t = useTranslations("header-homepage");
-  const scrolled = useScroll(50);
+  const scrolled = useScroll(20);
   const initialIsComponentOpen = getCookie("navComponentOpen");
   const [isComponentOpen, setIsComponentOpen] = React.useState<boolean>(
     initialIsComponentOpen === "true" || !initialIsComponentOpen,
@@ -30,19 +30,19 @@ export function Header({ user }: HeaderProps) {
 
   return (
     <header
-      className={`sticky top-0 z-40 ${
+      className={`sticky z-40 mx-16 top-6 rounded-md ${
         scrolled
-          ? "border-separator border-b bg-background/60 backdrop-blur-xl"
-          : "sm:bg-transparent bg-background border-separator border-b sm:border-transparent"
+          ? "sm:bg-background/60 backdrop-blur-xl bg-background border-separator border"
+          : "sm:bg-transparent border-transparent border"
       } `}
     >
       <nav>
         <HomepageContainer>
-          <div className="relative flex h-14 items-center justify-between sm:h-16">
-            <Link href="/" className="items-center w-72">
-              <PrimaryLogo className="text-action sm:hover:text-action-muted h-8 w-auto sm:w-auto" />
-            </Link>
-            <div className="hidden sm:flex">
+          <div className="relative flex h-14 items-center justify-between">
+            <div className="hidden sm:flex items-center gap-12">
+              <Link href="/" className="items-center">
+                <PrimaryLogo className="text-action sm:hover:text-action-muted h-7 w-auto sm:w-auto" />
+              </Link>
               <NavigationBar />
             </div>
             <div className="hidden sm:block">
@@ -75,3 +75,50 @@ export function Header({ user }: HeaderProps) {
     </header>
   );
 }
+
+// return (
+//   <header
+//     className={`sticky top-0 z-40 ${
+//       scrolled
+//         ? "border-separator border-b bg-background/60 backdrop-blur-xl"
+//         : "sm:bg-transparent bg-background border-separator border-b sm:border-transparent"
+//     } `}
+//   >
+//     <nav>
+//       <HomepageContainer>
+//         <div className="relative flex h-14 items-center justify-between sm:h-16">
+//           <Link href="/" className="items-center">
+//             <PrimaryLogo className="text-action sm:hover:text-action-muted h-8 w-auto sm:w-auto" />
+//           </Link>
+//           <div className="hidden sm:flex">
+//             <NavigationBar />
+//           </div>
+//           <div className="hidden sm:block">
+//             <ul className="bottom-14 flex flex-row items-right justify-end gap-4">
+//               <LocaleChooseIcon />
+//               <Link
+//                 href={t("call-to-action.open-studio.href")}
+//                 className={cn(
+//                   buttonVariants({
+//                     variant: "actionButton",
+//                     size: "headerSize",
+//                   }),
+//                 )}
+//               >
+//                 {t("call-to-action.open-studio.name")}
+//               </Link>
+//               <MenuBar />
+//             </ul>
+//           </div>
+//           <div className="flex items-center gap-6 sm:hidden">
+//             <NavigationMain
+//               items={homepageConfig.mainNav}
+//               user={user}
+//               isComponentOpen={isComponentOpen}
+//             />
+//           </div>
+//         </div>
+//       </HomepageContainer>
+//     </nav>
+//   </header>
+// );

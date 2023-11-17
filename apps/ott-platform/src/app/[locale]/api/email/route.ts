@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: `${process.env.COMPANY_NAME} <${process.env.MAIL_FROM}>`,
       to: email,
-      subject: "Newsletter for Streamify",
+      subject: "Newsletter for Streamify OTT",
       react: NewsletterEmail({
         firstName,
         lastName,

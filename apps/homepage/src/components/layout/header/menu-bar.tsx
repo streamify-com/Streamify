@@ -21,14 +21,16 @@ import {
   DiscordCard,
   ScheduleMeetingCard,
 } from "@shared-components/components/menu-card";
+import { Icons } from "@shared-components/graphics/icons";
 
 export default function MenuBar() {
   const t = useTranslations("header-homepage");
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghostButton" size="headerSize">
-          {t("call-to-action.menu.name")}
+        <Button variant="ghostButton" size="iconSize">
+          {/* {t("call-to-action.menu.name")} */}
+          <Icons.open className="h-5 w-5" />
         </Button>
       </SheetTrigger>
       <SheetContent className="flex w-full flex-col px-8 sm:max-w-lg">

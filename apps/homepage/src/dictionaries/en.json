@@ -3,6 +3,10 @@
     "label": "Change language",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}"
   },
+  "teamcard": {
+    "label": "Open team card",
+    "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
+  },
   "mode-theme": {
     "light": "Light",
     "dark": "Dark",
@@ -83,7 +87,7 @@
   "newsletter": {
     "title": "Subscribe to our newsletter",
     "description": "The latest news, articles, and resources, sent to your inbox weekly.",
-    "placeholder": "Email address",
+    "placeholder": "Your email",
     "button": "Subscribe"
   },
   "footer-declaration": {
@@ -170,7 +174,7 @@
     "newsletter": {
       "title": "Subscribe to our newsletter",
       "description": "The latest news, articles, and resources, sent to your inbox weekly.",
-      "placeholder": "Email",
+      "placeholder": "Your email",
       "button": "Subscribe"
     },
     "we-support": {
@@ -222,7 +226,7 @@
         "href": "/streamify-studio"
       },
       "menu": {
-        "name": "Contact us",
+        "name": "Menu",
         "schedule-a-call": "Schedula a call with us",
         "join-our-discord": "Join our Discord channel",
         "email-title": "Email",

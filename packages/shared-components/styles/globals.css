@@ -22,8 +22,8 @@
     --secondary-inner: 112, 112, 112, 1;
     --secondary-hover: 0, 0, 0, 1;
 
-    --action: 220, 5, 45, 1;
-    --action-muted: 132, 3, 27, 1;
+    --action: 178, 16, 100, 1;
+    --action-muted: 112, 16, 66, 1;
 
     /* Signal colors */
     --active: 13, 153, 255, 1;
@@ -77,8 +77,8 @@
     --secondary-inner: 112, 112, 112, 1;
     --secondary-hover: 255, 255, 255, 1;
 
-    --action: 220, 5, 45, 1;
-    --action-muted: 132, 3, 27, 1;
+    --action: 178, 16, 100, 1;
+    --action-muted: 112, 16, 66, 1;
 
     /* Signal colors */
     --active: 13, 153, 255, 1;
@@ -114,7 +114,7 @@
   }
 
   ::selection {
-    background: #dc052d;
+    background: #b21064;
     color: #000000;
   }
 
@@ -133,25 +133,13 @@ body {
   box-sizing: border-box;
 }
 
-.gradient-button {
-  background:
-    linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(60deg, #00f, #00e8ff) border-box;
-  color: #313149;
-  padding: 20px 70px;
-  border: 5px solid transparent;
-  border-radius: 40px;
-  display: inline-block;
-  font-size: 28px;
-}
-
 .general-gradient {
   position: relative;
   background-image: repeating-linear-gradient(
     to left,
-    #dc052d,
-    #800018,
-    #dc052d
+    #b21064,
+    #701042,
+    #b21064
   );
 
   z-index: 1;

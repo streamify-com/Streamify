@@ -9,7 +9,7 @@ export default function StartPageForm() {
       <Background />
       <HeroSection />
       <LogoCloudSection />
-      <CtaSection />
+      {/* <CtaSection /> */}
     </>
   );
 }

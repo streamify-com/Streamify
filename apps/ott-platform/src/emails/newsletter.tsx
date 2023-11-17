@@ -30,17 +30,17 @@ export const NewsletterEmail = ({
 }: NewsletterEmailProps) => (
   <Html>
     <Head />
-    <Preview>Streamify - All-in-One video streaming platform</Preview>
+    <Preview>Streamify OTT - An OTT template</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="https://assets.streamify.dev/logo/streamify_logo-red.svg"
+          src="https://assets.streamify.dev/logo/streamify-logo-purpur.svg"
           width="170"
           height="50"
           alt="Streamify"
           style={logo}
         />
-        <Heading style={h1}>Welcome to the Streamify newsletter</Heading>
+        <Heading style={h1}>Welcome to the Streamify OTT newsletter</Heading>
         <Text style={paragraph}>
           Thank you for your interest in Streamify. You will receive news about
           the progress of the project as well as new features and articles about
@@ -67,7 +67,7 @@ export default NewsletterEmail;
 
 const main = {
   backgroundColor: "#ffffff",
-  fontFamily: '-apple-system, "Helvetica", sans-serif',
+  fontFamily: '-apple-system, "Inter", sans-serif',
 };
 
 const container = {
@@ -86,7 +86,7 @@ const paragraph = {
 
 const h1 = {
   color: "#000000",
-  fontFamily: "-apple-system, 'Helvetica', sans-serif",
+  fontFamily: "-apple-system, 'Inter', sans-serif",
   fontSize: "24px",
   fontWeight: "bold",
   margin: "40px 0",
@@ -98,10 +98,10 @@ const btnContainer = {
 };
 
 const button = {
-  backgroundColor: "#DC052D",
+  backgroundColor: "#B21064",
   borderRadius: "4px",
   color: "#000000",
-  fontFamily: "'Helvetica', sans-serif",
+  fontFamily: "'Inter', sans-serif",
   fontSize: "15px",
   textDecoration: "none",
   textAlign: "center" as const,

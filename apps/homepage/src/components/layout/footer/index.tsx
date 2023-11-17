@@ -43,6 +43,7 @@ import {
 } from "@shared-components/graphics/logo";
 import { StripeClimateBadge } from "@shared-components/graphics/badge";
 import { Separator } from "@shared-components/ui/separator";
+import Newsletter from "@/components/newsletter";
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
@@ -131,7 +132,7 @@ export function FooterHomepageLayout() {
   const t = useTranslations("footer-homepage");
   return (
     <footer
-      className="border-separator bg-background/75 bottom-0 z-0 border-t py-10 backdrop-blur-xl"
+      className="border-separator bg-foreground bottom-0 z-0 border-t py-10 backdrop-blur-xl"
       aria-labelledby="footer-heading"
     >
       <HomepageContainer>
@@ -710,15 +711,16 @@ export function FooterHomepageLayout() {
             </Accordion>
             <div className="mt-8 sm:mt-0 sm:border-l border-transparend sm:border-separator">
               <div className="sm:ml-8">
-                <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
+                {/* <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
                   {t("newsletter.title")}
                 </h3>
                 <p className="text-md text-primary-muted my-2 leading-6">
                   {t("newsletter.description")}
-                </p>
+                </p> */}
+                <Newsletter />
                 <form>
                   <div className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
-                    <Input
+                    {/* <Input
                       type="email"
                       autoComplete="on"
                       placeholder={t("newsletter.placeholder")}
@@ -732,10 +734,10 @@ export function FooterHomepageLayout() {
                       )}
                     >
                       {t("newsletter.button")}
-                    </Button>
+                    </Button> */}
                   </div>
                 </form>
-                <Separator className="my-6" />
+                {/* <Separator className="my-6" />
                 <div className="hidden sm:block">
                   <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
                     {t("we-support.title")}
@@ -751,10 +753,10 @@ export function FooterHomepageLayout() {
                       <StripeClimateBadge className="border-separator text-standard bg-background sm:hover:border-separator-hover sm:hover:bg-hoverground h-10 w-10 rounded-full border p-2" />
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className="block sm:hidden">
+            {/* <div className="block sm:hidden">
               <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
                 {t("we-support.title")}
               </h3>
@@ -766,7 +768,7 @@ export function FooterHomepageLayout() {
                   <StripeClimateBadge className="border-separator text-standard bg-background sm:hover:border-separator-hover sm:hover:bg-hoverground h-12 w-12 rounded-full border p-3" />
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </HomepageContainer>
@@ -777,7 +779,7 @@ export function FooterHomepageLayout() {
 export function FooterDeclarationLayout() {
   const t = useTranslations("footer-declaration");
   return (
-    <footer className="border-separator bg-background/75 z-0 border-t py-6 backdrop-blur-xl">
+    <footer className="border-separator bg-foreground z-0 border-t py-6">
       <HomepageContainer>
         <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
@@ -827,7 +829,7 @@ export function FooterPaymentLayout() {
   ];
 
   return (
-    <footer className="bg-background/75 border-t border-separator z-0 py-6 backdrop-blur-xl">
+    <footer className="bg-foreground border-t border-separator z-0 py-6">
       <HomepageContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <div className="sm:order-1 sm:mt-0">

@@ -44,6 +44,7 @@ export default {
       fontFamily: {
         italic: ["var(--font-italic)", ...fontFamily.sans],
         regular: ["var(--font-regular)", ...fontFamily.sans],
+        semibold: ["var(--font-semibold)", ...fontFamily.sans],
         bold: ["var(--font-bold)", ...fontFamily.sans],
         special: ["var(--font-heading)", ...fontFamily.sans],
       },

@@ -11,8 +11,6 @@ import {
 } from "@shared-components/graphics/icons";
 import { Tabs, TabsList, TabsTrigger } from "@shared-components/ui/tabs";
 import { useTranslations } from "next-intl";
-import { cn } from "@shared-components/lib/utils";
-import { buttonVariants } from "@shared-components/ui/button";
 
 export function ModeSelection() {
   const t = useTranslations("mode-theme");
@@ -28,12 +26,7 @@ export function ModeSelection() {
       <select
         id="selectTheme"
         name="Theme selector"
-        className={cn(
-          buttonVariants({
-            variant: "secondaryButton",
-            size: "fixedSize",
-          }),
-        )}
+        className="border-separator rounded-md sm:hover:border-primary sm:hover:text-primary text-md sm:text-sm h-10 w-full border bg-transparent transition-all sm:h-10 sm:w-48"
         value={resolvedTheme}
         onChange={handleThemeChange}
       >
@@ -127,6 +120,7 @@ export function ThemeModeSelector() {
     },
   ];
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function onWindowMatch() {
     if (
       localStorage.theme === "dark" ||
@@ -167,14 +161,14 @@ export function ThemeModeSelector() {
   });
 
   return (
-    <Tabs defaultValue="system" className="border-separator w-full sm:w-48">
+    <Tabs defaultValue="system" className="border-primary w-full sm:w-48">
       <TabsList className="grid w-full grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.position}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm sm:text-xs"
+            className="data-[state=active]:bg-primary-muted text-sm sm:text-xs"
           >
             {opt.text}
           </TabsTrigger>
@@ -208,6 +202,7 @@ export function ThemeModeIcon() {
     },
   ];
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function onWindowMatch() {
     if (
       localStorage.theme === "dark" ||
@@ -255,7 +250,7 @@ export function ThemeModeIcon() {
             key={opt.text}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary text-sm sm:text-xs px-2 py-1 rounded-full"
+            className="data-[state=active]:bg-primary-muted text-sm sm:text-xs px-2 py-1 rounded-full"
           >
             {opt.icon}
           </TabsTrigger>

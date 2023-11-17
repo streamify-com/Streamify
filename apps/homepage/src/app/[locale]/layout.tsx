@@ -2,7 +2,7 @@ import "@shared-components/styles/globals.css";
 import type { Metadata } from "next";
 import { cn } from "@shared-components/lib/utils";
 import { ThemeProvider } from "@/components/feature/theme-provider";
-import { Analytics } from "@shared-components/components/vercel-analytics";
+import { VercelPerformanceAnalytics } from "@shared-components/components/vercel-analytics";
 import { Toaster } from "@shared-components/ui/sonner-toaster";
 import { ClerkProvider } from "@clerk/nextjs";
 import { siteConfig } from "@/config/site";
@@ -11,6 +11,7 @@ import {
   fontHeading,
   fontItalic,
   fontRegular,
+  fontSemibold,
 } from "@shared-components/lib/fonts";
 import { env } from "@/env.mjs";
 import { notFound } from "next/navigation";
@@ -109,6 +110,7 @@ export default async function RootLayout({
               "bg-background font-regular min-h-screen antialiased",
               fontRegular.variable,
               fontItalic.variable,
+              fontSemibold.variable,
               fontBold.variable,
               fontHeading.variable,
             )}
@@ -119,7 +121,7 @@ export default async function RootLayout({
               </NextIntlClientProvider>
             </ThemeProvider>
             <Toaster />
-            <Analytics />
+            <VercelPerformanceAnalytics />
           </body>
         </html>
       </ClerkProvider>

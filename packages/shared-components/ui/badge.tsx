@@ -14,7 +14,7 @@ const badgeVariants = cva(
         warning:
           "border-transparent bg-negative text-background sm:hover:bg-negative/80",
         outline:
-          "border-separator text-primary-muted sm:hover:text-primary text-primary bg-background/50 backdrop-blur-lg sm:hover:bg-background-hover",
+          "border-separator text-primary-muted bg-background/50 backdrop-blur-lg sm:hover:bg-background-hover",
       },
     },
     defaultVariants: {

@@ -3,6 +3,10 @@
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
   },
+  "teamcard": {
+    "label": "Open team card",
+    "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
+  },
   "mode-theme": {
     "light": "Hell",
     "dark": "Dunkel",
@@ -82,7 +86,7 @@
   },
   "newsletter": {
     "title": "Abonniere unseren Newsletter",
-    "description": "Die neuesten Nachrichten, Artikel und Ressourcen werden wöchentlich an deinen Posteingang geschickt.",
+    "description": "Die neuesten Nachrichten, Artikel und Materialien in deinem Postfach.",
     "placeholder": "E-Mail-Adresse eingeben",
     "button": "Abonnieren"
   },
@@ -170,7 +174,7 @@
     "newsletter": {
       "title": "Abonniere unseren Newsletter",
       "description": "Die neuesten Nachrichten, Artikel und Materialien in deinem Postfach.",
-      "placeholder": "E-Mail-Adresse",
+      "placeholder": "E-Mail-Adresse eingeben",
       "button": "Abonnieren"
     },
     "we-support": {
@@ -222,7 +226,7 @@
         "href": "/streamify-studio"
       },
       "menu": {
-        "name": "Kontakt",
+        "name": "Menü",
         "schedule-a-call": "Vereinbare einen Termin mit uns",
         "join-our-discord": "Tritt unserem Discord-Channel bei",
         "email-title": "E-Mail-Adresse",

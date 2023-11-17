@@ -2,10 +2,9 @@ import { SiteConfig } from "@shared-components/types";
 
 export const siteConfig: SiteConfig = {
   name: "Streamify",
-  description:
-    "Streamify is an All-in-One Streaming Platform for content creators and broadcasters that requires no programming skills.",
-  url: "https://www.streamifysports.com",
-  ogImage: "https://assets.streamify.dev/card/streamify-card.png",
+  description: "Everything you need to start your streaming business.",
+  url: "https://www.streamify.com",
+  ogImage: "https://www.streamify.com/opengraph-image.png",
   links: {
     facebook: "",
     instagram: "",
