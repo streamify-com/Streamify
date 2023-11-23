@@ -19,9 +19,7 @@ interface NewsletterEmailProps {
   lastName: string;
 }
 
-const baseUrl = process.env.COMPANY_URL
-  ? `https://${process.env.COMPANY_URL}`
-  : "";
+const baseUrl = process.env.COMPANY_URL ? `${process.env.COMPANY_URL}` : "";
 
 const CompanyName = process.env.COMPANY_NAME;
 

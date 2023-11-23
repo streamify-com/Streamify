@@ -60,7 +60,7 @@ const buttonVariants = cva(
           "h-12 sm:h-8 sm:text-xs w-full sm:w-auto sm:py-1 sm:px-2 py-0 px-0 sm:justify-center justify-start",
         navigationSize: "h-8",
         iconSize: "h-9 w-9",
-        avatarSize: "py-1 px-2",
+        avatarSize: "p-1",
         menuSize: "h-auto w-full text-left",
         linkSize: "p-0",
         seeAllSize: "h-10 sm:h-10 w-full sm:w-auto py-2 px-4 text-right",

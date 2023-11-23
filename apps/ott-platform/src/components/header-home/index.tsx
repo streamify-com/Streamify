@@ -7,14 +7,18 @@ import { cn } from "@shared-components/lib/utils";
 import { PrimaryLogo } from "@shared-components/graphics/logo";
 import { HomepageContainer } from "@shared-components/ui/container";
 import type { User } from "@clerk/nextjs/dist/types/server";
-import { buttonVariants } from "@shared-components/ui/button";
+import { Button, buttonVariants } from "@shared-components/ui/button";
 import NavigationBar from "./navigation-bar";
 import { homepageConfig } from "@/config/homepage";
 import NavigationMain from "./navigation-main";
 import { useScroll } from "@shared-components/lib/use-scroll";
 import { useTranslations } from "next-intl";
 import MenuBar from "./menu-bar";
-import { LocaleChooseIcon } from "@/components/locale-switcher";
+import {
+  LocaleChooseIcon,
+  LocaleChooseIconHeader,
+} from "@/components/locale-switcher";
+import { Icons } from "@shared-components/graphics/icons";
 
 interface HeaderHomeProps {
   user: User | null;
@@ -30,7 +34,7 @@ export function HeaderHome({ user }: HeaderHomeProps) {
 
   return (
     <header
-      className={`sticky z-40 mx-0 sm:mx-16 top-0 sm:top-6 rounded-md ${
+      className={`sticky z-40 mx-0 sm:mx-16 top-0 sm:top-6 sm:rounded-md rounded-none ${
         scrolled
           ? "sm:bg-background/60 backdrop-blur-xl bg-background border-separator border-b sm:border"
           : "sm:bg-background/60 backdrop-blur-xl bg-background border-transparent border sm:border-separator"
@@ -38,7 +42,10 @@ export function HeaderHome({ user }: HeaderHomeProps) {
     >
       <nav className="px-8 sm:px-8">
         <div className="relative flex h-14 items-center justify-between">
-          <div className=" sm:flex items-center gap-12">
+          <div className="sm:hidden flex items-center">
+            <LocaleChooseIconHeader />
+          </div>
+          <div className="sm:flex items-center gap-12">
             <Link href="/" className="items-center">
               <PrimaryLogo className="text-action sm:hover:text-action-muted h-7 w-auto sm:w-auto" />
             </Link>

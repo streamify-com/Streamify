@@ -1,5 +1,5 @@
 import "@shared-components/styles/globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { cn } from "@shared-components/lib/utils";
 import { Toaster } from "@shared-components/ui/sonner-toaster";
 import { VercelPerformanceAnalytics } from "@shared-components/components/vercel-analytics";
@@ -37,10 +37,7 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  viewport:
-    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover",
-  manifest: "../../../public/manifest.json",
-  themeColor: "#000000",
+  manifest: "/manifest.json",
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
   title: {
     default: siteConfig.name,
@@ -106,6 +103,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  colorScheme: "dark light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
+
 export default async function LocaleLayout({
   children,
   params: { locale },
@@ -116,7 +121,7 @@ export default async function LocaleLayout({
     <>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <ClerkProvider localization={enUS}>
-          <html lang={locale} suppressHydrationWarning={true}>
+          <html lang={locale} suppressHydrationWarning>
             <head />
             <link rel="manifest" href="/manifest.json" />
             <body
@@ -132,6 +137,7 @@ export default async function LocaleLayout({
                 attribute="class"
                 defaultTheme="system"
                 enableSystem
+                disableTransitionOnChange
               >
                 {children}
               </ThemeProvider>

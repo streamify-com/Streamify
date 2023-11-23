@@ -80,14 +80,10 @@ export default function NavigationMain({
           ))}
         </nav>
       ) : null}
-      {/* <div className="flex relative justify-between items-center"> */}
-      {/* <Link href="/" className="items-center">
-          <PrimaryLogo className="text-action sm:hover:text-action-muted h-7 w-auto sm:w-auto" />
-        </Link> */}
       <Menu>
         <MenuTrigger asChild>
           <button
-            className="active:bg-hoverground flex h-7 w-7 items-center justify-center rounded-sm sm:hidden"
+            className="flex h-7 w-7 items-center justify-center rounded-sm sm:hidden"
             onClick={() => setShowMobileMenu(!showMobileMenu)}
           >
             <Icons.open className="h-5 w-auto" />
