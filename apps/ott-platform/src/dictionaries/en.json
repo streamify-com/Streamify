@@ -179,7 +179,7 @@
     "legal": {
       "name": "Legal",
       "terms-of-services": {
-        "name": "Terms of services",
+        "name": "Terms of Services",
         "href": "/terms-of-services"
       },
       "privacy-policy": {
@@ -187,7 +187,7 @@
         "href": "/privacy-policy"
       },
       "cookie-policy": {
-        "name": "Cookie policy",
+        "name": "Cookie Policy",
         "href": "/cookie-policy"
       },
       "imprint": {
@@ -198,7 +198,7 @@
   },
   "footer-platform": {
     "terms-of-services": {
-      "name": "Terms of services",
+      "name": "Terms of Services",
       "href": "/terms-of-services"
     },
     "privacy-policy": {
@@ -206,7 +206,7 @@
       "href": "/privacy-policy"
     },
     "cookie-policy": {
-      "name": "Cookie policy",
+      "name": "Cookie Policy",
       "href": "/cookie-policy"
     },
     "imprint": {
@@ -223,6 +223,42 @@
     },
     "sitemap": {
       "name": "Sitemap"
+    },
+    "company": {
+      "name": "Streamify"
+    }
+  },
+  "header-homepage": {
+    "products": {
+      "name": "Products",
+      "href": "/products"
+    },
+    "templates": {
+      "name": "Templates",
+      "href": "/templates"
+    },
+    "showcases": {
+      "name": "Showcases",
+      "href": "/showcases"
+    },
+    "pricing": {
+      "name": "Pricing",
+      "href": "/pricing"
+    },
+    "call-to-action": {
+      "open-studio": {
+        "name": "Open Studio",
+        "href": "/streamify-studio"
+      },
+      "menu": {
+        "name": "Menu",
+        "schedule-a-call": "Schedula a call with us",
+        "join-our-discord": "Join our Discord channel",
+        "email-title": "Email",
+        "email-value": "support@streamify.com",
+        "phone-title": "Phone",
+        "phone-value": "+49 173 7692475"
+      }
     }
   },
   "header-platform": {

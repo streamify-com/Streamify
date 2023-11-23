@@ -6,31 +6,31 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@shared-components/lib/utils";
 import { Icons } from "@shared-components/graphics/icons";
 
-const Sheet = SheetPrimitive.Root;
+const Menu = SheetPrimitive.Root;
 
-const SheetTrigger = SheetPrimitive.Trigger;
+const MenuTrigger = SheetPrimitive.Trigger;
 
-const SheetClose = SheetPrimitive.Close;
+const MenuClose = SheetPrimitive.Close;
 
-const SheetPortal = ({ ...props }: SheetPrimitive.DialogPortalProps) => (
+const MenuPortal = ({ ...props }: SheetPrimitive.DialogPortalProps) => (
   <SheetPrimitive.Portal {...props} />
 );
-SheetPortal.displayName = SheetPrimitive.Portal.displayName;
+MenuPortal.displayName = SheetPrimitive.Portal.displayName;
 
-const SheetOverlay = React.forwardRef<
+const MenuOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50 backdrop-blur-md dark:bg-black/20",
+      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-background/80 backdrop-blur-lg",
       className,
     )}
     {...props}
     ref={ref}
   />
 ));
-SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
+MenuOverlay.displayName = SheetPrimitive.Overlay.displayName;
 
 const sheetVariants = cva(
   "fixed z-50 gap-4 bg-background p-6 transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
@@ -42,7 +42,7 @@ const sheetVariants = cva(
           "inset-x-0 bottom-0 border-y border-separator data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
         left: "inset-y-0 left-0 border-x border-separator data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
         right:
-          "inset-y-0 right-0 border-x sm:border-separator border-transparent data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
+          "inset-x-0 top-0 data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
       },
     },
     defaultVariants: {
@@ -51,16 +51,16 @@ const sheetVariants = cva(
   },
 );
 
-interface SheetContentProps
+interface MenuContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     VariantProps<typeof sheetVariants> {}
 
-const SheetContent = React.forwardRef<
+const MenuContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
-  SheetContentProps
+  MenuContentProps
 >(({ side = "right", className, children, title, ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
+  <MenuPortal>
+    <MenuOverlay />
     <SheetPrimitive.Content
       ref={ref}
       className={cn(sheetVariants({ side }), className)}
@@ -68,20 +68,19 @@ const SheetContent = React.forwardRef<
     >
       {children}
       <div className="absolute left-8 top-5 block sm:hidden">
-        <span className="text-primary-muted">{title}</span>
+        <span className="text-primary">{title}</span>
       </div>
-      <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-primary-muted absolute right-8 top-6 rounded-sm opacity-70 transition-opacity sm:hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
-        <button className="sm:hover:bg-secondary-muted flex h-7 w-7 items-center justify-center rounded-sm border border-transparent sm:hover:border-separator">
+      <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-primary-muted absolute right-8 top-4 rounded-sm opacity-70 transition-opacity sm:hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
+        <button className="active:bg-background-hover flex h-7 w-7 items-center justify-center rounded-sm">
           <Icons.close className="h-5 w-5" />
-          <span className="sr-only">Close</span>
         </button>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
-  </SheetPortal>
+  </MenuPortal>
 ));
-SheetContent.displayName = SheetPrimitive.Content.displayName;
+MenuContent.displayName = SheetPrimitive.Content.displayName;
 
-const SheetHeader = ({
+const MenuHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -93,9 +92,9 @@ const SheetHeader = ({
     {...props}
   />
 );
-SheetHeader.displayName = "SheetHeader";
+MenuHeader.displayName = "MenuHeader";
 
-const SheetFooter = ({
+const MenuFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -104,9 +103,9 @@ const SheetFooter = ({
     {...props}
   />
 );
-SheetFooter.displayName = "SheetFooter";
+MenuFooter.displayName = "MenuFooter";
 
-const SheetTitle = React.forwardRef<
+const MenuTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
@@ -116,9 +115,9 @@ const SheetTitle = React.forwardRef<
     {...props}
   />
 ));
-SheetTitle.displayName = SheetPrimitive.Title.displayName;
+MenuTitle.displayName = SheetPrimitive.Title.displayName;
 
-const SheetDescription = React.forwardRef<
+const MenuDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (
@@ -128,17 +127,17 @@ const SheetDescription = React.forwardRef<
     {...props}
   />
 ));
-SheetDescription.displayName = SheetPrimitive.Description.displayName;
+MenuDescription.displayName = SheetPrimitive.Description.displayName;
 
 export {
-  Sheet,
-  SheetPortal,
-  SheetOverlay,
-  SheetTrigger,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
-  SheetDescription,
+  Menu,
+  MenuPortal,
+  MenuOverlay,
+  MenuTrigger,
+  MenuClose,
+  MenuContent,
+  MenuHeader,
+  MenuFooter,
+  MenuTitle,
+  MenuDescription,
 };

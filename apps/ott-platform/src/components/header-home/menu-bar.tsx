@@ -14,7 +14,6 @@ import {
 } from "@shared-components/ui/sheet";
 import { Separator } from "@shared-components/ui/separator";
 import { useTranslations } from "next-intl";
-import LocaleSwitcher from "@/components/feature/locale-switcher";
 import { ModeSelection, ThemeModeIcon } from "@/components/mode-theme";
 import {
   CopyCard,
@@ -52,9 +51,9 @@ export default function MenuBar() {
               title={t("call-to-action.menu.email-title")}
               value_string={t("call-to-action.menu.email-value")}
             />
-            <Separator className="my-2" />
+            {/* <Separator className="my-2" /> */}
             <SheetFooter className="my-2 sm:justify-end">
-              <ThemeModeIcon />
+              {/* <ThemeModeIcon /> */}
               {/* <SheetTrigger asChild>
                 <LocaleSwitcher />
               </SheetTrigger>

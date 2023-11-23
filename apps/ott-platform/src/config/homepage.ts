@@ -13,11 +13,6 @@ export const homepageConfig: HeaderConfig = {
       restricted: false,
     },
     {
-      title: "Showcases",
-      href: "/showcases",
-      restricted: false,
-    },
-    {
       title: "Pricing",
       href: "/pricing",
       restricted: false,

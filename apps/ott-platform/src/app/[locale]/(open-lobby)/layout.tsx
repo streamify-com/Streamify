@@ -7,6 +7,7 @@ import {
 import { currentUser } from "@clerk/nextjs";
 import Cookie from "@/components/cookie";
 import TopBar from "@/components/header/top-bar";
+import AdvertiseBadge from "@shared-components/components/advertise-badge";
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
@@ -23,6 +24,7 @@ export default async function PlatformLayout({
       <Header user={user} />
       <main className="flex-1 my-10">{children}</main>
       <Cookie />
+      <AdvertiseBadge />
       <FooterPlatformLayout />
       <FooterPaymentLayout />
       <FooterDeclarationLayout />

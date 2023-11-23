@@ -16,7 +16,7 @@ interface WelcomeEmailProps {
   lastName: string;
 }
 
-const companyName = process.env.COMPANY_NAME;
+const CompanyName = process.env.COMPANY_NAME;
 
 export const WelcomeEmail = ({ firstName, lastName }: WelcomeEmailProps) => (
   <Html>
@@ -32,7 +32,7 @@ export const WelcomeEmail = ({ firstName, lastName }: WelcomeEmailProps) => (
           Thank you for signing up to the newsletter!
         </Text>
 
-        <Text style={footer}>Yours truly, Team {companyName}</Text>
+        <Text style={footer}>Yours truly, Team {CompanyName}</Text>
       </Container>
     </Body>
   </Html>

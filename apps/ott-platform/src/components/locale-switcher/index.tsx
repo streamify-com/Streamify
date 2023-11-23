@@ -53,6 +53,29 @@ export function LocaleChoose() {
   );
 }
 
+export function LocaleChooseTitle() {
+  const t = useTranslations("locale-switcher");
+  const locale = useLocale();
+
+  return (
+    <>
+      <Dialog>
+        <DialogTrigger asChild className="hidden sm:flex">
+          <Button
+            variant="ghostButton"
+            size="footerSize"
+            className="justify-start w-fit sm:text-sm"
+          >
+            {t("locale", { locale })}
+          </Button>
+        </DialogTrigger>
+        <LocaleSelectionDialog />
+      </Dialog>
+      <MobileSelectionDialog />
+    </>
+  );
+}
+
 export function LocaleChooseIconHeader() {
   const t = useTranslations("locale-switcher");
   const locale = useLocale();

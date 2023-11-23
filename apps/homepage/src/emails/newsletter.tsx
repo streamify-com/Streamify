@@ -22,7 +22,7 @@ const baseUrl = process.env.COMPANY_URL
   ? `https://${process.env.COMPANY_URL}`
   : "";
 
-const companyName = process.env.COMPANY_NAME;
+const CompanyName = process.env.COMPANY_NAME;
 
 export const NewsletterEmail = ({
   firstName,
@@ -54,7 +54,7 @@ export const NewsletterEmail = ({
         <Text style={paragraph}>
           Best regards
           <br />
-          Team {companyName}
+          Team {CompanyName}
         </Text>
         <Hr style={hr} />
         <Text style={footer}>Based in Stuttgart (Germany)</Text>

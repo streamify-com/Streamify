@@ -137,7 +137,7 @@ export default async function LocaleLayout({
               </ThemeProvider>
               <Toaster />
               <VercelPerformanceAnalytics />
-              <AdvertiseBadge />
+              {/* <AdvertiseBadge /> */}
             </body>
           </html>
         </ClerkProvider>

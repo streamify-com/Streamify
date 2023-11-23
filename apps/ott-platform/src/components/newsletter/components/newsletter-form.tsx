@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { Input } from "@shared-components/ui/input";
 import { Button, buttonVariants } from "@shared-components/ui/button";
 import { cn } from "@shared-components/lib/utils";
-import { Icons } from "@shared-components/graphics/icons";
 
 function isInputNamedElement(
   e: Element,

@@ -69,7 +69,7 @@
     "last-name": "Last name",
     "email": "Email",
     "password": "Password",
-    "terms-and-conditions": "Terms of services",
+    "terms-and-conditions": "Terms of Services",
     "terms-and-conditions-description": "By signing up you accept to the terms of services and privacy policy.",
     "privacy-policy": "Privacy Policy",
     "and": "and",
@@ -155,7 +155,7 @@
     "legal": {
       "name": "Legal",
       "terms-of-services": {
-        "name": "Terms of services",
+        "name": "Terms of Services",
         "href": "/terms-of-services"
       },
       "privacy-policy": {
@@ -163,7 +163,7 @@
         "href": "/privacy-policy"
       },
       "cookie-policy": {
-        "name": "Cookie policy",
+        "name": "Cookie Policy",
         "href": "/cookie-policy"
       },
       "imprint": {
@@ -183,7 +183,7 @@
   },
   "footer-platform": {
     "terms-of-services": {
-      "name": "Terms of services",
+      "name": "Terms of Services",
       "href": "/terms-of-services"
     },
     "privacy-policy": {
@@ -191,7 +191,7 @@
       "href": "/privacy-policy"
     },
     "cookie-policy": {
-      "name": "Cookie policy",
+      "name": "Cookie Policy",
       "href": "/cookie-policy"
     },
     "imprint": {

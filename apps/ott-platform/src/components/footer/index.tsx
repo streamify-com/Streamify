@@ -19,7 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@shared-components/ui/accordion";
-import { LocaleChoose } from "@/components/locale-switcher";
+import { LocaleChoose, LocaleChooseTitle } from "@/components/locale-switcher";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 import {
@@ -34,6 +34,8 @@ import {
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 import { ThemeModeIcon, ThemeModeSelector } from "@/components/mode-theme";
+
+const CompanyName = process.env.COMPANY_NAME;
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
@@ -92,7 +94,7 @@ const navigationWebsite = {
 export function FooterDeclarationLayout() {
   const t = useTranslations("footer-declaration");
   return (
-    <footer className="border-separator bg-foreground z-0 border-t py-6">
+    <footer className="border-separator bg-foreground z-0 border-t py-2 sm:py-3">
       <PlatformContainer>
         <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
@@ -135,7 +137,7 @@ export function FooterPlatformLayout() {
       <PlatformContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <nav
-            className="text-center my-2 sm:my-4 sm:flex sm:justify-center sm:space-x-10"
+            className="text-center my-2 sm:my-3 sm:flex sm:justify-center sm:space-x-10"
             aria-label="Footer"
           >
             <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">
@@ -281,7 +283,7 @@ export function FooterPlatformLayout() {
               href={t("support.href")}
               className={cn(
                 buttonVariants({
-                  variant: "secondaryButton",
+                  variant: "primaryButton",
                   size: "headerSize",
                 }),
               )}
@@ -309,17 +311,17 @@ export function FooterPaymentLayout() {
   ];
 
   return (
-    <footer className="bg-foreground border-t border-separator z-0 py-6">
+    <footer className="bg-foreground border-t border-separator z-0 py-2">
       <PlatformContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <div className="sm:order-1 sm:mt-0">
-            <LocaleChoose />
+            <LocaleChooseTitle />
           </div>
           <div className="flex gap-x-2 justify-between sm:order-2 mt-4 sm:mt-0">
             {logos.map((logoData, index) => (
               <div
                 key={index}
-                className="flex items-center h-10 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center sm:order-2"
+                className="flex items-center h-8 w-20 rounded-md border border-separator bg-background-hover text-primary-muted justify-center sm:order-2"
               >
                 <logoData.logo
                   className={logoData.className}
@@ -327,6 +329,167 @@ export function FooterPaymentLayout() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </PlatformContainer>
+    </footer>
+  );
+}
+
+export function FooterWebsiteLayout() {
+  const t = useTranslations("footer-platform");
+  return (
+    <footer className="border-separator bg-foreground z-0 border-t">
+      <PlatformContainer>
+        <div className="mx-auto sm:flex sm:items-center sm:justify-between">
+          <nav
+            className="text-center my-2 sm:my-3 sm:flex sm:justify-center sm:space-x-10"
+            aria-label="Footer"
+          >
+            <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">
+              <Link
+                href={t("terms-of-services.href")}
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                )}
+              >
+                {t("terms-of-services.name")}
+              </Link>
+              <Link
+                href={t("privacy-policy.href")}
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                )}
+              >
+                {t("privacy-policy.name")}
+              </Link>
+              <Link
+                href={t("cookie-policy.href")}
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                )}
+              >
+                {t("cookie-policy.name")}
+              </Link>
+              <Link
+                href={t("imprint.href")}
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                )}
+              >
+                {t("imprint.name")}
+              </Link>
+              <Link
+                href={t("cancel-subscription.href")}
+                className={cn(
+                  buttonVariants({
+                    variant: "ghostButton",
+                    size: "footerSize",
+                  }),
+                )}
+              >
+                {t("cancel-subscription.name")}
+              </Link>
+            </div>
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full sm:hidden block"
+            >
+              <AccordionItem value="item-1" className="border-transparent">
+                <AccordionTrigger className="text-md text-primary-muted leading-6">
+                  {t("sitemap.name")}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="flex flex-col items-start">
+                    <Link
+                      href={t("terms-of-services.href")}
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                      )}
+                    >
+                      {t("terms-of-services.name")}
+                    </Link>
+                    <Link
+                      href={t("privacy-policy.href")}
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                      )}
+                    >
+                      {t("privacy-policy.name")}
+                    </Link>
+                    <Link
+                      href={t("cookie-policy.href")}
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                      )}
+                    >
+                      {t("cookie-policy.name")}
+                    </Link>
+                    <Link
+                      href={t("imprint.href")}
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                      )}
+                    >
+                      {t("imprint.name")}
+                    </Link>
+                    <Link
+                      href={t("cancel-subscription.href")}
+                      className={cn(
+                        buttonVariants({
+                          variant: "ghostButton",
+                          size: "footerSize",
+                        }),
+                        "sm:text-xs",
+                      )}
+                    >
+                      {t("cancel-subscription.name")}
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </nav>
+          <div className="mb-6 sm:mb-0">
+            <div className="sm:order-1 order-2 sm:hidden block">
+              <div className="w-full flex items-center justify-between">
+                <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
+                  &copy;&nbsp;{t("company.name")}&nbsp;
+                  {new Date().getFullYear()}
+                </p>
+                <div className="sm:order-1 order-2 sm:hidden block">
+                  <ThemeModeIcon />
+                </div>
+              </div>
+            </div>
+            <div className="sm:order-1 order-2 hidden sm:block">
+              <ThemeModeSelector />
+            </div>
           </div>
         </div>
       </PlatformContainer>

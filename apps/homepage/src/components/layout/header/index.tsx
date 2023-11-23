@@ -30,7 +30,7 @@ export function Header({ user }: HeaderProps) {
 
   return (
     <header
-      className={`sticky z-40 mx-16 top-6 rounded-md ${
+      className={`sticky z-40 mx-16 top-0 sm:top-6 rounded-md ${
         scrolled
           ? "sm:bg-background/60 backdrop-blur-xl bg-background border-separator border"
           : "sm:bg-transparent border-transparent border"

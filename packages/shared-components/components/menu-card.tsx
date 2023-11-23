@@ -12,7 +12,7 @@ interface CopyCardProps {
 export function CopyCard({ title, value_string }: CopyCardProps) {
   return (
     <div className="flex items-center transition duration-200 border-separator border my-2 px-4 py-2 bg-transparent rounded-md">
-      <span className="flex-1">{title}</span>
+      <span className="text-primary-muted flex-1">{title}</span>
       <span className="text-primary mr-4">{value_string}</span>
       <CopyToClipboardComponent copy_text={value_string} />
     </div>

@@ -10,6 +10,7 @@ import {
   Preview,
   Section,
   Text,
+  Tailwind,
 } from "@react-email/components";
 import * as React from "react";
 
@@ -22,7 +23,7 @@ const baseUrl = process.env.COMPANY_URL
   ? `https://${process.env.COMPANY_URL}`
   : "";
 
-const companyName = process.env.COMPANY_NAME;
+const CompanyName = process.env.COMPANY_NAME;
 
 export const NewsletterEmail = ({
   firstName,
@@ -32,33 +33,35 @@ export const NewsletterEmail = ({
     <Head />
     <Preview>Streamify OTT - An OTT template</Preview>
     <Body style={main}>
-      <Container style={container}>
-        <Img
-          src="https://assets.streamify.dev/logo/streamify-logo-purpur.svg"
-          width="170"
-          height="50"
-          alt="Streamify"
-          style={logo}
-        />
-        <Heading style={h1}>Welcome to the Streamify OTT newsletter</Heading>
-        <Text style={paragraph}>
-          Thank you for your interest in Streamify. You will receive news about
-          the progress of the project as well as new features and articles about
-          content monetization.
-        </Text>
-        <Section style={btnContainer}>
-          <Button style={button} href={baseUrl}>
-            Go to website
-          </Button>
-        </Section>
-        <Text style={paragraph}>
-          Best regards
-          <br />
-          Team {companyName}
-        </Text>
-        <Hr style={hr} />
-        <Text style={footer}>Based in Stuttgart (Germany)</Text>
-      </Container>
+      <Tailwind>
+        <Container style={container}>
+          <Img
+            src="https://assets.streamify.dev/logo/streamify-logo-purpur.svg"
+            width="170"
+            height="50"
+            alt="Streamify"
+            style={logo}
+          />
+          <Heading style={h1}>Welcome to the Streamify OTT newsletter</Heading>
+          <Text style={paragraph}>
+            Thank you for your interest in Streamify. You will receive news
+            about the progress of the project as well as new features and
+            articles about content monetization.
+          </Text>
+          <Section style={btnContainer}>
+            <Button style={button} href={baseUrl} className="my-6">
+              Go to website
+            </Button>
+          </Section>
+          <Text style={paragraph}>
+            Best regards,
+            <br />
+            Team {CompanyName}
+          </Text>
+          <Hr style={hr} />
+          <Text style={footer}>Based in Stuttgart (Germany)</Text>
+        </Container>
+      </Tailwind>
     </Body>
   </Html>
 );
@@ -100,7 +103,7 @@ const btnContainer = {
 const button = {
   backgroundColor: "#B21064",
   borderRadius: "4px",
-  color: "#000000",
+  color: "#ffffff",
   fontFamily: "'Inter', sans-serif",
   fontSize: "15px",
   textDecoration: "none",

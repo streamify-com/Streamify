@@ -1,4 +1,5 @@
 export type NavItem = {
+  restricted?: boolean;
   title: string;
   href: string;
   disabled?: boolean;

@@ -224,6 +224,40 @@
     },
     "sitemap": {
       "name": "Seitenverzeichnis"
+    },
+    "company": {
+      "name": "Streamify"
+    }
+  },
+  "header-homepage": {
+    "products": {
+      "name": "Produkte",
+      "href": "/products"
+    },
+    "templates": {
+      "name": "Vorlagen",
+      "href": "/templates"
+    },
+    "showcases": {
+      "name": "Anwendungen",
+      "href": "/showcases"
+    },
+    "pricing": {
+      "name": "Preise",
+      "href": "/pricing"
+    },
+    "call-to-action": {
+      "open-studio": {
+        "name": "Studio öffnen",
+        "href": "/streamify-studio"
+      },
+      "menu": {
+        "name": "Menü",
+        "schedule-a-call": "Vereinbare einen Termin mit uns",
+        "join-our-discord": "Tritt unserem Discord-Channel bei",
+        "email-title": "E-Mail-Adresse",
+        "email-value": "support@streamify.com"
+      }
     }
   },
   "header-platform": {

@@ -161,7 +161,7 @@ export function ThemeModeSelector() {
   });
 
   return (
-    <Tabs defaultValue="system" className="border-primary w-full sm:w-48">
+    <Tabs defaultValue="system" className="border-primary w-full">
       <TabsList className="grid w-full grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger

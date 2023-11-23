@@ -10,16 +10,19 @@ export const dashboardConfig: DashboardConfig = {
       title: "Account",
       href: "/dashboard/account",
       items: [],
+      restricted: false,
     },
     {
       title: "Subscription",
       href: "/dashboard/subscription",
       items: [],
+      restricted: false,
     },
     {
       title: "Billing",
       href: "/dashboard/billing",
       items: [],
+      restricted: false,
     },
   ],
 };
