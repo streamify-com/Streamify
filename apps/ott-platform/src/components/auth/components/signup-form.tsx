@@ -242,10 +242,7 @@ export function SignUpForm({
               <FormItem>
                 <FormLabel className="sm:hidden block">{password}</FormLabel>
                 <FormControl>
-                  <PasswordInput
-                    placeholder={password}
-                    {...field}
-                  />
+                  <PasswordInput placeholder={password} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
