@@ -149,16 +149,6 @@ export function SignUpForm({
                     {genderplaceholder}
                   </FormLabel>
                   <FormControl>
-                    {/* <Select {...field}>
-                    <SelectTrigger>
-                      <SelectValue placeholder={genderplaceholder} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="male">{gendermale}</SelectItem>
-                      <SelectItem value="female">{genderfemale}</SelectItem>
-                      <SelectItem value="diverse">{genderdiverse}</SelectItem>
-                    </SelectContent>
-                  </Select> */}
                     <select
                       {...field}
                       className={cn(
@@ -254,7 +244,6 @@ export function SignUpForm({
                 <FormControl>
                   <PasswordInput
                     placeholder={password}
-                    autoComplete="new-password"
                     {...field}
                   />
                 </FormControl>
