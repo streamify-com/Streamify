@@ -4,7 +4,7 @@ const withPWA = require("next-pwa")({
   skipWaiting: true,
 });
 
-module.exports = withPWA({
+const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["shared-components"],
   images: {
@@ -23,4 +23,6 @@ module.exports = withPWA({
   experimental: {
     esmExternals: "loose",
   },
-});
+};
+
+module.exports = withPWA(nextConfig);

@@ -94,7 +94,7 @@ const navigationWebsite = {
 export function FooterDeclarationLayout() {
   const t = useTranslations("footer-declaration");
   return (
-    <footer className="border-separator bg-foreground z-0 border-t py-2 sm:py-3">
+    <footer className="border-separator bg-foreground z-0 border-t py-2 sm:py-4">
       <PlatformContainer>
         <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
@@ -137,7 +137,7 @@ export function FooterPlatformLayout() {
       <PlatformContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <nav
-            className="text-center my-2 sm:my-3 sm:flex sm:justify-center sm:space-x-10"
+            className="text-center my-2 sm:my-4 sm:flex sm:justify-center sm:space-x-10"
             aria-label="Footer"
           >
             <div className="my-4 sm:my-0 sm:space-x-8 sm:flex hidden">
@@ -311,7 +311,7 @@ export function FooterPaymentLayout() {
   ];
 
   return (
-    <footer className="bg-foreground border-t border-separator z-0 py-2">
+    <footer className="bg-foreground border-t border-separator z-0 py-4">
       <PlatformContainer>
         <div className="mx-auto sm:flex sm:items-center sm:justify-between">
           <div className="sm:order-1 sm:mt-0">
@@ -409,7 +409,7 @@ export function FooterWebsiteLayout() {
               className="w-full sm:hidden block"
             >
               <AccordionItem value="item-1" className="border-transparent">
-                <AccordionTrigger className="text-md text-primary-muted leading-6">
+                <AccordionTrigger className="text-sm text-primary-muted leading-6">
                   {t("sitemap.name")}
                 </AccordionTrigger>
                 <AccordionContent>
