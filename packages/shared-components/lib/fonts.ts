@@ -11,7 +11,7 @@ export const fontSemibold = localFont({
 });
 
 export const fontBold = localFont({
-  src: "../assets/fonts/Inter/Inter-Bold.ttf",
+  src: "../assets/fonts/Inter/Inter-SemiBold.ttf",
   variable: "--font-bold",
 });
 

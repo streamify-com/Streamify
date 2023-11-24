@@ -31,8 +31,8 @@ export default function Cookie() {
   }
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 px-10 pb-10">
-      <div className="bg-background ring-separator pointer-events-auto max-w-md rounded-md p-6 ring-1">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 p-16">
+      <div className="bg-foreground ring-separator pointer-events-auto max-w-md rounded-md p-6 ring-1">
         <p className="text-standard text-sm">
           {t("description")}
           <Link

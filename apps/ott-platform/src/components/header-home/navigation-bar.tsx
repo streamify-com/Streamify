@@ -57,7 +57,7 @@ const components: { title: string; href: string; description: string }[] = [
 export default function NavigationBar() {
   const t = useTranslations("header-homepage");
   return (
-    <NavigationMenu>
+    <NavigationMenu className="hidden sm:flex">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link

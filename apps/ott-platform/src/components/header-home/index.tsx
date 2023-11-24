@@ -49,9 +49,7 @@ export function HeaderHome({ user }: HeaderHomeProps) {
             <Link href="/" className="items-center">
               <PrimaryLogo className="text-action sm:hover:text-action-muted h-7 w-auto sm:w-auto" />
             </Link>
-            <div className="hidden overflow-y-auto sm:flex">
-              <NavigationBar />
-            </div>
+            <NavigationBar />
           </div>
           <div className="hidden sm:block">
             <ul className="bottom-14 flex flex-row items-right justify-between gap-4">

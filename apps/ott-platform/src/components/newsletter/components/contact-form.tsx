@@ -55,7 +55,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleOnSubmit} className="lg:flex-auto w-full z-10">
-      <div className="relative md:font-semibold font-medium text-[30px] md:text-[30px] text-[#1E2B3A]">
+      <div className="relative md:font-bold font-medium text-[30px] md:text-[30px] text-[#1E2B3A]">
         Bleiben Sie informiert über unsere&nbsp;
         <span className="text-[#407BBF]">Warteliste.</span>
       </div>
@@ -125,7 +125,7 @@ const ContactForm = () => {
         <Link
           href="/privacy-policy"
           target="_blank"
-          className="font-semibold text-[#407BBF]"
+          className="font-bold text-[#407BBF]"
         >
           Datenschutzbestimmungen
         </Link>
