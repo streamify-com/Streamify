@@ -19,6 +19,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { deDE } from "@clerk/localizations";
 import { enUS } from "@clerk/localizations";
 import { ThemeProvider } from "@shared-components/components/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -145,6 +146,7 @@ export default async function LocaleLayout({
               </ThemeProvider>
               <Toaster />
               <VercelPerformanceAnalytics />
+              <SpeedInsights />
               {/* <AdvertiseBadge /> */}
             </body>
           </html>

@@ -1,5 +1,5 @@
 import "@shared-components/styles/globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { cn } from "@shared-components/lib/utils";
 import { ThemeProvider } from "@/components/feature/theme-provider";
 import { VercelPerformanceAnalytics } from "@shared-components/components/vercel-analytics";
@@ -16,6 +16,7 @@ import {
 import { env } from "@/env.mjs";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -93,6 +94,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  colorScheme: "dark light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
+
 export default async function RootLayout({
   children,
   params: { locale },
@@ -121,6 +130,7 @@ export default async function RootLayout({
               </NextIntlClientProvider>
             </ThemeProvider>
             <Toaster />
+            <SpeedInsights />
             <VercelPerformanceAnalytics />
           </body>
         </html>
