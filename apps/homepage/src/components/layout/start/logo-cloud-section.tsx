@@ -38,7 +38,7 @@ export default function LogoCloudSection() {
             </div>
             <div className="text-primary-muted mx-auto mt-12 grid max-w-lg grid-cols-4 items-center justify-between gap-x-8 gap-y-10 sm:grid-cols-7 sm:gap-x-10 sm:mx-0 sm:max-w-none">
               {/* <Image
-              src="https://https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg"
+              src="https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg"
               alt="Logo 1"
               width={474}
               height={144}

@@ -40,7 +40,7 @@ export default async function AuthLayout({ children }: AuthLayoutProps) {
         <div className="bg-background border-separator relative hidden h-full flex-col border-r md:flex">
           <div className="absolute inset-0">
             <Image
-              src="https://https://d2fplzddl6myl4.cloudfront.net/img/stadium-blur.png"
+              src="https://d2fplzddl6myl4.cloudfront.net/img/stadium-blur.png"
               fill
               priority={false}
               sizes="100vw"

@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     // ],
     images: [
       {
-        url: "https://https://d2fplzddl6myl4.cloudfront.net/card/streamify-card.png",
+        url: "https://d2fplzddl6myl4.cloudfront.net/card/streamify-card.png",
         width: 1200,
         height: 630,
         alt: siteConfig.name,

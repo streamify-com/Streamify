@@ -34,7 +34,7 @@ export const NewsletterEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="https://https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg"
+          src="https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg"
           width="170"
           height="50"
           alt="Streamify"
