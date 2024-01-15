@@ -35,7 +35,7 @@ import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 import { ThemeModeIcon, ThemeModeSelector } from "@/components/mode-theme";
 
-const CompanyName = process.env.COMPANY_NAME;
+const CompanyName = process.env.RESEND_COMPANY_NAME;
 
 interface IconProps extends JSX.IntrinsicAttributes {
   className?: string;
@@ -98,11 +98,11 @@ export function FooterDeclarationLayout() {
       <PlatformContainer>
         <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
+            <p className="hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
-            <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
+            <p className="sm:hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}
             </p>
             <div className="sm:order-1 order-2 sm:hidden block">
@@ -208,7 +208,7 @@ export function FooterPlatformLayout() {
               className="w-full sm:hidden block"
             >
               <AccordionItem value="item-1" className="border-transparent">
-                <AccordionTrigger className="text-md text-primary-muted leading-6">
+                <AccordionTrigger className="text-sm text-primary leading-6">
                   {t("sitemap.name")}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -478,7 +478,7 @@ export function FooterWebsiteLayout() {
           <div className="mb-6 sm:mb-0">
             <div className="sm:order-1 order-2 sm:hidden block">
               <div className="w-full flex items-center justify-between">
-                <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
+                <p className="sm:hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
                   &copy;&nbsp;{t("company.name")}&nbsp;
                   {new Date().getFullYear()}
                 </p>

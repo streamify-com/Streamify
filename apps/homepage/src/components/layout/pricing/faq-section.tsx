@@ -30,7 +30,7 @@ export default function FaqSection() {
       <HomepageContainer>
         <div className="mx-auto py-20">
           <div className="divide-separator mx-auto divide-y">
-            <h2 className="text-primary text-2xl font-bold leading-10 tracking-tight">
+            <h2 className="text-primary text-2xl font-semibold leading-10 tracking-tight">
               Frequently asked questions
             </h2>
             <dl className="divide-separator mt-10 space-y-6 divide-y">

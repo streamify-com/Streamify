@@ -32,13 +32,13 @@ export default function LogoCloudSection() {
             className="mx-auto py-8 text-center"
           >
             <div className="relative flex justify-center text-md uppercase">
-              <span className="px-2 font-bold text-primary-muted">
+              <span className="px-2 font-semibold text-primary-muted">
                 {t("title")}
               </span>
             </div>
             <div className="text-primary-muted mx-auto mt-12 grid max-w-lg grid-cols-4 items-center justify-between gap-x-8 gap-y-10 sm:grid-cols-7 sm:gap-x-10 sm:mx-0 sm:max-w-none">
               {/* <Image
-              src="https://assets.streamify.dev/logo/streamify-logo-purpur.svg"
+              src="https://https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg"
               alt="Logo 1"
               width={474}
               height={144}

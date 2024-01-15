@@ -105,7 +105,7 @@ const getWeightClassNames = (weight: HeadingWeight | undefined) => {
       return 'font-medium';
     case 'bold':
     case undefined:
-      return 'font-bold';
+      return 'font-semibold';
     default:
       return unreachable(weight);
   }

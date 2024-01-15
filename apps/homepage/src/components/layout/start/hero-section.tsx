@@ -38,7 +38,7 @@ export default function HeroSection() {
                 <span className="text-primary sm:group-hover:text-action font-italic">
                   {t("badge.read-the-story")}
                 </span>
-                <ArrowRightCircle className="font-regular text-primary group sm:group-hover:text-action ml-2 h-4 w-4" />
+                <ArrowRightCircle className="font-medium text-primary group sm:group-hover:text-action ml-2 h-4 w-4" />
               </Link>
             </motion.div>
             <div className="mx-auto text-center">
@@ -103,7 +103,7 @@ export default function HeroSection() {
                       variant: "actionButton",
                       size: "fixedSize",
                     }),
-                    // "font-regular sm:font-bold",
+                    // "font-medium sm:font-semibold",
                   )}
                 >
                   {t("button.call-to-action.name")}

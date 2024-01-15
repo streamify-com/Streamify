@@ -81,10 +81,10 @@ export default function Header({ user }: HeaderProps) {
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghostButton" size="avatarSize">
-                        <p className="font-regular text-primary text-sm leading-none">
+                        <p className="font-medium text-primary text-sm leading-none">
                           {t("dropdown.greeting")}&nbsp;
                         </p>
-                        <p className="text-primary text-sm font-bold leading-none">
+                        <p className="text-primary text-sm font-semibold leading-none">
                           {user.firstName}&nbsp;{user.lastName}
                         </p>
                         <Avatar className="ml-4">
@@ -103,7 +103,7 @@ export default function Header({ user }: HeaderProps) {
                     >
                       <DropdownMenuLabel className="font-normal">
                         <div className="flex flex-col space-y-1">
-                          <p className="text-md font-regular text-primary leading-none">
+                          <p className="text-md font-medium text-primary leading-none">
                             {user.firstName}&nbsp;{user.lastName}
                           </p>
                           <p className="text-primary-muted text-xs leading-none">

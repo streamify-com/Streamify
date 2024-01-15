@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@shared-components/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center group rounded-md text-md font-regular transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center group rounded-md text-md font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -15,7 +15,7 @@ const buttonVariants = cva(
         tertiaryButton:
           "bg-secondary sm:hover:bg-primary text-secondary-inner sm:hover:text-primary-hover border border-separator sm:hover:border-primary-muted",
         actionButton:
-          "bg-action sm:hover:bg-action-muted text-background sm:hover:text-white border border-action sm:hover:border-separator",
+          "bg-action sm:hover:bg-action-muted text-background sm:hover:text-white border border-action sm:hover:border-action-muted",
         insentiveButton:
           "bg-transparent text-action sm:hover:underline hover:underline-offset-4 sm:hover:text-action-muted border border-transparent",
         ghostButton:
@@ -105,12 +105,12 @@ const ShiningButton = React.forwardRef<HTMLButtonElement, ShiningButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className="from-primary to-separator font-regular group relative inline-flex h-12 sm:h-10 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] sm:w-48 sm:hover:bg-primary"
+        className="from-primary to-separator font-medium group relative inline-flex h-12 sm:h-10 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] sm:w-48 sm:hover:bg-primary"
         ref={ref}
         {...props}
       >
         <span className="bg-background sm:hover:bg-background-hover flex h-full w-full items-center justify-center rounded-md">
-          <p className="font-regular from-primary-muted via-primary to-primary-muted text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent sm:group-hover:text-primary">
+          <p className="font-medium from-primary-muted via-primary to-primary-muted text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent sm:group-hover:text-primary">
             {children}
           </p>
         </span>

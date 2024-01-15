@@ -57,7 +57,7 @@ export default function NavigationMain({
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "font-regular text-md sm:hover:text-primary flex items-center px-2 py-5 transition-colors",
+                "font-medium text-md sm:hover:text-primary flex items-center px-2 py-5 transition-colors",
                 item.href.startsWith(`/${segment}`)
                   ? "text-action sm:border-action sm:border-b-2"
                   : "text-primary sm:border-b-2 sm:border-transparent",
@@ -85,10 +85,10 @@ export default function NavigationMain({
         <div className={mobileMenuClassName}>
           <HomepageContainer>
             <div className="relative z-20 grid gap-4">
-              <nav className="no-scrollbar font-regular mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
+              <nav className="no-scrollbar font-medium mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
                 <Link
                   onClick={closeMobileMenu}
-                  href={t("products.href")}
+                  href={t("solutions.href")}
                   className={cn(
                     buttonVariants({
                       variant: "ghostButton",
@@ -97,7 +97,7 @@ export default function NavigationMain({
                     "my-2 flex w-full items-center justify-between",
                   )}
                 >
-                  <p>{t("products.name")}</p>
+                  <p>{t("solutions.name")}</p>
                   <Icons.chevronRight />
                 </Link>
                 <Link

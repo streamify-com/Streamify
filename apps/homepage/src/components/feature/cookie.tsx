@@ -36,7 +36,7 @@ export default function Cookie() {
           {t("description")}
           <Link
             href="/cookie-policy"
-            className="font-regular underline underline-offset-4"
+            className="font-medium underline underline-offset-4"
           >
             {t("cookie-policy")}
           </Link>

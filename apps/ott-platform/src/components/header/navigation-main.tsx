@@ -51,7 +51,7 @@ export default function NavigationMain({
           <Link
             href={t("home.href")}
             className={cn(
-              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
+              "font-medium text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "home"
                 ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
                 : "text-primary-muted sm:border-b-2 sm:border-transparent",
@@ -62,7 +62,7 @@ export default function NavigationMain({
           <Link
             href={t("matches.href")}
             className={cn(
-              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
+              "font-medium text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "matches"
                 ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
                 : "text-primary-muted sm:border-b-2 sm:border-transparent",
@@ -73,7 +73,7 @@ export default function NavigationMain({
           <Link
             href={t("players.href")}
             className={cn(
-              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
+              "font-medium text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "players"
                 ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
                 : "text-primary-muted sm:border-b-2 sm:border-transparent",
@@ -84,7 +84,7 @@ export default function NavigationMain({
           <Link
             href={t("plus.href")}
             className={cn(
-              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
+              "font-medium text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "plus"
                 ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
                 : "text-primary-muted sm:border-b-2 sm:border-transparent",
@@ -95,7 +95,7 @@ export default function NavigationMain({
           <Link
             href={t("live.href")}
             className={cn(
-              "font-regular text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
+              "font-medium text-md sm:hover:text-primary flex items-center px-2 py-4 transition-colors text-primary-muted sm:border-b-2 sm:border-transparent",
               selectedSegment === "live"
                 ? "text-action sm:hover:text-action-muted sm:border-action sm:border-b-2"
                 : "text-primary-muted sm:border-b-2 sm:border-transparent",
@@ -125,7 +125,7 @@ export default function NavigationMain({
         >
           <PlatformContainer>
             <div className="relative z-20 grid gap-4">
-              <nav className="no-scrollbar font-regular mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
+              <nav className="no-scrollbar font-medium mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
                 <Link
                   onClick={closeMobileMenu}
                   href={t("matches.href")}

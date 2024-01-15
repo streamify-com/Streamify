@@ -40,7 +40,7 @@ export default function LocaleSelectionDialog() {
   }
 
   return (
-    <DialogContent className="sm:max-w-[425px]">
+    <DialogContent className="sm:max-w-[425px] sm:border-separator">
       <DialogHeader>
         <DialogTitle>{t("label")}</DialogTitle>
       </DialogHeader>

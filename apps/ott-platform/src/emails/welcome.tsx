@@ -16,7 +16,7 @@ interface WelcomeEmailProps {
   lastName: string;
 }
 
-const CompanyName = process.env.COMPANY_NAME;
+const CompanyName = process.env.RESEND_COMPANY_NAME;
 
 export const WelcomeEmail = ({ firstName, lastName }: WelcomeEmailProps) => (
   <Html>

@@ -39,7 +39,7 @@ const tiers: TierProps[] = [
     price: { monthly: "€15", annually: "€144" },
     description:
       "The essentials to provide your best work for clients. Start with a minimal setup.",
-    features: ["5 products", "Up to 1,000 subscribers", "Basic analytics"],
+    features: ["5 solutions", "Up to 1,000 subscribers", "Basic analytics"],
     mostPopular: false,
   },
   {
@@ -51,7 +51,7 @@ const tiers: TierProps[] = [
       "A plan that scales with your rapidly growing business and teams.",
     features: [
       "Everything in BASIC included",
-      "25 products",
+      "25 solutions",
       "Up to 10,000 subscribers",
       "Advanced analytics",
       "24-hour support response time",
@@ -68,7 +68,7 @@ const tiers: TierProps[] = [
       "Optimized infrastructure for sport clubs to increase fan engagement.",
     features: [
       "Everything in PLUS included",
-      "Unlimited products",
+      "Unlimited solutions",
       "Unlimited subscribers",
       "Advanced analytics",
       "1-hour, dedicated support response time",
@@ -96,17 +96,17 @@ export default function PricingSection() {
               {t("title")}
             </h2>
           </div>
-          <p className="font-regular text-primary mx-auto mt-6 text-center text-lg">
+          <p className="font-medium text-primary mx-auto mt-6 text-center text-lg">
             {t("subtitle")}
           </p>
-          <p className="font-regular text-primary mx-auto mb-6 mt-2 text-center text-lg">
+          <p className="font-medium text-primary mx-auto mb-6 mt-2 text-center text-lg">
             {t("description")}
           </p>
           <div className="mt-16 flex justify-center">
             <RadioGroup
               value={frequency}
               onChange={setFrequency}
-              className="font-regular ring-separator grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm leading-5 ring-1 ring-inset"
+              className="font-medium ring-separator grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm leading-5 ring-1 ring-inset"
             >
               <RadioGroup.Label className="sr-only">
                 Payment frequency
@@ -118,8 +118,8 @@ export default function PricingSection() {
                   className={({ checked }) =>
                     classNames(
                       checked
-                        ? "bg-primary text-background font-regular"
-                        : "text-primary font-regular",
+                        ? "bg-primary text-background font-medium"
+                        : "text-primary font-medium",
                       "cursor-pointer rounded-full px-3 py-1",
                     )
                   }
@@ -132,8 +132,8 @@ export default function PricingSection() {
                 className={({ checked }) =>
                   classNames(
                     checked
-                      ? "bg-primary text-background font-regular"
-                      : "text-primary font-regular",
+                      ? "bg-primary text-background font-medium"
+                      : "text-primary font-medium",
                     "cursor-pointer rounded-full px-3 py-1",
                   )
                 }
@@ -145,8 +145,8 @@ export default function PricingSection() {
                 className={({ checked }) =>
                   classNames(
                     checked
-                      ? "bg-primary text-background font-regular"
-                      : "text-primary font-regular",
+                      ? "bg-primary text-background font-medium"
+                      : "text-primary font-medium",
                     "cursor-pointer rounded-full px-3 py-1",
                   )
                 }
@@ -170,16 +170,16 @@ export default function PricingSection() {
                   id={tier.id}
                   className={classNames(
                     tier.mostPopular ? "text-primary" : "text-primary",
-                    "text-lg font-bold uppercase",
+                    "text-lg font-semibold uppercase",
                   )}
                 >
                   {tier.name}
                 </h3>
-                <p className="text-md font-regular text-primary mt-4 h-20">
+                <p className="text-md font-medium text-primary mt-4 h-20">
                   {tier.description}
                 </p>
                 <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="text-primary text-4xl font-bold tracking-tight">
+                  <span className="text-primary text-4xl font-semibold tracking-tight">
                     {tier.price[frequency.value]}
                   </span>
                   <span className="text-md text-primary">
@@ -200,7 +200,7 @@ export default function PricingSection() {
                 </Link>
                 <ul
                   role="list"
-                  className="text-md font-regular text-primary mt-8 space-y-3"
+                  className="text-md font-medium text-primary mt-8 space-y-3"
                 >
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
@@ -217,10 +217,10 @@ export default function PricingSection() {
           </div>
           <div className="ring-separator mt-10 flex flex-col items-start gap-x-8 gap-y-6 rounded-md p-8 ring-1 sm:gap-y-10 sm:p-10 md:col-span-2 md:flex-row md:items-center">
             <div className="md:min-w-0 md:flex-1">
-              <h3 className="text-primary text-lg font-bold uppercase leading-8 tracking-tight">
+              <h3 className="text-primary text-lg font-semibold uppercase leading-8 tracking-tight">
                 Your are a sports club?
               </h3>
-              <p className="font-regular text-primary mt-4 leading-7">
+              <p className="font-medium text-primary mt-4 leading-7">
                 Streamify Sports is the perfect solution for dedicated sports
                 OTT with additional features to serve your content and optimzed
                 for fan engagement.

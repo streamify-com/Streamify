@@ -49,7 +49,6 @@
 
     /* Separator colors */
     --separator: 221, 221, 221, 1;
-    --separator-hover: 112, 112, 112, 1;
 
     /* Test colors */
     --testing: 62, 180, 137, 1;
@@ -104,7 +103,6 @@
 
     /* Separator colors */
     --separator: 47, 47, 47, 1;
-    --separator-hover: 112, 112, 112, 1;
 
     /* Test colors */
     --testing: 62, 180, 137, 1;
@@ -119,7 +117,7 @@
   }
 
   body {
-    @apply bg-background font-regular text-primary;
+    @apply bg-background font-medium text-primary;
   }
 }
 

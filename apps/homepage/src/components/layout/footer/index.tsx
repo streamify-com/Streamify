@@ -144,7 +144,7 @@ export function FooterHomepageLayout() {
             <div className="sm:grid grid-cols-2 gap-8 sm:col-span-2 hidden">
               <div className="grid grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-md text-primary font-bold leading-6 px-2">
+                  <h3 className="text-md text-primary font-semibold leading-6 px-2">
                     {t("solutions.name")}
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -156,6 +156,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("solutions.studio.name")}
@@ -169,6 +170,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("solutions.sports.name")}
@@ -182,6 +184,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("solutions.analytics.name")}
@@ -195,6 +198,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("solutions.atlas.name")}
@@ -203,7 +207,7 @@ export function FooterHomepageLayout() {
                   </ul>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <h3 className="text-md text-primary font-bold leading-6 px-2">
+                  <h3 className="text-md text-primary font-semibold leading-6 px-2">
                     {t("support.name")}
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -211,7 +215,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
+                          className="font-medium text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -225,6 +229,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("support.pricing.name")}
@@ -238,6 +243,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("support.documentation.name")}
@@ -251,6 +257,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("support.guides.name")}
@@ -264,6 +271,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("support.programs.name")}
@@ -274,7 +282,7 @@ export function FooterHomepageLayout() {
               </div>
               <div className="sm:grid sm:grid-cols-2 sm:gap-8">
                 <div>
-                  <h3 className="text-md text-primary font-bold leading-6 px-2">
+                  <h3 className="text-md text-primary font-semibold leading-6 px-2">
                     {t("company.name")}
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -282,7 +290,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
+                          className="font-medium text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -296,6 +304,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("company.about-us.name")}
@@ -309,6 +318,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("company.blog.name")}
@@ -322,6 +332,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("company.jobs.name")}
@@ -335,6 +346,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("company.partners.name")}
@@ -343,7 +355,7 @@ export function FooterHomepageLayout() {
                   </ul>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <h3 className="text-md text-primary font-bold leading-6 px-2">
+                  <h3 className="text-md text-primary font-semibold leading-6 px-2">
                     {t("legal.name")}
                   </h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -351,7 +363,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
+                          className="font-medium text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -365,6 +377,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("legal.terms-of-services.name")}
@@ -378,6 +391,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("legal.privacy-policy.name")}
@@ -391,6 +405,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("legal.cookie-policy.name")}
@@ -404,6 +419,7 @@ export function FooterHomepageLayout() {
                             variant: "ghostButton",
                             size: "footerSize",
                           }),
+                          "sm:text-md",
                         )}
                       >
                         {t("legal.imprint.name")}
@@ -493,7 +509,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
+                          className="font-medium text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -568,7 +584,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
+                          className="font-medium text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -643,7 +659,7 @@ export function FooterHomepageLayout() {
                       <li key={item.name}>
                         <Link
                           href={item.href}
-                          className="font-regular text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
+                          className="font-medium text-md text-primary sm:hover:text-primary leading-6 p-2 rounded-md bg-transparent sm:hover:bg-background-hover border border-transparent sm:hover:border-separator"
                         >
                           {item.name}
                         </Link>
@@ -711,7 +727,7 @@ export function FooterHomepageLayout() {
             </Accordion>
             <div className="mt-8 sm:mt-0 sm:border-l border-transparend sm:border-separator">
               <div className="sm:ml-8">
-                {/* <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
+                {/* <h3 className="text-md text-primary sm:font-semibold ront-regular leading-6">
                   {t("newsletter.title")}
                 </h3>
                 <p className="text-md text-primary-muted my-2 leading-6">
@@ -739,7 +755,7 @@ export function FooterHomepageLayout() {
                 </form>
                 {/* <Separator className="my-6" />
                 <div className="hidden sm:block">
-                  <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
+                  <h3 className="text-md text-primary sm:font-semibold ront-regular leading-6">
                     {t("we-support.title")}
                   </h3>
                   <div className="mt-2 flex items-center gap-4 flex-row">
@@ -757,7 +773,7 @@ export function FooterHomepageLayout() {
               </div>
             </div>
             {/* <div className="block sm:hidden">
-              <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
+              <h3 className="text-md text-primary sm:font-semibold ront-regular leading-6">
                 {t("we-support.title")}
               </h3>
               <div className="mt-4 flex items-center gap-4 flex-row">
@@ -783,11 +799,11 @@ export function FooterDeclarationLayout() {
       <HomepageContainer>
         <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
+            <p className="hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}.&nbsp;
               {t("all-rights-reserved")}
             </p>
-            <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
+            <p className="sm:hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{t("company")}&nbsp;{new Date().getFullYear()}
             </p>
             <div className="sm:order-1 order-2 sm:hidden block">
@@ -802,7 +818,7 @@ export function FooterDeclarationLayout() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-primary sm:hover:text-primary h-8 w-8 rounded-md bg-transparent sm:hover:bg-background-hover flex justify-center items-center border border-transparent sm:hover:border-separator"
+                className="text-primary-muted sm:hover:text-primary h-8 w-8 rounded-md bg-transparent sm:hover:bg-background-hover flex justify-center items-center border border-transparent sm:hover:border-separator"
               >
                 <span className="sr-only">{item.name}</span>
                 {item.icon({ className: "h-4 w-4 sm:h-5 sm:w-5" } as IconProps)}

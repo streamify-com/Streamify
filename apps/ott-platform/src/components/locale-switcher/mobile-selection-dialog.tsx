@@ -47,7 +47,7 @@ export default function MobileSelectionDialog() {
       <SheetContent
         title={t("label")}
         side="bottom"
-        className="border-separator h-[40%] rounded-t-xl border-t text-primary-muted"
+        className="border-separator h-[50%] rounded-t-[1.5rem] border-t text-primary-muted"
       >
         <ScrollArea className="mt-10 h-[90%] w-full border-t border-separator">
           <div className="grid mt-4">
@@ -60,7 +60,7 @@ export default function MobileSelectionDialog() {
                 size="defaultSize"
                 className={
                   cur === locale
-                    ? "justify-between sm:w-full text-active"
+                    ? "justify-between sm:w-full text-action"
                     : "justify-between sm:w-full text-primary"
                 }
               >

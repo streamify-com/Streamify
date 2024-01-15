@@ -5,35 +5,26 @@ import Link from "next-intl/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { MainNavItem } from "@shared-components/types";
 import { cn } from "@shared-components/lib/utils";
-import { Icons } from "@shared-components/graphics/icons";
-import {
-  HomepageContainer,
-  PlatformContainer,
-} from "@shared-components/ui/container";
+import { Icons, MenuIcon } from "@shared-components/graphics/icons";
+import { PlatformContainer } from "@shared-components/ui/container";
 
 import { Separator } from "@shared-components/ui/separator";
 import type { User } from "@clerk/nextjs/dist/types/server";
-import { Button, buttonVariants } from "@shared-components/ui/button";
+import { buttonVariants } from "@shared-components/ui/button";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from "@shared-components/ui/avatar";
 import { useTranslations } from "next-intl";
-import { LocaleChoose, LocaleSwitcher } from "@/components/locale-switcher";
-import { ModeSelection, ThemeModeSelector } from "@/components/mode-theme";
+import { LocaleChoose } from "@/components/locale-switcher";
+import { ThemeModeSelector } from "@/components/mode-theme";
 import {
   Menu,
   MenuClose,
   MenuContent,
-  MenuDescription,
-  MenuFooter,
-  MenuHeader,
-  MenuTitle,
   MenuTrigger,
 } from "@shared-components/ui/menu";
-import { Container } from "@react-email/components";
-import { PrimaryLogo, TertiaryLogo } from "@shared-components/graphics/logo";
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -68,7 +59,7 @@ export default function NavigationMain({
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "font-regular text-md sm:hover:text-primary flex items-center px-2 py-5 transition-colors",
+                "font-medium text-md sm:hover:text-primary flex items-center px-2 py-5 transition-colors",
                 item.href.startsWith(`/${segment}`)
                   ? "text-action sm:border-action sm:border-b-2"
                   : "text-primary sm:border-b-2 sm:border-transparent",
@@ -86,15 +77,15 @@ export default function NavigationMain({
             className="flex h-7 w-7 items-center justify-center rounded-sm sm:hidden"
             onClick={() => setShowMobileMenu(!showMobileMenu)}
           >
-            <Icons.open className="h-5 w-auto" />
+            <MenuIcon className="h-5 w-auto text-primary-muted" />
           </button>
         </MenuTrigger>
         <MenuContent title="Menu" side="right" className="h-full">
           {items && (
-            <div className="animate-in slide-in-to-bottom-80 bg-background border-separator fixed inset-x-0 bottom-0 top-[3.5rem] z-50 mt-px grid grid-flow-row auto-rows-max overflow-y-auto border-t pb-32 duration-300 lg:static lg:block">
+            <div className="animate-in slide-in-to-bottom-80 bg-background border-transparent fixed inset-x-0 bottom-0 top-[3.5rem] z-50 mt-px grid grid-flow-row auto-rows-max overflow-y-auto border-t pb-32 duration-300 lg:static lg:block">
               <PlatformContainer>
                 <div className="relative z-20 grid gap-4">
-                  <nav className="no-scrollbar font-regular mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
+                  <nav className="no-scrollbar font-medium mt-3 grid grid-flow-row auto-rows-max items-center overflow-y-auto">
                     {items.map((item, index) => (
                       <>
                         <MenuClose asChild>
@@ -155,7 +146,9 @@ export default function NavigationMain({
                               }),
                             )}
                           >
-                            <TertiaryLogo className="text-background md:hover:text-primary h-12 w-auto" />
+                            {/* <PrimaryLogo className="text-background md:hover:text-primary h-8 w-auto" /> */}
+                            {/* <TertiaryLogo className="text-background md:hover:text-primary h-12 w-auto" /> */}
+                            Create now
                           </Link>
                         )}
                       </MenuClose>

@@ -52,7 +52,7 @@ export function GET(req: Request) {
                 {type}
               </div>
             ) : null}
-            <div tw="px-8 text-5xl font-bold leading-tight tracking-tight dark:text-zinc-50">
+            <div tw="px-8 text-5xl font-semibold leading-tight tracking-tight dark:text-zinc-50">
               {title}
             </div>
             {description ? (

@@ -36,8 +36,8 @@ export function HeaderHome({ user }: HeaderHomeProps) {
     <header
       className={`sticky z-40 mx-0 sm:mx-16 top-0 sm:top-6 sm:rounded-md rounded-none ${
         scrolled
-          ? "sm:bg-background/60 backdrop-blur-xl bg-background border-separator border-b sm:border"
-          : "sm:bg-background/60 backdrop-blur-xl bg-background border-transparent border sm:border-separator"
+          ? "sm:bg-background/60 backdrop-blur-xl bg-background border-separator border-b sm:border-separator"
+          : "sm:bg-background/60 backdrop-blur-xl bg-background border-transparent border-b sm:border sm:border-separator"
       } `}
     >
       <nav className="px-8 sm:px-8">

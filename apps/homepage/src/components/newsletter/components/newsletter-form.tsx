@@ -52,7 +52,7 @@ const NewsletterForm = () => {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <h3 className="text-md text-primary sm:font-bold ront-regular leading-6">
+      <h3 className="text-md text-primary sm:font-semibold ront-regular leading-6">
         {t("title")}
       </h3>
       <p className="text-md text-primary-muted my-2 leading-6">

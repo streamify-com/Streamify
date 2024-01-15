@@ -43,10 +43,10 @@ export default {
     extend: {
       fontFamily: {
         italic: ["var(--font-italic)", ...fontFamily.sans],
-        regular: ["var(--font-regular)", ...fontFamily.sans],
+        regular: ["var(--font-medium)", ...fontFamily.sans],
         semibold: ["var(--font-semibold)", ...fontFamily.sans],
         bold: ["var(--font-bold)", ...fontFamily.sans],
-        special: ["var(--font-heading)", ...fontFamily.sans],
+        special: ["var(--font-special)", ...fontFamily.sans],
       },
       colors: {
         foreground: {
@@ -92,15 +92,12 @@ export default {
         transparent: "rgba(var(--transparent))",
         link: "rgba(var(--link))",
         skeleton: "rgba(var(--skeleton))",
-        separator: {
-          DEFAULT: "rgba(var(--separator))",
-          hover: "rgba(var(--separator-hover))",
-        },
+        separator: "rgba(var(--separator))",
         testing: "rgba(var(--testing))",
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {

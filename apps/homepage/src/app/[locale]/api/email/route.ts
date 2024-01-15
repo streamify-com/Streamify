@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 
   try {
     await resend.emails.send({
-      from: `${process.env.COMPANY_NAME} <${process.env.MAIL_FROM}>`,
+      from: `${process.env.RESEND_COMPANY_NAME} <${process.env.RESEND_MAIL_FROM}>`,
       to: email,
       subject: "Newsletter for Streamify",
       react: NewsletterEmail({

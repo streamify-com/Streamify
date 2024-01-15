@@ -3,8 +3,8 @@ import { HeaderConfig } from "@shared-components/types";
 export const homepageConfig: HeaderConfig = {
   mainNav: [
     {
-      title: "Products",
-      href: "/products",
+      title: "Solutions",
+      href: "/solutions",
       restricted: false,
     },
     {

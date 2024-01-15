@@ -61,7 +61,7 @@ export default function NavigationBar() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link
-            href={t("products.href")}
+            href={t("solutions.href")}
             legacyBehavior
             passHref
             className={cn(
@@ -71,7 +71,7 @@ export default function NavigationBar() {
               }),
             )}
           >
-            <NavigationMenuTrigger>{t("products.name")}</NavigationMenuTrigger>
+            <NavigationMenuTrigger>{t("solutions.name")}</NavigationMenuTrigger>
           </Link>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 sm:w-[400px] md:w-[500px] md:grid-cols-[.75fr_1fr]">
@@ -84,7 +84,7 @@ export default function NavigationBar() {
                     <div className="mb-2 mt-4">
                       <PrimaryLogo className="text-action h-8 w-auto" />
                     </div>
-                    <div className="mb-2 text-lg font-bold text-primary">
+                    <div className="mb-2 text-lg font-semibold text-primary">
                       Studio
                     </div>
                     <p className="text-primary-muted text-sm leading-tight">
@@ -158,7 +158,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-bold leading-none">{title}</div>
+          <div className="text-sm font-semibold leading-none">{title}</div>
           <p className="text-primary-muted line-clamp-2 text-sm leading-snug">
             {children}
           </p>

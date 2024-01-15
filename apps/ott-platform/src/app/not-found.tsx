@@ -9,7 +9,7 @@ export default function NotFound() {
       <div className="grid place-items-center text-center">
         <div className="text-primary mx-auto mt-10 py-8 text-3xl">404</div>
         <div className="mx-auto text-center">
-          <h1 className="text-primary text-4xl font-bold sm:text-5xl md:text-6xl">
+          <h1 className="text-primary text-4xl font-semibold sm:text-5xl md:text-6xl">
             Page not found
           </h1>
           <div className="mx-auto my-6 px-8 text-center sm:px-20 lg:px-44">

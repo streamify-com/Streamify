@@ -8,9 +8,9 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { siteConfig } from "@/config/site";
 import {
   fontBold,
-  fontHeading,
+  fontSpecial,
   fontItalic,
-  fontRegular,
+  fontMedium,
   fontSemibold,
 } from "@shared-components/lib/fonts";
 import { env } from "@/env.mjs";
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "https://assets.streamify.dev/card/streamify-card.png",
+        url: "https://https://d2fplzddl6myl4.cloudfront.net/card/streamify-card.png",
         width: 1200,
         height: 630,
         alt: siteConfig.name,
@@ -107,12 +107,12 @@ export default async function RootLayout({
           <link rel="manifest" href="/manifest.json" />
           <body
             className={cn(
-              "bg-background font-regular min-h-screen antialiased",
-              fontRegular.variable,
+              "bg-background font-medium min-h-screen antialiased",
+              fontMedium.variable,
               fontItalic.variable,
               fontSemibold.variable,
               fontBold.variable,
-              fontHeading.variable,
+              fontSpecial.variable,
             )}
           >
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

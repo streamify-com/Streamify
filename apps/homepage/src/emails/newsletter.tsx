@@ -18,9 +18,11 @@ interface NewsletterEmailProps {
   lastName: string;
 }
 
-const baseUrl = process.env.COMPANY_URL ? `${process.env.COMPANY_URL}` : "";
+const baseUrl = process.env.RESEND_COMPANY_URL
+  ? `${process.env.RESEND_COMPANY_URL}`
+  : "";
 
-const CompanyName = process.env.COMPANY_NAME;
+const CompanyName = process.env.RESEND_COMPANY_NAME;
 
 export const NewsletterEmail = ({
   firstName,
@@ -32,7 +34,7 @@ export const NewsletterEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src="https://assets.streamify.dev/logo/streamify-logo-purpur.svg"
+          src="https://https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg"
           width="170"
           height="50"
           alt="Streamify"

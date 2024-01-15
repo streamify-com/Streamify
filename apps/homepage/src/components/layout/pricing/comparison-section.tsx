@@ -137,7 +137,7 @@ const ComparisonSection: React.FC = () => {
         </div>
         {showContent && (
           <div>
-            <p className="text-primary mt-10 text-2xl font-bold tracking-tight sm:text-2xl">
+            <p className="text-primary mt-10 text-2xl font-semibold tracking-tight sm:text-2xl">
               Compare all plan features
             </p>
             <p className="text-md text-primary mx-auto mt-6 text-left leading-8">
@@ -181,16 +181,16 @@ const ComparisonSection: React.FC = () => {
                         </th>
                         {tiers.map((tier) => (
                           <td key={tier.id} className="px-6 pt-2 lg:px-8">
-                            <div className="inline-flex items-center justify-center w-full uppercase font-bold text-xl text-primary">
+                            <div className="inline-flex items-center justify-center w-full uppercase font-semibold text-xl text-primary">
                               {tier.name}
                             </div>
                             <a
                               href={tier.href}
                               className={classNames(
                                 tier.mostPopular
-                                  ? "bg-primary text-background sm:hover:text-primary border-primary sm:hover:bg-background sm:hover:border-primary font-regular border"
+                                  ? "bg-primary text-background sm:hover:text-primary border-primary sm:hover:bg-background sm:hover:border-primary font-medium border"
                                   : "text-primary sm:hover:text-primary border-separator sm:hover:bg-background-hover sm:hover:border-primary border bg-transparent",
-                                "text-md font-regular focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:h-10 sm:w-full",
+                                "text-md font-medium focus-visible:ring-separator mt-6 inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-center transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:h-10 sm:w-full",
                               )}
                             >
                               Choose plan

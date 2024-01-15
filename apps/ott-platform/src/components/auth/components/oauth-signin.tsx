@@ -4,8 +4,7 @@ import * as React from "react";
 import { isClerkAPIResponseError, useSignIn } from "@clerk/nextjs";
 import type { OAuthStrategy } from "@clerk/types";
 import { toast } from "sonner";
-import { Button, buttonVariants } from "@shared-components/ui/button";
-import { cn } from "@shared-components/lib/utils";
+import { Button } from "@shared-components/ui/button";
 import { Icons } from "@shared-components/graphics/icons";
 
 const oauthProviders = [
@@ -51,12 +50,8 @@ export function OAuthSignIn() {
           <Button
             aria-label={`Sign in with ${provider.name}`}
             key={provider.strategy}
-            className={cn(
-              buttonVariants({
-                variant: "tertiaryButton",
-                size: "defaultSize",
-              }),
-            )}
+            variant="tertiaryButton"
+            size="defaultSize"
             onClick={() => void oauthSignIn(provider.strategy)}
           >
             {isLoading === provider.strategy ? (

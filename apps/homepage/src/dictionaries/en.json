@@ -204,9 +204,9 @@
     }
   },
   "header-homepage": {
-    "products": {
-      "name": "Products",
-      "href": "/products"
+    "solutions": {
+      "name": "Solutions",
+      "href": "/solutions"
     },
     "templates": {
       "name": "Templates",

@@ -8,7 +8,11 @@ module.exports = withPWA({
   reactStrictMode: true,
   transpilePackages: ["shared-components"],
   images: {
-    domains: ["assets.streamify.dev", "tailwindui.com", "stream.mux.com"],
+    domains: [
+      "https://d2fplzddl6myl4.cloudfront.net",
+      "tailwindui.com",
+      "stream.mux.com",
+    ],
     remotePatterns: [
       {
         protocol: "https",

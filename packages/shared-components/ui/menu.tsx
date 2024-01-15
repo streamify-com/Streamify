@@ -70,9 +70,9 @@ const MenuContent = React.forwardRef<
       <div className="absolute left-8 top-5 block sm:hidden">
         <span className="text-primary">{title}</span>
       </div>
-      <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-primary-muted absolute right-8 top-4 rounded-sm opacity-70 transition-opacity sm:hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
-        <button className="active:bg-background-hover flex h-7 w-7 items-center justify-center rounded-sm">
-          <Icons.close className="h-5 w-5" />
+      <SheetPrimitive.Close className="ring-offset-background focus:ring-separator data-[state=open]:bg-primary-muted absolute right-8 top-4 rounded-sm opacity-70 transition-opacity sm:hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
+        <button className="active:bg-background-hover flex h-8 w-8 items-center justify-center rounded-full border-separator border bg-foreground">
+          <Icons.close className="h-4 w-4" />
         </button>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>

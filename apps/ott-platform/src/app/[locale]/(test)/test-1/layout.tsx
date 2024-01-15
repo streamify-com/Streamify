@@ -13,7 +13,7 @@ export default async function PricingLayout({ children }: PlatformLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <HeaderHome user={user} />
-      <main className="w-screen flex-1 sm:my-20 my-10">{children}</main>
+      <main className="flex-1 w-screen sm:my-20 my-10">{children}</main>
       <Cookie />
       <FooterWebsiteLayout />
     </div>
