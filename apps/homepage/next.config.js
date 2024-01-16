@@ -9,7 +9,7 @@ module.exports = withPWA({
   transpilePackages: ["shared-components"],
   images: {
     domains: [
-      "https://d2fplzddl6myl4.cloudfront.net",
+      "d2fplzddl6myl4.cloudfront.net",
       "tailwindui.com",
       "stream.mux.com",
     ],

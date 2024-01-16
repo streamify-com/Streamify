@@ -1,0 +1,328 @@
+{
+  "locale-switcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
+  },
+  "mode-theme": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "go-back": {
+    "name": "Zurück"
+  },
+  "back-to-homepage": {
+    "name": "Zurück zur Startseite",
+    "href": "/home"
+  },
+  "cookie": {
+    "description": "Diese Seite speichert Daten in Form von Cookies, um essenzielle Funktionen zu ermöglichen, sowie für Marketing-, Personalisierungs- und Analysezwecke. Du kannst deine Einstellungen jederzeit ändern oder die Standardeinstellungen aktivieren. Weiterhin kannst du diese Seite mit den Mindesteinstellungen verwenden. Erfahre mehr unter ",
+    "cookie-policy": "Cookie-Richtlinie",
+    "accept-all": "Akzeptiere alle",
+    "only-necessary": "Nur notwendige"
+  },
+  "plus": {
+    "name": "Deutsches Plus"
+  },
+  "subscribe": {
+    "name": "Abonnieren"
+  },
+  "signin": {
+    "card-title": "Anmelden",
+    "card-description": "Noch nicht registriert?",
+    "alternative": {
+      "name": "Registrieren",
+      "href": "/signup"
+    },
+    "or-continue-with": "Oder weiter mit",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "sign-in": "Anmelden",
+    "reset-password": "Passwort zurücksetzen",
+    "previous-step": "Zurück"
+  },
+  "reset-password": {
+    "card-title": "Passwort zurücksetzen",
+    "card-description": "Gib deine E-Mail-Adresse ein und wir schicken dir einen Verifizierungscode.",
+    "password": "Passwort",
+    "input-placeholder": "E-Mail-Adresse",
+    "form-button": "Weiter",
+    "previous-step": "Zurück",
+    "form-button-description": "Weiter, um die Passwortrücksetzung zu verifizieren."
+  },
+  "step-2": {
+    "card-title": "Neues Passwort bestätigen",
+    "card-description": "Wähle ein neues Passwort und gib den Code ein, der an deine E-Mail-Adresse erschickt wurde.",
+    "password-form-label": "Neues Passwort festlegen",
+    "confirmation-form-label": "Neues Passwort erneut eingeben",
+    "code-form-label": "Code",
+    "verify-code-form-label": "6-stelliger Code",
+    "form-button": "Passwort bestätigen",
+    "previous-step": "Zurück"
+  },
+  "signout": {
+    "card-title": "Abmelden",
+    "card-description": "Bist du dir sicher, dass du dich abmelden möchtest?",
+    "cancel-button": "Abbrechen"
+  },
+  "signup": {
+    "card-title": "Registrieren",
+    "step": "Schritt 1 von 5",
+    "card-description": "Bereits registriert?",
+    "alternative": {
+      "name": "Anmelden",
+      "href": "/signin"
+    },
+    "or-continue-with": "oder weiter mit",
+    "gender": {
+      "title": "Anrede",
+      "placeholder": "Anrede",
+      "male": "Herr",
+      "female": "Frau",
+      "diverse": "Divers"
+    },
+    "birth-date": "Geburtsdatum",
+    "first-name": "Vorname",
+    "last-name": "Nachname",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "terms-and-conditions": "Nutzungsvereinbarung",
+    "terms-and-conditions-header": "Akzeptieren der Nutzungsvereinbarung und Datenschutzbestimmungen",
+    "terms-and-conditions-description-part-1": "Durch die Registrierung nehme ich die Bestimmungen der",
+    "terms-and-conditions-description-part-2": " zur Kenntnis und akzeptiere diese.",
+    "privacy-policy": "Datenschutzerklärung",
+    "and": "und",
+    "form-button": "Weiter",
+    "previous-step": "Zurück"
+  },
+  "verify": {
+    "card-title": "Verifiziere E-Mail-Adresse",
+    "step": "Schritt 2 von 5",
+    "card-description": "Ein Verifizierungscode wurde an deine E-Mail-Adresse gesendet.",
+    "form-label": "Verifizierungscode",
+    "verify-code-form-label": "6-stelliger Code",
+    "form-button": "Profil erstellen",
+    "previous-step": "Zurück"
+  },
+  "newsletter": {
+    "title": "Abonniere unseren Newsletter",
+    "description": "Die neuesten Nachrichten, Artikel und Ressourcen werden wöchentlich an deinen Posteingang geschickt.",
+    "placeholder": "E-Mail-Adresse",
+    "button": "Warteliste",
+    "notification": "Du wurdest erfolgreich in die Warteliste hinzugefügt."
+  },
+  "footer-declaration": {
+    "company": "Streamify",
+    "all-rights-reserved": "Alle Rechte vorbehalten."
+  },
+  "footer-payment": {
+    "cancel-subscription": "Vertrag kündigen",
+    "href": "/cancel-subscription"
+  },
+  "hero-homepage": {
+    "badge": {
+      "headless-streaming": "Headless Streaming",
+      "read-the-story": "Release am 01. April 2023",
+      "href": "/about-us"
+    },
+    "title-1": "Entwickle deine eigene Video",
+    "title-2": "Streaming",
+    "title-3": "Plattform",
+    "title-4": "Verdiene Geld mit deinem Content",
+    "description": "Die All-in-One Lösung mit der du deine eigene angepasste Video-Streaming-Plattform bauen kannst. Verwalte nahtlos deine Inhalte, Nutzer, Zahlungen und mehr - einfach und effizient.",
+    "highlight": "Deine Inhalte • Deine Plattform • Deine Regeln",
+    "button": {
+      "call-to-action": {
+        "name": "Starte jetzt",
+        "href": "/streamify-studio"
+      },
+      "watch-video": "Video abspielen"
+    }
+  },
+  "footer-homepage": {
+    "solutions": {
+      "name": "Lösungen",
+      "studio": {
+        "name": "Studio",
+        "href": "/streamify-studio"
+      },
+      "ott-platform": {
+        "name": "Over-the-Top-Plattform",
+        "href": "/streamify-ott-platform"
+      },
+      "analytics": {
+        "name": "Analytics",
+        "href": "/streamify-analytics"
+      },
+      "atlas": {
+        "name": "Atlas",
+        "href": "/streamify-atlas"
+      }
+    },
+    "support": {
+      "name": "Support",
+      "pricing": {
+        "name": "Preise",
+        "href": "/pricing"
+      },
+      "documentation": {
+        "name": "Dokumentation",
+        "href": "/documentation"
+      },
+      "guides": {
+        "name": "Anleitungen",
+        "href": "/guides"
+      },
+      "programs": {
+        "name": "Programme",
+        "href": "/programs"
+      }
+    },
+    "company": {
+      "name": "Unternehmen",
+      "about-us": {
+        "name": "Über uns",
+        "href": "/about-us"
+      },
+      "blog": {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      "jobs": {
+        "name": "Jobs",
+        "href": "/jobs"
+      },
+      "partners": {
+        "name": "Partner",
+        "href": "/partners"
+      }
+    },
+    "legal": {
+      "name": "Rechtliches",
+      "terms-of-services": {
+        "name": "AGB",
+        "href": "/terms-of-services"
+      },
+      "privacy-policy": {
+        "name": "Datenschutz",
+        "href": "/privacy-policy"
+      },
+      "cookie-policy": {
+        "name": "Cookie-Richtlinie",
+        "href": "/cookie-policy"
+      },
+      "imprint": {
+        "name": "Impressum",
+        "href": "/imprint"
+      }
+    }
+  },
+  "footer-platform": {
+    "terms-of-services": {
+      "name": "AGB",
+      "href": "/terms-of-services"
+    },
+    "privacy-policy": {
+      "name": "Datenschutz",
+      "href": "/privacy-policy"
+    },
+    "cookie-policy": {
+      "name": "Cookie-Richtlinie",
+      "href": "/cookie-policy"
+    },
+    "imprint": {
+      "name": "Impressum",
+      "href": "/imprint"
+    },
+    "support": {
+      "name": "Support",
+      "href": "/support"
+    },
+    "cancel-subscription": {
+      "name": "Vertrag kündigen",
+      "href": "/cancel-subscription"
+    },
+    "sitemap": {
+      "name": "Seitenverzeichnis"
+    },
+    "company": {
+      "name": "Streamify"
+    }
+  },
+  "header-homepage": {
+    "solutions": {
+      "name": "Lösungen",
+      "href": "/solutions"
+    },
+    "templates": {
+      "name": "Vorlagen",
+      "href": "/templates"
+    },
+    "showcases": {
+      "name": "Anwendungen",
+      "href": "/showcases"
+    },
+    "pricing": {
+      "name": "Preise",
+      "href": "/pricing"
+    },
+    "call-to-action": {
+      "open-studio": {
+        "name": "Studio öffnen",
+        "href": "/streamify-studio"
+      },
+      "menu": {
+        "name": "Menü",
+        "schedule-a-call": "Vereinbare einen Termin mit uns",
+        "join-our-discord": "Tritt unserem Discord-Channel bei",
+        "email-title": "E-Mail-Adresse",
+        "email-value": "support@streamify.com"
+      }
+    }
+  },
+  "header-platform": {
+    "home": {
+      "name": "Start",
+      "href": "/home"
+    },
+    "matches": {
+      "name": "Spiele",
+      "href": "/matches"
+    },
+    "players": {
+      "name": "Mannschaft",
+      "href": "/players"
+    },
+    "plus": {
+      "name": "Plus",
+      "href": "/plus"
+    },
+    "live": {
+      "name": "Live",
+      "href": "/live"
+    },
+    "call-to-action": {
+      "name": "Abonnieren",
+      "href": "/subscribe"
+    },
+    "signup": {
+      "name": "Konto eröffnen",
+      "href": "/signup"
+    },
+    "signin": {
+      "name": "Anmelden",
+      "href": "/signin"
+    },
+    "signout": {
+      "name": "Abmelden",
+      "href": "/signout"
+    },
+    "dropdown": {
+      "greeting": "Hallo,",
+      "account": "Profil",
+      "subscription": "Abonnement",
+      "support": "Support",
+      "signout": "Abmelden"
+    }
+  }
+}

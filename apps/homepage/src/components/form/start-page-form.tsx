@@ -8,7 +8,7 @@ export default function StartPageForm() {
     <>
       <Background />
       <HeroSection />
-      <LogoCloudSection />
+      {/* <LogoCloudSection /> */}
       {/* <CtaSection /> */}
     </>
   );
