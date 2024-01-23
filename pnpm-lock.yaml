@@ -347,7 +347,7 @@ importers:
         specifier: ^10.16.4
         version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
       next:
-        specifier: ^14.0.3
+        specifier: ^14.0.2
         version: 14.0.3(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
       next-intl:
         specifier: 2.20.2

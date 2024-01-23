@@ -20,7 +20,7 @@ export default async function PlatformLayout({
 
   return (
     <div className="flex min-h-screen flex-col h-[2000px]">
-      {/* <TopBar /> */}
+      <TopBar />
       <Header user={user} />
       <main className="flex-1 my-10">{children}</main>
       <Cookie />

@@ -45,7 +45,7 @@ export default function Header({ user }: HeaderProps) {
       ?.emailAddress ?? "";
 
   return (
-    <header className="border-separator sticky top-0 z-40 border-b bg-background/60 backdrop-blur-xl">
+    <header className="border-separator sticky top-8 z-40 border-b bg-background/60 backdrop-blur-xl">
       <nav>
         <PlatformContainer>
           <div className="relative flex h-14 items-center justify-between gap-16">
