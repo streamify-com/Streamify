@@ -66,6 +66,8 @@ pnpm dev
 
 ### Core
 - [ ] Drag and drop functionality with dnd-kit
+- [Test 1](apps/core/README.md)
+- [Test 2](https://github.com/streamify-com/streamify.com/blob/main/apps/core/README.md#core)
 
 ### Template - OTT
 - [ ] Custom checkout and payment infrastructure with Stripe
