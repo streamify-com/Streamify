@@ -1,30 +1,68 @@
-## Getting Started
+<br />
+<br />
+<p align="center">
+  <img alt="Streamify logo" src="https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg" height="100">
+</p>
+<br />
+<h3 align="center">
+  Headless Streaming
+</h3>
+<p align="center">
+  No-code solution to build custom streaming platforms.
+</p>
+<p align="center">
+    <a href="https://streamify.com"><strong>Learn more »</strong></a>
+    <br />
+    <br />
+    <a href="https://discord.gg/Qct64q7z">Discord</a>
+    ·
+    <a href="https://streamify.com">Website</a>
+    ·
+    <a href="https://github.com/streamify-com/streamify.com/issues">Issues</a>
+    ·
+    <a href="https://streamifyplus.com/roadmap">Roadmap</a>
+  </p>
+<br />
 
-First, run the development server:
+> [!NOTE]
+> If you are a member/contributor of the Streamify development team, then check out the [wiki](https://github.com/streamify-com/streamify.com/wiki) to get started.
 
-```bash
-yarn dev
+## Table of contents
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+
+## Requirements
+
+- [Node.js](https://nodejs.org/en/) `Version +18`
+- [pnpm](https://pnpm.io/) `Version +6`
+- [Turbo](https://turbo.build/) `Version +1.10`
+- [TypeScript](http://typescriptlang.org) `Version +5`
+
+Check versions:
+
+```
+node -v && pnpm -v && turbo --version && tsc -v
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Navigate to the projects inside of the `apps` directory and copy the `.env.example` to `.env`. Update the variables.
+```
+cp .env.example .env
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+2. Install all dependencies and build all apps and packages
+```
+pnpm install && pnpm build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Running all projects locally
+```
+pnpm dev
+```
 
-## Learn More
+## Features to be implemented
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Core
+- [ ] Drag and drop functionality with dnd-kit
