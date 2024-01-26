@@ -24,6 +24,9 @@
   </p>
 <br />
 
+> [!NOTE]
+> If you are a member/contributor of the Streamify development team, then check out the [wiki](https://github.com/streamify-com/streamify.com/wiki) to get started.
+
 ## Table of contents
 
 - [Requirements](#requirements)
@@ -44,14 +47,31 @@ node -v && pnpm -v && turbo --version && tsc -v
 
 ## Installation
 
-Install all dependencies and build all apps and packages
-
+1. Copy the `.env.example` to `.env` and update the variables.
+```
+cp .env.example .env
+```
+2. Install all dependencies and build all apps and packages
 ```
 pnpm install && pnpm build
 ```
 
-Develop all apps and packages
-
+3. Running all projects locally
 ```
 pnpm dev
 ```
+
+## Features to be implemented
+
+### Core
+[ ] Drag and drop functionality with dnd-kit
+
+### Template - OTT
+[ ] Custom checkout and payment infrastructure with Stripe
+[ ] Email workflow with Resend
+[ ] Newsletter functionality with Resend
+[ ] Video CMS with Mux, LiveKit, Brightcove, Vidstack
+[ ] Authentication with Clerk
+[ ] User management with Clerk
+[ ] i18n with next-intl
+[ ] adjustable Metadata and Viewport with Next.js 14
