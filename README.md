@@ -76,3 +76,4 @@ pnpm dev
 - [ ] User management with Clerk
 - [ ] i18n with next-intl
 - [ ] Adjustable Metadata and Viewport with Next.js 14
+- [ ] Auto-generated opengraph- and twitter-images ([Next.js guide](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#generate-images-using-code-js-ts-tsx))
