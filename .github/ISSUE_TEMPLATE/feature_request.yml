@@ -6,7 +6,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        ## Thanks for taking the time to fill out this feature request!
+  - type: markdown
+    attributes:
+      value: ---
   - type: input
     id: contact
     attributes:
@@ -15,14 +18,20 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: ---
   - type: textarea
     id: problem-description
     attributes:
-      label: Is your feature request related to a problem? Please describe this problem.*
+      label: Is your feature request related to a problem? Please describe this problem.
       description: A clear and concise description of what the problem is.
       placeholder: Write your text here.
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: ---
   - type: textarea
     id: solution-description
     attributes:
@@ -42,7 +51,7 @@ body:
   - type: dropdown
     id: alternatives-existing
     attributes:
-      label: Do you know other tools which serves your needs?
+      label: Do you use or know other tools which serves your needs?
       description: What version of our software are you running?
       options:
         - 'Yes'
@@ -58,6 +67,9 @@ body:
       placeholder: Write your text here.
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: ---
   - type: textarea
     id: anything-else
     attributes:
@@ -66,6 +78,3 @@ body:
       placeholder: Write your text here.
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: "## Thanks for completing our form!"
