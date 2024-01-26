@@ -64,6 +64,5 @@ body:
       label: Anything else left you want to tell us?
       description: Add any other context or screenshots about the feature request here.
       placeholder: Write your text here.
-      value: "Alternative names"
     validations:
       required: false
