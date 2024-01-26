@@ -47,10 +47,11 @@ node -v && pnpm -v && turbo --version && tsc -v
 
 ## Installation
 
-1. Copy the `.env.example` to `.env` and update the variables.
+1. Navigate to the projects inside of the `apps` directory and copy the `.env.example` to `.env`. Update the variables.
 ```
 cp .env.example .env
 ```
+
 2. Install all dependencies and build all apps and packages
 ```
 pnpm install && pnpm build
@@ -64,14 +65,14 @@ pnpm dev
 ## Features to be implemented
 
 ### Core
-[ ] Drag and drop functionality with dnd-kit
+- [ ] Drag and drop functionality with dnd-kit
 
 ### Template - OTT
-[ ] Custom checkout and payment infrastructure with Stripe
-[ ] Email workflow with Resend
-[ ] Newsletter functionality with Resend
-[ ] Video CMS with Mux, LiveKit, Brightcove, Vidstack
-[ ] Authentication with Clerk
-[ ] User management with Clerk
-[ ] i18n with next-intl
-[ ] adjustable Metadata and Viewport with Next.js 14
+- [ ] Custom checkout and payment infrastructure with Stripe
+- [ ] Email workflow with Resend
+- [ ] Newsletter functionality with Resend
+- [ ] Video CMS with Mux, LiveKit, Brightcove, Vidstack
+- [ ] Authentication with Clerk
+- [ ] User management with Clerk
+- [ ] i18n with next-intl
+- [ ] Adjustable Metadata and Viewport with Next.js 14
