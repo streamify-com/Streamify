@@ -1,6 +1,6 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
+name: Feature request
+description: Suggest an idea to help us improve 
+title: "[Feature request]: "
 labels: ["Feature request"]
 body:
   - type: markdown
