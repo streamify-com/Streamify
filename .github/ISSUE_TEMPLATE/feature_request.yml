@@ -48,8 +48,8 @@ body:
       label: Do you know other tools which serves your needs?
       description: What version of our software are you running?
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
       default: 0
     validations:
       required: true
