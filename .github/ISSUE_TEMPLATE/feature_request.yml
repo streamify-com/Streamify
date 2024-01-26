@@ -1,23 +1,73 @@
-name: Feature Request
-description: Request a new feature or enhancement
-labels: ["enhancement"]
-title: "[FEAT]: "
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["Feature request"]
 body:
   - type: markdown
     attributes:
       value: |
-        Please make sure this feature request hasn't been already submitted by someone by looking through other open/closed issues
-  
-  - type: textarea
-    id: description
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
     attributes:
-      label: Description
-      description: Give us a brief description of the feature or enhancement you would like
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Is your feature request related to a problem? Please describe this problem.
+      description: A clear and concise description of what the problem is.
+      placeholder: Write your text here.
+      value: "Feature request"
     validations:
       required: true
-      
   - type: textarea
-    id: additional-information
+    id: solution-description
     attributes:
-      label: Additional Information
-      description: Give us some additional information on the feature request like proposed solutions, links, screenshots, etc.
+      label: Describe the solution you would like.
+      description: A clear and concise description of what you want to happen.
+      placeholder: Write your text here.
+      value: "Possible solution"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: How do you solve this problem at the moment?
+      description: A clear and concise description of any alternative solutions or features you've considered.
+      placeholder: Write your text here.
+      value: "Alternatives"
+    validations:
+      required: true
+  - type: dropdown
+    id: alternatives-existing
+    attributes:
+      label: Do you know other tools which serves your needs?
+      description: What version of our software are you running?
+      options:
+        - Yes
+        - No
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: alternative-names
+    attributes:
+      label: If yes, please list them.
+      description: URL to the website would be perfect!
+      placeholder: Write your text here.
+      value: "Alternative names"
+    validations:
+      required: false
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Anything else left you want to tell us?
+      description: Add any other context or screenshots about the feature request here.
+      placeholder: Write your text here.
+      value: "Alternative names"
+    validations:
+      required: false
