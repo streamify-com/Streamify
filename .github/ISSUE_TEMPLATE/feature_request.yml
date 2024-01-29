@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ### Thanks for taking the time to fill out this feature request!
+        ### Thank you for taking the time to complete this enquiry. To make it easier for us to understand your request, you should take a screen recording and send us the link to the footage. We recommend using Loom (https://www.loom.com/), but if you don't want to sign up to another service, you can use Stream.new (https://stream.new/) and record or upload your footage.
   - type: markdown
     attributes:
       value: ---
