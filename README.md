@@ -38,6 +38,7 @@
 - [pnpm](https://pnpm.io/) `Version +6`
 - [Turbo](https://turbo.build/) `Version +1.10`
 - [TypeScript](http://typescriptlang.org) `Version +5`
+- [PostgreSQL](https://www.postgresql.org/) `Version +14`
 
 Check versions:
 
