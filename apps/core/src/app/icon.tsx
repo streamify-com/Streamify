@@ -1,3 +1,4 @@
+import { PrimaryFavicon } from "@shared-components/graphics/streamify";
 import { ImageResponse } from "next/og";
 
 // Route segment config
@@ -5,8 +6,8 @@ export const runtime = "edge";
 
 // Image metadata
 export const size = {
-  width: 32,
-  height: 32,
+  width: 500,
+  height: 500,
 };
 export const contentType = "image/png";
 
@@ -15,8 +16,8 @@ export default function Icon() {
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <div tw="flex h-full w-full items-center justify-center bg-black text-[24px] leading-8 text-white">
-        S
+      <div tw="flex h-full w-full items-center justify-center">
+        <PrimaryFavicon />
       </div>
     ),
     // ImageResponse options

@@ -1,3 +1,9 @@
+// import { paraglide } from "@inlang/paraglide-js-adapter-next/plugin"
+
+const { paraglide } = require("@inlang/paraglide-js-adapter-next/plugin");
+
+// await import("./src/env.mjs")
+
 const withPWA = require("next-pwa")({
   dest: "public",
   register: true,
@@ -24,9 +30,15 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    esmExternals: "loose",
-  },
 };
 
-module.exports = withPWA(nextConfig);
+// /** @type {import('next').NextConfig} */
+// module.exports = withPWA(nextConfig);
+
+/** @type {import('next').NextConfig} */
+module.exports = paraglide({
+  paraglide: {
+    project: "./project.inlang",
+    outdir: "./src/paraglide",
+  },
+});

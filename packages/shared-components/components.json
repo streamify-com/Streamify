@@ -9,11 +9,15 @@
     "cssVariables": true
   },
   "aliases": {
+    "assets": "@shared-components/assets",
+    "animations": "@shared-components/animations",
     "components": "@shared-components/components",
-    "features": "@shared-components/features",
     "graphics": "@shared-components/graphics",
+    "hooks": "@shared-components/hooks",
+    "layout": "@shared-components/layout",
+    "styles": "@shared-components/styles",
+    "types": "@shared-components/types",
     "ui": "@shared-components/ui",
-    "utils": "@shared-components/lib/utils",
-    "types": "@shared-components/types"
+    "utils": "@shared-components/lib/utils"
   }
 }

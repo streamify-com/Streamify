@@ -3,15 +3,19 @@
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@shared-components/*": ["./*"],
+      "@shared-components/animations/*": ["./animations/*"],
+      "@shared-components/assets/*": ["./assets/*"],
       "@shared-components/components/*": ["./components/*"],
-      "@shared-components/features/*": ["./features/*"],
       "@shared-components/graphics/*": ["./graphics/*"],
-      "@shared-components/ui/*": ["./ui/*"],
+      "@shared-components/hooks/*": ["./hooks/*"],
+      "@shared-components/layout/*": ["./layout/*"],
       "@shared-components/lib/*": ["./lib/*"],
-      "@shared-components/types/*": ["./types/*"]
+      "@shared-components/types/*": ["./types/*"],
+      "@shared-components/ui/*": ["./ui/*"]
     }
   }
 }

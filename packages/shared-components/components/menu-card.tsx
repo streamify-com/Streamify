@@ -1,7 +1,7 @@
 "use client";
 
 import { ScheduleIcon, Icons } from "@shared-components/graphics/icons";
-import Link from "next-intl/link";
+import Link from "next/link";
 import CopyToClipboardComponent from "./copy-to-clipboard";
 
 interface CopyCardProps {
