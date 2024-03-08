@@ -2,8 +2,8 @@
 import Link from "next/link";
 import { PrimaryLogo } from "@shared-components/graphics/streamify";
 import * as React from "react";
-import GradientBackground from "@/components/gradient-background";
-// import GradientBackground from "@shared-components/components/gradient-background";
+// import GradientBackground from "@/components/gradient-background";
+import GradientBackground from "@shared-components/animations/gradient-background";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
