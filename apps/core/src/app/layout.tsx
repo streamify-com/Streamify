@@ -76,8 +76,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.url}/opengraph-image`,
-        alt: siteConfig.name,
+        url: "https://streamify-core.vercel.app/opengraph-image",
       },
     ],
     // images: [

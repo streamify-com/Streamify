@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { PrimaryLogo } from "@shared-components/graphics/streamify";
 import * as React from "react";
-// import GradientBackground from "@/components/gradient-background";
 import GradientBackground from "@shared-components/animations/gradient-background";
 
 interface AuthLayoutProps {
@@ -13,12 +12,13 @@ export default async function Layout({ children }: AuthLayoutProps) {
   return (
     <div>
       <div className="relative h-screen flex-col items-center justify-center sm:grid sm:grid-cols-1 md:grid-cols-2">
-        <div className="bg-background relative hidden h-full flex-col md:flex">
+        <GradientBackground />
+        <div className="relative hidden h-full flex-col md:flex">
           <div className="absolute inset-0">
             <GradientBackground />
           </div>
           <Link href="/" className="absolute z-30 hidden m-20 md:flex">
-            <PrimaryLogo className="text-background sm:hover:text-action-muted h-8 w-auto sm:h-14 sm:w-auto" />
+            <PrimaryLogo className="text-background sm:hover:text-skeleton h-8 w-auto sm:h-14 sm:w-auto" />
           </Link>
         </div>
         {/* <BackToHomepageButton /> */}
