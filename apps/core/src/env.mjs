@@ -14,6 +14,7 @@ export const env = createEnv({
     RESEND_MAIL_FROM: z.string(),
     MUX_ACCESS_TOKEN_ID: z.string(),
     MUX_SECRET_KEY: z.string(),
+    PROJECT_NAME: z.string(),
   },
 
   /**
@@ -37,6 +38,7 @@ export const env = createEnv({
   runtimeEnv: {
     // Next App
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+    PROJECT_NAME: process.env.PROJECT_NAME,
     // Clerk
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,

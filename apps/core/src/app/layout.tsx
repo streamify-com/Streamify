@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Tin Votan",
-      url: "https://github.com/Vintotan",
+      name: "Streamify",
+      url: "https://github.com/streamify-com",
     },
   ],
   creator: "Streamify",
@@ -70,14 +70,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
-        url: "https://ott.streamify.com/opengraph-image",
+        url: `${siteConfig.url}/opengraph-image`,
         alt: siteConfig.name,
       },
     ],

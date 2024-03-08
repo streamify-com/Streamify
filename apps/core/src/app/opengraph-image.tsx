@@ -39,7 +39,7 @@ export default async function Image() {
             "../../public/favicon/apple-touch-icon.png",
             import.meta.url,
           ).toString()}
-          alt="Databrix Logo"
+          alt="Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
         <h1

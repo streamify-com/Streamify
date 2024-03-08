@@ -1,10 +1,10 @@
 import { SiteConfig } from "@shared-components/types";
+import { env } from "@/env.mjs";
 
 export const siteConfig: SiteConfig = {
-  name: "Streamify",
-  description: "Streamify",
-  url: "https://streamify.com",
-  ogImage: "https://streamify.com/opengraph-image.png",
+  name: env.PROJECT_NAME,
+  description: "The all-in-one streaming solution for your business.",
+  url: env.NEXT_PUBLIC_APP_URL,
   links: {
     facebook: "",
     instagram: "",
