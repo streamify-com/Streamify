@@ -1,3 +1,9 @@
+import { ThemeModeIcon } from "@/components/theme-switcher";
+
 export default function Page() {
-  return <div></div>;
+  return (
+    <div>
+      <ThemeModeIcon />
+    </div>
+  );
 }

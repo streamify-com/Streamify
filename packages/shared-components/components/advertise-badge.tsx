@@ -1,5 +1,5 @@
 import { StreamifyBadge } from "@shared-components/graphics/badge";
-import { PrimaryIcon } from "@shared-components/graphics/icons";
+import { PrimaryIcon } from "@shared-components/graphics/streamify";
 import { badgeVariants } from "@shared-components/ui/badge";
 import Link from "next/link";
 

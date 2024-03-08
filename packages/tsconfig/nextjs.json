@@ -35,7 +35,10 @@
       "@shared-components/types/*": [
         "../../packages/shared-components/types/*"
       ],
-      "@shared-components/lib/*": ["../../packages/shared-components/lib/*"]
+      "@shared-components/lib/*": ["../../packages/shared-components/lib/*"],
+      "@animation-components/*": [
+        "../../packages/animation-components/src/components/*"
+      ]
     }
   },
   "include": [
