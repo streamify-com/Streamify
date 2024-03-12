@@ -15,15 +15,11 @@ export const contentType = "image/png";
 export default function Icon() {
   return new ImageResponse(
     (
-      // ImageResponse JSX element
       <div tw="flex h-full w-full items-center justify-center">
         <PrimaryFavicon />
       </div>
     ),
-    // ImageResponse options
     {
-      // For convenience, we can re-use the exported icons size metadata
-      // config to also set the ImageResponse's width and height.
       ...size,
     },
   );

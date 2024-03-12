@@ -12,8 +12,8 @@
       "@shared-components/components/*": ["./components/*"],
       "@shared-components/graphics/*": ["./graphics/*"],
       "@shared-components/hooks/*": ["./hooks/*"],
-      "@shared-components/layout/*": ["./layout/*"],
       "@shared-components/lib/*": ["./lib/*"],
+      "@shared-components/styles/*": ["./styles/*"],
       "@shared-components/types/*": ["./types/*"],
       "@shared-components/ui/*": ["./ui/*"]
     }

@@ -10,15 +10,11 @@ export default {
     "../../packages/shared-components/components/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/graphics/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/hooks/**/*.{js,ts,jsx,tsx}",
-    "../../packages/shared-components/layout/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/lib/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/types/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/ui/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
-  future: {
-    hoverOnlyWhenSupported: true,
-  },
   theme: {
     container: {
       center: true,

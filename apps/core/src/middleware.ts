@@ -1,29 +1,30 @@
 import { authMiddleware } from "@clerk/nextjs";
+import createMiddleware from "next-intl/middleware";
+import { locales, defaultLocale, localePrefix } from "@/navigation";
 
-export { middleware } from "@/lib/i18n";
+const intlMiddleware = createMiddleware({
+  locales,
+  defaultLocale: "de",
+  localePrefix,
+});
 
 export default authMiddleware({
+  beforeAuth: (req) => {
+    return intlMiddleware(req);
+  },
   publicRoutes: [
     "/(.*)",
-    "/test(.*)",
-    "/subscribe(.*)",
-    "/home(.*)",
-    "/matches(.*)",
-    "/players(.*)",
-    "/plus(.*)",
-    "/live(.*)",
-    "/signin(.*)",
-    "/signin/reset-password(.*)",
-    "/signin/reset-password/step-2(.*)",
-    "/signup(.*)",
-    "/signup/verify(.*)",
-    "/signout(.*)",
-    "/sso-callback(.*)",
-    "/privacy-policy(.*)",
-    "/terms-of-services(.*)",
+    "/:locale(.*)",
+    "/:locale/test(.*)",
+    "/:locale/signin(.*)",
   ],
 });
 
 export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)", `/:path*`],
+  matcher: [
+    "/((?!.*\\..*|_next).*)",
+    "/",
+    "/(api|trpc)(.*)",
+    "/(de|en)/:path*",
+  ],
 };

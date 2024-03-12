@@ -1,42 +1,18 @@
-"use client";
-import {
-  availableLanguageTags,
-  AvailableLanguageTag,
-  languageTag,
-} from "@/paraglide/runtime";
-import { useRouter, usePathname } from "@/lib/i18n";
-import { cn } from "@shared-components/lib/utils";
-import { buttonVariants } from "@shared-components/ui/button";
+import { useLocale, useTranslations } from "next-intl";
+import { locales } from "@/navigation";
+import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
 
-export function SelectLanguage() {
-  const labels: Record<AvailableLanguageTag, string> = {
-    en: "English",
-    de: "Deutsch",
-  };
-
-  const pathname = usePathname();
-  const router = useRouter();
+export default function LocaleSwitcher() {
+  const t = useTranslations("LocaleSwitcher");
+  const locale = useLocale();
 
   return (
-    <select
-      value={languageTag()}
-      onChange={(e) =>
-        router.replace(pathname, {
-          locale: e.target.value as AvailableLanguageTag,
-        })
-      }
-      className={cn(
-        buttonVariants({
-          variant: "secondaryButton",
-          size: "fixedSize",
-        }),
-      )}
-    >
-      {availableLanguageTags.map((lang) => (
-        <option key={lang} value={lang}>
-          {labels[lang]}
+    <LocaleSwitcherSelect defaultValue={locale}>
+      {locales.map((cur) => (
+        <option key={cur} value={cur}>
+          {t("locale", { locale: cur })}
         </option>
       ))}
-    </select>
+    </LocaleSwitcherSelect>
   );
 }

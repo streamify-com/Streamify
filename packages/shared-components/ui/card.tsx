@@ -88,7 +88,7 @@ const CardFooter = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "max-w-full py-4 text-sm text-center sm:text-right",
+      "max-w-full py-4 text-sm text-center sm:text-center",
       className,
     )}
     {...props}

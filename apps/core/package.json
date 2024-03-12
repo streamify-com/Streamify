@@ -4,23 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 4003",
-    "build": "paraglide-js compile --project ./project.inlang && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "update": "pnpm update --latest",
     "upgrade": "pnpm upgrade --latest",
     "unlighthouse": "pnpm dlx unlighthouse --site https://ott.streamify.com",
-    "email": "email dev --dir src/emails",
-    "postinstall": "paraglide-js compile --project ./project.inlang"
+    "email": "email dev --dir src/emails"
   },
   "dependencies": {
     "@clerk/localizations": "^1.26.15",
-    "@clerk/nextjs": "^4.29.7",
-    "@clerk/types": "^3.62.0",
+    "@clerk/nextjs": "^4.29.9",
+    "@clerk/types": "^3.62.1",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
-    "@inlang/paraglide-js": "^1.2.7",
-    "@inlang/paraglide-js-adapter-next": "^0.2.1",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
@@ -36,6 +33,7 @@
     "cookies-next": "^4.0.0",
     "framer-motion": "^10.16.4",
     "next": "^14.1.2",
+    "next-intl": "^3.9.4",
     "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
@@ -50,7 +48,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@inlang/paraglide-js": "1.2.7",
     "@types/formidable": "^2.0.5",
     "@types/node": "^20.9.0",
     "@types/react": "^18.2.37",

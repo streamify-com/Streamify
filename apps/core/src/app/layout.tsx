@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import { cn } from "@shared-components/lib/utils";
 import { Toaster } from "@shared-components/ui/sonner-toaster";
 import { VercelPerformanceAnalytics } from "@shared-components/components/vercel-analytics";
-import AdvertiseBadge from "@shared-components/components/advertise-badge";
 import { ClerkProvider } from "@clerk/nextjs";
 import { siteConfig } from "@/config/site";
 import {
@@ -14,15 +13,20 @@ import {
   fontMedium,
 } from "@shared-components/lib/fonts";
 import { env } from "@/env.mjs";
-import { LanguageProvider } from "@inlang/paraglide-js-adapter-next";
-import { languageTag } from "@/paraglide/runtime";
 import { deDE } from "@clerk/localizations";
 import { enUS } from "@clerk/localizations";
 import { ThemeProvider } from "@shared-components/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { locales } from "@/navigation";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 interface RootLayoutProps {
   children: React.ReactNode;
+  params: { locale: string };
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export const metadata: Metadata = {
@@ -98,40 +102,43 @@ export const viewport: Viewport = {
   ],
 };
 
-export default async function LocaleLayout({ children }: RootLayoutProps) {
+export default async function LocaleLayout({
+  children,
+  params: { locale },
+}: RootLayoutProps) {
+  // Enable static rendering
+  unstable_setRequestLocale(locale);
+
   return (
     <>
-      <LanguageProvider>
-        <ClerkProvider localization={enUS}>
-          <html lang={languageTag()} suppressHydrationWarning>
-            <head />
-            <link rel="manifest" href="/manifest.json" />
-            <body
-              className={cn(
-                "bg-background font-medium min-h-screen antialiased",
-                fontMedium.variable,
-                fontItalic.variable,
-                fontSemibold.variable,
-                fontBold.variable,
-                fontSpecial.variable,
-              )}
+      <ClerkProvider localization={enUS}>
+        <html lang={locale} suppressHydrationWarning>
+          <head />
+          <link rel="manifest" href="/manifest.json" />
+          <body
+            className={cn(
+              "bg-background font-medium min-h-screen antialiased",
+              fontMedium.variable,
+              fontItalic.variable,
+              fontSemibold.variable,
+              fontBold.variable,
+              fontSpecial.variable,
+            )}
+          >
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
             >
-              <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-              >
-                {children}
-              </ThemeProvider>
-              <Toaster />
-              <VercelPerformanceAnalytics />
-              <SpeedInsights />
-              {/* <AdvertiseBadge /> */}
-            </body>
-          </html>
-        </ClerkProvider>
-      </LanguageProvider>
+              {children}
+            </ThemeProvider>
+            <Toaster />
+            <VercelPerformanceAnalytics />
+            <SpeedInsights />
+          </body>
+        </html>
+      </ClerkProvider>
     </>
   );
 }

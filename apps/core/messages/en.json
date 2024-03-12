@@ -1,6 +1,334 @@
 {
-  "$schema": "https://inlang.com/schema/inlang-message-format",
-  "light": "Light",
-  "dark": "Dark",
-  "system": "System"
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}",
+    "switchLocale": "Switch to {locale, select, de {German} en {English} other {Unknown}}"
+  },
+  "locale-switcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}"
+  },
+  "mode-theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "go-back": {
+    "name": "Back"
+  },
+  "back-to-homepage": {
+    "name": "Back to homepage",
+    "href": "/home"
+  },
+  "cookie": {
+    "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
+    "cookie-policy": "Cookie Policy",
+    "accept-all": "Accept all",
+    "only-necessary": "Only necessary"
+  },
+  "plus": {
+    "name": "English Plus"
+  },
+  "subscribe": {
+    "name": "Subscribe"
+  },
+  "signin": {
+    "card-title": "Sign in",
+    "card-description": "Not registered?",
+    "alternative": {
+      "name": "Sign up",
+      "href": "/signup"
+    },
+    "or-continue-with": "Or continue with",
+    "email": "Email",
+    "password": "Password",
+    "sign-in": "Sign in",
+    "reset-password": "Reset password",
+    "previous-step": "Previous step"
+  },
+  "reset-password": {
+    "card-title": "Reset password",
+    "card-description": "Enter your email address and we will send you a verification code.",
+    "password": "Password",
+    "input-placeholder": "Email",
+    "form-button": "Continue",
+    "previous-step": "Previous step",
+    "form-button-description": "Continue to reset password verification."
+  },
+  "step-2": {
+    "card-title": "Verify new password",
+    "card-description": "Choose a new password and paste the code you received in your mailbox.",
+    "password-form-label": "Choose new password",
+    "confirmation-form-label": "Enter new password again",
+    "code-form-label": "Code",
+    "verify-code-form-label": "6-digit code",
+    "form-button": "Reset password",
+    "previous-step": "Previous step"
+  },
+  "signout": {
+    "card-title": "Sign out",
+    "card-description": "Are you sure you want to sign out?",
+    "cancel-button": "Cancel"
+  },
+  "signup": {
+    "card-title": "Sign up",
+    "step": "Step 1 of 5",
+    "card-description": "Already have an account?",
+    "alternative": {
+      "name": "Sign in",
+      "href": "/signin"
+    },
+    "or-continue-with": "or continue with",
+    "gender": {
+      "title": "Gender",
+      "placeholder": "Gender",
+      "male": "He/him",
+      "female": "She/her",
+      "diverse": "Diverse"
+    },
+    "birth-date": "Birth date",
+    "first-name": "First name",
+    "last-name": "Last name",
+    "email": "Email",
+    "password": "Password",
+    "terms-and-conditions": "Terms of Services",
+    "terms-and-conditions-header": "Accept terms and conditions",
+    "terms-and-conditions-description-part-1": "By signing up you accept to our",
+    "terms-and-conditions-description-part-2": ".",
+    "privacy-policy": "Privacy Policy",
+    "and": "and",
+    "form-button": "Continue",
+    "previous-step": "Previous step"
+  },
+  "verify": {
+    "card-title": "Verify email",
+    "card-description": "A verification code was sent to you by email.",
+    "form-label": "Verification Code",
+    "verify-code-form-label": "6-digit code",
+    "form-button": "Create account",
+    "previous-step": "Previous step"
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "description": "The latest news, articles, and resources, sent to your inbox weekly.",
+    "placeholder": "Email address",
+    "button": "Waitlist",
+    "notification": "You have been successfully added to the waitlist."
+  },
+  "footer-declaration": {
+    "company": "Streamify",
+    "all-rights-reserved": "All rights reserved."
+  },
+  "footer-payment": {
+    "cancel-subscription": "Cancel subscription",
+    "href": "/cancel-subscription"
+  },
+  "footer-homepage": {
+    "solutions": {
+      "name": "Solutions",
+      "studio": {
+        "name": "Studio",
+        "href": "/streamify-studio"
+      },
+      "ott-platform": {
+        "name": "Over-the-top platform",
+        "href": "/streamify-ott-platform"
+      },
+      "analytics": {
+        "name": "Analytics",
+        "href": "/streamify-analytics"
+      },
+      "atlas": {
+        "name": "Atlas",
+        "href": "/streamify-atlas"
+      }
+    },
+    "support": {
+      "name": "Support",
+      "pricing": {
+        "name": "Pricing",
+        "href": "/pricing"
+      },
+      "documentation": {
+        "name": "Documentation",
+        "href": "/documentation"
+      },
+      "guides": {
+        "name": "Guides",
+        "href": "/guides"
+      },
+      "programs": {
+        "name": "Programs",
+        "href": "/programs"
+      }
+    },
+    "company": {
+      "name": "Company",
+      "about-us": {
+        "name": "About us",
+        "href": "/about-us"
+      },
+      "blog": {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      "jobs": {
+        "name": "Jobs",
+        "href": "/jobs"
+      },
+      "partners": {
+        "name": "Partners",
+        "href": "/partners"
+      }
+    },
+    "legal": {
+      "name": "Legal",
+      "terms-of-services": {
+        "name": "Terms of Services",
+        "href": "/terms-of-services"
+      },
+      "privacy-policy": {
+        "name": "Privacy Policy",
+        "href": "/privacy-policy"
+      },
+      "cookie-policy": {
+        "name": "Cookie Policy",
+        "href": "/cookie-policy"
+      },
+      "imprint": {
+        "name": "Imprint",
+        "href": "/imprint"
+      }
+    }
+  },
+  "footer-platform": {
+    "terms-of-services": {
+      "name": "Terms of Services",
+      "href": "/terms-of-services"
+    },
+    "privacy-policy": {
+      "name": "Privacy Policy",
+      "href": "/privacy-policy"
+    },
+    "cookie-policy": {
+      "name": "Cookie Policy",
+      "href": "/cookie-policy"
+    },
+    "imprint": {
+      "name": "Imprint",
+      "href": "/imprint"
+    },
+    "support": {
+      "name": "Support",
+      "href": "/support"
+    },
+    "cancel-subscription": {
+      "name": "Cancel subscription",
+      "href": "/cancel-subscription"
+    },
+    "sitemap": {
+      "name": "Sitemap"
+    },
+    "company": {
+      "name": "Streamify"
+    }
+  },
+  "header-homepage": {
+    "solutions": {
+      "name": "Solutions",
+      "href": "/solutions"
+    },
+    "templates": {
+      "name": "Templates",
+      "href": "/templates"
+    },
+    "showcases": {
+      "name": "Showcases",
+      "href": "/showcases"
+    },
+    "pricing": {
+      "name": "Pricing",
+      "href": "/pricing"
+    },
+    "call-to-action": {
+      "open-studio": {
+        "name": "Open Studio",
+        "href": "/streamify-studio"
+      },
+      "menu": {
+        "name": "Menu",
+        "schedule-a-call": "Schedula a call with us",
+        "join-our-discord": "Join our Discord channel",
+        "email-title": "Email",
+        "email-value": "support@streamify.com",
+        "phone-title": "Phone",
+        "phone-value": "+49 173 7692475"
+      }
+    }
+  },
+  "header-platform": {
+    "home": {
+      "name": "Home",
+      "href": "/home"
+    },
+    "matches": {
+      "name": "Matches",
+      "href": "/matches"
+    },
+    "players": {
+      "name": "Players",
+      "href": "/players"
+    },
+    "plus": {
+      "name": "Plus",
+      "href": "/plus"
+    },
+    "live": {
+      "name": "Live",
+      "href": "/live"
+    },
+    "call-to-action": {
+      "name": "Subscribe",
+      "href": "/subscribe"
+    },
+    "signup": {
+      "name": "Create acccount",
+      "href": "/signup"
+    },
+    "signin": {
+      "name": "Sign in",
+      "href": "/signin"
+    },
+    "signout": {
+      "name": "Sign out",
+      "href": "/signout"
+    },
+    "dropdown": {
+      "greeting": "Hi,",
+      "account": "Account",
+      "subscription": "Subscription",
+      "support": "Support",
+      "signout": "Sign out"
+    }
+  },
+  "hero-homepage": {
+    "badge": {
+      "headless-streaming": "Headless Streaming",
+      "read-the-story": "Release on 15th April 2024",
+      "href": "/about-us"
+    },
+    "title-1": "Start your own custom streaming platform",
+    "title-2": "Monetize your content",
+    "title-3": "",
+    "title-4": "Monetize your content",
+    "description": "The All-in-One solution that lets you build your own customizable video streaming platform. Seamlessly manage content, users, payments and more with ease and efficiency.",
+    "highlight": "Your content • Your platform • Your rules",
+    "button": {
+      "call-to-action": {
+        "name": "Get started",
+        "href": "/streamify-studio"
+      },
+      "watch-video": "Watch video"
+    }
+  }
 }

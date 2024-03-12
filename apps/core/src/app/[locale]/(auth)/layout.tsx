@@ -14,15 +14,12 @@ export default async function Layout({ children }: AuthLayoutProps) {
       <div className="relative h-screen flex-col items-center justify-center sm:grid sm:grid-cols-1 md:grid-cols-2">
         <GradientBackground />
         <div className="relative hidden h-full flex-col md:flex">
-          <div className="absolute inset-0">
-            <GradientBackground />
-          </div>
           <Link href="/" className="absolute z-30 hidden m-20 md:flex">
-            <PrimaryLogo className="text-background sm:hover:text-skeleton h-8 w-auto sm:h-14 sm:w-auto" />
+            <PrimaryLogo className="text-background sm:hover:text-background-hover h-8 w-auto sm:h-14 sm:w-auto" />
           </Link>
         </div>
         {/* <BackToHomepageButton /> */}
-        <main className="mx-auto flex w-full flex-col justify-center space-y-6 px-8 py-10 sm:px-20">
+        <main className="mx-auto z-50 flex w-full flex-col justify-center space-y-6 px-8 py-10 sm:px-20">
           {children}
         </main>
       </div>
