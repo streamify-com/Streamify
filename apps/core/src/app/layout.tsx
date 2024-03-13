@@ -80,17 +80,9 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "https://streamify-core.vercel.app/opengraph-image",
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image`,
       },
     ],
-    // images: [
-    //   {
-    //     url: "https://d2fplzddl6myl4.cloudfront.net/card/streamify-card.png",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: siteConfig.name,
-    //   },
-    // ],
   },
 };
 

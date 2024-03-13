@@ -17,6 +17,10 @@ pnpm
 # production
 /build
 
+# PWA
+/sw.js
+/workbox-*.js
+
 # misc
 .DS_Store
 *.pem

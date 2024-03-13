@@ -24,3 +24,7 @@ export const fontSpecial = localFont({
   src: "../assets/fonts/Hiragino/Hiragino-Mincho-ProN-W6.otf",
   variable: "--font-special",
 });
+
+export const OpengraphFontPath = {
+  semibold: "../../assets/fonts/Inter/Inter-SemiBold.ttf",
+};
