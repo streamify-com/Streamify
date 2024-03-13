@@ -5,10 +5,10 @@
 </p>
 <br />
 <h3 align="center">
-  Headless Streaming
+  Headless CMS
 </h3>
 <p align="center">
-  No-code solution to build custom streaming platforms.
+  The all-in-one CMS for video streaming solutions
 </p>
 <p align="center">
     <a href="https://streamify.com"><strong>Learn more »</strong></a>
@@ -16,11 +16,9 @@
     <br />
     <a href="https://discord.gg/Qct64q7z">Discord</a>
     ·
-    <a href="https://streamify.com">Website</a>
-    ·
     <a href="https://github.com/streamify-com/streamify.com/issues">Issues</a>
     ·
-    <a href="https://streamifyplus.com/roadmap">Roadmap</a>
+    <a href="https://streamify.com/roadmap">Roadmap</a>
   </p>
 <br />
 
