@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, ReactNode, useTransition } from "react";
-import { useRouter } from "@/navigation";
+import { useRouter } from "@shared-components/ui/navigation";
 
 type Props = {
   children: ReactNode;
@@ -15,6 +15,7 @@ export default function LocaleSwitcherSelect({
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
 
+  // TODO
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value;
     startTransition(() => {

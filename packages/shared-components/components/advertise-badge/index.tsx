@@ -12,7 +12,7 @@ export default function AdvertiseBadge() {
         target="_blank"
         aria-label="Streamify ad"
       >
-        <PrimaryIcon className="font-medium text-primary group sm:group-hover:text-action ml-2 h-4 w-4" />
+        <PrimaryIcon className="font-regular text-primary group sm:group-hover:text-action ml-2 h-4 w-4" />
         <span className="text-primary ">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span className="text-primary sm:group-hover:text-action">
           Created with Streamify

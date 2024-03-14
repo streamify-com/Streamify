@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@shared-components/lib/utils";
 
 const inputVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center rounded-md text-md font-regular transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -11,7 +11,7 @@ const inputVariants = cva(
           "bg-transparent sm:hover:bg-secondary-muted border border-separator border sm:hover:border-primary sm:hover:placeholder:text-primary placeholder:text-primary-muted sm:hover:text-primary text-primary-muted transition-all",
       },
       size: {
-        inputSize: "h-12 sm:h-10 py-2 px-4 sm:w-full w-full",
+        inputSize: "h-10 sm:h-10 py-2 px-4 sm:w-full w-full",
       },
     },
     defaultVariants: {

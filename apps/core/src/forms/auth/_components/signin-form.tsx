@@ -126,7 +126,7 @@ export function SignInForm({
           disabled={isPending}
           className="w-full sm:w-full"
           variant="primaryButton"
-          size="fixedSize"
+          size="defaultSize"
         >
           {isPending && (
             <Icons.spinner
@@ -140,7 +140,7 @@ export function SignInForm({
         {/* <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
-          size="fixedSize"
+          size="defaultSize"
           className="w-full sm:w-full"
           onClick={() => router.back()}
           disabled={isPending}

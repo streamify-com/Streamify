@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
-import { Link, locales } from "@/navigation";
+import { locales } from "@/navigation";
 
 type Props = {
   locale: (typeof locales)[number];
@@ -13,7 +13,7 @@ export default function FullLocaleName({ locale }: Props) {
   return (
     <p
       className={clsx(
-        "font-medium sm:text-primary-muted text-primary-muted",
+        "font-regular sm:text-primary-muted text-primary-muted",
         curLocale === locale && "sm:text-primary text-primary",
       )}
     >

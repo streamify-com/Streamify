@@ -10,7 +10,7 @@ import {
   fontSemibold,
   fontSpecial,
   fontItalic,
-  fontMedium,
+  fontRegular,
 } from "@shared-components/lib/fonts";
 import { env } from "@/env.mjs";
 import { deDE } from "@clerk/localizations";
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image`,
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/${locales}/opengraph-image`,
       },
     ],
   },
@@ -109,8 +109,8 @@ export default async function LocaleLayout({
           <link rel="manifest" href="/manifest.json" />
           <body
             className={cn(
-              "bg-background font-medium min-h-screen antialiased",
-              fontMedium.variable,
+              "bg-background font-regular min-h-screen antialiased",
+              fontRegular.variable,
               fontItalic.variable,
               fontSemibold.variable,
               fontBold.variable,

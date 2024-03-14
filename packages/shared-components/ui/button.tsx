@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@shared-components/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center group rounded-md text-md font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center group rounded-md text-md font-regular transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -52,12 +52,11 @@ const buttonVariants = cva(
           "bg-[#232F3E] sm:hover:bg-[#394351] text-white border border-separator",
       },
       size: {
-        defaultSize: "h-12 sm:h-10 w-full sm:w-auto py-2 px-4",
-        fixedSize: "h-12 sm:h-10 w-full sm:w-48 py-2 px-4",
-        fullSize: "h-12 sm:h-10 w-full sm:w-full py-2 px-4",
-        headerSize: "h-12 sm:h-8 w-full sm:w-auto py-1 px-4 sm:text-sm",
+        defaultSize: "h-10 sm:h-10 w-full sm:w-auto py-2 px-4",
+        fullSize: "h-10 sm:h-10 w-full sm:w-full py-2 px-4",
+        headerSize: "h-10 sm:h-10 w-full sm:w-auto py-1 px-4 sm:text-sm",
         footerSize:
-          "h-12 sm:h-8 sm:text-xs text-sm w-full sm:w-auto sm:py-1 sm:px-2 py-0 px-0 sm:justify-center justify-start",
+          "h-8 sm:text-xs text-sm w-full sm:w-auto sm:py-1 sm:px-2 py-0 px-0 sm:justify-center justify-start",
         navigationSize: "h-8",
         iconSize: "h-9 w-9",
         avatarSize: "p-1",
@@ -105,12 +104,12 @@ const ShiningButton = React.forwardRef<HTMLButtonElement, ShiningButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className="from-primary to-separator font-medium group relative inline-flex h-12 sm:h-10 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] sm:w-48 sm:hover:bg-primary"
+        className="from-primary to-separator font-regular group relative inline-flex h-12 sm:h-10 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-br p-[0.05rem] sm:w-48 sm:hover:bg-primary"
         ref={ref}
         {...props}
       >
         <span className="bg-background sm:hover:bg-background-hover flex h-full w-full items-center justify-center rounded-md">
-          <p className="font-medium from-primary-muted via-primary to-primary-muted text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent sm:group-hover:text-primary">
+          <p className="font-regular from-primary-muted via-primary to-primary-muted text-md inline-flex items-center justify-center bg-gradient-to-br bg-clip-text text-center text-transparent sm:group-hover:text-primary">
             {children}
           </p>
         </span>

@@ -4,6 +4,11 @@ import { DrawerDialogDemo } from "@/components/test-component";
 import { unstable_setRequestLocale } from "next-intl/server";
 import FullLocaleName from "@/components/full-locale-name";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@shared-components/ui/navigation";
+import { cn } from "@shared-components/lib/utils";
+import { buttonVariants } from "@shared-components/ui/button";
+import { ThemeModeSelector } from "@shared-components/components/theme-switcher";
+import FullLocaleLink from "@/components/full-locale-link";
 
 type Props = {
   params: { locale: string };
@@ -15,14 +20,34 @@ export default function Page({ params: { locale } }: Props) {
 
   const curLocale = useLocale();
   const t = useTranslations("LocaleSwitcher");
+  const u = useTranslations("mode-theme");
 
   return (
-    <div className="p-20">
-      <LocaleSwitcher />
+    <div className="p-4 sm:p-20 grid grid-cols-1 gap-2 sm:flex">
+      My name is methos
+      {/* <LocaleSwitcher /> */}
       <ShortLocaleLink locale="en" />
       <ShortLocaleLink locale="de" />
+      <FullLocaleLink locale="en" languageName="English" />
+      <FullLocaleLink locale="de" languageName="Deutsch" />
       <DrawerDialogDemo buttonContent={t("locale", { locale: curLocale })} />
-      <FullLocaleName locale={undefined} />
+      {/* <FullLocaleName locale={undefined} /> */}
+      <Link
+        href="/signin"
+        className={cn(
+          buttonVariants({
+            variant: "secondaryButton",
+            size: "defaultSize",
+          }),
+        )}
+      >
+        Signin
+      </Link>
+      <ThemeModeSelector
+        light={u("light")}
+        dark={u("dark")}
+        system={u("system")}
+      />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
 
-export const fontMedium = localFont({
-  src: "../assets/fonts/Inter/Inter-Medium.ttf",
-  variable: "--font-medium",
+export const fontRegular = localFont({
+  src: "../assets/fonts/Inter/Inter-Regular.ttf",
+  variable: "--font-regular",
 });
 
 export const fontSemibold = localFont({

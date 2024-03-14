@@ -25,7 +25,7 @@ export default function NotFound() {
               className={cn(
                 buttonVariants({
                   variant: "primaryButton",
-                  size: "fixedSize",
+                  size: "defaultSize",
                 }),
               )}
             >
@@ -36,7 +36,7 @@ export default function NotFound() {
               className={cn(
                 buttonVariants({
                   variant: "secondaryButton",
-                  size: "fixedSize",
+                  size: "defaultSize",
                 }),
               )}
             >

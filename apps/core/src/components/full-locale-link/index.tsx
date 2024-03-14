@@ -1,25 +1,29 @@
 import clsx from "clsx";
-import { useLocale, useTranslations } from "next-intl";
-import { Link, locales } from "@/navigation";
+import { useLocale } from "next-intl";
+import { Link } from "@shared-components/ui/navigation";
+import { locales } from "@/navigation";
+import { buttonVariants } from "@shared-components/ui/button";
+import { cn } from "@shared-components/lib/utils";
 
 type Props = {
   locale: (typeof locales)[number];
+  languageName: string;
 };
 
-export default function FullLocaleLink({ locale }: Props) {
+export default function FullLocaleLink({ locale, languageName }: Props) {
   const curLocale = useLocale();
-  const t = useTranslations("LocaleSwitcher");
 
   return (
     <Link
       href="/"
       locale={locale}
       className={clsx(
-        "font-medium text-primary-muted",
-        curLocale === locale && "sm:text-primary",
+        "font-regular text-primary sm:text-primary",
+        curLocale === locale &&
+          "text-action sm:text-action underline underline-offset-4",
       )}
     >
-      {t("locale", { locale: curLocale })}
+      {languageName}
     </Link>
   );
 }

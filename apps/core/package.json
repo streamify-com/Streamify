@@ -45,6 +45,7 @@
     "shared-components": "workspace:*",
     "sharp": "^0.32.6",
     "sonner": "^1.2.0",
+    "vaul": "^0.9.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {

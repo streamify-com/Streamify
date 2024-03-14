@@ -26,6 +26,7 @@ import {
 import { Input } from "@shared-components/ui/input";
 import { Label } from "@shared-components/ui/label";
 import ShortLocaleLink from "../short-locale-link";
+import FullLocaleLink from "../full-locale-link";
 
 type Props = {
   buttonContent: string;
@@ -56,10 +57,15 @@ export function DrawerDialogDemo({ buttonContent }: Props) {
         <Button variant="primaryButton">{buttonContent}</Button>
       </DrawerTrigger>
       <DrawerContent>
-        {/* <ProfileForm className="px-4" /> */}
-        <ShortLocaleLink locale="en" />
-        <ShortLocaleLink locale="de" />
-        <DrawerFooter className="pt-2">
+        <DrawerHeader>
+          <DrawerTitle>Languages</DrawerTitle>
+          <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+        </DrawerHeader>
+        <div className="p-4 sm:p-20 grid grid-cols-1 gap-2 sm:flex">
+          <FullLocaleLink locale="en" languageName="English" />
+          <FullLocaleLink locale="de" languageName="Deutsch" />
+        </div>
+        <DrawerFooter className="pt-8">
           <DrawerClose asChild>
             <Button variant="primaryButton">Cancel</Button>
           </DrawerClose>
