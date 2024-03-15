@@ -8,7 +8,7 @@ interface AuthLayoutProps {
 
 export default function AuthLayout({ children }: AuthLayoutProps) {
   return (
-    <div className="p-12 z-10 bg-white/60 dark:bg-black/60 backdrop-blur-2xl rounded-md border-separator border">
+    <div className="p-12 z-10 bg-background rounded-md border-separator border">
       {children}
     </div>
   );

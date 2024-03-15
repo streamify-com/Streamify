@@ -8,23 +8,45 @@ import {
   CardHeader,
   CardTitle,
 } from "@shared-components/ui/card";
-import { SignInForm } from "@/forms/auth/_components/signin-form";
+import { SignInForm } from "@shared-components/forms/auth/_components/signin-form";
 
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 import { Separator } from "@shared-components/ui/separator";
-import { OAuthSignIn } from "@/forms/auth/_components/oauth-signin";
+import { OAuthSignIn } from "@shared-components/forms/auth/_components/oauth-signin";
 
-export default function SigninPageForm() {
+interface SignInFormProps {
+  title: string;
+  description: string;
+  signup_link: string;
+  or_continue_with: string;
+  email: string;
+  password: string;
+  signin_button: string;
+  previousstep: string;
+  reset_password: string;
+}
+
+export default function SigninPageForm({
+  title,
+  description,
+  signup_link,
+  or_continue_with,
+  email,
+  password,
+  signin_button,
+  previousstep,
+  reset_password,
+}: SignInFormProps) {
   return (
     <>
       <CardHeader>
-        <CardTitle>Title</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <CardDescription>
-          Description&nbsp;
+          {description}&nbsp;
           <Link
             aria-label="alternative.name"
-            href="/link"
+            href="/signup"
             className={cn(
               buttonVariants({
                 variant: "highlightLinkButton",
@@ -32,12 +54,12 @@ export default function SigninPageForm() {
               }),
             )}
           >
-            Alternative name
+            {signup_link}
           </Link>
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className="grid grid-cols-1 gap-2">
+        <div className="grid grid-cols-1 gap-2 my-4">
           <OAuthSignIn />
         </div>
         <div className="relative">
@@ -46,18 +68,19 @@ export default function SigninPageForm() {
           </div>
           <div className="relative flex justify-center text-xs uppercase">
             <span className="bg-background text-primary-muted px-2">
-              or continue with
+              {or_continue_with}
             </span>
           </div>
         </div>
         <SignInForm
-          email="Email"
-          password="Password"
-          signin="Signin"
-          previousstep="Previous step"
+          email={email}
+          password={password}
+          signin={signin_button}
+          previousstep={previousstep}
+          reset_password={reset_password}
         />
-        <CardFooter>
-          {/* <Link
+        {/* <CardFooter>
+          <Link
             aria-label="Reset password"
             href="/signin/reset-password"
             className={cn(
@@ -68,9 +91,9 @@ export default function SigninPageForm() {
               "sm:text-sm",
             )}
           >
-            Reset password
-          </Link> */}
-        </CardFooter>
+            {reset_password}
+          </Link>
+        </CardFooter> */}
       </CardContent>
     </>
   );

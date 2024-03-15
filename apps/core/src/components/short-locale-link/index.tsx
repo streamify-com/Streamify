@@ -1,18 +1,18 @@
 import clsx from "clsx";
 import { useLocale } from "next-intl";
-import { Link } from "@shared-components/ui/navigation";
-import { locales } from "@/navigation";
+import { locales, Link } from "@/navigation";
 
 type Props = {
   locale: (typeof locales)[number];
+  href: string;
 };
 
-export default function ShortLocaleLink({ locale }: Props) {
+export default function ShortLocaleLink({ href, locale }: Props) {
   const curLocale = useLocale();
 
   return (
     <Link
-      href="/"
+      href={href}
       locale={locale}
       className={clsx(
         "sm:text-primary text-primary",

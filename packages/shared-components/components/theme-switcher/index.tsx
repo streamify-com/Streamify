@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { useState, useEffect } from "react";
 import {
   DarkIcon,
@@ -80,14 +79,14 @@ export function ThemeModeSelector({ light, dark, system }: ThemeNameProps) {
   });
 
   return (
-    <Tabs defaultValue="system" className="border-primary w-full">
+    <Tabs defaultValue="system" className="w-full sm:w-auto">
       <TabsList className="grid w-full grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.position}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary-muted text-sm sm:text-xs"
+            className="data-[state=active]:bg-primary text-sm sm:text-xs"
           >
             {opt.text}
           </TabsTrigger>
@@ -169,7 +168,7 @@ export function ThemeModeIcon() {
             key={opt.text}
             onClick={() => setTheme(opt.value)}
             value={opt.value}
-            className="data-[state=active]:bg-primary-muted text-sm sm:text-xs px-2 py-1 rounded-full"
+            className="data-[state=active]:bg-primary text-sm sm:text-xs px-2 py-1 rounded-full"
           >
             {opt.icon}
           </TabsTrigger>

@@ -1,5 +1,5 @@
+import SSOCallback from "@/components/sso-callback";
 import type { HandleOAuthCallbackParams } from "@clerk/types";
-import SSOCallback from "@/forms/auth/_components/sso-callback";
 import { Shell } from "@shared-components/ui/shell";
 
 export const runtime = "edge";

@@ -1,11 +1,14 @@
+import ShortLocaleLink from "@/components/short-locale-link";
 import { DrawerDialogDemo } from "@/components/test-component";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/navigation";
+import { cn } from "@shared-components/lib/utils";
+import { buttonVariants } from "@shared-components/ui/button";
 import {
   ThemeModeIcon,
   ThemeModeSelector,
 } from "@shared-components/components/theme-switcher";
-import ShortLocaleLink from "@/components/short-locale-link";
 import FullLocaleLink from "@/components/full-locale-link";
 
 type Props = {
@@ -21,8 +24,7 @@ export default function Page({ params: { locale } }: Props) {
   const u = useTranslations("mode-theme");
 
   return (
-    <div className="p-6 sm:p-20 grid grid-cols-1 gap-2 sm:flex z-50">
-      <div className="font-special text-action">Tin Votan</div>
+    <div className="p-20 sm:p-20 grid grid-cols-1 gap-2 sm:flex">
       <ShortLocaleLink locale="en" href="/test" />
       <ShortLocaleLink locale="de" href="/test" />
       <FullLocaleLink locale="en" languageName="English" href="/test" />
@@ -32,6 +34,17 @@ export default function Page({ params: { locale } }: Props) {
         href="/test"
       />
       {/* <FullLocaleName locale={undefined} /> */}
+      <Link
+        href="/signin"
+        className={cn(
+          buttonVariants({
+            variant: "secondaryButton",
+            size: "defaultSize",
+          }),
+        )}
+      >
+        Sign in
+      </Link>
       <ThemeModeSelector
         light={u("light")}
         dark={u("dark")}

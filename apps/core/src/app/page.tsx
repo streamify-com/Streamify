@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { redirect } from "@/navigation";
 
-export default async function RootPage() {
-  redirect("/de");
+export default function RootPage() {
+  redirect("/en");
 }

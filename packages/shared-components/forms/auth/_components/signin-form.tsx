@@ -19,7 +19,7 @@ import {
 } from "@shared-components/ui/form";
 import { Input } from "@shared-components/ui/input";
 import { Icons } from "@shared-components/graphics/icons";
-import { PasswordInput } from "@/forms/auth/_components/password-input";
+import { PasswordInput } from "@shared-components/forms/auth/_components/password-input";
 import { Separator } from "@shared-components/ui/separator";
 import Link from "next/link";
 import { cn } from "@shared-components/lib/utils";
@@ -31,6 +31,7 @@ interface SignInFormProps {
   password: string;
   signin: string;
   previousstep: string;
+  reset_password: string;
 }
 
 export function SignInForm({
@@ -38,6 +39,7 @@ export function SignInForm({
   password,
   signin,
   previousstep,
+  reset_password,
 }: SignInFormProps) {
   const router = useRouter();
   const { isLoaded, signIn, setActive } = useSignIn();
@@ -91,7 +93,7 @@ export function SignInForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">{email}</FormLabel>
+              <FormLabel>{email}</FormLabel>
               <FormControl>
                 <Input
                   placeholder={email}
@@ -109,7 +111,7 @@ export function SignInForm({
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">{password}</FormLabel>
+              <FormLabel>{password}</FormLabel>
               <FormControl>
                 <PasswordInput
                   placeholder={password}
@@ -137,7 +139,7 @@ export function SignInForm({
           {signin}
           <span className="sr-only">{signin}</span>
         </Button>
-        {/* <Button
+        <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
           size="defaultSize"
@@ -146,7 +148,7 @@ export function SignInForm({
           disabled={isPending}
         >
           {previousstep}
-        </Button> */}
+        </Button>
         <Link
           aria-label="Reset password"
           href="/signin/reset-password"
@@ -158,7 +160,7 @@ export function SignInForm({
             "sm:text-sm",
           )}
         >
-          Reset password
+          {reset_password}
         </Link>
       </form>
     </Form>

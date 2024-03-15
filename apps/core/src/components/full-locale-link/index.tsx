@@ -1,26 +1,24 @@
 import clsx from "clsx";
 import { useLocale } from "next-intl";
-import { Link } from "@shared-components/ui/navigation";
-import { locales } from "@/navigation";
-import { buttonVariants } from "@shared-components/ui/button";
-import { cn } from "@shared-components/lib/utils";
+import { locales, Link } from "@/navigation";
 
 type Props = {
   locale: (typeof locales)[number];
   languageName: string;
+  href: string;
 };
 
-export default function FullLocaleLink({ locale, languageName }: Props) {
+export default function FullLocaleLink({ href, locale, languageName }: Props) {
   const curLocale = useLocale();
 
   return (
     <Link
-      href="/"
+      href={href}
       locale={locale}
       className={clsx(
-        "font-regular text-primary sm:text-primary",
+        "font-regular text-primary-muted sm:text-primary inline-flex items-center justify-center h-10 sm:w-auto border border-separator sm:border-transparent rounded-md",
         curLocale === locale &&
-          "text-action sm:text-action underline underline-offset-4",
+          "font-regular text-primary sm:text-primary sm:underline sm:underline-offset-4 bg-background sm:bg-transparent border-primary-muted",
       )}
     >
       {languageName}

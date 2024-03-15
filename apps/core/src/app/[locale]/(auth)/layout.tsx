@@ -1,5 +1,4 @@
-// import GradientBackground from "@shared-components/animations/gradient-background";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { PrimaryLogo } from "@shared-components/graphics/streamify";
 import * as React from "react";
 import GradientBackground from "@shared-components/animations/gradient-background";
@@ -18,7 +17,7 @@ export default async function Layout({ children }: AuthLayoutProps) {
             <PrimaryLogo className="text-background sm:hover:text-background-hover h-8 w-auto sm:h-14 sm:w-auto" />
           </Link>
         </div>
-        {/* <BackToHomepageButton /> */}
+        {/* <BackToHomepageButton href={""} name={""} /> */}
         <main className="mx-auto z-50 flex w-full flex-col justify-center space-y-6 px-8 py-10 sm:px-20">
           {children}
         </main>

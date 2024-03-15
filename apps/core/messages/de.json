@@ -13,6 +13,13 @@
     "dark": "Dunkel",
     "system": "System"
   },
+  "page-not-found": {
+    "message": "404",
+    "title": "Seite nicht geunden",
+    "description": "Die aufgerufene Seite konnte leider nicht gefunden werden.",
+    "button_homepage_name": "Startseite",
+    "button_support_name": "Kontaktiere uns"
+  },
   "go-back": {
     "name": "Zurück"
   },
@@ -33,12 +40,9 @@
     "name": "Abonnieren"
   },
   "signin": {
-    "card-title": "Anmelden",
-    "card-description": "Noch nicht registriert?",
-    "alternative": {
-      "name": "Registrieren",
-      "href": "/signup"
-    },
+    "title": "Anmelden",
+    "description": "Noch nicht registriert?",
+    "signup-link": "Registrieren",
     "or-continue-with": "Oder weiter mit",
     "email": "E-Mail-Adresse",
     "password": "Passwort",

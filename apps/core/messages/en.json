@@ -13,6 +13,13 @@
     "dark": "Dark",
     "system": "System"
   },
+  "page-not-found": {
+    "message": "404",
+    "title": "Page not found",
+    "description": "Sorry, we couldn't find the page you're looking for.",
+    "button_homepage_name": "Homepage",
+    "button_support_name": "Contact us"
+  },
   "go-back": {
     "name": "Back"
   },
@@ -33,12 +40,9 @@
     "name": "Subscribe"
   },
   "signin": {
-    "card-title": "Sign in",
-    "card-description": "Not registered?",
-    "alternative": {
-      "name": "Sign up",
-      "href": "/signup"
-    },
+    "title": "Sign in",
+    "description": "Not registered?",
+    "signup-link": "Sign up",
     "or-continue-with": "Or continue with",
     "email": "Email",
     "password": "Password",

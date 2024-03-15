@@ -123,7 +123,7 @@ export default async function LocaleLayout({
               enableSystem
               disableTransitionOnChange
             >
-              {children}
+              <div vaul-drawer-wrapper="">{children}</div>
             </ThemeProvider>
             <Toaster />
             <VercelPerformanceAnalytics />

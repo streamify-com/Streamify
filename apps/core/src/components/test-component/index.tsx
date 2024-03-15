@@ -25,14 +25,15 @@ import {
 } from "@shared-components/ui/drawer";
 import { Input } from "@shared-components/ui/input";
 import { Label } from "@shared-components/ui/label";
-import ShortLocaleLink from "../short-locale-link";
 import FullLocaleLink from "../full-locale-link";
+import { GlobeIcon } from "@shared-components/graphics/icons";
 
 type Props = {
+  href: string;
   buttonContent: string;
 };
 
-export function DrawerDialogDemo({ buttonContent }: Props) {
+export function DrawerDialogDemo({ href, buttonContent }: Props) {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -40,12 +41,14 @@ export function DrawerDialogDemo({ buttonContent }: Props) {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="primaryButton">{buttonContent}</Button>
+          <Button variant="secondaryButton" size="headerSize">
+            <GlobeIcon className="h-4 w-auto mr-3" />
+            {buttonContent}
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px] border sm:border-separator">
-          {/* <ProfileForm /> */}
-          <ShortLocaleLink locale="en" />
-          <ShortLocaleLink locale="de" />
+          <FullLocaleLink locale="en" languageName="English" href={href} />
+          <FullLocaleLink locale="de" languageName="Deutsch" href={href} />
         </DialogContent>
       </Dialog>
     );
@@ -58,16 +61,16 @@ export function DrawerDialogDemo({ buttonContent }: Props) {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Languages</DrawerTitle>
+          <DrawerTitle className="font-bold">Languages</DrawerTitle>
           <DrawerDescription>Set your daily activity goal.</DrawerDescription>
         </DrawerHeader>
         <div className="p-4 sm:p-20 grid grid-cols-1 gap-2 sm:flex">
-          <FullLocaleLink locale="en" languageName="English" />
-          <FullLocaleLink locale="de" languageName="Deutsch" />
+          <FullLocaleLink locale="en" languageName="English" href={href} />
+          <FullLocaleLink locale="de" languageName="Deutsch" href={href} />
         </div>
         <DrawerFooter className="pt-8">
           <DrawerClose asChild>
-            <Button variant="primaryButton">Cancel</Button>
+            <Button variant="secondaryButton">Close</Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
