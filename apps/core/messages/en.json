@@ -51,17 +51,16 @@
     "previous-step": "Previous step"
   },
   "reset-password": {
-    "card-title": "Reset password",
-    "card-description": "Enter your email address and we will send you a verification code.",
-    "password": "Password",
+    "title": "Reset password",
+    "description": "Enter your email address and we will send you a verification code.",
     "input-placeholder": "Email",
     "form-button": "Continue",
     "previous-step": "Previous step",
     "form-button-description": "Continue to reset password verification."
   },
   "step-2": {
-    "card-title": "Verify new password",
-    "card-description": "Choose a new password and paste the code you received in your mailbox.",
+    "title": "Verify new password",
+    "description": "Choose a new password and paste the code you received in your mailbox.",
     "password-form-label": "Choose new password",
     "confirmation-form-label": "Enter new password again",
     "code-form-label": "Code",
@@ -70,26 +69,20 @@
     "previous-step": "Previous step"
   },
   "signout": {
-    "card-title": "Sign out",
-    "card-description": "Are you sure you want to sign out?",
+    "title": "Sign out",
+    "description": "Are you sure you want to sign out?",
     "cancel-button": "Cancel"
   },
   "signup": {
-    "card-title": "Sign up",
+    "title": "Sign up",
     "step": "Step 1 of 5",
-    "card-description": "Already have an account?",
-    "alternative": {
-      "name": "Sign in",
-      "href": "/signin"
-    },
+    "description": "Already have an account?",
+    "signin-link": "Sign in",
     "or-continue-with": "or continue with",
-    "gender": {
-      "title": "Gender",
-      "placeholder": "Gender",
-      "male": "He/him",
-      "female": "She/her",
-      "diverse": "Diverse"
-    },
+    "genderplaceholder": "Salute",
+    "gendermale": "He/him",
+    "genderfemale": "She/her",
+    "genderdiverse": "Diverse",
     "birth-date": "Birth date",
     "first-name": "First name",
     "last-name": "Last name",
@@ -105,8 +98,9 @@
     "previous-step": "Previous step"
   },
   "verify": {
-    "card-title": "Verify email",
-    "card-description": "A verification code was sent to you by email.",
+    "title": "Verify email",
+    "step": "Step 2 of 5",
+    "description": "A verification code was sent to you by email.",
     "form-label": "Verification Code",
     "verify-code-form-label": "6-digit code",
     "form-button": "Create account",

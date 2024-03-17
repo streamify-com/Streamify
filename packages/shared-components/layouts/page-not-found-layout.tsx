@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@shared-components/ui/link";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 

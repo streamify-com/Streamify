@@ -23,7 +23,7 @@ interface SignInFormProps {
   email: string;
   password: string;
   signin_button: string;
-  previousstep: string;
+  previous_step: string;
   reset_password: string;
 }
 
@@ -35,7 +35,7 @@ export default function SigninPageForm({
   email,
   password,
   signin_button,
-  previousstep,
+  previous_step,
   reset_password,
 }: SignInFormProps) {
   return (
@@ -59,7 +59,7 @@ export default function SigninPageForm({
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className="grid grid-cols-1 gap-2 my-4">
+        <div className="grid gap-4">
           <OAuthSignIn />
         </div>
         <div className="relative">
@@ -67,7 +67,7 @@ export default function SigninPageForm({
             <Separator />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background text-primary-muted px-2">
+            <span className="bg-background text-primary-muted px-4">
               {or_continue_with}
             </span>
           </div>
@@ -76,7 +76,7 @@ export default function SigninPageForm({
           email={email}
           password={password}
           signin={signin_button}
-          previousstep={previousstep}
+          previous_step={previous_step}
           reset_password={reset_password}
         />
         {/* <CardFooter>

@@ -51,17 +51,16 @@
     "previous-step": "Zurück"
   },
   "reset-password": {
-    "card-title": "Passwort zurücksetzen",
-    "card-description": "Gib deine E-Mail-Adresse ein und wir schicken dir einen Verifizierungscode.",
-    "password": "Passwort",
+    "title": "Passwort zurücksetzen",
+    "description": "Gib deine E-Mail-Adresse ein und wir schicken dir einen Verifizierungscode.",
     "input-placeholder": "E-Mail-Adresse",
     "form-button": "Weiter",
     "previous-step": "Zurück",
     "form-button-description": "Weiter, um die Passwortrücksetzung zu verifizieren."
   },
   "step-2": {
-    "card-title": "Neues Passwort bestätigen",
-    "card-description": "Wähle ein neues Passwort und gib den Code ein, der an deine E-Mail-Adresse erschickt wurde.",
+    "title": "Neues Passwort bestätigen",
+    "description": "Wähle ein neues Passwort und gib den Code ein, der an deine E-Mail-Adresse erschickt wurde.",
     "password-form-label": "Neues Passwort festlegen",
     "confirmation-form-label": "Neues Passwort erneut eingeben",
     "code-form-label": "Code",
@@ -70,26 +69,20 @@
     "previous-step": "Zurück"
   },
   "signout": {
-    "card-title": "Abmelden",
-    "card-description": "Bist du dir sicher, dass du dich abmelden möchtest?",
+    "title": "Abmelden",
+    "description": "Bist du dir sicher, dass du dich abmelden möchtest?",
     "cancel-button": "Abbrechen"
   },
   "signup": {
-    "card-title": "Registrieren",
+    "title": "Registrieren",
     "step": "Schritt 1 von 5",
-    "card-description": "Bereits registriert?",
-    "alternative": {
-      "name": "Anmelden",
-      "href": "/signin"
-    },
+    "description": "Bereits registriert?",
+    "signin-link": "Anmelden",
     "or-continue-with": "oder weiter mit",
-    "gender": {
-      "title": "Anrede",
-      "placeholder": "Anrede",
-      "male": "Herr",
-      "female": "Frau",
-      "diverse": "Divers"
-    },
+    "genderplaceholder": "Anrede",
+    "gendermale": "Herr",
+    "genderfemale": "Frau",
+    "genderdiverse": "Divers",
     "birth-date": "Geburtsdatum",
     "first-name": "Vorname",
     "last-name": "Nachname",
@@ -105,9 +98,9 @@
     "previous-step": "Zurück"
   },
   "verify": {
-    "card-title": "Verifiziere E-Mail-Adresse",
+    "title": "Verifiziere E-Mail-Adresse",
     "step": "Schritt 2 von 5",
-    "card-description": "Ein Verifizierungscode wurde an deine E-Mail-Adresse gesendet.",
+    "description": "Ein Verifizierungscode wurde an deine E-Mail-Adresse gesendet.",
     "form-label": "Verifizierungscode",
     "verify-code-form-label": "6-stelliger Code",
     "form-button": "Profil erstellen",

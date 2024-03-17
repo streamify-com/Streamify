@@ -1,6 +1,6 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": ["."],
+  "include": [".", "lib/handle-error.ts", "lib/constants.ts"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "allowJs": true,

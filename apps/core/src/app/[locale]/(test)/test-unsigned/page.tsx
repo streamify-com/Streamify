@@ -1,8 +1,8 @@
 import ShortLocaleLink from "@/components/short-locale-link";
-import { DrawerDialogDemo } from "@/components/test-component";
+import { LanguagePicker } from "@/components/test-component";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useLocale, useTranslations } from "next-intl";
-import { Link } from "@/navigation";
+import { Link } from "@shared-components/ui/link";
 import { cn } from "@shared-components/lib/utils";
 import { buttonVariants } from "@shared-components/ui/button";
 import {
@@ -29,7 +29,7 @@ export default function Page({ params: { locale } }: Props) {
       <ShortLocaleLink locale="de" href="/test" />
       <FullLocaleLink locale="en" languageName="English" href="/test" />
       <FullLocaleLink locale="de" languageName="Deutsch" href="/test" />
-      <DrawerDialogDemo
+      <LanguagePicker
         buttonContent={t("locale", { locale: curLocale })}
         href="/test"
       />

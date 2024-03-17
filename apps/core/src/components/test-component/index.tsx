@@ -33,7 +33,7 @@ type Props = {
   buttonContent: string;
 };
 
-export function DrawerDialogDemo({ href, buttonContent }: Props) {
+export function LanguagePicker({ href, buttonContent }: Props) {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 

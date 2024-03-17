@@ -17,7 +17,7 @@ import { deDE } from "@clerk/localizations";
 import { enUS } from "@clerk/localizations";
 import { ThemeProvider } from "@shared-components/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { locales } from "@/navigation";
+import { locales } from "@/config/navigation";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 interface RootLayoutProps {

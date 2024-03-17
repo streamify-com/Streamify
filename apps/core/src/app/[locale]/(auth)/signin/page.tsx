@@ -1,22 +1,15 @@
 import { Metadata } from "next";
 import SigninPageForm from "@shared-components/forms/auth/signin";
-import { unstable_setRequestLocale } from "next-intl/server";
 import { useLocale, useTranslations } from "next-intl";
-import { DrawerDialogDemo } from "@/components/test-component";
+import { LanguagePicker } from "@/components/test-component";
 
 export const metadata: Metadata = {
   title: "Sign In",
   description: "Sign in to your account",
 };
 
-// type Props = {
-//   params: { locale: string };
-// };
-
 export default function Page() {
   const curLocale = useLocale();
-  // Enable static rendering
-  // unstable_setRequestLocale(locale);
   const t = useTranslations("signin");
   const u = useTranslations("LocaleSwitcher");
 
@@ -30,10 +23,10 @@ export default function Page() {
         email={t("email")}
         password={t("password")}
         signin_button={t("sign-in")}
-        previousstep={t("previous-step")}
+        previous_step={t("previous-step")}
         reset_password={t("reset-password")}
       />
-      <DrawerDialogDemo
+      <LanguagePicker
         buttonContent={u("locale", { locale: curLocale })}
         href="/signin"
       />

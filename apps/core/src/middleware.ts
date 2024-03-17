@@ -1,6 +1,6 @@
 import { authMiddleware } from "@clerk/nextjs";
 import createMiddleware from "next-intl/middleware";
-import { locales, localePrefix } from "@/navigation";
+import { locales, localePrefix } from "@/config/navigation";
 
 const intlMiddleware = createMiddleware({
   locales,
@@ -17,6 +17,12 @@ export default authMiddleware({
     "/:locale(.*)",
     "/:locale/test(.*)",
     "/:locale/signin(.*)",
+    "/:locale/signin/reset-password(.*)",
+    "/:locale/signin/reset-password/step-2(.*)",
+    "/:locale/signup(.*)",
+    "/:locale/signup/verify(.*)",
+    "/:locale/signout(.*)",
+    "/:locale/sso-callback(.*)",
   ],
 });
 

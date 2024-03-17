@@ -6,6 +6,13 @@
     "moduleResolution": "node",
     "allowJs": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "../../packages/shared-components/lib/constants.ts",
+    "../../packages/shared-components/lib/handle-error.ts"
+  ],
   "exclude": ["node_modules"]
 }

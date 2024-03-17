@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useLocale } from "next-intl";
-import { locales, Link } from "@/navigation";
+import { locales } from "@/config/navigation";
+import { Link } from "@shared-components/ui/link";
 
 type Props = {
   locale: (typeof locales)[number];

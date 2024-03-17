@@ -28,14 +28,14 @@ export const signInSchema = z.object({
 });
 
 export const signUpSchema = z.object({
-  gender: z.enum(getValues(Gender), {
-    errorMap: () => ({
-      message: "Please select your gender.",
-    }),
-  }),
-  birthday: z.string().min(1, {
-    message: "Please enter your birth date.",
-  }),
+  // gender: z.enum(getValues(Gender), {
+  //   errorMap: () => ({
+  //     message: "Please select your gender.",
+  //   }),
+  // }),
+  // birthday: z.string().min(1, {
+  //   message: "Please enter your birth date.",
+  // }),
   firstname: z
     .string()
     .min(2, {

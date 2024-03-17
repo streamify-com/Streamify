@@ -1,6 +1,5 @@
 import * as React from "react";
 import { currentUser } from "@clerk/nextjs";
-import { redirect } from "@/navigation";
 
 interface AuthLayoutProps {
   children: React.ReactNode;

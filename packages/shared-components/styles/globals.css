@@ -183,3 +183,7 @@ body {
   --gradient-color-3: #e2d8ee;
   --gradient-color-4: #fe6192;
 }
+
+.rdp-vhidden {
+  @apply hidden;
+}
