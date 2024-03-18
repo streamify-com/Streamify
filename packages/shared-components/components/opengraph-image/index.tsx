@@ -1,4 +1,4 @@
-import { TestLogo } from "@shared-components/graphics/logo";
+import { PlanetscaleLogo } from "@shared-components/graphics/logo";
 import { ImageResponse } from "next/og";
 import { OpengraphFontPath } from "@shared-components/lib/fonts";
 
@@ -36,7 +36,7 @@ export default async function OpengraphImage(
     (
       <div tw="flex h-full w-full flex-col items-center justify-center bg-black">
         <div tw="flex flex-none items-center justify-center border border-neutral-700 h-[160px] w-[160px] rounded-3xl">
-          <TestLogo width="64" height="58" />
+          <PlanetscaleLogo width="64" height="58" />
         </div>
         <p tw="mt-12 text-6xl font-bold text-white">{title}</p>
       </div>

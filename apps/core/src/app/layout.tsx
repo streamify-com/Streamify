@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/${locales}/opengraph-image`,
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image`,
       },
     ],
   },
