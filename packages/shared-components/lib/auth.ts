@@ -1,12 +1,12 @@
 import * as z from "zod";
 
-export const Gender = {
-  Male: "male",
-  Female: "female",
-  Diverse: "diverse",
-} as const;
+// export const Gender = {
+//   Male: "male",
+//   Female: "female",
+//   Diverse: "diverse",
+// } as const;
 
-export type Title = (typeof Gender)[keyof typeof Gender];
+// export type Title = (typeof Gender)[keyof typeof Gender];
 
 export function getValues<T extends Record<string, any>>(obj: T) {
   return Object.values(obj) as [(typeof obj)[keyof T]];
@@ -27,46 +27,60 @@ export const signInSchema = z.object({
     }),
 });
 
-export const signUpSchema = z.object({
-  // gender: z.enum(getValues(Gender), {
-  //   errorMap: () => ({
-  //     message: "Please select your gender.",
-  //   }),
-  // }),
-  // birthday: z.string().min(1, {
-  //   message: "Please enter your birth date.",
-  // }),
-  firstname: z
-    .string()
-    .min(2, {
-      message: "Please enter your first name.",
-    })
-    .max(25)
-    .regex(/^(?=.{2,})/, {
-      message: "Must contain at least 2 characters.",
+export const signUpSchema = z
+  .object({
+    // gender: z.enum(getValues(Gender), {
+    //   errorMap: () => ({
+    //     message: "Please select your gender.",
+    //   }),
+    // }),
+    // birthday: z.string().min(1, {
+    //   message: "Please enter your birth date.",
+    // }),
+    firstname: z
+      .string()
+      .min(2, {
+        message: "Please enter your first name.",
+      })
+      .max(25)
+      .regex(/^(?=.{2,})/, {
+        message: "Must contain at least 2 characters.",
+      }),
+    lastname: z
+      .string()
+      .min(2, {
+        message: "Please enter your last name.",
+      })
+      .max(25)
+      .regex(/^(?=.{2,})/, {
+        message: "Must contain at least 2 characters.",
+      }),
+    email: z.string().email({
+      message: "Please enter a valid email address.",
     }),
-  lastname: z
-    .string()
-    .min(2, {
-      message: "Please enter your last name.",
-    })
-    .max(25)
-    .regex(/^(?=.{2,})/, {
-      message: "Must contain at least 2 characters.",
-    }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  password: z
-    .string()
-    .min(4, {
-      message: "Password must contain at least 4 characters.",
-    })
-    .max(100)
-    .regex(/^(?=.{4,})/, {
-      message: "Password must contain at least 4 characters.",
-    }),
-});
+    password: z
+      .string()
+      .min(4, {
+        message: "Password must contain at least 4 characters.",
+      })
+      .max(100)
+      .regex(/^(?=.{4,})/, {
+        message: "Password must contain at least 4 characters.",
+      }),
+    confirmPassword: z
+      .string()
+      .min(4, {
+        message: "Password must contain at least 4 characters.",
+      })
+      .max(100)
+      .regex(/^(?=.{4,})/, {
+        message: "Password must contain at least 4 characters.",
+      }),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
 
 export const verfifyEmailSchema = z.object({
   code: z

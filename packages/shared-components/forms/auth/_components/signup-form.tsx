@@ -71,7 +71,6 @@ export function SignUpForm({
   const { isLoaded, signUp } = useSignUp();
   const [isPending, startTransition] = React.useTransition();
   const [isChecked, setIsChecked] = React.useState(false);
-  const [confirmPassword, setConfirmPassword] = React.useState("");
 
   const handleCheckboxClick = () => {
     setIsChecked(!isChecked);
@@ -86,16 +85,12 @@ export function SignUpForm({
       lastname: "",
       email: "",
       password: "",
+      confirmPassword: "",
     },
   });
 
   function onSubmit(data: Inputs) {
     if (!isLoaded) return;
-
-    if (data.password !== confirmPassword) {
-      toast.error("Passwords do not match");
-      return;
-    }
 
     startTransition(async () => {
       try {
@@ -249,18 +244,12 @@ export function SignUpForm({
           />
           <FormField
             control={form.control}
-            name="password"
+            name="confirmPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="sm:hidden block">
-                  Confirm Password
-                </FormLabel>
+                <FormLabel className="sm:hidden block">{password}</FormLabel>
                 <FormControl>
-                  <PasswordInput
-                    placeholder="Confirm Password"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                  />
+                  <PasswordInput placeholder={password} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
