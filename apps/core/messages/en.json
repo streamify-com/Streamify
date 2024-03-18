@@ -110,8 +110,8 @@
     "title": "Subscribe to our newsletter",
     "description": "The latest news, articles, and resources, sent to your inbox weekly.",
     "placeholder": "Email address",
-    "button": "Waitlist",
-    "notification": "You have been successfully added to the waitlist."
+    "newsletterbutton": "Join",
+    "notification": "You have been successfully added to the newsletter."
   },
   "footer-declaration": {
     "company": "Streamify",

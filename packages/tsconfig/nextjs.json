@@ -19,26 +19,32 @@
     "paths": {
       "@/*": ["./src/*"],
       "@shared-components/*": ["../../packages/shared-components/*"],
-      "@shared-components/styles/*": [
-        "../../packages/shared-components/styles/*"
+      "@shared-components/animations/*": [
+        "../../packages/shared-components/animations/*"
       ],
       "@shared-components/components/*": [
         "../../packages/shared-components/components/*"
       ],
-      "@shared-components/features/*": [
-        "../../packages/shared-components/features/*"
+      "@shared-components/forms/*": [
+        "../../packages/shared-components/forms/*"
       ],
       "@shared-components/graphics/*": [
         "../../packages/shared-components/graphics/*"
       ],
-      "@shared-components/ui/*": ["../../packages/shared-components/ui/*"],
+      "@shared-components/hooks/*": [
+        "../../packages/shared-components/hooks/*"
+      ],
+      "@shared-components/layouts/*": [
+        "../../packages/shared-components/layouts/*"
+      ],
+      "@shared-components/lib/*": ["../../packages/shared-components/lib/*"],
+      "@shared-components/styles/*": [
+        "../../packages/shared-components/styles/*"
+      ],
       "@shared-components/types/*": [
         "../../packages/shared-components/types/*"
       ],
-      "@shared-components/lib/*": ["../../packages/shared-components/lib/*"],
-      "@animation-components/*": [
-        "../../packages/animation-components/src/components/*"
-      ]
+      "@shared-components/ui/*": ["../../packages/shared-components/ui/*"]
     }
   },
   "include": [

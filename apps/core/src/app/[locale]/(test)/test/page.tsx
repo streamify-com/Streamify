@@ -11,6 +11,7 @@ import { Link } from "@shared-components/ui/link";
 import { Calendar } from "@shared-components/ui/calendar";
 import { buttonVariants } from "@shared-components/ui/button";
 import { cn } from "@shared-components/lib/utils";
+import Newsletter from "@shared-components/forms/email/newsletter";
 
 type Props = {
   params: { locale: string };
@@ -24,6 +25,7 @@ export default function Page({ params: { locale } }: Props) {
   const t = useTranslations("LocaleSwitcher");
   const u = useTranslations("mode-theme");
   const v = useTranslations("signin");
+  const w = useTranslations("newsletter");
 
   return (
     <div className="p-6 sm:p-20 grid grid-cols-1 gap-2 sm:flex z-50">
@@ -56,7 +58,12 @@ export default function Page({ params: { locale } }: Props) {
       >
         {v("signin")}
       </Link>
-      <Calendar />
+      {/* <Calendar /> */}
+      <Newsletter
+        notification={w("notification")}
+        placeholder={w("placeholder")}
+        newsletterbutton={w("newsletterbutton")}
+      />
     </div>
   );
 }

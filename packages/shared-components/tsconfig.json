@@ -13,6 +13,7 @@
       "@shared-components/forms/*": ["./forms/*"],
       "@shared-components/graphics/*": ["./graphics/*"],
       "@shared-components/hooks/*": ["./hooks/*"],
+      "@shared-components/layouts/*": ["./layouts/*"],
       "@shared-components/lib/*": ["./lib/*"],
       "@shared-components/styles/*": ["./styles/*"],
       "@shared-components/types/*": ["./types/*"],
