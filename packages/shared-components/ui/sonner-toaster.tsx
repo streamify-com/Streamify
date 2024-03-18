@@ -8,7 +8,7 @@ export function Toaster() {
       position="bottom-right"
       toastOptions={{
         style: {
-          background: "rgba(var(--active))",
+          background: "rgba(var(--action))",
           color: "rgba(var(--background))",
           border: "1px solid rgba(var(--separator))",
         },

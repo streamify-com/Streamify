@@ -12,7 +12,7 @@ import {
   fontItalic,
   fontRegular,
 } from "@shared-components/lib/fonts";
-import { env } from "@/env.mjs";
+import { env } from "@/env.js";
 import { deDE } from "@clerk/localizations";
 import { enUS } from "@clerk/localizations";
 import { ThemeProvider } from "@shared-components/components/theme-provider";

@@ -41,6 +41,7 @@ export default function VerifyEmailPageForm({
           verify_code_form_label={verify_code_form_label}
           formbutton={formbutton}
           previous_step={previous_step}
+          description={description}
         />
       </CardContent>
     </>

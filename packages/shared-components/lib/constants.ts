@@ -5,8 +5,8 @@ export const redirects = {
   toLogin: "/signin",
   toSignup: "/signup",
   afterLogin: "/test",
-  afterLogout: "/",
-  toVerify: "/verify-email",
+  afterLogout: "/signin",
+  toVerify: "/verify",
   afterVerify: "/test",
 } as const;
 

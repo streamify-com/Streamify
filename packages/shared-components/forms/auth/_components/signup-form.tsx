@@ -273,20 +273,20 @@ export function SignUpForm({
             id="terms1"
             checked={isChecked}
             onClick={handleCheckboxClick}
-            className="mt-1 sm:mt-0"
+            className="mt-1.5 sm:mt-1 h-5 w-5 sm:h-4 sm:w-4"
           />
-          <div className="grid gap-1.5 leading-none ml-4">
-            <label htmlFor="terms1" className="text-primary sm:text-xs text-sm">
+          <div className="grid gap-1.5 leading-none ml-2">
+            <label htmlFor="terms1" className="text-primary sm:text-sm text-sm">
               {termsandconditionsheader}
             </label>
-            <p className="text-primary-muted sm:text-xs text-sm">
+            <p className="text-primary-muted sm:text-sm text-sm">
               {termsandconditionsdescriptionpart1}
               <Link
                 aria-label="Terms of Services"
                 href="/terms-of-services"
                 className={cn(
                   buttonVariants({ variant: "linkButton", size: "linkSize" }),
-                  "sm:text-xs text-sm",
+                  "sm:text-sm text-sm",
                 )}
               >
                 {termsandconditions}
@@ -297,7 +297,7 @@ export function SignUpForm({
                 href="/privacy-policy"
                 className={cn(
                   buttonVariants({ variant: "linkButton", size: "linkSize" }),
-                  "sm:text-xs text-sm",
+                  "sm:text-sm text-sm",
                 )}
               >
                 {privacypolicy}

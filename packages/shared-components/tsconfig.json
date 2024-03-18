@@ -1,6 +1,6 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": [".", "lib/handle-error.ts", "lib/constants.ts"],
+  "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "allowJs": true,
@@ -10,6 +10,7 @@
       "@shared-components/animations/*": ["./animations/*"],
       "@shared-components/assets/*": ["./assets/*"],
       "@shared-components/components/*": ["./components/*"],
+      "@shared-components/forms/*": ["./forms/*"],
       "@shared-components/graphics/*": ["./graphics/*"],
       "@shared-components/hooks/*": ["./hooks/*"],
       "@shared-components/lib/*": ["./lib/*"],

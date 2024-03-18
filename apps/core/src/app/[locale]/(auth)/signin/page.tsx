@@ -22,7 +22,7 @@ export default function Page() {
         or_continue_with={t("or-continue-with")}
         email={t("email")}
         password={t("password")}
-        signin_button={t("sign-in")}
+        signin_button={t("signin")}
         previous_step={t("previous-step")}
         reset_password={t("reset-password")}
       />

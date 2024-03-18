@@ -54,7 +54,7 @@ export default function Page({ params: { locale } }: Props) {
           "sm:text-sm",
         )}
       >
-        {v("sign-in")}
+        {v("signin")}
       </Link>
       <Calendar />
     </div>

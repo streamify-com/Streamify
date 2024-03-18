@@ -2,31 +2,35 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { isClerkAPIResponseError, useSignUp } from "@clerk/nextjs";
+import { useSignUp } from "@clerk/nextjs";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { toast } from "sonner";
 
 import type { z } from "zod";
-import { Separator } from "@shared-components/ui/separator";
 import { verfifyEmailSchema } from "@shared-components/lib/auth";
 import { Button } from "@shared-components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@shared-components/ui/form";
-import { Input } from "@shared-components/ui/input";
 import { Icons } from "@shared-components/graphics/icons";
 import { showErrorToast } from "@shared-components/lib/handle-error";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+} from "@shared-components/ui/input-otp";
 
 type Inputs = z.infer<typeof verfifyEmailSchema>;
 
 interface VerifyEmailFormProps {
   formlabel: string;
+  description: string;
   verify_code_form_label: string;
   formbutton: string;
   previous_step: string;
@@ -34,6 +38,7 @@ interface VerifyEmailFormProps {
 
 export function VerifyEmailForm({
   formlabel,
+  description,
   verify_code_form_label,
   formbutton,
   previous_step,
@@ -78,8 +83,8 @@ export function VerifyEmailForm({
 
   return (
     <Form {...form}>
-      <form className="grid gap-2" onSubmit={form.handleSubmit(onSubmit)}>
-        <FormField
+      <form className="grid gap-4" onSubmit={form.handleSubmit(onSubmit)}>
+        {/* <FormField
           control={form.control}
           name="code"
           render={({ field }) => (
@@ -99,9 +104,40 @@ export function VerifyEmailForm({
               <FormMessage />
             </FormItem>
           )}
+        /> */}
+        <FormField
+          control={form.control}
+          name="code"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{verify_code_form_label}</FormLabel>
+              <FormControl>
+                <InputOTP
+                  maxLength={6}
+                  render={({ slots }) => (
+                    <InputOTPGroup>
+                      {slots.map((slot, index) => (
+                        <InputOTPSlot key={index} {...slot} />
+                      ))}{" "}
+                    </InputOTPGroup>
+                  )}
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription className="text-primary-muted">
+                {description}
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-        <Separator className="my-4" />
-        <Button disabled={loading} variant="actionButton" size="defaultSize">
+        {/* <Separator className="my-4" /> */}
+        <Button
+          disabled={loading}
+          variant="actionButton"
+          size="defaultSize"
+          type="submit"
+        >
           {loading && (
             <Icons.spinner
               className="mr-2 h-4 w-4 animate-spin"
