@@ -31,7 +31,7 @@ export default function VerifyEmailPageForm({
   return (
     <>
       <CardHeader>
-        <CardSubtitle>{step}</CardSubtitle>
+        {/* <CardSubtitle>{step}</CardSubtitle> */}
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>

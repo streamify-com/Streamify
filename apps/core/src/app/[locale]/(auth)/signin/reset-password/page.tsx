@@ -1,11 +1,23 @@
 import { type Metadata } from "next";
 import ResetPasswordPageForm from "@shared-components/forms/auth/reset-password";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Reset Password",
-  description: "Enter your email to reset your password",
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
 };
+
+export async function generateMetadata({
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "reset-password" });
+
+  return {
+    title: t("title"),
+  };
+}
 
 export default function ResetPasswordPage() {
   const t = useTranslations("reset-password");

@@ -93,7 +93,7 @@ export function SignInForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">{email}</FormLabel>
+              {/* <FormLabel className="sm:hidden block">{email}</FormLabel> */}
               <FormControl>
                 <Input
                   placeholder={email}
@@ -111,7 +111,7 @@ export function SignInForm({
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">{password}</FormLabel>
+              {/* <FormLabel className="sm:hidden block">{password}</FormLabel> */}
               <FormControl>
                 <PasswordInput
                   placeholder={password}
@@ -139,7 +139,7 @@ export function SignInForm({
           {signin}
           <span className="sr-only">{signin}</span>
         </Button>
-        <Button
+        {/* <Button
           aria-label="Go back to the previous page"
           variant="secondaryButton"
           size="defaultSize"
@@ -148,8 +148,8 @@ export function SignInForm({
           disabled={isPending}
         >
           {previous_step}
-        </Button>
-        <Link
+        </Button> */}
+        {/* <Link
           aria-label="Reset password"
           href="/signin/reset-password"
           className={cn(
@@ -161,7 +161,7 @@ export function SignInForm({
           )}
         >
           {reset_password}
-        </Link>
+        </Link> */}
       </form>
     </Form>
   );

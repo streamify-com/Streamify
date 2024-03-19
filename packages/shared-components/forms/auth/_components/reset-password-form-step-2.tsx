@@ -98,9 +98,9 @@ export function ResetPasswordStep2Form({
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">
+              {/* <FormLabel className="sm:hidden block">
                 {passwordformlabel}
-              </FormLabel>
+              </FormLabel> */}
               <FormControl>
                 <PasswordInput placeholder={passwordformlabel} {...field} />
               </FormControl>
@@ -113,9 +113,9 @@ export function ResetPasswordStep2Form({
           name="confirmPassword"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">
+              {/* <FormLabel className="sm:hidden block">
                 {confirmationformlabel}
-              </FormLabel>
+              </FormLabel> */}
               <FormControl>
                 <PasswordInput placeholder={confirmationformlabel} {...field} />
               </FormControl>
@@ -128,9 +128,9 @@ export function ResetPasswordStep2Form({
           name="code"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">
+              {/* <FormLabel className="sm:hidden block">
                 {verifycodeformlabel}
-              </FormLabel>
+              </FormLabel> */}
               <FormControl>
                 <Input
                   placeholder={verifycodeformlabel}
@@ -145,7 +145,7 @@ export function ResetPasswordStep2Form({
             </FormItem>
           )}
         />
-        <Separator className="my-4" />
+        <Separator className="my-2" />
         <Button disabled={isPending} variant="primaryButton" size="fullSize">
           {isPending && (
             <Icons.spinner

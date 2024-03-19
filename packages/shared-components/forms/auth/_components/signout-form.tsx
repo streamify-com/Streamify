@@ -1,4 +1,5 @@
 import { cn } from "@shared-components/lib/utils";
+import { Separator } from "@shared-components/ui/separator";
 
 interface HeaderProps
   extends React.DetailedHTMLProps<
@@ -34,6 +35,7 @@ export function SignOutForm({
           {description}
         </p>
       ) : null}
+      <Separator className="my-2" />
     </div>
   );
 }

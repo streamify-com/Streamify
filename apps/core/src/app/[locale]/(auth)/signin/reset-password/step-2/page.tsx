@@ -1,11 +1,23 @@
 import { type Metadata } from "next";
 import ResetPasswordStep2PageForm from "@shared-components/forms/auth/reset-password-step-2";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Reset Password",
-  description: "Choose a new password and paste the code",
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
 };
+
+export async function generateMetadata({
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "step-2" });
+
+  return {
+    title: t("title"),
+  };
+}
 
 export default function ResetPasswordStep2Page() {
   const t = useTranslations("step-2");

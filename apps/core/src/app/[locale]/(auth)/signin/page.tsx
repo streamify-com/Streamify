@@ -1,17 +1,30 @@
-import { Metadata } from "next";
 import SigninPageForm from "@shared-components/forms/auth/signin";
 import { useLocale, useTranslations } from "next-intl";
 import { LanguagePicker } from "@/components/test-component";
+import { ThemeModeSelector } from "@shared-components/components/theme-switcher";
+import { getTranslations } from "next-intl/server";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Sign In",
-  description: "Sign in to your account",
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
 };
+
+export async function generateMetadata({
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "signin" });
+
+  return {
+    title: t("title"),
+  };
+}
 
 export default function Page() {
   const curLocale = useLocale();
   const t = useTranslations("signin");
   const u = useTranslations("LocaleSwitcher");
+  const v = useTranslations("mode-theme");
 
   return (
     <div>
@@ -26,10 +39,15 @@ export default function Page() {
         previous_step={t("previous-step")}
         reset_password={t("reset-password")}
       />
-      <LanguagePicker
+      {/* <LanguagePicker
         buttonContent={u("locale", { locale: curLocale })}
         href="/signin"
       />
+      <ThemeModeSelector
+        light={v("light")}
+        dark={v("dark")}
+        system={v("system")}
+      /> */}
     </div>
   );
 }

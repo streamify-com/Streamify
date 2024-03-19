@@ -1,11 +1,23 @@
 import { type Metadata } from "next";
 import SignOutPageForm from "@shared-components/forms/auth/signout";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Sign Out",
-  description: "Sign out to your account",
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
 };
+
+export async function generateMetadata({
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "signout" });
+
+  return {
+    title: t("title"),
+  };
+}
 
 export const runtime = "edge";
 

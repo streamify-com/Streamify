@@ -79,7 +79,7 @@ export default function SigninPageForm({
           previous_step={previous_step}
           reset_password={reset_password}
         />
-        {/* <CardFooter>
+        <CardFooter>
           <Link
             aria-label="Reset password"
             href="/signin/reset-password"
@@ -93,7 +93,7 @@ export default function SigninPageForm({
           >
             {reset_password}
           </Link>
-        </CardFooter> */}
+        </CardFooter>
       </CardContent>
     </>
   );

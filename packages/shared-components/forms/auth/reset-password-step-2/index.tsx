@@ -35,7 +35,7 @@ export default function ResetPasswordStep2PageForm({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4">
+      <CardContent className="grid gap-4 mt-4">
         <ResetPasswordStep2Form
           passwordformlabel={password_form_label}
           confirmationformlabel={confirmation_form_label}

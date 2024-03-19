@@ -11,7 +11,7 @@ const oauthProviders = [
   { name: "Google", strategy: "oauth_google", icon: "GoogleIcon" },
   { name: "Facebook", strategy: "oauth_facebook", icon: "FacebookIcon" },
   { name: "Apple", strategy: "oauth_apple", icon: "AppleIcon" },
-  { name: "Linkedin", strategy: "oauth_linkedin", icon: "LinkedinIcon" },
+  // { name: "Linkedin", strategy: "oauth_linkedin", icon: "LinkedinIcon" },
 ] satisfies {
   name: string;
   icon: keyof typeof Icons;
@@ -43,7 +43,7 @@ export function OAuthSignIn() {
   }
 
   return (
-    <div className="sm:grid grid-cols-4 gap-2 sm:grid-cols-4 sm:gap-2 group sm:group-hover:text-primary mt-4">
+    <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-2 group sm:group-hover:text-primary mt-4">
       {oauthProviders.map((provider) => {
         const Icon = Icons[provider.icon];
 

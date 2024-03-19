@@ -31,7 +31,7 @@ export default function ResetPasswordPageForm({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-2">
+      <CardContent className="grid gap-2 mt-4">
         <ResetPasswordForm
           formlabel={title}
           formbutton={formbutton}

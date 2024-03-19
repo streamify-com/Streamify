@@ -1,11 +1,23 @@
 import { Metadata } from "next";
 import SignUpPageForm from "@shared-components/forms/auth/signup";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Sign Up",
-  description: "Sign up for an account",
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
 };
+
+export async function generateMetadata({
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "signup" });
+
+  return {
+    title: t("title"),
+  };
+}
 
 export default function SignUpPage() {
   const t = useTranslations("signup");
@@ -38,6 +50,7 @@ export default function SignUpPage() {
         and={t("and")}
         formbutton={t("form-button")}
         previous_step={t("previous-step")}
+        confirmPassword={t("confirm-password")}
       />
     </>
   );

@@ -1,4 +1,4 @@
-import SSOCallback from "@/components/sso-callback";
+import SSOCallback from "@/app/[locale]/(auth)/sso-callback/_components/sso-callback";
 import type { HandleOAuthCallbackParams } from "@clerk/types";
 import { Shell } from "@shared-components/ui/shell";
 

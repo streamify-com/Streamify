@@ -3,5 +3,5 @@ interface RootLayoutProps {
 }
 
 export default function LocaleLayout({ children }: RootLayoutProps) {
-  return <>{children}</>;
+  return children;
 }

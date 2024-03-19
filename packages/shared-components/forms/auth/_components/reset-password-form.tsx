@@ -87,9 +87,9 @@ export function ResetPasswordForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sm:hidden block">
+              {/* <FormLabel className="sm:hidden block">
                 {inputplaceholder}
-              </FormLabel>
+              </FormLabel> */}
               <FormControl>
                 <Input placeholder={inputplaceholder} {...field} />
               </FormControl>
@@ -97,7 +97,7 @@ export function ResetPasswordForm({
             </FormItem>
           )}
         />
-        <Separator className="my-4" />
+        <Separator className="my-2" />
         <Button disabled={isPending} variant="primaryButton" size="fullSize">
           {isPending && (
             <Icons.spinner

@@ -68,11 +68,11 @@ export function LanguagePicker({ href, buttonContent }: Props) {
           <FullLocaleLink locale="en" languageName="English" href={href} />
           <FullLocaleLink locale="de" languageName="Deutsch" href={href} />
         </div>
-        <DrawerFooter className="pt-8">
+        {/* <DrawerFooter className="pt-8">
           <DrawerClose asChild>
             <Button variant="secondaryButton">Close</Button>
           </DrawerClose>
-        </DrawerFooter>
+        </DrawerFooter> */}
       </DrawerContent>
     </Drawer>
   );

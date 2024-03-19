@@ -38,6 +38,7 @@ interface SignUpFormProps {
   birthdate: string;
   email: string;
   password: string;
+  confirmPassword: string;
   termsandconditions: string;
   termsandconditionsheader: string;
   termsandconditionsdescriptionpart1: string;
@@ -49,15 +50,11 @@ interface SignUpFormProps {
 }
 
 export function SignUpForm({
-  genderplaceholder,
-  gendermale,
-  genderfemale,
-  genderdiverse,
   firstname,
   lastname,
-  birthdate,
   email,
   password,
+  confirmPassword,
   termsandconditions,
   termsandconditionsheader,
   termsandconditionsdescriptionpart1,
@@ -65,7 +62,6 @@ export function SignUpForm({
   privacypolicy,
   and,
   formbutton,
-  previous_step,
 }: SignUpFormProps) {
   const router = useRouter();
   const { isLoaded, signUp } = useSignUp();
@@ -181,7 +177,7 @@ export function SignUpForm({
               name="firstname"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="sm:hidden block">{firstname}</FormLabel>
+                  {/* <FormLabel className="sm:hidden block">{firstname}</FormLabel> */}
                   <FormControl>
                     <Input
                       placeholder={firstname}
@@ -198,7 +194,7 @@ export function SignUpForm({
               name="lastname"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="sm:hidden block">{lastname}</FormLabel>
+                  {/* <FormLabel className="sm:hidden block">{lastname}</FormLabel> */}
                   <FormControl>
                     <Input
                       placeholder={lastname}
@@ -216,7 +212,7 @@ export function SignUpForm({
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="sm:hidden block">{email}</FormLabel>
+                {/* <FormLabel className="sm:hidden block">{email}</FormLabel> */}
                 <FormControl>
                   <Input
                     placeholder={email}
@@ -234,7 +230,7 @@ export function SignUpForm({
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="sm:hidden block">{password}</FormLabel>
+                {/* <FormLabel className="sm:hidden block">{password}</FormLabel> */}
                 <FormControl>
                   <PasswordInput placeholder={password} {...field} />
                 </FormControl>
@@ -247,9 +243,9 @@ export function SignUpForm({
             name="confirmPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="sm:hidden block">{password}</FormLabel>
+                {/* <FormLabel className="sm:hidden block">{password}</FormLabel> */}
                 <FormControl>
-                  <PasswordInput placeholder={password} {...field} />
+                  <PasswordInput placeholder={confirmPassword} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -264,18 +260,18 @@ export function SignUpForm({
             onClick={handleCheckboxClick}
             className="mt-1.5 sm:mt-1 h-5 w-5 sm:h-4 sm:w-4"
           />
-          <div className="grid gap-1.5 leading-none ml-2">
+          <div className="grid gap-1.5 leading-none ml-2 mb-2">
             <label htmlFor="terms1" className="text-primary sm:text-sm text-sm">
               {termsandconditionsheader}
             </label>
-            <p className="text-primary-muted sm:text-sm text-sm">
+            <p className="text-primary-muted sm:text-xs text-sm">
               {termsandconditionsdescriptionpart1}
               <Link
                 aria-label="Terms of Services"
                 href="/terms-of-services"
                 className={cn(
                   buttonVariants({ variant: "linkButton", size: "linkSize" }),
-                  "sm:text-sm text-sm",
+                  "sm:text-xs text-sm",
                 )}
               >
                 {termsandconditions}
@@ -286,7 +282,7 @@ export function SignUpForm({
                 href="/privacy-policy"
                 className={cn(
                   buttonVariants({ variant: "linkButton", size: "linkSize" }),
-                  "sm:text-sm text-sm",
+                  "sm:text-xs text-sm",
                 )}
               >
                 {privacypolicy}

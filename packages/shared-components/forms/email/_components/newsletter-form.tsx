@@ -75,30 +75,11 @@ const NewsletterForm = ({
         }),
       });
 
+      // TODO: handle error - At the moment success is assumed every time
       if (response.status === 200) {
         setData(initialData);
         toast.success(`${notification}`);
       }
-
-      // if (!response.ok) {
-      //   switch (response.status) {
-      //     case 409:
-      //       toast.error("You are already subscribed to our newsletter.")
-      //       break
-      //     case 422:
-      //       toast.error("Invalid input.")
-      //       break
-      //     case 429:
-      //       toast.error("The daily email limit has been reached.")
-      //       break
-      //     case 500:
-      //       toast.error("Something went wrong. Please try again later.")
-      //       break
-      //     default:
-      //       toast.error("Something went wrong. Please try again later.")
-      //   }
-      //   return
-      // }
     });
   }
 

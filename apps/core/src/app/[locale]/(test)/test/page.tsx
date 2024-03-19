@@ -12,10 +12,21 @@ import { Calendar } from "@shared-components/ui/calendar";
 import { buttonVariants } from "@shared-components/ui/button";
 import { cn } from "@shared-components/lib/utils";
 import Newsletter from "@shared-components/forms/email/newsletter";
+import { getTranslations } from "next-intl/server";
 
 type Props = {
   params: { locale: string };
 };
+
+export async function generateMetadata({
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "verify" });
+
+  return {
+    title: t("title"),
+  };
+}
 
 export default function Page({ params: { locale } }: Props) {
   // Enable static rendering

@@ -29,6 +29,7 @@ interface SignUpFormProps {
   birthdate: string;
   email: string;
   password: string;
+  confirmPassword: string;
   termsandconditions: string;
   termsandconditionsheader: string;
   termsandconditionsdescriptionpart1: string;
@@ -54,6 +55,7 @@ export default function SignUpPageForm({
   birthdate,
   email,
   password,
+  confirmPassword,
   termsandconditions,
   termsandconditionsheader,
   termsandconditionsdescriptionpart1,
@@ -66,7 +68,7 @@ export default function SignUpPageForm({
   return (
     <>
       <CardHeader>
-        <CardSubtitle>{step}</CardSubtitle>
+        {/* <CardSubtitle>{step}</CardSubtitle> */}
         <CardTitle>{title}</CardTitle>
         <CardDescription>
           {description}&nbsp;
@@ -118,6 +120,7 @@ export default function SignUpPageForm({
           genderfemale={genderfemale}
           genderdiverse={genderdiverse}
           birthdate={birthdate}
+          confirmPassword={confirmPassword}
         />
       </CardContent>
     </>
