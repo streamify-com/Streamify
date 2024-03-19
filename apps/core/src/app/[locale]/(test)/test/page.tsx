@@ -13,6 +13,7 @@ import { buttonVariants } from "@shared-components/ui/button";
 import { cn } from "@shared-components/lib/utils";
 import Newsletter from "@shared-components/forms/email/newsletter";
 import { getTranslations } from "next-intl/server";
+import { ComboBoxResponsive } from "@/components/test-1";
 
 type Props = {
   params: { locale: string };
@@ -39,7 +40,7 @@ export default function Page({ params: { locale } }: Props) {
   const w = useTranslations("newsletter");
 
   return (
-    <div className="p-6 sm:p-20 grid grid-cols-1 gap-2 sm:flex z-50">
+    <>
       <div className="font-special text-action">Tin Votan</div>
       <ShortLocaleLink locale="en" href="/test" />
       <ShortLocaleLink locale="de" href="/test" />
@@ -75,6 +76,10 @@ export default function Page({ params: { locale } }: Props) {
         placeholder={w("placeholder")}
         newsletterbutton={w("newsletterbutton")}
       />
-    </div>
+      <ComboBoxResponsive
+        buttonContent={t("locale", { locale: curLocale })}
+        href="/test"
+      />
+    </>
   );
 }

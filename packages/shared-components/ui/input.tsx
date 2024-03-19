@@ -11,7 +11,7 @@ const inputVariants = cva(
           "bg-transparent sm:hover:bg-secondary-muted border border-separator border sm:hover:border-primary sm:hover:placeholder:text-primary placeholder:text-primary-muted sm:hover:text-primary text-primary-muted transition-all",
       },
       size: {
-        inputSize: "h-10 sm:h-10 py-2 px-4 sm:w-full w-full",
+        inputSize: "h-10 sm:h-10 py-2 px-4 sm:w-auto w-full",
       },
     },
     defaultVariants: {

@@ -57,7 +57,10 @@ export function LanguagePicker({ href, buttonContent }: Props) {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="primaryButton">{buttonContent}</Button>
+        <Button variant="secondaryButton">
+          <GlobeIcon className="h-4 w-auto mr-3" />
+          {buttonContent}
+        </Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>

@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import { Drawer as DrawerPrimitive } from "vaul";
-
+import { X } from "lucide-react";
 import { cn } from "@shared-components/lib/utils";
+import { Button } from "./button";
 
 const Drawer = ({
   shouldScaleBackground = true,
@@ -43,12 +44,21 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mt-4 px-4 py-4 flex h-auto flex-col rounded-t-2xl border border-separator bg-foreground",
+        "fixed inset-x-0 bottom-0 z-50 p-4 flex h-auto flex-col rounded-t-2xl border border-separator bg-foreground",
         className,
       )}
       {...props}
     >
-      <div className="mx-auto mt-0 h-1 w-[100px] rounded-full bg-primary-muted" />
+      {/* <div className="mx-auto mt-0 h-1 w-[100px] rounded-full bg-primary-muted" /> */}
+      <DrawerClose className="right-4 absolute">
+        <Button
+          variant="secondaryButton"
+          size="roundedSize"
+          className="bg-skeleton"
+        >
+          <X className="h-4 w-4 text-primary-muted" />
+        </Button>
+      </DrawerClose>
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
@@ -60,7 +70,10 @@ const DrawerHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("grid gap-1.5 p-4 text-center sm:text-left", className)}
+    className={cn(
+      "grid gap-0 p-2 text-center sm:text-left border-b border-separator",
+      className,
+    )}
     {...props}
   />
 );
@@ -71,7 +84,7 @@ const DrawerFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn("mt-auto flex flex-col gap-2 p-4", className)}
+    className={cn("mt-auto flex flex-col gap-2 py-4", className)}
     {...props}
   />
 );
@@ -84,7 +97,7 @@ const DrawerTitle = React.forwardRef<
   <DrawerPrimitive.Title
     ref={ref}
     className={cn(
-      "text-lg font-regular leading-none tracking-tight",
+      "text-lg font-regular leading-none tracking-tight pb-4",
       className,
     )}
     {...props}
@@ -98,7 +111,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-primary-muted", className)}
+    className={cn("text-sm text-primary-muted -mt-2 pb-2", className)}
     {...props}
   />
 ));

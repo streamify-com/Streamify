@@ -79,8 +79,8 @@ export function ThemeModeSelector({ light, dark, system }: ThemeNameProps) {
   });
 
   return (
-    <Tabs defaultValue="system" className="w-full sm:w-auto">
-      <TabsList className="grid w-full grid-cols-3 gap-2">
+    <Tabs defaultValue="system" className="w-full sm:w-fit">
+      <TabsList className="grid w-full sm:w-auto grid-cols-3 gap-2">
         {options?.map((opt) => (
           <TabsTrigger
             key={opt.position}
