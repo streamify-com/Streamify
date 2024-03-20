@@ -1,6 +1,5 @@
 import SigninPageForm from "@shared-components/forms/auth/signin";
 import { useLocale, useTranslations } from "next-intl";
-import { LanguagePicker } from "@/components/test-component";
 import { ThemeModeSelector } from "@shared-components/components/theme-switcher";
 import { getTranslations } from "next-intl/server";
 import { ReactNode } from "react";
@@ -39,15 +38,6 @@ export default function Page() {
         previous_step={t("previous-step")}
         reset_password={t("reset-password")}
       />
-      {/* <LanguagePicker
-        buttonContent={u("locale", { locale: curLocale })}
-        href="/signin"
-      />
-      <ThemeModeSelector
-        light={v("light")}
-        dark={v("dark")}
-        system={v("system")}
-      /> */}
     </div>
   );
 }
