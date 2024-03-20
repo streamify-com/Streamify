@@ -20,7 +20,7 @@ export default function CoverImage(props: CoverImageProps) {
       priority={priority}
     />
   ) : (
-    <div className="bg-slate-50" style={{ paddingTop: "50%" }} />
+    <div className="bg-background" style={{ paddingTop: "50%" }} />
   );
 
   return (
