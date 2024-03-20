@@ -26,7 +26,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@shared-components/ui/drawer";
-import FullLocaleLink from "../full-locale-link";
+import FullLocaleLink from "@/components/full-locale-link";
 import { GlobeIcon } from "@shared-components/graphics/icons";
 
 type Props = {

@@ -14,5 +14,5 @@ export default async function AuthLayout({ children }: AuthLayoutProps) {
 
   if (!user) return <div>Not signed in</div>;
 
-  return <>{children}</>;
+  return children;
 }
