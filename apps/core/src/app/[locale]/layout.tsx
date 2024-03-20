@@ -23,7 +23,7 @@ interface RootLayoutProps {
 
 export default async function PlatformLayout({ children }: RootLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col p-8 sm:p-12">
+    <div className="flex min-h-screen flex-col">
       <main className="flex-1">{children}</main>
       <CookieBannerComponent />
     </div>

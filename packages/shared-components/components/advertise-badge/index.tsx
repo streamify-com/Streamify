@@ -1,7 +1,7 @@
 import { StreamifyBadge } from "@shared-components/graphics/badge";
 import { PrimaryIcon } from "@shared-components/graphics/streamify";
 import { badgeVariants } from "@shared-components/ui/badge";
-import Link from "next/link";
+import { Link } from "@shared-components/ui/link";
 
 export default function AdvertiseBadge() {
   return (

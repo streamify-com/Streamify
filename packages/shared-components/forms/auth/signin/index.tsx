@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@shared-components/ui/link";
 import {
   CardContent,
   CardDescription,

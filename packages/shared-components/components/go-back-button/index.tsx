@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { ExpandingArrowLeft } from "@shared-components/animations/expanding-arrow-left";
-import Link from "next/link";
+import { Link } from "@shared-components/ui/link";
 
 type BackToHomepageButtonProps = {
   href: string;

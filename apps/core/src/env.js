@@ -15,6 +15,8 @@ export const env = createEnv({
     MUX_ACCESS_TOKEN_ID: z.string(),
     MUX_SECRET_KEY: z.string(),
     PROJECT_NAME: z.string(),
+    SANITY_API_READ_TOKEN: z.string(),
+    SANITY_API_WRITE_TOKEN: z.string(),
   },
 
   /**
@@ -25,6 +27,12 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_APP_URL: z.string().url(),
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string(),
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL: z.string(),
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL: z.string(),
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: z.string(),
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: z.string(),
+    NEXT_PUBLIC_SANITY_PROJECT_ID: z.string(),
+    NEXT_PUBLIC_SANITY_DATASET: z.string(),
   },
 
   /**
@@ -39,6 +47,12 @@ export const env = createEnv({
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
       process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL,
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL,
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL:
+      process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL,
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL:
+      process.env.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL,
     // Resend
     RESEND_API_KEY: process.env.RESEND_API_KEY,
     RESEND_COMPANY_NAME: process.env.RESEND_COMPANY_NAME,
@@ -47,6 +61,11 @@ export const env = createEnv({
     // Mux
     MUX_ACCESS_TOKEN_ID: process.env.MUX_ACCESS_TOKEN_ID,
     MUX_SECRET_KEY: process.env.MUX_SECRET_KEY,
+    // Sanity
+    SANITY_API_READ_TOKEN: process.env.SANITY_API_READ_TOKEN,
+    SANITY_API_WRITE_TOKEN: process.env.SANITY_API_WRITE_TOKEN,
+    NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.

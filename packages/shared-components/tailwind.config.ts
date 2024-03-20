@@ -8,6 +8,7 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/animations/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/components/**/*.{js,ts,jsx,tsx}",
+    "../../packages/shared-components/features/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/forms/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/graphics/**/*.{js,ts,jsx,tsx}",
     "../../packages/shared-components/hooks/**/*.{js,ts,jsx,tsx}",
