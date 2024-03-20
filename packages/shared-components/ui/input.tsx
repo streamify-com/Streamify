@@ -11,12 +11,12 @@ const inputVariants = cva(
           "bg-transparent sm:hover:bg-secondary-muted border border-separator border sm:hover:border-primary sm:hover:placeholder:text-primary placeholder:text-primary-muted sm:hover:text-primary text-primary-muted transition-all",
       },
       size: {
-        inputSize: "h-10 sm:h-10 py-2 px-4 sm:w-auto w-full",
+        defaultInputSize: "h-10 sm:h-10 py-2 px-4 sm:w-full w-full"
       },
     },
     defaultVariants: {
       variant: "defaultInput",
-      size: "inputSize",
+      size: "defaultInputSize",
     },
   },
 );
@@ -30,7 +30,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         type={type}
         className={cn(
-          inputVariants({ variant: "defaultInput", size: "inputSize" }),
+          inputVariants({ variant: "defaultInput", size: "defaultInputSize" }),
         )}
         ref={ref}
         {...props}
@@ -40,4 +40,4 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 );
 Input.displayName = "Input";
 
-export { Input };
+export { Input, inputVariants };

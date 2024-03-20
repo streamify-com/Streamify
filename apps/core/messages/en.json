@@ -4,12 +4,14 @@
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
   },
   "LocaleSwitcher": {
-    "label": "Change language",
+    "title": "Change language",
+    "description": "Your current language:",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}",
     "switchLocale": "Switch to {locale, select, de {German} en {English} other {Unknown}}"
   },
   "locale-switcher": {
-    "label": "Change language",
+    "title": "Change language",
+    "description": "Your current language:",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unknown}}"
   },
   "mode-theme": {
@@ -32,7 +34,7 @@
     "href": "/home"
   },
   "cookie": {
-    "description": "This website stores data such as cookies to enable essential site functionality, as well as marketing, personalization and analytics. You may change your settings at any time or accept the default settings. You may close this banner to continue with only necessary cookies. Read more in ",
+    "description": "This site uses tracking technologies. You may opt in or opt out of the use of these technologies.",
     "cookie-policy": "Cookie Policy",
     "accept-all": "Accept all",
     "only-necessary": "Only necessary"

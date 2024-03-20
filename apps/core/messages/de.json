@@ -4,12 +4,14 @@
     "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>"
   },
   "LocaleSwitcher": {
-    "label": "Sprache ändern",
+    "title": "Sprache ändern",
+    "description": "Aktuelle Sprache:",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}",
     "switchLocale": "Zu {locale, select, de {Deutsch} en {Englisch} other {Unbekannt}} wechseln"
   },
   "locale-switcher": {
-    "label": "Sprache ändern",
+    "title": "Sprache ändern",
+    "description": "Aktuelle Sprache:",
     "locale": "{locale, select, de {Deutsch} en {English} other {Unbekannt}}"
   },
   "mode-theme": {
@@ -32,7 +34,7 @@
     "href": "/home"
   },
   "cookie": {
-    "description": "Diese Seite speichert Daten in Form von Cookies, um essenzielle Funktionen zu ermöglichen, sowie für Marketing-, Personalisierungs- und Analysezwecke. Du kannst deine Einstellungen jederzeit ändern oder die Standardeinstellungen aktivieren. Weiterhin kannst du diese Seite mit den Mindesteinstellungen verwenden. Erfahre mehr unter ",
+    "description": "Diese Website verwendet Tracking-Technologien. Sie können der Verwendung dieser Technologien zustimmen oder sie ablehnen.",
     "cookie-policy": "Cookie-Richtlinie",
     "accept-all": "Akzeptiere alle",
     "only-necessary": "Nur notwendige"

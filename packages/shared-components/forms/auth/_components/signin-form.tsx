@@ -17,7 +17,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@shared-components/ui/form";
-import { Input } from "@shared-components/ui/input";
+import { Input, inputVariants } from "@shared-components/ui/input";
 import { Icons } from "@shared-components/graphics/icons";
 import { PasswordInput } from "@shared-components/forms/auth/_components/password-input";
 import { Separator } from "@shared-components/ui/separator";
@@ -117,6 +117,7 @@ export function SignInForm({
                   placeholder={password}
                   autoComplete="current-password"
                   {...field}
+                  className="sm:w-full"
                 />
               </FormControl>
               <FormMessage />

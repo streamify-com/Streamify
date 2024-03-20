@@ -32,14 +32,16 @@ import { GlobeIcon } from "@shared-components/graphics/icons";
 type Props = {
   href: string;
   buttonContent: string;
+  title: string;
+  description: string;
 };
 
-type Status = {
-  value: string;
-  label: string;
-};
-
-export function ComboBoxResponsive({ href, buttonContent }: Props) {
+export function LanguagePicker({
+  title,
+  description,
+  href,
+  buttonContent,
+}: Props) {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -71,9 +73,12 @@ export function ComboBoxResponsive({ href, buttonContent }: Props) {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
-          <DrawerTitle className="font-bold">Languages</DrawerTitle>
+          <DrawerTitle className="font-bold">{title}</DrawerTitle>
           <DrawerDescription>
-            Your current language: {buttonContent}
+            {description}{" "}
+            <span className="underline underline-offset-4">
+              {buttonContent}
+            </span>
           </DrawerDescription>
         </DrawerHeader>
         <div className="mt-4">

@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 4003",
+    "dev": "next dev --port 4001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "update": "pnpm update --latest",
     "upgrade": "pnpm upgrade --latest",
-    "unlighthouse": "pnpm dlx unlighthouse --site https://ott.streamify.com",
-    "email": "email dev --dir src/emails"
+    "unlighthouse": "pnpm dlx unlighthouse --site https://streamify.com"
   },
   "dependencies": {
     "@clerk/localizations": "^1.26.15",

@@ -6,7 +6,8 @@
     "lint": "eslint \"**/*.ts*\"",
     "update": "pnpm update --latest",
     "upgrade": "pnpm upgrade --latest",
-    "ui:add": "pnpm dlx shadcn-ui@latest add"
+    "ui:add": "pnpm dlx shadcn-ui@latest add",
+    "email": "email dev --dir forms/email/_templates --port 4000"
   },
   "devDependencies": {
     "@types/formidable": "^2.0.5",
@@ -51,7 +52,9 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-email/button": "^0.0.11",
     "@react-email/components": "^0.0.10",
+    "@react-email/html": "^0.0.6",
     "@react-email/tailwind": "^0.0.14",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
@@ -75,6 +78,7 @@
     "pnpm": "^8.10.5",
     "postcss-focus-visible": "^9.0.0",
     "react-day-picker": "^8.10.0",
+    "react-email": "^2.1.0",
     "react-hook-form": "^7.51.0",
     "resend": "^2.0.0",
     "sonner": "^1.2.0",

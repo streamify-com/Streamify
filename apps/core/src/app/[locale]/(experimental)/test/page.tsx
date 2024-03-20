@@ -1,4 +1,3 @@
-import { LanguagePicker } from "@/components/test-component";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useLocale, useTranslations } from "next-intl";
 import {
@@ -6,14 +5,12 @@ import {
   ThemeModeSelector,
 } from "@shared-components/components/theme-switcher";
 import ShortLocaleLink from "@/components/short-locale-link";
-import FullLocaleLink from "@/components/full-locale-link";
 import { Link } from "@shared-components/ui/link";
-import { Calendar } from "@shared-components/ui/calendar";
 import { buttonVariants } from "@shared-components/ui/button";
 import { cn } from "@shared-components/lib/utils";
 import Newsletter from "@shared-components/forms/email/newsletter";
 import { getTranslations } from "next-intl/server";
-import { ComboBoxResponsive } from "@/components/test-1";
+import { LanguagePicker } from "@/components/language-picker";
 
 type Props = {
   params: { locale: string };
@@ -40,17 +37,10 @@ export default function Page({ params: { locale } }: Props) {
   const w = useTranslations("newsletter");
 
   return (
-    <>
+    <div className="flex-1 space-y-4">
       <div className="font-special text-action">Tin Votan</div>
-      <ShortLocaleLink locale="en" href="/test" />
-      <ShortLocaleLink locale="de" href="/test" />
-      <FullLocaleLink locale="en" languageName="English" href="/test" />
-      <FullLocaleLink locale="de" languageName="Deutsch" href="/test" />
-      <LanguagePicker
-        buttonContent={t("locale", { locale: curLocale })}
-        href="/test"
-      />
-      {/* <FullLocaleName locale={undefined} /> */}
+      <ShortLocaleLink locale="en" href="/welcome" />
+      <ShortLocaleLink locale="de" href="/welcome" />
       <ThemeModeSelector
         light={u("light")}
         dark={u("dark")}
@@ -70,16 +60,17 @@ export default function Page({ params: { locale } }: Props) {
       >
         {v("signin")}
       </Link>
-      {/* <Calendar /> */}
       <Newsletter
         notification={w("notification")}
         placeholder={w("placeholder")}
         newsletterbutton={w("newsletterbutton")}
       />
-      <ComboBoxResponsive
+      <LanguagePicker
         buttonContent={t("locale", { locale: curLocale })}
-        href="/test"
+        href="/welcome"
+        title={t("title")}
+        description={t("description")}
       />
-    </>
+    </div>
   );
 }

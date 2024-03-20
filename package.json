@@ -34,8 +34,7 @@
     "update": "pnpm update --latest",
     "upgrade": "pnpm upgrade --latest",
     "format:write": "prettier --write \"**/*.{ts,js,tsx,css,json}\"",
-    "format:check": "prettier --check \"**/*.{ts,js,tsx,css,json}\"",
-    "ui:add": "pnpm --filter ui ui:add"
+    "format:check": "prettier --check \"**/*.{ts,js,tsx,css,json}\""
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.16",
