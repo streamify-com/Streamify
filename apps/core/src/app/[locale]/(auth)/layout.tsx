@@ -2,7 +2,7 @@ import { Link } from "@shared-components/ui/link";
 import { PrimaryLogo } from "@shared-components/graphics/streamify";
 import * as React from "react";
 import GradientBackground from "@shared-components/animations/gradient-background";
-import { ThemeModeIcon } from "@shared-components/components/theme-switcher";
+import { ThemeIconToggleTabs } from "@shared-components/components/theme-switcher";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -16,10 +16,10 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
           <GradientBackground />
           <div className="relative hidden h-full flex-col md:flex">
             <Link href="/" className="absolute z-30 hidden m-20 md:flex">
-              <PrimaryLogo className="text-background sm:hover:text-background-hover h-8 w-auto sm:h-14 sm:w-auto" />
+              <PrimaryLogo className="text-background sm:hover:text-background-hover h-8 w-auto sm:h-14 sm:w-auto sm:drop-shadow-md" />
             </Link>
             <div className="absolute z-30 hidden ml-20 bottom-20 md:flex">
-              <ThemeModeIcon />
+              <ThemeIconToggleTabs />
             </div>
           </div>
         </div>
