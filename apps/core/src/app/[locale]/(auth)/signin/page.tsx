@@ -1,6 +1,5 @@
 import SigninPageForm from "@shared-components/forms/auth/signin";
-import { useLocale, useTranslations } from "next-intl";
-import { ThemeModeSelector } from "@shared-components/components/theme-switcher";
+import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { ReactNode } from "react";
 
@@ -20,10 +19,7 @@ export async function generateMetadata({
 }
 
 export default function Page() {
-  const curLocale = useLocale();
   const t = useTranslations("signin");
-  const u = useTranslations("LocaleSwitcher");
-  const v = useTranslations("mode-theme");
 
   return (
     <div>

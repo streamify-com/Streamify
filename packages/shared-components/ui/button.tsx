@@ -13,7 +13,7 @@ const buttonVariants = cva(
         secondaryButton:
           "bg-secondary sm:hover:bg-secondary-muted text-secondary-inner sm:hover:text-secondary-hover border border-separator",
         tertiaryButton:
-          "bg-secondary sm:hover:bg-primary text-secondary-inner sm:hover:text-primary-hover border border-separator sm:hover:border-primary-muted",
+          "bg-secondary sm:hover:bg-primary-muted text-primary sm:hover:text-primary border border-separator sm:hover:border-primary-muted",
         actionButton:
           "bg-action sm:hover:bg-action-muted text-background sm:hover:text-white border border-action sm:hover:border-action-muted",
         insentiveButton:

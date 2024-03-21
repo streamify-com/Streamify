@@ -7,6 +7,9 @@ import {
   SystemIcon,
 } from "@shared-components/graphics/icons";
 import { Tabs, TabsList, TabsTrigger } from "@shared-components/ui/tabs";
+import { useTheme } from "next-themes";
+import { cn } from "@shared-components/lib/utils";
+import { buttonVariants } from "@shared-components/ui/button";
 
 interface ThemeNameProps {
   light: string;
@@ -14,165 +17,105 @@ interface ThemeNameProps {
   system: string;
 }
 
-export function ThemeModeSelector({ light, dark, system }: ThemeNameProps) {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "system",
-  );
-  const element = document.documentElement;
-  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const options = [
-    {
-      value: "light",
-      position: "light",
-      text: <>{light}</>,
-    },
-    {
-      value: "dark",
-      position: "dark",
-      text: <>{dark}</>,
-    },
-    {
-      value: "system",
-      position: "system",
-      text: <>{system}</>,
-    },
-  ];
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  function onWindowMatch() {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) && darkQuery.matches)
-    ) {
-      element.classList.add("dark");
-    } else {
-      element.classList.remove("dark");
-    }
-  }
-  onWindowMatch();
-
-  useEffect(() => {
-    switch (theme) {
-      case "dark":
-        element.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-        break;
-      case "light":
-        element.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-        break;
-      default:
-        localStorage.removeItem("theme");
-        onWindowMatch();
-        break;
-    }
-  }, [element.classList, onWindowMatch, theme]);
-
-  darkQuery.addEventListener("change", (e) => {
-    if (!("theme" in localStorage)) {
-      if (e.matches) {
-        element.classList.add("dark");
-      } else {
-        element.classList.remove("dark");
-      }
-    }
-  });
+export function ThemeSelect({ light, dark, system }: ThemeNameProps) {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   return (
-    <Tabs defaultValue="system" className="w-full sm:w-fit">
+    <select
+      value={theme}
+      onChange={(e) => setTheme(e.target.value)}
+      data-test-id="theme-selector"
+      className={cn(
+        buttonVariants({ variant: "secondaryButton" }),
+        "sm:w-[160px] w-lg appearance-none",
+      )}
+    >
+      <option value="system">{system}</option>
+      {mounted && (
+        <>
+          <option value="dark">{dark}</option>
+          <option value="light">{light}</option>
+        </>
+      )}
+    </select>
+  );
+}
+
+export function ThemeTextToggleTabs({ light, dark, system }: ThemeNameProps) {
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
+  return (
+    <Tabs
+      defaultValue={resolvedTheme}
+      className="w-full sm:w-fit"
+      onValueChange={setTheme}
+    >
       <TabsList className="grid w-full sm:w-auto grid-cols-3 gap-2">
-        {options?.map((opt) => (
-          <TabsTrigger
-            key={opt.position}
-            onClick={() => setTheme(opt.value)}
-            value={opt.value}
-            className="data-[state=active]:bg-primary text-sm sm:text-xs"
-          >
-            {opt.text}
-          </TabsTrigger>
-        ))}
+        <TabsTrigger
+          value="light"
+          className={`${
+            resolvedTheme === "light" ? "data-[state=active]:bg-primary" : ""
+          }`}
+        >
+          {light}
+        </TabsTrigger>
+        <TabsTrigger
+          value="dark"
+          className={`${
+            resolvedTheme === "dark" ? "data-[state=active]:bg-primary" : ""
+          }`}
+        >
+          {dark}
+        </TabsTrigger>
+        <TabsTrigger
+          value="system"
+          className={`${
+            resolvedTheme === "system" ? "data-[state=active]:bg-primary" : ""
+          }`}
+        >
+          {system}
+        </TabsTrigger>
       </TabsList>
     </Tabs>
   );
 }
 
-export function ThemeModeIcon() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "system",
-  );
-  const element = document.documentElement;
-  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const options = [
-    {
-      value: "light",
-      text: "Light",
-      icon: <LightIcon className="h-4 w-auto" />,
-    },
-    {
-      value: "dark",
-      text: "Dark",
-      icon: <DarkIcon className="h-4 w-auto" />,
-    },
-    {
-      value: "system",
-      text: "System",
-      icon: <SystemIcon className="h-4 w-auto" />,
-    },
-  ];
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  function onWindowMatch() {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) && darkQuery.matches)
-    ) {
-      element.classList.add("dark");
-    } else {
-      element.classList.remove("dark");
-    }
-  }
-  onWindowMatch();
-
-  useEffect(() => {
-    switch (theme) {
-      case "dark":
-        element.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-        break;
-      case "light":
-        element.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-        break;
-      default:
-        localStorage.removeItem("theme");
-        onWindowMatch();
-        break;
-    }
-  }, [element.classList, onWindowMatch, theme]);
-
-  darkQuery.addEventListener("change", (e) => {
-    if (!("theme" in localStorage)) {
-      if (e.matches) {
-        element.classList.add("dark");
-      } else {
-        element.classList.remove("dark");
-      }
-    }
-  });
+export function ThemeIconToggleTabs() {
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   return (
-    <Tabs defaultValue="system" className="w-28 sm:w-28 rounded-full">
-      <TabsList className="grid w-full grid-cols-3 gap-2 p-1 rounded-full">
-        {options?.map((opt) => (
-          <TabsTrigger
-            key={opt.text}
-            onClick={() => setTheme(opt.value)}
-            value={opt.value}
-            className="data-[state=active]:bg-primary text-sm sm:text-xs px-2 py-1 rounded-full"
-          >
-            {opt.icon}
-          </TabsTrigger>
-        ))}
+    <Tabs
+      defaultValue={resolvedTheme}
+      className="w-full sm:w-fit"
+      onValueChange={setTheme}
+    >
+      <TabsList className="grid w-full sm:w-auto grid-cols-3 gap-2">
+        <TabsTrigger
+          value="light"
+          className={`${
+            resolvedTheme === "light" ? "data-[state=active]:bg-primary" : ""
+          }`}
+        >
+          <LightIcon className="h-3 w-auto" />
+        </TabsTrigger>
+        <TabsTrigger
+          value="dark"
+          className={`${
+            resolvedTheme === "dark" ? "data-[state=active]:bg-primary" : ""
+          }`}
+        >
+          <DarkIcon className="h-3 w-auto" />
+        </TabsTrigger>
+        <TabsTrigger
+          value="system"
+          className={`${
+            resolvedTheme === "system" ? "data-[state=active]:bg-primary" : ""
+          }`}
+        >
+          <SystemIcon className="h-3 w-auto" />
+        </TabsTrigger>
       </TabsList>
     </Tabs>
   );

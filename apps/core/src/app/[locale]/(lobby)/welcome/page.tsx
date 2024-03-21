@@ -1,9 +1,5 @@
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useLocale, useTranslations } from "next-intl";
-import {
-  ThemeModeIcon,
-  ThemeModeSelector,
-} from "@shared-components/components/theme-switcher";
 import ShortLocaleLink from "@/components/short-locale-link";
 import { Link } from "@shared-components/ui/link";
 import { buttonVariants } from "@shared-components/ui/button";
@@ -38,14 +34,8 @@ export default function Page({ params: { locale } }: Props) {
 
   return (
     <div className="flex-1 space-y-4">
-      <ShortLocaleLink locale="en" href="/test" />
-      <ShortLocaleLink locale="de" href="/test" />
-      <ThemeModeSelector
-        light={u("light")}
-        dark={u("dark")}
-        system={u("system")}
-      />
-      <ThemeModeIcon />
+      <ShortLocaleLink locale="en" href="/welcome" />
+      <ShortLocaleLink locale="de" href="/welcome" />
       <Link
         aria-label="Reset password"
         href="/signin"

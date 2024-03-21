@@ -1,8 +1,9 @@
 import { unstable_setRequestLocale } from "next-intl/server";
 import { useLocale, useTranslations } from "next-intl";
 import {
-  ThemeModeIcon,
-  ThemeModeSelector,
+  ThemeIconToggleTabs,
+  ThemeSelect,
+  ThemeTextToggleTabs,
 } from "@shared-components/components/theme-switcher";
 import ShortLocaleLink from "@/components/short-locale-link";
 import { Link } from "@shared-components/ui/link";
@@ -38,15 +39,8 @@ export default function Page({ params: { locale } }: Props) {
 
   return (
     <div className="flex-1 space-y-4">
-      <div className="font-special text-action">Tin Votan</div>
-      <ShortLocaleLink locale="en" href="/welcome" />
-      <ShortLocaleLink locale="de" href="/welcome" />
-      <ThemeModeSelector
-        light={u("light")}
-        dark={u("dark")}
-        system={u("system")}
-      />
-      <ThemeModeIcon />
+      <ShortLocaleLink locale="en" href="/test" />
+      <ShortLocaleLink locale="de" href="/test" />
       <Link
         aria-label="Reset password"
         href="/signin"
@@ -67,10 +61,17 @@ export default function Page({ params: { locale } }: Props) {
       />
       <LanguagePicker
         buttonContent={t("locale", { locale: curLocale })}
-        href="/welcome"
+        href="/test"
         title={t("title")}
         description={t("description")}
       />
+      <ThemeTextToggleTabs
+        light={u("light")}
+        dark={u("dark")}
+        system={u("system")}
+      />
+      <ThemeIconToggleTabs />
+      <ThemeSelect light={u("light")} dark={u("dark")} system={u("system")} />
     </div>
   );
 }
