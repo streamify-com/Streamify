@@ -17,9 +17,9 @@ export default function FullLocaleLink({ href, locale, languageName }: Props) {
       href={href}
       locale={locale}
       className={clsx(
-        "font-regular text-lg sm:text-md text-primary sm:text-primary inline-flex items-center justify-center sm:w-auto w-full border border-separator sm:border-transparent rounded-md h-10 sm:h-auto",
+        "font-regular text-lg sm:text-md text-primary sm:text-primary inline-flex items-center justify-left sm:w-auto w-full h-10 sm:h-auto",
         curLocale === locale &&
-          "font-regular text-secondary-muted sm:text-primary-muted bg-primary-muted sm:bg-transparent",
+          "font-regular text-primary-muted sm:text-primary-muted",
       )}
     >
       {languageName}

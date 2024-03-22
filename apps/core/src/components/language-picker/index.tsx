@@ -27,13 +27,14 @@ import {
   DrawerTrigger,
 } from "@shared-components/ui/drawer";
 import FullLocaleLink from "@/components/full-locale-link";
-import { GlobeIcon } from "@shared-components/graphics/icons";
+import { GlobeIcon, Icons } from "@shared-components/graphics/icons";
 
 type Props = {
   href: string;
   buttonContent: string;
   title: string;
   description: string;
+  activeLocale: string;
 };
 
 export function LanguagePicker({
@@ -41,6 +42,7 @@ export function LanguagePicker({
   description,
   href,
   buttonContent,
+  activeLocale,
 }: Props) {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -55,7 +57,7 @@ export function LanguagePicker({
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-[200px] p-0" align="start">
-          <StatusList href={href} />
+          <StatusList href={href} activeLocale={activeLocale} />
         </PopoverContent>
       </Popover>
     );
@@ -82,23 +84,35 @@ export function LanguagePicker({
           </DrawerDescription>
         </DrawerHeader>
         <div className="mt-4">
-          <StatusList href={href} />
+          <StatusList href={href} activeLocale={activeLocale} />
         </div>
       </DrawerContent>
     </Drawer>
   );
 }
 
-function StatusList({ href }: { href: string }) {
+function StatusList({
+  href,
+  activeLocale,
+}: {
+  href: string;
+  activeLocale: string;
+}) {
   return (
     <Command>
       <CommandList>
         <CommandGroup>
           <CommandItem>
             <FullLocaleLink locale="en" languageName="English" href={href} />
+            {activeLocale === "en" && (
+              <Icons.check className="h-4 w-auto ml-auto text-primary-muted" />
+            )}
           </CommandItem>
           <CommandItem>
             <FullLocaleLink locale="de" languageName="Deutsch" href={href} />
+            {activeLocale === "de" && (
+              <Icons.check className="h-4 w-auto ml-auto text-primary-muted" />
+            )}
           </CommandItem>
         </CommandGroup>
       </CommandList>
