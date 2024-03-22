@@ -94,19 +94,19 @@ export default async function PostPage({ params }: Props) {
               <Avatar name={post.author.name} picture={post.author.picture} />
             )}
           </div>
-          <div className="mb-6 text-lg">
-            <div className="mb-4 text-lg">
+          <div className="mb-6 text-lg text-primary">
+            <div className="mb-4 text-lg text-primary-muted">
               <DateComponent dateString={post.date} />
             </div>
           </div>
         </div>
         {post.content?.length && (
-          <PortableText className="mx-auto max-w-2xl" value={post.content} />
+          <PortableText className="mx-auto max-w-2xl text-primary" value={post.content} />
         )}
       </article>
       <aside>
-        <hr className="border-accent-2 mb-24 mt-28" />
-        <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
+        <hr className="border-separator border mb-24 mt-28" />
+        <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl text-action">
           Recent Stories
         </h2>
         <Suspense>

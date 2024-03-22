@@ -56,6 +56,7 @@ export default function Page({ params: { locale } }: Props) {
         href="/unsigned"
         title={t("title")}
         description={t("description")}
+        activeLocale={curLocale}
       />
     </div>
   );
