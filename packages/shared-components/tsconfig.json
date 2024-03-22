@@ -1,6 +1,6 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": ["."],
+  "include": [".", "../../apps/core/src/components/short-locale-link"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "allowJs": true,

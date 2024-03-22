@@ -32,13 +32,13 @@ export function ThemeSelect({ light, dark, system }: ThemeNameProps) {
         "sm:w-[160px] w-lg appearance-none",
       )}
     >
-      <option value="system">{system}</option>
       {mounted && (
         <>
-          <option value="dark">{dark}</option>
           <option value="light">{light}</option>
+          <option value="dark">{dark}</option>
         </>
       )}
+      <option value="system">{system}</option>
     </select>
   );
 }
@@ -88,7 +88,7 @@ export function ThemeIconToggleTabs() {
   return (
     <Tabs
       defaultValue={resolvedTheme}
-      className="w-full sm:w-fit"
+      className="w-fit sm:w-fit"
       onValueChange={setTheme}
     >
       <TabsList className="grid w-full sm:w-auto grid-cols-3 gap-2">

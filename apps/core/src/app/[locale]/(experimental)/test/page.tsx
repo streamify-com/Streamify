@@ -64,6 +64,7 @@ export default function Page({ params: { locale } }: Props) {
         href="/test"
         title={t("title")}
         description={t("description")}
+        activeLocale={curLocale}
       />
       <ThemeTextToggleTabs
         light={u("light")}
