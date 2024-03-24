@@ -17,6 +17,7 @@
     "@clerk/types": "^3.62.1",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
+    "@mux/mux-player-react": "^2.4.0",
     "@next/env": "^14.1.4",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-label": "^2.0.2",

@@ -9,7 +9,6 @@ import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
 import {
-  apiVersion,
   dataset,
   projectId,
   studioUrl,
@@ -22,20 +21,18 @@ import {
 import { assistWithPresets } from "@shared-components/features/sanity/plugins/assist";
 import author from "@shared-components/features/sanity/schemas/documents/author";
 import post from "@shared-components/features/sanity/schemas/documents/post";
+import video from "@shared-components/features/sanity/schemas/documents/video";
+import blockContent from "@shared-components/features/sanity/schemas/documents/block-content";
 import settings from "@shared-components/features/sanity/schemas/singletons/settings";
+import { muxInput } from "sanity-plugin-mux-input";
+import { scheduledPublishing } from "@sanity/scheduled-publishing";
 
 export default defineConfig({
   basePath: studioUrl,
   projectId,
   dataset,
   schema: {
-    types: [
-      // Singletons
-      settings,
-      // Documents
-      post,
-      author,
-    ],
+    types: [settings, post, author, video, blockContent],
   },
   plugins: [
     structureTool({ structure: pageStructure([settings]) }),
@@ -46,6 +43,11 @@ export default defineConfig({
     // Sets up AI Assist with preset prompts
     // https://www.sanity.io/docs/ai-assist
     assistWithPresets(),
+    scheduledPublishing({
+      // E.g. 12/25/2000 6:30 AM
+      inputDateTimeFormat: "dd/mm/yyyy h:mm",
+    }),
+    muxInput({ mp4_support: "standard" }),
     presentationTool({
       locate,
       previewUrl: { previewMode: { enable: "/api/draft" } },

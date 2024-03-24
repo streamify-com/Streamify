@@ -24,10 +24,18 @@ export default function CustomPortableText({
   const components: PortableTextComponents = {
     block: {
       h5: ({ children }) => (
-        <h5 className="mb-2 text-sm font-semibold">{children}</h5>
+        <h5 className="mb-2 text-sm font-regular text-action">{children}</h5>
       ),
       h6: ({ children }) => (
-        <h6 className="mb-1 text-xs font-semibold">{children}</h6>
+        <h6 className="mb-1 text-xs font-regular text-action">{children}</h6>
+      ),
+      b: ({ children }) => (
+        <b className="mb-1 text-xs font-regular text-action">{children}</b>
+      ),
+      strong: ({ children }) => (
+        <strong className="mb-1 text-xs font-regular text-action">
+          {children}
+        </strong>
       ),
     },
     marks: {

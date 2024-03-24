@@ -12,6 +12,9 @@ import { cn } from "@shared-components/lib/utils";
 import Newsletter from "@shared-components/forms/email/newsletter";
 import { getTranslations } from "next-intl/server";
 import { LanguagePicker } from "@/components/language-picker";
+import { ExperimentalComponent } from "@/components/experiemental-component";
+import { GithubGlobe } from "@/components/github-globe";
+import CopyToClipboard from "@shared-components/components/copy-to-clipboard";
 
 type Props = {
   params: { locale: string };
@@ -36,6 +39,7 @@ export default function Page({ params: { locale } }: Props) {
   const u = useTranslations("mode-theme");
   const v = useTranslations("signin");
   const w = useTranslations("newsletter");
+  const x = useTranslations("copy-to-clipboard");
 
   return (
     <div className="flex-1 space-y-4">
@@ -66,6 +70,11 @@ export default function Page({ params: { locale } }: Props) {
         description={t("description")}
         activeLocale={curLocale}
       />
+      <CopyToClipboard
+        copy_text="Streamify rocks"
+        CopySucessful={x("CopySucessful")}
+        CopyFailed={x("CopyFailed")}
+      />
       <ThemeTextToggleTabs
         light={u("light")}
         dark={u("dark")}
@@ -73,6 +82,8 @@ export default function Page({ params: { locale } }: Props) {
       />
       <ThemeIconToggleTabs />
       <ThemeSelect light={u("light")} dark={u("dark")} system={u("system")} />
+      <ExperimentalComponent />
+      <GithubGlobe />
     </div>
   );
 }

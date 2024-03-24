@@ -2,7 +2,7 @@
 
 import { ScheduleIcon, Icons } from "@shared-components/graphics/icons";
 import { Link } from "@shared-components/ui/link";
-import CopyToClipboardComponent from "../copy-to-clipboard";
+import CopyToClipboard from "../copy-to-clipboard";
 
 interface CopyCardProps {
   title: string;
@@ -14,7 +14,7 @@ export function CopyCard({ title, value_string }: CopyCardProps) {
     <div className="flex items-center transition duration-200 border-separator border my-2 px-4 py-2 bg-transparent rounded-md">
       <span className="text-primary-muted flex-1">{title}</span>
       <span className="text-primary mr-4">{value_string}</span>
-      <CopyToClipboardComponent copy_text={value_string} />
+      <CopyToClipboard copy_text={value_string} />
     </div>
   );
 }

@@ -23,6 +23,21 @@ export interface Post {
   date: string;
   author?: Author | null;
 }
+export interface VideoPost {
+  _id: string;
+  status: "draft" | "published";
+  title: string;
+  slug: string;
+  excerpt?: string | null;
+  thumbnailPicture?: (Image & { alt?: string }) | null;
+  date: string;
+  publishedAt: string;
+  shortStory: string;
+  fullStory: string;
+  playbackId: string;
+  playbackDuration: number;
+  playbackResolution: string;
+}
 
 const postFields = groq`
   _id,
@@ -34,6 +49,20 @@ const postFields = groq`
   "date": coalesce(date, _updatedAt),
   "author": author->{"name": coalesce(name, "Anonymous"), picture},
 `;
+
+const videoPostFields = groq`
+    _id, 
+    "status": select(_originalId in path("drafts.**") => "draft", "published"),
+    title, 
+    slug, 
+    thumbnailPicture, 
+    publishedAt,
+    shortStory,
+    fullStory,
+    "playbackId": video.asset->playbackId,
+    "playbackDuration": video.asset->data.duration,
+    "playbackResolution": video.asset->data.max_stored_resolution,
+  }`;
 
 export const heroQuery = groq`*[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) [0] {
   content,
@@ -56,6 +85,17 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug] [0] {
 }`;
 export type PostQueryResponse =
   | (Post & {
+      content?: PortableTextBlock[] | null;
+    })
+  | null;
+
+// Get a single post by its slug
+export const videoPostQuery = groq`*[_type == "videoPost" && slug.current == $slug][0]{ 
+  content,
+  ${videoPostFields}
+}`;
+export type VideoPostQueryResponse =
+  | (VideoPost & {
       content?: PortableTextBlock[] | null;
     })
   | null;

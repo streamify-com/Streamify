@@ -19,6 +19,10 @@
     "dark": "Dunkel",
     "system": "System"
   },
+  "copy-to-clipboard": {
+    "CopySucessful": "Kopiert",
+    "CopyFailed": "Kopieren nicht möglich"
+  },
   "page-not-found": {
     "message": "404",
     "title": "Seite nicht geunden",
