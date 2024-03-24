@@ -17,11 +17,11 @@ import {
   VideoPostQueryResponse,
   postQuery,
   settingsQuery,
-  videoPostQuery
+  videoPostQuery,
 } from "@shared-components/features/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@shared-components/features/sanity/lib/utils";
 import * as demo from "@shared-components/features/sanity/lib/demo";
-import MuxPlayer from '@mux/mux-player-react';
+import MuxPlayer from "@mux/mux-player-react";
 
 type Props = {
   params: { slug: string };
@@ -34,7 +34,6 @@ type Props = {
 //     stega: false,
 //   });
 // }
-
 
 export default async function PostPage({ params }: Props) {
   const [videoPost, settings] = await Promise.all([
@@ -53,13 +52,13 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <div className="container mx-auto px-5">
-            <MuxPlayer
-              streamType="on-demand"
-              playbackId={videoPost.playbackId}
-              className="relative z-10 h-[30rem]"
-              loop
-              autoPlay
-            />
+      <MuxPlayer
+        streamType="on-demand"
+        playbackId={videoPost.playbackId}
+        className="relative z-10 h-[30rem]"
+        loop
+        autoPlay
+      />
     </div>
   );
 }

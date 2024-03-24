@@ -25,6 +25,7 @@
       "@shared-components/components/*": [
         "../../packages/shared-components/components/*"
       ],
+      "@shared-components/data/*": ["../../packages/shared-components/data/*"],
       "@shared-components/features/*": [
         "../../packages/shared-components/features/*"
       ],

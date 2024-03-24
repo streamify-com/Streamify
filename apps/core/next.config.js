@@ -8,6 +8,7 @@ const nextConfig = {
       "d2fplzddl6myl4.cloudfront.net",
       "tailwindui.com",
       "stream.mux.com",
+      "images.pexels.com",
     ],
     remotePatterns: [
       {

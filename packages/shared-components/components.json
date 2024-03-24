@@ -12,6 +12,7 @@
     "assets": "@shared-components/assets",
     "animations": "@shared-components/animations",
     "components": "@shared-components/components",
+    "data": "@shared-components/data",
     "features": "@shared-components/features",
     "forms": "@shared-components/forms",
     "graphics": "@shared-components/graphics",

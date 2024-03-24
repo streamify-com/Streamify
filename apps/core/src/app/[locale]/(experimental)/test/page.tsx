@@ -12,6 +12,9 @@ import { cn } from "@shared-components/lib/utils";
 import Newsletter from "@shared-components/forms/email/newsletter";
 import { getTranslations } from "next-intl/server";
 import { LanguagePicker } from "@/components/language-picker";
+import { ExperimentalComponent } from "@/components/experiemental-component";
+import { GithubGlobe } from "@/components/github-globe";
+import CopyToClipboardComponent from "@shared-components/components/copy-to-clipboard";
 
 type Props = {
   params: { locale: string };
@@ -73,6 +76,9 @@ export default function Page({ params: { locale } }: Props) {
       />
       <ThemeIconToggleTabs />
       <ThemeSelect light={u("light")} dark={u("dark")} system={u("system")} />
+      <ExperimentalComponent />
+      {/* <GithubGlobe /> */}
+      <CopyToClipboardComponent copy_text="Successfully copied to your clipboard" />
     </div>
   );
 }

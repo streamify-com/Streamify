@@ -1,41 +1,41 @@
 import { format, parseISO } from "date-fns";
-import { defineField, defineType } from 'sanity';
+import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: 'videoPost',
-  title: 'Video Post',
-  type: 'document',
+  name: "videoPost",
+  title: "Video Post",
+  type: "document",
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "title",
+      title: "Title",
+      type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'slug',
-      title: 'URL',
-      type: 'slug',
+      name: "slug",
+      title: "URL",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96,
         isUnique: (value, context) => context.defaultIsUnique(value, context),
       },
       description:
-        'Set the URL of your post, e.g. www.streamify.com/YOUR-CUSTOM-URL',
+        "Set the URL of your post, e.g. www.streamify.com/YOUR-CUSTOM-URL",
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'video',
-      title: 'Video',
-      type: 'mux.video',
+      name: "video",
+      title: "Video",
+      type: "mux.video",
       description:
-        'Attention: Kepp the window open until the video upload has been completed.',
+        "Attention: Kepp the window open until the video upload has been completed.",
     }),
     defineField({
-      name: 'thumbnailPicture',
-      title: 'Thumbnail picture',
-      type: 'image',
+      name: "thumbnailPicture",
+      title: "Thumbnail picture",
+      type: "image",
       options: {
         hotspot: true,
         aiAssist: {
@@ -61,29 +61,29 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
       initialValue: () => new Date().toISOString(),
     }),
     defineField({
-      name: 'shortStory',
-      title: 'Short story',
-      type: 'string',
+      name: "shortStory",
+      title: "Short story",
+      type: "string",
     }),
     defineField({
-      name: 'fullStory',
-      title: 'Full story',
-      type: 'blockContent',
+      name: "fullStory",
+      title: "Full story",
+      type: "blockContent",
     }),
   ],
 
   preview: {
     select: {
-      title: 'title',
-      author: 'author.name',
-      publishedAt: 'publishedAt',
-      media: 'thumbnailPicture',
+      title: "title",
+      author: "author.name",
+      publishedAt: "publishedAt",
+      media: "thumbnailPicture",
     },
     prepare({ title, media, author, publishedAt }) {
       const subtitles = [

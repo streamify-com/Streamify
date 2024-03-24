@@ -101,7 +101,10 @@ export default async function PostPage({ params }: Props) {
           </div>
         </div>
         {post.content?.length && (
-          <PortableText className="mx-auto max-w-2xl text-primary" value={post.content} />
+          <PortableText
+            className="mx-auto max-w-2xl text-primary"
+            value={post.content}
+          />
         )}
       </article>
       <aside>

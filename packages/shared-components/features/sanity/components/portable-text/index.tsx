@@ -33,7 +33,9 @@ export default function CustomPortableText({
         <b className="mb-1 text-xs font-regular text-action">{children}</b>
       ),
       strong: ({ children }) => (
-        <strong className="mb-1 text-xs font-regular text-action">{children}</strong>
+        <strong className="mb-1 text-xs font-regular text-action">
+          {children}
+        </strong>
       ),
     },
     marks: {
