@@ -60,7 +60,7 @@ interface WorldProps {
 
 let numbersOfRings = [0];
 
-export function RotatingGlobe({ globeConfig, data }: WorldProps) {
+export function Globe({ globeConfig, data }: WorldProps) {
   const [globeData, setGlobeData] = useState<
     | {
         size: number;
