@@ -4,6 +4,7 @@
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "allowJs": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "@shared-components/*": ["./*"],

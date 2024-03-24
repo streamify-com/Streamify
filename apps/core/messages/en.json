@@ -19,6 +19,10 @@
     "dark": "Dark",
     "system": "System"
   },
+  "copy-to-clipboard": {
+    "CopySucessful": "Copied",
+    "CopyFailed": "Copying failed"
+  },
   "page-not-found": {
     "message": "404",
     "title": "Page not found",

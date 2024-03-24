@@ -3,9 +3,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-const World = dynamic(() => import("@shared-components/animations/rotating-globe").then((m) => m.World), {
-  ssr: false,
-});
+const World = dynamic(
+  () =>
+    import("@shared-components/animations/rotating-globe").then((m) => m.World),
+  {
+    ssr: false,
+  },
+);
 
 export function GithubGlobe() {
   const globeConfig = {

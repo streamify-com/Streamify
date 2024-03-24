@@ -4,27 +4,27 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@shared-components/lib/utils";
 
-type Tab = {
+type AnimatedTabsProps = {
   title: string;
   value: string;
   content?: string | React.ReactNode | any;
 };
 
-export const Tabs = ({
+export const AnimatedTabs = ({
   tabs: propTabs,
   containerClassName,
   activeTabClassName,
   tabClassName,
   contentClassName,
 }: {
-  tabs: Tab[];
+  tabs: AnimatedTabsProps[];
   containerClassName?: string;
   activeTabClassName?: string;
   tabClassName?: string;
   contentClassName?: string;
 }) => {
-  const [active, setActive] = useState<Tab>(propTabs[0]);
-  const [tabs, setTabs] = useState<Tab[]>(propTabs);
+  const [active, setActive] = useState<AnimatedTabsProps>(propTabs[0]);
+  const [tabs, setTabs] = useState<AnimatedTabsProps[]>(propTabs);
 
   const moveSelectedTabToTop = (idx: number) => {
     const newTabs = [...propTabs];
@@ -62,15 +62,13 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full ",
+                  "absolute inset-0 bg-skeleton rounded-full ",
                   activeTabClassName,
                 )}
               />
             )}
 
-            <span className="relative block text-black dark:text-white">
-              {tab.title}
-            </span>
+            <span className="relative block text-primary">{tab.title}</span>
           </button>
         ))}
       </div>
@@ -79,7 +77,7 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-32", contentClassName)}
+        className={cn("mt-14", contentClassName)}
       />
     </>
   );
@@ -92,11 +90,11 @@ export const FadeInDiv = ({
 }: {
   className?: string;
   key?: string;
-  tabs: Tab[];
-  active: Tab;
+  tabs: AnimatedTabsProps[];
+  active: AnimatedTabsProps;
   hovering?: boolean;
 }) => {
-  const isActive = (tab: Tab) => {
+  const isActive = (tab: AnimatedTabsProps) => {
     return tab.value === tabs[0].value;
   };
   return (

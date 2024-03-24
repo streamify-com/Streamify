@@ -25,7 +25,7 @@ import video from "@shared-components/features/sanity/schemas/documents/video";
 import blockContent from "@shared-components/features/sanity/schemas/documents/block-content";
 import settings from "@shared-components/features/sanity/schemas/singletons/settings";
 import { muxInput } from "sanity-plugin-mux-input";
-import { scheduledPublishing } from "@sanity/scheduled-publishing"
+import { scheduledPublishing } from "@sanity/scheduled-publishing";
 
 export default defineConfig({
   basePath: studioUrl,
@@ -45,7 +45,7 @@ export default defineConfig({
     assistWithPresets(),
     scheduledPublishing({
       // E.g. 12/25/2000 6:30 AM
-      inputDateTimeFormat: 'dd/mm/yyyy h:mm',
+      inputDateTimeFormat: "dd/mm/yyyy h:mm",
     }),
     muxInput({ mp4_support: "standard" }),
     presentationTool({

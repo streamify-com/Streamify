@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Tabs } from "@shared-components/animations/animated-tabs";
+import { AnimatedTabs } from "@shared-components/animations/animated-tabs";
 
 export function ExperimentalComponent() {
   const tabs = [
@@ -9,7 +9,7 @@ export function ExperimentalComponent() {
       title: "Product",
       value: "product",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl sm:text-4xl font-bold text-primary bg-foreground border border-separator">
           <p>Product Tab</p>
           <DummyContent />
         </div>
@@ -19,7 +19,7 @@ export function ExperimentalComponent() {
       title: "Services",
       value: "services",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl sm:text-4xl font-bold text-primary bg-foreground border border-separator">
           <p>Services tab</p>
           <DummyContent />
         </div>
@@ -29,7 +29,7 @@ export function ExperimentalComponent() {
       title: "Playground",
       value: "playground",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl sm:text-4xl font-bold text-primary bg-foreground border border-separator">
           <p>Playground tab</p>
           <DummyContent />
         </div>
@@ -39,7 +39,7 @@ export function ExperimentalComponent() {
       title: "Content",
       value: "content",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl sm:text-4xl font-bold text-primary bg-foreground border border-separator">
           <p>Content tab</p>
           <DummyContent />
         </div>
@@ -49,7 +49,7 @@ export function ExperimentalComponent() {
       title: "Random",
       value: "random",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl sm:text-4xl font-bold text-primary bg-foreground border border-separator">
           <p>Random tab</p>
           <DummyContent />
         </div>
@@ -58,8 +58,8 @@ export function ExperimentalComponent() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
-      <Tabs tabs={tabs} />
+    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-40">
+      <AnimatedTabs tabs={tabs} />
     </div>
   );
 }

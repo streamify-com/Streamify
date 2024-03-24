@@ -3,31 +3,31 @@
 import { CopyIcon, Icons } from "@shared-components/graphics/icons";
 import useClipboard from "@shared-components/hooks/use-clipboard";
 import { Button } from "@shared-components/ui/button";
-// Import the toast module
 import { toast } from "sonner";
 
-interface CopyToClipboardComponentProps {
+interface CopyToClipboardProps {
   copy_text: string;
+  CopySucessful: string;
+  CopyFailed: string;
 }
 
-const CopyToClipboardComponent = ({
+const CopyToClipboard = ({
+  CopySucessful,
+  CopyFailed,
   copy_text,
-}: CopyToClipboardComponentProps) => {
-  const { ref, copied, onCopy: originalOnCopy } = useClipboard({ duration: 3000 });
+}: CopyToClipboardProps) => {
+  const {
+    ref,
+    copied,
+    onCopy: originalOnCopy,
+  } = useClipboard({ duration: 3000 });
 
-  // Wrap the original onCopy to add toast notifications
   const onCopy = async () => {
     try {
       await originalOnCopy();
-      // Display success message
-      toast.message("Copied to clipboard!", {
-        // Optional: Add any configuration specific to your project's theme or requirements
-      });
+      toast.message(CopySucessful, {});
     } catch (error) {
-      // Display error message
-      toast.error("Failed to copy!", {
-        // Optional: Add any configuration specific to your project's theme or requirements
-      });
+      toast.error(CopyFailed, {});
     }
   };
 
@@ -51,4 +51,4 @@ const CopyToClipboardComponent = ({
   );
 };
 
-export default CopyToClipboardComponent;
+export default CopyToClipboard;
