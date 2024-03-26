@@ -56,7 +56,7 @@ const buttonVariants = cva(
         fullSize: "h-10 sm:h-10 w-full sm:w-full py-2 px-4",
         headerSize: "h-8 sm:h-8 w-full sm:w-auto py-1 px-4 sm:text-sm",
         footerSize:
-          "h-8 sm:text-xs text-sm w-full sm:w-auto sm:py-1 sm:px-2 py-0 px-0 sm:justify-center justify-start",
+          "h-8 sm:text-sm text-sm w-full sm:w-auto sm:py-1 sm:px-2 py-0 px-0 sm:justify-center justify-start",
         navigationSize: "h-8",
         iconSize: "h-9 w-9",
         roundedSize: "h-8 w-8 rounded-full",

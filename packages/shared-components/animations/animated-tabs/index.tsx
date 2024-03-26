@@ -40,7 +40,7 @@ export const AnimatedTabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-row items-center justify-start relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
           containerClassName,
         )}
       >
@@ -52,7 +52,7 @@ export const AnimatedTabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-full", tabClassName)}
+            className={cn("relative px-4 py-2 rounded-md", tabClassName)}
             style={{
               transformStyle: "preserve-3d",
             }}
@@ -62,7 +62,7 @@ export const AnimatedTabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-skeleton rounded-full ",
+                  "absolute inset-0 bg-skeleton rounded-md text-testing",
                   activeTabClassName,
                 )}
               />
@@ -77,7 +77,7 @@ export const AnimatedTabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-14", contentClassName)}
+        className={cn("mt-24 sm:mt-14", contentClassName)}
       />
     </>
   );

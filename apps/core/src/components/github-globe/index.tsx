@@ -14,7 +14,7 @@ const World = dynamic(
 export function GithubGlobe() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#000000",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
@@ -34,7 +34,7 @@ export function GithubGlobe() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#B21064", "#707070", "#701042"];
   const sampleArcs = [
     {
       order: 1,

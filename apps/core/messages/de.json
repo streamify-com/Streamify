@@ -126,7 +126,10 @@
   },
   "footer-declaration": {
     "company": "Streamify",
-    "all-rights-reserved": "Alle Rechte vorbehalten."
+    "all-rights-reserved": "Alle Rechte vorbehalten.",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
   },
   "footer-payment": {
     "cancel-subscription": "Vertrag kündigen",
@@ -153,114 +156,52 @@
     }
   },
   "footer-homepage": {
-    "solutions": {
-      "name": "Lösungen",
-      "studio": {
-        "name": "Studio",
-        "href": "/streamify-studio"
-      },
-      "ott-platform": {
-        "name": "Over-the-Top-Plattform",
-        "href": "/streamify-ott-platform"
-      },
-      "analytics": {
-        "name": "Analytics",
-        "href": "/streamify-analytics"
-      },
-      "atlas": {
-        "name": "Atlas",
-        "href": "/streamify-atlas"
-      }
-    },
-    "support": {
-      "name": "Support",
-      "pricing": {
-        "name": "Preise",
-        "href": "/pricing"
-      },
-      "documentation": {
-        "name": "Dokumentation",
-        "href": "/documentation"
-      },
-      "guides": {
-        "name": "Anleitungen",
-        "href": "/guides"
-      },
-      "programs": {
-        "name": "Programme",
-        "href": "/programs"
-      }
-    },
-    "company": {
-      "name": "Unternehmen",
-      "about-us": {
-        "name": "Über uns",
-        "href": "/about-us"
-      },
-      "blog": {
-        "name": "Blog",
-        "href": "/blog"
-      },
-      "jobs": {
-        "name": "Jobs",
-        "href": "/jobs"
-      },
-      "partners": {
-        "name": "Partner",
-        "href": "/partners"
-      }
-    },
-    "legal": {
-      "name": "Rechtliches",
-      "terms-of-services": {
-        "name": "AGB",
-        "href": "/terms-of-services"
-      },
-      "privacy-policy": {
-        "name": "Datenschutz",
-        "href": "/privacy-policy"
-      },
-      "cookie-policy": {
-        "name": "Cookie-Richtlinie",
-        "href": "/cookie-policy"
-      },
-      "imprint": {
-        "name": "Impressum",
-        "href": "/imprint"
-      }
-    }
+    "solutions": "Lösungen",
+    "solution-1": "Studio",
+    "solution-2": "Sports",
+    "solution-3": "Analytics",
+    "solution-4": "Atlas",
+    "support": "Support",
+    "pricing": "Preise",
+    "documentation": "Dokumentation",
+    "guides": "Anleitungen",
+    "programs": "Programme",
+    "company": "Unternehmen",
+    "about-us": "Über uns",
+    "blog": "Blog",
+    "jobs": "Jobs",
+    "partners": "Partner",
+    "legal": "Rechtliches",
+    "terms-of-services": "AGB",
+    "privacy-policy": "Datenschutz",
+    "cookie-policy": "Cookie-Richtlinie",
+    "imprint": "Impressum",
+    "title": "Abonniere unseren Newsletter",
+    "description": "Die neuesten Nachrichten, Artikel und Ressourcen werden wöchentlich an deinen Posteingang geschickt.",
+    "placeholder": "E-Mail-Adresse",
+    "newsletterbutton": "Abonnieren",
+    "notification": "Du wurdest erfolgreich dem Newsletter hinzugefügt."
   },
   "footer-platform": {
-    "terms-of-services": {
-      "name": "AGB",
-      "href": "/terms-of-services"
-    },
-    "privacy-policy": {
-      "name": "Datenschutz",
-      "href": "/privacy-policy"
-    },
-    "cookie-policy": {
-      "name": "Cookie-Richtlinie",
-      "href": "/cookie-policy"
-    },
-    "imprint": {
-      "name": "Impressum",
-      "href": "/imprint"
-    },
-    "support": {
-      "name": "Support",
-      "href": "/support"
-    },
-    "cancel-subscription": {
-      "name": "Vertrag kündigen",
-      "href": "/cancel-subscription"
-    },
-    "sitemap": {
-      "name": "Seitenverzeichnis"
-    },
-    "company": {
-      "name": "Streamify"
-    }
+    "terms-of-services": "AGB",
+    "privacy-policy": "Datenschutz",
+    "cookie-policy": "Cookie-Richtlinie",
+    "imprint": "Impressum",
+    "support": "Support",
+    "cancel-subscription": "Abonnement kündigen",
+    "sitemap": "Seitenverzeichnis"
+  },
+  "footer-website": {
+    "company": "Streamify",
+    "terms-of-services": "AGB",
+    "privacy-policy": "Datenschutz",
+    "cookie-policy": "Cookie-Richtlinie",
+    "imprint": "Impressum",
+    "cancel-subscription": "Abonnement kündigen",
+    "sitemap": "Seitenverzeichnis",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
   },
   "header-homepage": {
     "solutions": {
