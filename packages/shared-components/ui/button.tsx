@@ -17,7 +17,7 @@ const buttonVariants = cva(
         actionButton:
           "bg-action sm:hover:bg-action-muted text-background sm:hover:text-white border border-action sm:hover:border-action-muted",
         insentiveButton:
-          "bg-transparent text-action sm:hover:underline hover:underline-offset-4 sm:hover:text-action-muted border border-transparent",
+          "bg-transparent text-action sm:hover:underline hover:underline-offset-4 sm:hover:text-action border border-action",
         ghostButton:
           "bg-transparent sm:hover:bg-secondary-muted text-secondary-inner sm:hover:text-secondary-hover border border-transparent sm:hover:border-separator",
         blurButton:

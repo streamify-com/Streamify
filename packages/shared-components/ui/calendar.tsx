@@ -36,7 +36,7 @@ function Calendar({
         caption: `flex justify-center pt-1 relative items-center ${
           isDropDown ? "w-full flex-col gap-2" : ""
         }`,
-        caption_label: `text-sm font-medium ${isDropDown ? "hidden" : ""}`,
+        caption_label: `text-sm font-regular ${isDropDown ? "hidden" : ""}`,
         nav: `space-x-1 flex items-center ${
           isDropDown ? "justify-between w-full" : ""
         }`,

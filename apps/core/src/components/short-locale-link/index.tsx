@@ -16,8 +16,8 @@ export default function ShortLocaleLink({ href, locale }: Props) {
       href={href}
       locale={locale}
       className={clsx(
-        "p-1 hover:sm:bg-foreground",
-        curLocale === locale && "border border-primary rounded-md",
+        "px-2 py-1 text-sm hover:sm:bg-foreground rounded-md hover:sm:border-separator sm:border sm:border-transparent",
+        curLocale === locale && "underline underline-offset-4",
       )}
     >
       {locale.toUpperCase()}

@@ -184,37 +184,11 @@
     "system": "System"
   },
   "header-homepage": {
-    "solutions": {
-      "name": "Solutions",
-      "href": "/solutions"
-    },
-    "templates": {
-      "name": "Templates",
-      "href": "/templates"
-    },
-    "showcases": {
-      "name": "Showcases",
-      "href": "/showcases"
-    },
-    "pricing": {
-      "name": "Pricing",
-      "href": "/pricing"
-    },
-    "call-to-action": {
-      "open-studio": {
-        "name": "Open Studio",
-        "href": "/streamify-studio"
-      },
-      "menu": {
-        "name": "Menu",
-        "schedule-a-call": "Schedula a call with us",
-        "join-our-discord": "Join our Discord channel",
-        "email-title": "Email",
-        "email-value": "support@streamify.com",
-        "phone-title": "Phone",
-        "phone-value": "+49 173 7692475"
-      }
-    }
+    "products": "Products",
+    "templates": "Templates",
+    "download": "Download",
+    "roadmap": "Roadmap",
+    "pricing": "Pricing"
   },
   "header-platform": {
     "home": {

@@ -49,7 +49,7 @@ export function ThemeTextToggleTabs({ light, dark, system }: ThemeNameProps) {
   return (
     <Tabs
       defaultValue={resolvedTheme}
-      className="w-full sm:w-fit"
+      className="w-full sm:w-fit bg-background"
       onValueChange={setTheme}
     >
       <TabsList className="grid w-full sm:w-auto grid-cols-3 gap-2">

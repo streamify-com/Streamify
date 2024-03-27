@@ -1539,10 +1539,20 @@ export function MenuIcon(
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
 ) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 512 512"
+      {...props}
+    >
       <path
-        fill="currentColor"
-        d="M104 160a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56Zm152 0a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56Zm152 0a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56ZM104 312a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56Zm152 0a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56Zm152 0a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56ZM104 464a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56Zm152 0a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56Zm152 0a56 56 0 1 1 56-56a56.06 56.06 0 0 1-56 56Z"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="44"
+        d="M118 304h276m-276-96h276"
       />
     </svg>
   );

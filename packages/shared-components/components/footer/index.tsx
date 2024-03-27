@@ -723,11 +723,11 @@ export function FooterDeclarationLayout({
       <HomepageContainer>
         <div className="sm:flex sm:justify-between">
           <div className="w-full flex items-center justify-between">
-            <p className="hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
+            <p className="hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute sm:flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{company}&nbsp;{new Date().getFullYear()}.&nbsp;
               {all_rights_reserved}
             </p>
-            <p className="sm:hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
+            <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
               &copy;&nbsp;{company}&nbsp;{new Date().getFullYear()}
             </p>
             <div className="sm:order-1 order-2 sm:hidden block">
@@ -1140,7 +1140,7 @@ export function FooterWebsiteLayout({
           <div className="mb-6 sm:mb-0">
             <div className="sm:order-1 order-2 sm:hidden block">
               <div className="w-full flex items-center justify-between">
-                <p className="sm:hidden font-medium text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
+                <p className="sm:hidden font-regular text-primary-muted text-xs leading-5 sm:order-2 order-1 sm:absolute flex sm:left-1/2 sm:-translate-x-1/2">
                   &copy;&nbsp;{company}&nbsp;
                   {new Date().getFullYear()}
                 </p>

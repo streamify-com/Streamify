@@ -52,7 +52,10 @@ export const AnimatedTabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-md", tabClassName)}
+            className={cn(
+              "relative px-4 py-2 text-sm rounded-md h-full items-center",
+              tabClassName,
+            )}
             style={{
               transformStyle: "preserve-3d",
             }}
