@@ -77,7 +77,7 @@ export function LanguagePicker({
         <DrawerHeader className="text-left">
           <DrawerTitle className="font-bold">{title}</DrawerTitle>
           <DrawerDescription>
-            {description}{" "}
+            {description}&nbsp;
             <span className="underline underline-offset-4">
               {buttonContent}
             </span>

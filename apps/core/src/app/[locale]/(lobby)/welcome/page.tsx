@@ -1,62 +1,35 @@
-import { unstable_setRequestLocale } from "next-intl/server";
-import { useLocale, useTranslations } from "next-intl";
-import { Link } from "@shared-components/ui/link";
-import { buttonVariants } from "@shared-components/ui/button";
-import { cn } from "@shared-components/lib/utils";
-import Newsletter from "@shared-components/forms/email/newsletter";
 import { getTranslations } from "next-intl/server";
-import { LanguagePicker } from "@/components/language-picker";
+import HeroSectionComponent from "@/components/hero-section-component";
+import { useTranslations } from "next-intl";
 
-type Props = {
-  params: { locale: string };
-};
+// type Props = {
+//   params: { locale: string };
+// };
 
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
-  const t = await getTranslations({ locale, namespace: "verify" });
+// export async function generateMetadata({
+//   params: { locale },
+// }: Omit<Props, "children">) {
+//   const t = await getTranslations({ locale, namespace: "verify" });
 
-  return {
-    title: t("title"),
-  };
-}
+//   return {
+//     title: t("title"),
+//   };
+// }
 
-export default function Page({ params: { locale } }: Props) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
-
-  const curLocale = useLocale();
-  const t = useTranslations("LocaleSwitcher");
-  const u = useTranslations("mode-theme");
-  const v = useTranslations("signin");
-  const w = useTranslations("newsletter");
+export default function Page() {
+  const t = useTranslations("hero-homepage");
 
   return (
-    <div className="flex-1 space-y-4">
-      <Link
-        aria-label="Reset password"
-        href="/signin"
-        className={cn(
-          buttonVariants({
-            variant: "primaryButton",
-            size: "defaultSize",
-          }),
-          "sm:text-sm",
-        )}
-      >
-        {v("signin")}
-      </Link>
-      <Newsletter
-        notification={w("notification")}
-        placeholder={w("placeholder")}
-        newsletterbutton={w("newsletterbutton")}
-      />
-      <LanguagePicker
-        buttonContent={t("locale", { locale: curLocale })}
-        href="/welcome"
-        title={t("title")}
+    <div>
+      <HeroSectionComponent
+        title_1={t("title-1")}
+        title_2={t("title-2")}
+        title_3={t("title-3")}
         description={t("description")}
-        activeLocale={curLocale}
+        highlight={t("highlight")}
+        badge_description={t("badge-description")}
+        badge_subtext={t("badge-subtext")}
+        badge_title={t("badge-title")}
       />
     </div>
   );

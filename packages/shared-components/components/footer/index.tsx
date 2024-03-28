@@ -152,8 +152,8 @@ export function FooterHomepageLayout({
       aria-labelledby="footer-heading"
     >
       <HomepageContainer>
-        <div className="my-4 flex items-center justify-center">
-          <PrimaryLogo className="text-action h-10 w-auto" />
+        <div className="sm:my-4 flex items-center justify-center">
+          <PrimaryLogo className="text-action h-8 w-auto" />
         </div>
         <div className="pb-2 pt-4 sm:pt-8">
           <div className="sm:grid sm:grid-cols-3 sm:gap-8">

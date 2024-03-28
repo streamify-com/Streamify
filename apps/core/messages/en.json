@@ -188,7 +188,9 @@
     "templates": "Templates",
     "download": "Download",
     "roadmap": "Roadmap",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "signin": "Sign in",
+    "signup": "Sign up"
   },
   "header-platform": {
     "home": {
@@ -236,17 +238,15 @@
     }
   },
   "hero-homepage": {
-    "badge": {
-      "headless-streaming": "Headless Streaming",
-      "read-the-story": "Release on 15th April 2024",
-      "href": "/about-us"
-    },
-    "title-1": "Start your own custom streaming platform",
-    "title-2": "Monetize your content",
-    "title-3": "",
+    "badge-title": "Welcome",
+    "badge-description": "Headless Streaming",
+    "badge-subtext": "Learn more about it",
+    "title-1": "The all-in-one",
+    "title-2": "streaming solution",
+    "title-3": "for your business",
     "title-4": "Monetize your content",
-    "description": "The All-in-One solution that lets you build your own customizable video streaming platform. Seamlessly manage content, users, payments and more with ease and efficiency.",
-    "highlight": "Your content • Your platform • Your rules",
+    "description": "Beautifully designed templates that you can edit and ship to your audience. ",
+    "highlight": "All-in-One • No-Code • White-Label",
     "button": {
       "call-to-action": {
         "name": "Get started",

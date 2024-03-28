@@ -18,11 +18,13 @@ export default function HeaderWebsiteComponent({ user }: HeaderWebsiteProps) {
       download={t("download")}
       roadmap={t("roadmap")}
       pricing={t("pricing")}
+      signin={t("signin")}
+      signup={t("signup")}
     >
       <div className="flex items-center mx-4 space-x-4">
         <div className="flex items-center space-x-2">
-          <ShortLocaleLink locale="en" href="/test" />
-          <ShortLocaleLink locale="de" href="/test" />
+          <ShortLocaleLink locale="en" href="/" />
+          <ShortLocaleLink locale="de" href="/" />
         </div>
         <Separator orientation="vertical" />
       </div>

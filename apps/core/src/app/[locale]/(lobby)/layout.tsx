@@ -1,33 +1,27 @@
+import FooterDeclarationComponent from "@/components/footer-declaration-component";
+import FooterHomeComponent from "@/components/footer-home-component";
+import { FooterPaymentLayout } from "@shared-components/components/footer";
+import { currentUser } from "@clerk/nextjs";
+import HeaderWebsiteComponent from "@/components/header-website-component";
 import CookieBannerComponent from "@/components/cookie-banner-component";
-import { getTranslations } from "next-intl/server";
-import { ReactNode } from "react";
-
-type Props = {
-  children: ReactNode;
-  params: { locale: string };
-};
-
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
-  const t = await getTranslations({ locale, namespace: "signin" });
-
-  return {
-    title: t("title"),
-  };
-}
 
 interface PlatformLayoutProps {
   children: React.ReactNode;
 }
 
-export default async function PlatformLayout({
+export default async function OpenLobbyLayout({
   children,
 }: PlatformLayoutProps) {
+  const user = await currentUser();
+
   return (
-    <div className="flex min-h-screen flex-col p-8 sm:p-12">
-      <main className="flex-1">{children}</main>
+    <div className="flex min-h-screen flex-col">
+      <HeaderWebsiteComponent user={user} />
+      <main className="flex-1 py-8 sm:py-24">{children}</main>
       <CookieBannerComponent />
+      <FooterHomeComponent />
+      <FooterPaymentLayout />
+      <FooterDeclarationComponent />
     </div>
   );
 }

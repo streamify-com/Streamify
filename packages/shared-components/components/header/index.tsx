@@ -11,22 +11,17 @@ import NavigationBar from "./_components/navigation-bar";
 import { homepageConfig } from "./_components/homepage";
 import NavigationMain from "./_components/navigation-main";
 import { useScroll } from "@shared-components/lib/use-scroll";
-import { useTranslations } from "next-intl";
-// import MenuBar from "./_components/menu-bar";
-// import {
-//   LocaleChooseIcon,
-//   LocaleChooseIconHeader,
-// } from "@shared-components/components/locale-switcher";
-import { Icons } from "@shared-components/graphics/icons";
 
 interface HeaderWebsiteProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   user: User | null;
   products: string;
   templates: string;
   download: string;
   roadmap: string;
   pricing: string;
+  signin: string;
+  signup: string;
 }
 
 export function HeaderWebsite({
@@ -37,6 +32,8 @@ export function HeaderWebsite({
   download,
   roadmap,
   pricing,
+  signin,
+  signup,
 }: HeaderWebsiteProps) {
   const scrolled = useScroll(20);
   const initialIsComponentOpen = getCookie("navComponentOpen");
@@ -48,16 +45,15 @@ export function HeaderWebsite({
     <header
       className={`sticky z-40 top-0 sm:top-6 sm:rounded-md rounded-none mx-0 sm:mx-8 ${
         scrolled
-          ? "sm:bg-white/75 dark:sm:bg-black/75 bg-white/75 dark:bg-black/75 backdrop-blur-xl border-separator border-b sm:border sm:border-separator "
-          : "sm:bg-transparent bg-background border-transparent border-b sm:border sm:border-transparent"
+          ? "sm:bg-background bg-background border-separator border-b sm:border sm:border-separator "
+          : "sm:bg-background bg-background border-transparent border-b sm:border sm:border-transparent"
       } `}
     >
       <nav className="px-8 sm:px-8">
         <div className="relative flex h-14 items-center justify-between">
-          <div className="sm:hidden flex items-center">
-            {/* <LocaleChooseIconHeader /> */}
+          {/* <div className="sm:hidden flex items-center">
             Tin
-          </div>
+          </div> */}
           <div className="sm:flex items-center gap-12">
             <Link href="/" className="items-center">
               <PrimaryLogo className="text-action sm:hover:text-action-muted h-7 w-auto sm:w-auto" />
@@ -83,7 +79,7 @@ export function HeaderWebsite({
                   }),
                 )}
               >
-                Sign in
+                {signin}
               </Link>
               <Link
                 href="/signup"
@@ -94,7 +90,7 @@ export function HeaderWebsite({
                   }),
                 )}
               >
-                Sign up
+                {signup}
               </Link>
               {/* <MenuBar /> */}
             </ul>

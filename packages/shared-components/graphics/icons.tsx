@@ -1296,14 +1296,19 @@ export function VideoIcon(
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
-      viewBox="0 0 20 20"
+      viewBox="0 0 512 512"
       {...props}
     >
       <path
+        fill="none"
+        stroke="currentColor"
+        stroke-miterlimit="10"
+        stroke-width="32"
+        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192s192-86 192-192Z"
+      />
+      <path
         fill="currentColor"
-        fill-rule="evenodd"
-        d="M2 10a8 8 0 1 1 16 0a8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z"
-        clip-rule="evenodd"
+        d="m216.32 334.44l114.45-69.14a10.89 10.89 0 0 0 0-18.6l-114.45-69.14a10.78 10.78 0 0 0-16.32 9.31v138.26a10.78 10.78 0 0 0 16.32 9.31"
       />
     </svg>
   );

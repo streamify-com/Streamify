@@ -3,18 +3,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@shared-components/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full border group px-4 py-2 sm:text-sm text-xs font-regular transition-colors focus:outline-none focus:ring-2 focus:ring-separator focus:ring-offset-2",
+  "inline-flex items-center rounded-full border group p-1 sm:text-xs text-xs font-regular transition-colors focus:outline-none focus:ring-2 focus:ring-separator focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-action text-primary sm:hover:bg-action/80",
+          "border-transparent bg-action text-background sm:hover:bg-action-muted",
         secondary:
-          "border-transparent bg-secondary text-primary sm:hover:bg-secondary/80",
+          "border-transparent bg-secondary text-primary sm:hover:bg-secondary-muted",
         warning:
-          "border-transparent bg-negative text-background sm:hover:bg-negative/80",
+          "border-transparent bg-negative text-background sm:hover:bg-negative-muted",
         outline:
-          "border-separator text-primary-muted bg-background/50 backdrop-blur-lg sm:hover:bg-background-hover sm:hover:border-primary sm:hover:text-primary",
+          "border-separator text-primary bg-background/50 backdrop-blur-lg sm:hover:bg-background-hover sm:hover:border-separator-hover",
       },
     },
     defaultVariants: {

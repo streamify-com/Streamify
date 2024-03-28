@@ -1,5 +1,12 @@
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+});
+
 const withNextIntl = require("next-intl/plugin")();
 
+// You can nest plugin calls to apply multiple enhancements/plugins
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["shared-components"],
@@ -8,7 +15,7 @@ const nextConfig = {
       "d2fplzddl6myl4.cloudfront.net",
       "tailwindui.com",
       "stream.mux.com",
-      "images.pexels.com",
+      "images.pexels.com", // Make sure your domains are correctly listed here
     ],
     remotePatterns: [
       {
@@ -22,13 +29,12 @@ const nextConfig = {
     ],
   },
   experimental: {
-    // Used to guard against accidentally leaking SANITY_API_READ_TOKEN to the browser
-    taint: true,
+    // Depending on your requirement, adjust experimental features
+    taint: true, // For next-intl settings
   },
   logging: {
     fetches: { fullUrl: false },
   },
 };
 
-/** @type {import('next').NextConfig} */
-module.exports = withNextIntl(nextConfig);
+module.exports = withPWA(withNextIntl(nextConfig));

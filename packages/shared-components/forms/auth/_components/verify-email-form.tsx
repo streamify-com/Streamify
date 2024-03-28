@@ -118,7 +118,8 @@ export function VerifyEmailForm({
                     <InputOTPGroup>
                       {slots.map((slot, index) => (
                         <InputOTPSlot key={index} {...slot} />
-                      ))}{" "}
+                      ))}
+                      &nbsp;
                     </InputOTPGroup>
                   )}
                   {...field}

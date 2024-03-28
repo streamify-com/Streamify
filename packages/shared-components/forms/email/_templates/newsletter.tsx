@@ -29,11 +29,10 @@ export const NewsletterEmail = ({
   lastName,
 }: NewsletterEmailProps) => (
   <Tailwind>
-  <Html>
-    <Head />
-    <Preview>Streamify newsletter</Preview>
-    <Body style={main}>
-      
+    <Html>
+      <Head />
+      <Preview>Streamify newsletter</Preview>
+      <Body style={main}>
         <Container style={container}>
           <Img
             src="https://d2fplzddl6myl4.cloudfront.net/logo/streamify-logo-purpur.svg"
@@ -42,7 +41,9 @@ export const NewsletterEmail = ({
             alt="Streamify"
             className="h-12 w-auto items-center justify-center mx-auto"
           />
-          <Heading className="text-center text-2xl mt-10">Welcome to the Streamify newsletter</Heading>
+          <Heading className="text-center text-2xl mt-10">
+            Welcome to the Streamify newsletter
+          </Heading>
           <Text style={paragraph} className="text-center sm:text-left">
             Thank you for your interest in Streamify. You will receive news
             about the progress of the project as well as new features and
@@ -61,8 +62,8 @@ export const NewsletterEmail = ({
           <Hr style={hr} />
           <Text style={footer}>Based in Stuttgart (Germany)</Text>
         </Container>
-    </Body>
-  </Html>
+      </Body>
+    </Html>
   </Tailwind>
 );
 

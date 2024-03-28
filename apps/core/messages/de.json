@@ -136,16 +136,14 @@
     "href": "/cancel-subscription"
   },
   "hero-homepage": {
-    "badge": {
-      "headless-streaming": "Headless Streaming",
-      "read-the-story": "Release am 15. April 2024",
-      "href": "/about-us"
-    },
-    "title-1": "Starte deine eigene Streaming Plattform",
-    "title-2": "Verdiene Geld mit deinem Content",
-    "title-3": "",
+    "badge-title": "Willkommen",
+    "badge-description": "Headless Streaming",
+    "badge-subtext": "Erfahre mehr darüber",
+    "title-1": "Die All-in-One",
+    "title-2": "Streaming-Lösung",
+    "title-3": "für Ihr Unternehmen",
     "title-4": "Verdiene Geld mit deinem Content",
-    "description": "Die All-in-One Lösung mit der du deine eigene angepasste Video-Streaming-Plattform bauen kannst. Verwalte nahtlos deine Inhalte, Nutzer, Zahlungen und mehr - einfach und effizient.",
+    "description": "Nutzen Sie die Templates, um Ihre eigene Streaming-Plattform zu erstellen.",
     "highlight": "Deine Inhalte • Deine Plattform • Deine Regeln",
     "button": {
       "call-to-action": {
@@ -208,7 +206,9 @@
     "templates": "Templates",
     "download": "Download",
     "roadmap": "Roadmap",
-    "pricing": "Preise"
+    "pricing": "Preise",
+    "signin": "Anmelden",
+    "signup": "Registrieren"
   },
   "header-platform": {
     "home": {
